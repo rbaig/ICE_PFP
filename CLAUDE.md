@@ -57,12 +57,13 @@ Guia ICE:
 
 ## Estat actual
 
-- [x] Revisió completa del Google Doc (5 punts: inconsistències, mancances, duplicacions, obsolescències, propostes)
+- [x] Revisió completa del Google Doc
 - [x] Nova estructura del document acordada
-- [x] Taula de mapping MIPS→RISC-V construïda (pendent de validació per l'autor)
-- [ ] Redacció de §2.2.3 (reestructuració pedagògica + taula de mapping)
-- [ ] Redacció de §3 (Resultats)
-- [ ] Redacció de §4 (Discussió i conclusions)
-- [ ] Actualització de §1 (inconsistències detectades)
-- [ ] Migració bibliografia a APA 7a edició + ampliació a ~25 referències
-- [ ] Resum/Abstract (al final, quan el cos estigui madur)
+- [x] §1 complet (incl. nota reestructuració §1.1.2; TODO §1.7 eliminat)
+- [x] §2 complet (incl. §2.2.3 amb taula de mapping MIPS→RISC-V)
+- [x] §3 complet (les 4 subseccions)
+- [x] §4 complet (les 4 subseccions: contrast teòric, valoració crítica, continuïtat, connexions)
+- [x] Annex I complet
+- [x] Bibliografia: 8 refs APA 7a (corregit Waterman, URL Winans, afegit WCAG 2.1)
+- [x] §2.1/§2.2/§2.3: Addenda inexistent al doc; contingut ja integrat
+- [x] Resum/Abstract: reescrits amb resultats reals

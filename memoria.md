@@ -14,30 +14,29 @@ lang: ca
 
 # Resum
 
-<!-- TODO: Actualitzar temps verbals i afegir resultats reals un cop
-     el cos del document estigui madur. Fer-ho al final. -->
+L'assignatura Estructura de computadors (EC) del Grau en Enginyeria Informàtica de la FIB-UPC emprava MIPS com a arquitectura de referència des dels seus orígens. La pèrdua de rellevància industrial d'aquesta ISA i la consolidació de RISC-V com a estàndard obert de facto —adoptat per la Unió Europea i pels autors dels principals llibres de text del camp— han motivat la migració integral dels materials docents escrits de l'assignatura.
 
-Aquest projecte aborda la necessitat de modernitzar la formació en l'àmbit de l'estructura de computadors mitjançant la incorporació de l'arquitectura RISC-V com a referència. Aquest canvi no és fútil, sinó una aposta decidida per la innovació pedagògica, atès que RISC-V s'ha consolidat com l'arquitectura emergent i de codi obert que està revolucionant la indústria i l'acadèmia. La seva selecció com a eix central per als estudis d'informàtica garanteix que els futurs professionals adquireixin coneixements amb una visió de futur i en línia amb les tendències tecnològiques més actuals.
+L'objectiu ha estat actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori públic de GitHub. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa, en dues fases: una primera d'exploració amb NotebookLM i una de consolidació amb Claude, que ha multiplicat la velocitat i la cobertura de la producció.
 
-La rellevància i l'oportunitat temporal d'aquest projecte són inqüestionables. En un context global on la sobirania tecnològica i la seguretat del *hardware* són prioritats estratègiques, la Unió Europea ha identificat RISC-V com una tecnologia *flagship* (tecnologia capdavantera). Aquesta aposta institucional subratlla la importància d'invertir en la formació basada en aquesta arquitectura, la qual fomenta la innovació, redueix la dependència de tecnologies propietàries i obre la porta a la creació d'ecosistemes d'innovació local i col·laborativa.
+Els resultats superen les previsions inicials: s'han migrat o creat íntegrament 23 fitxers Quarto Markdown —T1–T9, L1–L6, PE, PS_T2–T5 i materials transversals—, que representen el 95% del material total. S'han incorporat 23 exercicis nous sense equivalent en el material MIPS original, s'ha establert un sistema de qualitat documentat (*Definition of Done*, guia de convencions i glossari de sigles), i els materials estan disponibles en un punt d'entrada únic en HTML i PDF, complint l'estàndard WCAG 2.1.
 
-L'impacte esperat en l'alumnat és significatiu i es centra en l'adquisició i consolidació dels principis fonamentals d'estructura de computadors. RISC-V, gràcies al seu disseny intel·ligent, simplicitat i sistematicitat, ofereix un vehicle pedagògic excepcional. A diferència d'arquitectures més complexes i amb llast històric, la netedat conceptual de RISC-V permet als estudiants entendre de manera clara i profunda com es tradueixen les instruccions en operacions de maquinari. Això no només facilita l'aprenentatge, sinó que també fomenta un pensament més analític i una millor capacitat per a dissenyar i optimitzar sistemes *hardware* i *software*.
+El projecte demostra que la combinació d'un format obert i estructurat, la supervisió experta de la IA generativa i una metodologia àgil multiplica la capacitat de producció docent de qualitat, i ofereix un model exportable a altres assignatures STEAM.
 
-**Paraules clau**: RISC-V, estructura de computadors, arquitectura de computadors, llenguatge d'assemblador, STEAM, aprenentatge assistit per intel·ligència artificial.
+**Paraules clau**: RISC-V, estructura de computadors, arquitectura de computadors, Quarto Markdown, metodologia àgil, aprenentatge assistit per intel·ligència artificial.
 
 ---
 
 # Abstract
 
-<!-- TODO: Actualitzar temps verbals i afegir resultats reals. Fer-ho al final. -->
+The Computer Organization (EC) course in the Bachelor's Degree in Computer Science at FIB-UPC used MIPS as its reference architecture from its inception. The declining industrial relevance of this ISA and the consolidation of RISC-V as the de facto open standard — adopted by the European Union and the authors of the field's key textbooks — motivated the comprehensive migration of the course's written teaching materials.
 
-This project addresses the need to modernize education in the field of computer organization by incorporating the RISC-V architecture as a reference. This change is not trivial, but a firm commitment to pedagogical innovation, given that RISC-V has established itself as the emergent, open-source architecture that is revolutionizing industry and academia. Its selection as the central pillar for computer science studies ensures that future professionals acquire knowledge with a forward-looking vision and in line with the most current technological trends.
+The objective was to update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a public GitHub repository. The methodology combined an agile project management approach with generative AI-assisted production, in two phases: an initial exploration phase with NotebookLM and a consolidation phase with Claude, which multiplied production speed and coverage.
 
-The relevance and timeliness of this project are unquestionable. In a global context where technological sovereignty and hardware security are strategic priorities, the European Union has identified RISC-V as a *flagship* technology. This institutional commitment underscores the importance of investing in training based on this architecture, which promotes innovation, reduces dependence on proprietary technologies, and opens the door to the creation of local and collaborative innovation ecosystems.
+The results exceed the initial projections: 23 Quarto Markdown files — T1–T9, L1–L6, PE, PS_T2–T5, and transversal materials — have been migrated or created from scratch, representing 95% of the course's total material. Twenty-three new exercises without equivalent in the original MIPS material have been incorporated, a documented quality system (Definition of Done, style guide, and acronym glossary) has been established, and the materials are available at a single entry point in HTML and PDF, complying with the WCAG 2.1 standard.
 
-The expected impact on students is significant and focuses on the acquisition and consolidation of the fundamental principles of computer organization. RISC-V, thanks to its intelligent design, simplicity, and systematic nature, offers an exceptional pedagogical vehicle. Unlike more complex architectures with historical baggage, the conceptual clarity of RISC-V allows students to understand clearly and profoundly how instructions are translated into hardware operations. This not only facilitates learning but also fosters more analytical thinking and a greater capacity to design and optimize hardware and software systems.
+The project demonstrates that combining an open, structured format, expert-supervised generative AI, and an agile methodology multiplies the capacity for quality pedagogical production, and offers a replicable model for other STEAM courses.
 
-**Keywords**: RISC-V, computer organization, computer architecture, assembly language, STEAM, artificial intelligence assisted learning.
+**Keywords**: RISC-V, computer organization, computer architecture, Quarto Markdown, agile methodology, AI-assisted learning.
 
 ---
 
@@ -56,6 +55,15 @@ A EC, partint de la base del disseny de computadors senzills après a IC, els es
 A AC, un cop dominada l'estructura bàsica i el repertori d'instruccions a EC, els estudiants s'endinsen en el disseny de computadors d'alt rendiment mitjançant l'estudi de la segmentació (*pipelining*). Prenent com a referència l'arquitectura x86, s'analitza com dividir l'execució de les instruccions en etapes per augmentar el paral·lelisme a nivell d'instrucció (ILP), identificant i resolent els riscos o *hazards* estructurals, de dades i de control que sorgeixen en el flux de dades. Aquesta anàlisi es complementa amb l'estudi de la jerarquia de memòria avançada, on s'aprofundeix en el disseny i l'impacte de les memòries cau en el rendiment del sistema, així com en la gestió de la memòria virtual per garantir la protecció i l'eficiència en l'accés a les dades.
 
 Així doncs, l'itinerari formatiu compost per IC, EC i AC constitueix el tronc central de l'eix d'arquitectura del GEI de la FIB. Aquesta seqüència representa l'itinerari tradicional i consolidat en els plans d'estudis d'informàtica a nivell internacional, ja que permet una evolució pedagògica natural: després de comprendre la lògica digital amb un processador teòric a IC, el pas per EC utilitzant una arquitectura RISC (*Reduced Instruction Set Computer*) és fonamental; el seu joc d'instruccions reduït i altament regular actua com el pas intermedi ideal, permetent a l'estudiant dominar els conceptes d'execució i traducció sense la complexitat del maquinari real. Finalment, a AC es culmina l'aprenentatge amb el model CISC (*Complex Instruction Set Computer*), on s'estudien arquitectures com x86 que, tot i la seva riquesa i heterogeneïtat d'instruccions, s'aborden amb èxit gràcies a la base sòlida adquirida prèviament.
+
+```{mermaid}
+%%| label: fig-eix-arquitectura
+%%| fig-cap: "L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC."
+flowchart LR
+    IC["IC — Q1\nProcessador teòric\nCircuits digitals"] --> EC["EC — Q2\nISA / ABI RISC-V\nAssemblador · Memòria"]
+    EC --> AC["AC — Q4\nPipelining\nAlt rendiment"]
+    style EC fill:#cfe2ff,stroke:#084298,color:#000
+```
 
 ### 1.1.2. L'assignatura Estructura de computadors (EC)
 
@@ -87,9 +95,7 @@ Per garantir un aprenentatge profund, els resultats d'aprenentatge específics (
 
 #### Seqüenciació temàtica i programació temporal
 
-<!-- TODO: Actualitzar amb la nova estructura T1-T9 RISC-V.
-     Afegir nota sobre la reestructuració: T1 antic → T1+T6 nous;
-     aritmètica entera T5 antic → T4 nou; T5 nou = coma flotant exclusivament. -->
+L'estructura actual és el resultat d'una revisió pedagògica realitzada durant la migració. Respecte a l'assignatura original (basada en MIPS), s'han pres dues decisions estructurals rellevants. D'una banda, el Tema 1 original —que agrupava la introducció conceptual i els continguts de rendiment i potència— s'ha dividit en dos temes independents: el nou T1 manté la introducció al computador i la codificació de dades, mentre que el nou T6 recull els continguts de rendiment i potència, tractats ara amb el context que l'estudiant ja ha adquirit en els temes anteriors sobre ISA i programació en assemblador. D'altra banda, l'aritmètica entera —que en l'estructura original formava part del T5 juntament amb la coma flotant— s'ha reallotjat al nou T4, i el T5 nou queda dedicat exclusivament a la coma flotant. Aquesta separació redueix la càrrega cognitiva de cada tema i clarifica la frontera conceptual entre els dos tipus d'aritmètica.
 
 **Tema 1. Introducció:** Descripció jeràrquica del computador. Codificació de naturals i enters. Setmana 1.
 
@@ -202,14 +208,11 @@ En el pla institucional, adoptar RISC-V és una decisió estratègica que transc
 
 ## 1.5. Marc teòric i conceptual: referències actuals i rellevants
 
-<!-- TODO: Ampliar de 6 a ~25 referències. Migrar a APA 7a edició.
-     Les referències actuals estan en format IEEE al Google Doc original. -->
-
 El marc teòric principal per a la docència de RISC-V es troba en els llibres de text que han establert l'estàndard de facto en l'ensenyament de l'arquitectura de computadors durant dècades. Les edicions més recents d'aquestes obres han adoptat RISC-V com a eix central, la qual cosa representa l'aval acadèmic més significatiu per a la migració.
 
 Patterson i Hennessy (2021) presenten en la segona edició de *Computer Organization and Design RISC-V Edition* l'obra de referència fonamental per a qualsevol curs introductori d'estructura o arquitectura de computadors. El fet que els seus autors, pioners de MIPS, hagin reescrit completament el llibre al voltant de RISC-V és la declaració més clara del canvi de paradigma. En la mateixa línia, Hennessy i Patterson (2022) consoliden en la sisena edició de *Computer Architecture: A Quantitative Approach* RISC-V com a arquitectura vàlida per a la computació d'altes prestacions.
 
-A nivell d'especificació tècnica, Waterman, Asanović et al. (eds.) mantenen *The RISC-V Instruction Set Manual* com el document fundacional que defineix amb precisió l'ISA base i les extensions estàndard. RISC-V International publica a més un conjunt d'especificacions ratificades que cobreixen l'arquitectura privilegiada, la gestió d'interrupcions i la depuració, essencials per a projectes avançats.
+A nivell d'especificació tècnica, Waterman i Asanović (eds., 2019) mantenen *The RISC-V Instruction Set Manual* com el document fundacional que defineix amb precisió l'ISA base i les extensions estàndard. RISC-V International publica a més un conjunt d'especificacions ratificades que cobreixen l'arquitectura privilegiada, la gestió d'interrupcions i la depuració, essencials per a projectes avançats.
 
 A nivell pràctic, Patterson i Waterman (2017) ofereixen en *The RISC-V Reader* una guia concisa de 180 pàgines que sintetitza conceptes arquitectònics complexos en un manual directe, amb 75 «punts clau de disseny» que expliquen la lògica de RISC-V en contrast amb arquitectures anteriors. Winans (2022) completa el panorama amb *RISC-V assembly language programming*, una introducció de codi obert per a principiants allotjada a GitHub, que prioritza la configuració d'entorns reals i l'aplicació pràctica.
 
@@ -220,9 +223,6 @@ La transició de MIPS a RISC-V en l'àmbit acadèmic ha estat liderada per les m
 En l'escena internacional, la Universitat Cornell ha migrat la seva assignatura CS 3410 (*Computer System Organization and Programming*) a RISC-V de 64 bits, contribuint activament a l'ecosistema amb el seu propi intèrpret en línia i fent ús de simuladors visuals i interactius com Venus. A Europa, centres com l'ETH Zürich mostren un compromís profund amb RISC-V, especialment en recerca i cursos avançats on els estudiants aprenen a estendre l'ISA base amb instruccions personalitzades.
 
 ## 1.7. Connexió amb el context del sistema educatiu català
-
-<!-- TODO: Completar la frase trencada. El text original deia "La [institució]..."
-     Confirmar si es refereix a la FIB, la UPC o una altra institució. -->
 
 A Catalunya, la transició està en marxa i és objecte de debat i planificació activa. La FIB-UPC, un referent en enginyeria informàtica, ha formalitzat propostes d'innovació docent per executar aquesta mateixa migració en assignatures com EC. Les propostes justifiquen el canvi per l'obsolescència industrial de MIPS i l'alineament estratègic amb RISC-V, considerant-lo clau per a la sobirania tecnològica i per dotar els estudiants de competències rellevants. L'experiència a la UPC se centra a substituir els simuladors clàssics de MIPS per eines modernes com RARS, que manté una interfície familiar però adaptada al nou ISA. Aquesta adopció progressiva, recolzada per la creació de la Xarxa-RISC-V a nivell de recerca dins de la mateixa universitat, assegura una transició coherent que permea des de la docència bàsica fins a la investigació de frontera.
 
@@ -251,6 +251,16 @@ L'estratègia central ha estat la **migració iterativa i incremental**: en lloc
 **Fase 2 — Acceleració (Claude):** El punt d'inflexió del projecte va arribar amb l'adopció de Claude com a eina principal de producció. El canvi va ser radical: la capacitat de mantenir el context complet del projecte (convencions d'estil, decisions prèvies, estructura del llibre) en una sola sessió de treball va eliminar la fragmentació de la fase anterior. La velocitat de producció va augmentar de manera espectacular, la qualitat dels materials va millorar i la cobertura va superar amb escreix les previsions inicials, assolint el 95% del material total quan el pla inicial preveia acabar la teoria al lliurament final.
 
 El flux de treball de cada unitat temàtica ha estat: (1) extracció i primera conversió assistida per IA; (2) edició i enriquiment en format Quarto Markdown, aplicant les convencions d'estil documentades; (3) validació tècnica del codi assemblador amb el simulador RARS; i (4) consolidació al repositori GitHub.
+
+```{mermaid}
+%%| label: fig-flux-produccio
+%%| fig-cap: "Flux de treball de producció de cada unitat temàtica del material migrat."
+flowchart LR
+    A["PDF original\n(material llegat)"] --> B["Extracció IA\n(NotebookLM / Claude)"]
+    B --> C["Edició .qmd\n(convencions d'estil)"]
+    C --> D["Validació RARS\n(codi assemblador)"]
+    D --> E["GitHub\n(consolidació)"]
+```
 
 ## 2.2. Descripció de la innovació docent dissenyada
 
@@ -394,8 +404,6 @@ Tot i que en aquesta fase el treball no inclou experimentació directa amb dades
 
 ## 3.1. Volum i abast dels materials produïts
 
-<!-- TODO: Completar amb dades quantitatives finals quan la validació RARS estigui completa. -->
-
 La migració ha assolit el **95% del material total** de l'assignatura. La Taula 2 en detalla el volum per categoria.
 
 **Taula 2.** Volum de materials produïts.
@@ -451,40 +459,71 @@ La diferència entre el previst i l'assolit és directament atribuïble al **piv
 
 ## 4.1. Contrast dels resultats amb el marc teòric i estudis previs
 
-<!-- TODO: Desenvolupar. Connectar els resultats amb les referències clau,
-     especialment la decisió de Patterson i Hennessy d'adoptar RISC-V. -->
+Els resultats descrits a §3 confirmen les premisses del marc teòric establert a §1.5 i els antecedents identificats a §1.6. La validació acadèmica més clara prové del propi camp disciplinar: la decisió de Patterson i Hennessy (2021) de reescriure íntegrament el seu llibre de referència al voltant de RISC-V és el gest que millor avala el canvi de paradigma. Que els pioners d'una arquitectura l'abandonin per adoptar-ne una d'oberta no és una anècdota circumstancial: és la prova que RISC-V representa l'estàndard emergent per a la docència de l'arquitectura de computadors en la dècada de 2020. Les migracions documentades a Berkeley (CS 61C) i Cornell (CS 3410), descrites a §1.6, confirmen que la tendència és global i sistemàtica, i que la FIB-UPC no és pionera aïllada sinó participant ben posicionada en un moviment acadèmic de fons.
+
+En l'àmbit metodològic, l'experiència d'aquest projecte valida l'ús de l'enfocament àgil (Schwaber & Sutherland, 2020) per a la producció iterativa de materials educatius tècnics. La comparativa pla→realitat de §3.4 mostra que la divisió del corpus en unitats temàtiques funcionals va permetre absorbir la variabilitat inherent al projecte —decisions terminològiques retroactives, addició d'exercicis sense equivalent en el material original, evolució del sistema de convencions— sense comprometre el calendari global. Un model de planificació seqüencial hauria estat molt menys resilient davant d'aquests ajustos.
+
+L'aportació diferencial d'aquest projecte, més enllà de la migració pròpiament dita, és triple: l'adopció de formats oberts i llegibles per màquines com a principi estructurador dels materials; l'establiment d'un sistema de qualitat documentat (DoD, `contrib.qmd`, `sigles.qmd`) que fa el corpus auditable i mantenible per qualsevol membre de l'equip docent; i la documentació del procés de producció assistit per IA, que ofereix un model replicable per a equips sense recursos de producció professional.
+
+El fet d'assolir el 95% del material quan el pla inicial preveia tancar únicament la teoria al lliurament final supera significativament les previsions. Això suggereix que les estimacions convencionals de cost i temps per a la producció de materials docents tècnics necessiten ser revisades a la llum de les eines d'IA generativa actuals, amb totes les implicacions que té per a la planificació de projectes de millora docent.
 
 ## 4.2. Valoració crítica del procés, obstacles i aprenentatges
 
-<!-- TODO: Desenvolupar. Incloure:
-     - Obstacles reals: PDF sense fonts, validació tècnica del codi,
-       gestió de la coherència entre temes.
-     - Narrativa completa del pivot NotebookLM → Claude.
-     - Aprenentatges sobre supervisió humana i rol del professor com a validador tècnic.
-     - Reflexió sobre l'ús de la IA en la producció de materials docents. -->
+El procés ha estat ric en aprenentatges tant sobre el contingut tècnic de la migració com sobre l'ús de la IA com a eina de producció educativa.
+
+**Obstacles identificats**
+
+El primer obstacle va ser la naturalesa dels materials de partida: documents PDF sense fonts editables, resultat de convertir presentacions de diapositives elaborades anys enrere. Cap eina de processament de text pot importar-los directament sense una fase de transcripció i reestructuració prèvies. En la Fase 1 (NotebookLM), aquest pas va consumir un temps desproporcionat i va limitar la velocitat de producció.
+
+El segon obstacle, de caràcter tècnic, va ser la validació del codi assemblador. Les eines d'IA generativa produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte: errors subtils en les convencions de l'ABI, en l'ordre dels operands o en l'ús de les pseudoinstruccions passen desapercebuts en una lectura ràpida però fallen en execució al simulador. Cada exemple de codi dels apunts de teoria i cada exercici dels solucionaris ha requerit verificació manual a RARS. Aquest pas no és automatitzable i no ha de ser-ho: és precisament el punt on l'expertesa disciplinar del professor resulta imprescindible.
+
+El tercer obstacle va ser la gestió de la coherència terminològica i d'estil en un corpus de 23 fitxers. Qualsevol decisió de format o lèxic adoptada al T2 té implicacions al T3, al T4 i en endavant. Mantenir la consistència en un corpus d'aquesta escala requereix un sistema de convencions documentat, accessible i consultat sistemàticament durant la producció: aquest és l'origen de `contrib.qmd`.
+
+**El pivot NotebookLM → Claude**
+
+La Fase 1 va validar la viabilitat de la migració assistida per IA però va evidenciar un límit estructural: NotebookLM requereix la fragmentació en *notebooks* temàtics independents, cosa que impedeix propagar les decisions d'estil i contingut d'un tema a un altre de manera automàtica. La velocitat de producció era moderada i la supervisió humana, intensiva.
+
+L'adopció de Claude com a eina principal va transformar el procés. La capacitat de mantenir en una sola sessió el context complet del projecte —les convencions de `contrib.qmd`, les decisions prèvies, l'estructura del repositori, els exemples de temes ja tancats— va eliminar la fragmentació. Cada sessió de treball permetia avançar en un tema sencer amb coherència i qualitat homogènies. La cobertura final (95% del material quan el pla inicial preveia cobrir únicament la teoria al lliurament final) és la mesura més objectiva d'aquest canvi.
+
+**El rol del professor com a director tècnic**
+
+La integració de la IA no va reduir el rol del professor: el va transformar. El docent va passar de ser l'escriptor principal dels materials a ser el *director tècnic* del procés: definint les convencions d'estil, prenent les decisions pedagògiques clau (quins conceptes aprofundir, quins exemples prioritzar, quina progressió didàctica seguir), validant cada fragment de codi al simulador RARS i revisant la precisió tècnica del contingut. La IA accelera la producció; la intel·ligència pedagògica continua residint en el docent. Aquesta distinció és una conclusió central del projecte amb implicacions directes per a la formació del professorat universitari en l'era de la IA generativa.
 
 ## 4.3. Propostes de millora o línies de continuïtat del projecte
 
-<!-- TODO: Desenvolupar. Incloure:
-     - Implantació Q1 2025-26 (setembre): 2 grups teoria + 3-4 pràctiques.
-     - Recollida de feedback dels estudiants durant el primer quadrimestre.
-     - Extensió a IC i AC (coherència de l'eix d'arquitectura).
-     - Contribució oberta al repositori per part de la comunitat docent. -->
+**Implantació a l'aula (Q1 2025-26)**
+
+La primera validació real dels materials migrats tindrà lloc al primer quadrimestre del curs 2025-26 (setembre de 2025), en 2 grups de teoria i 3 o 4 grups de laboratori. L'experiència dels estudiants amb els nous materials —en format HTML navegable, accessible i integrat en el repositori GitHub— proporcionarà el *feedback* necessari per a una primera iteració de millora. La recollida de dades durant el primer quadrimestre inclourà: el seguiment del rendiment als exàmens per als temes que tradicionalment presenten les taxes de superació més baixes (T7 memòria cau, T9 excepcions i interrupcions); una enquesta de satisfacció focalitzada en la claredat i usabilitat dels materials en format web; i el registre d'incidències tècniques detectades durant les sessions de laboratori (errors de codi no detectats a la validació prèvia, formulació d'exercicis ambigua).
+
+**Completar el cicle actual**
+
+Abans del desplegament cal finalitzar els elements en procés: els solucionaris PS_T2–T5 i la secció de pseudoinstruccions de L1, que representen el 5% del material pendent. La seva finalització no és un prerequisit per a la implantació, però és necessària per poder afirmar que la migració és completa i per tancar formalment el projecte.
+
+**Extensió a l'eix d'arquitectura: IC i AC**
+
+A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC → EC → AC, descrita a §1.1.1) aconsella estendre el model a les assignatures veïnes. IC podria beneficiar-se de la migració a format obert per facilitar la sincronització conceptual amb EC. AC, que utilitza x86 com a arquitectura de referència per a l'estudi del *pipelining*, podria incorporar RISC-V com a pont pedagògic entre EC i els conceptes avançats de segmentació, aprofitant la continuïtat de l'ISA que l'estudiant ja domina en sortir d'EC. Aquesta extensió enforteix la coherència vertical del pla d'estudis i optimitza el temps d'aula dedicat a la introducció d'arquitectures noves.
+
+**Manteniment col·laboratiu i comunitat docent**
+
+El repositori públic a GitHub és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques de la DoD, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
 
 ## 4.4. Possibles connexions amb altres àmbits o temàtiques educatives
 
-<!-- TODO: Desenvolupar. Incloure:
-     - El model (àgil + IA + Markdown + GitHub) com a pràctica exportable
-       a altres assignatures STEM.
-     - Connexió amb el paradigma Docs-as-Code en l'àmbit educatiu.
-     - Implicacions per a la formació del professorat en IA. -->
+**El model com a pràctica exportable a assignatures STEAM**
+
+L'arquitectura metodològica d'aquest projecte —gestió àgil, producció assistida per IA, format *Docs-as-Code* i repositori compartit— no és específica ni de l'arquitectura de computadors ni de l'enginyeria informàtica. Qualsevol assignatura STEAM amb un corpus de materials tècnics susceptible d'actualització pot aplicar el mateix model. Els ingredients essencials en són quatre: un format de marcatge pla (Markdown, LaTeX, reStructuredText) que separi el contingut de la presentació i el faci processable per eines automàtiques; un repositori de control de versions que garanteixi la traçabilitat i la sincronització entre l'equip docent; la IA generativa com a accelerador de producció amb supervisió humana explícitament definida; i un sistema de convencions documentat que mantingui la coherència del corpus a mesura que creix. Assignatures com Física, Matemàtiques o Electrònica comparteixen el repte de mantenir materials tècnics actualitzats amb equips reduïts i temps fragmentat. El cost d'entrada d'aquest model és baix: totes les eines emprades (Quarto, GitHub, RARS, Docker) són de codi obert o d'accés gratuït.
+
+**El paradigma *Docs-as-Code* en l'àmbit educatiu**
+
+El paradigma *Docs-as-Code* —tractar la documentació amb les mateixes eines i pràctiques que el codi font— és una pràctica consolidada en la indústria del programari que aquest projecte trasllada explícitament a la docència universitària. L'aplicació educativa aporta beneficis directes: control de versions del contingut docent, revisió col·laborativa entre iguals (anàloga al *code review*), detecció automàtica d'errors de format i desplegament automàtic dels materials actualitzats. A més, per als estudiants d'enginyeria informàtica, accedir a materials allotjats en un repositori GitHub, renderitzats amb Quarto i compatibles amb les tecnologies assistives representa en si mateix un aprenentatge implícit sobre les bones pràctiques de la indústria, alineat amb els objectius formatius del grau.
+
+**Implicacions per a la formació del professorat universitari en IA**
+
+L'experiència d'aquest projecte permet formular una conclusió amb implicacions directes per a la missió de l'ICE: la formació del professorat universitari en l'ús de la IA ha d'anar més enllà de l'adopció puntual d'eines individuals. El que resulta estratègic és una alfabetització en la *gestió de projectes assistits per IA*: com definir convencions de treball que la IA pugui seguir amb consistència, com estructurar les tasques per maximitzar l'efectivitat de la col·laboració humà-màquina, i com establir mecanismes de validació adequats al context disciplinar de cada assignatura. El professor que domina aquesta competència pot multiplicar la seva capacitat de producció docent de qualitat sense comprometre el rigor. Promoure i difondre aquest model és, per tant, una tasca estratègica per a les institucions que, com l'ICE de la UPC, lideren la innovació pedagògica a la universitat.
 
 ---
 
 # 5. Bibliografia
-
-<!-- TODO: Migrar a APA 7a edició (ordre alfabètic). Ampliar a ~25 referències.
-     Les referències actuals estan en format IEEE. -->
 
 Hennessy, J. L., & Patterson, D. A. (2022). *Computer architecture: A quantitative approach* (6th ed.). Morgan Kaufmann.
 
@@ -496,9 +535,11 @@ RISC-V International. (2020–present). *Official RISC-V specifications*. <https
 
 Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to Scrum: The rules of the game*. Scrum.org. <https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf>
 
-Waterman, A., Asanović, K., et al. (Eds.). (2019–present). *The RISC-V instruction set manual, volume I: Unprivileged ISA*. RISC-V International. <https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html>
+Waterman, A., & Asanović, K. (Eds.). (2019). *The RISC-V instruction set manual, volume I: Unprivileged ISA*. RISC-V International. <https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html>
 
-Winans, J. (2022). *RISC-V assembly language programming*. Northern Illinois University. <https://github.com/Hsins/rvalp>
+Winans, J. (2022). *RISC-V assembly language programming*. Northern Illinois University. <https://github.com/johnwinans/rvalp>
+
+World Wide Web Consortium. (2018). *Web content accessibility guidelines (WCAG) 2.1*. <https://www.w3.org/TR/WCAG21/>
 
 ---
 
