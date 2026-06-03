@@ -23,6 +23,7 @@ format:
     code-overflow: wrap
     theme: cosmo
   pdf:
+    toc: true
     documentclass: scrartcl
     classoption: oneside
     papersize: a4
