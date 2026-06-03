@@ -1,0 +1,121 @@
+Teoria
+
+1. Tema 1: Introducció
+1.1. La gestió de la complexitat: Capes i interfícies
+1.1.2. Interfícies: Els contractes del sistema
+1.2. El cicle de vida del programa: Generació vs. Execució
+1.3. Arquitectura física: El model de Von Neumann
+1.4. Codificació de nombres naturals en base 2
+1.5 Codificació de nombres enters en base 2
+
+2. Tema 2: Instruccions i tipus de dades bàsics
+2.1. Introducció a l’ISA de RISC-V
+2.2. Format de les instruccions RV32I
+2.3. Estructura d’un programa en assemblador
+2.4. Variables escalars
+2.5. La memòria
+2.6. Operands i modes d’adreçament
+2.7. Punters
+2.8. Vectors
+2.9. Caràcters i cadenes de caràcters
+
+3. Tema 3: Traducció de programes 
+3.1. Desplaçaments de bits
+3.2. Operacions lògiques bit a bit
+3.3. Comparacions i operacions booleanes
+3.4. Salts
+3.5. Revisió dels modes d’adreçament
+3.6. Sentències alternatives: if-then-else i switch
+3.7. Sentències iteratives: while, for i do-while
+3.8. Estructura de la memòria
+3.9. Subrutines
+3.10. Compilació, assemblatge, enllaçat i càrrega
+
+4. Tema 4: Aritmètica entera i matrius
+4.1. Suma, resta i canvi de signe
+4.2. Sobreeiximent en suma i resta d’enters
+4.3. Multiplicació entera
+4.4. Matrius
+4.5. Optimitzacions de bucle
+4.6. Divisió entera
+
+5. Tema 5: Coma flotant
+5.1. Representació en coma flotant
+5.2. Operacions en coma flotant
+5.3. Coma flotant a RISC-V (RV32F)
+
+6. Tema 6: Rendiment i potència
+6.1. Rendiment
+6.3. Potència
+
+7. Tema 7: Memòria cau
+7.1. La jerarquia de memòria
+7.2. La memòria cau
+7.3. Política d’emplaçament
+7.4. Política de reemplaçament
+7.5. Política d’escriptura
+7.6. Rendiment
+7.7. Tipologia de les fallades
+7.8. Memòries cau multinivell
+
+8. Tema 8: Memòria virtual
+8.1. Introducció
+8.2. Paginació
+8.3. La taula de pàgines
+8.4. Fallada de pàgina
+8.5. Traducció ràpida: el TLB
+
+Tema 9: Excepcions i interrupcions
+9.1. Excepcions i interrupcions
+9.2. Crides al sistema
+9.3. Entrada/Sortida
+
+
+Laboratori
+
+Sessió 1: Introducció al simulador RARS
+Sessió 2: Assemblador RISC-V i tipus bàsics de dades
+Sessió 3: Traducció de programes
+Sessió 4: Matrius i subrutines
+Sessió 5: Coma flotant i compilació separada
+Sessió 6: Memòria cau
+
+Laboratori MIPS:
+
+Sessió 0: Introducció
+Sessió 1: Assemblador MIPS i tipus bàsics de dades
+Sessió 2: Traducció de Programes
+Sessió 3: Tipus de dades estructurats
+Sessió 4: Codificació en coma flotant
+Sessió 5: Memòria cau
+
+
+| Tema | Exercici nou | Cobertura |
+|:---|:---|:---|
+| T2 | `exr-p3-memoria-endianness` | *Little-endian*, ordre de bytes |
+| T2 | `exr-p3-vectors-bucle` | Bucles sobre vectors (init, suma, còpia inversa) |
+| T2 | `exr-p3-vectors-cerca` | Cerca en vector, retorn −1 |
+| T2 | `exr-p3-vectors-punter-aritm` | Aritmètica de punters sobre `short` |
+| T2 | `exr-p3-strings-longitud` | Funció `longitud` amb `'\0'` |
+| T2 | `exr-p3-strings-copia` | Còpia de string |
+| T3 | `exr-p4-bucles-switch` | `switch` amb salts encadenats i *jump table* |
+| T3 | `exr-p4-compilacio-relocacio` | Compilació separada, símbols externs, `auipc` |
+| T4 | `exr-p5-opt-condicio-final` | Optimització #2: condició al final |
+| T4 | `exr-p5-opt-variable-induccio` | Optimització #3: eliminació variable d'inducció |
+| T5 | `exr-p6-ops-rv32f-memoria` | `flw`/`fsw`, `flt.s` |
+| T5 | `exr-p6-ops-rv32f-conversio` | `fcvt.w.s`, `fcvt.s.w`, truncament vs. arrodoniment |
+| T6 | `exr-p2-amdahl-basic` | Amdahl bàsic, límit teòric |
+| T6 | `exr-p2-amdahl-multicomponent` | Amdahl amb tres components simultanis |
+| T6 | `exr-p2-amdahl-limit` | Amdahl invers: quin % de CF cal per a speedup 10× |
+| T7 | `exr-p7-fallades-tipologia` | Cold-start, conflicte, capacitat amb seqüències concretes |
+| T7 | `exr-p7-fallades-programa` | Conflictes entre dos vectors, efecte de l'adreça base |
+| T8 | `exr-p8-mv-multinivell` | Taula de pàgines de dos nivells, mida, avantatge |
+| T8 | `exr-p8-mv-proteccio` | Bit de protecció W, excepcions de protecció |
+| T8 | `exr-p8-mv-tlb-cau` | Integració TLB+cau, VIPT, condició antialiàsing |
+| T9 | `exr-p9-exc-mepc-mtvec` | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
+| T9 | `exr-p9-exc-tlb-miss` | Fallada de TLB com a excepció, gestió RSE |
+| T9 | `exr-p9-exc-interrupcions-io` | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
+: Exercicis afegits
+
+
+
