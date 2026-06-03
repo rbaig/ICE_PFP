@@ -16,7 +16,7 @@ lang: ca
 
 L'assignatura Estructura de computadors (EC) del Grau en Enginyeria Informàtica de la FIB-UPC emprava MIPS com a arquitectura de referència des dels seus orígens. La pèrdua de rellevància industrial d'aquesta ISA i la consolidació de RISC-V com a estàndard obert de facto —adoptat per la Unió Europea i pels autors dels principals llibres de text del camp— han motivat la migració integral dels materials docents escrits de l'assignatura.
 
-L'objectiu ha estat actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori públic de GitHub. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa, en dues fases: una primera d'exploració amb NotebookLM i una de consolidació amb Claude, que ha multiplicat la velocitat i la cobertura de la producció.
+L'objectiu ha estat actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori públic de GitHub. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa mitjançant Claude, que ha multiplicat la velocitat i la cobertura de la producció.
 
 Els resultats superen les previsions inicials: s'han migrat o creat íntegrament 23 fitxers Quarto Markdown —T1–T9, L1–L6, PE, PS_T2–T5 i materials transversals—, que representen el 95% del material total. S'han incorporat 23 exercicis nous sense equivalent en el material MIPS original, s'ha establert un sistema de qualitat documentat (*Definition of Done*, guia de convencions i glossari de sigles), i els materials estan disponibles en un punt d'entrada únic en HTML i PDF, complint l'estàndard WCAG 2.1.
 
@@ -30,7 +30,7 @@ El projecte demostra que la combinació d'un format obert i estructurat, la supe
 
 The Computer Organization (EC) course in the Bachelor's Degree in Computer Science at FIB-UPC used MIPS as its reference architecture from its inception. The declining industrial relevance of this ISA and the consolidation of RISC-V as the de facto open standard — adopted by the European Union and the authors of the field's key textbooks — motivated the comprehensive migration of the course's written teaching materials.
 
-The objective was to update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a public GitHub repository. The methodology combined an agile project management approach with generative AI-assisted production, in two phases: an initial exploration phase with NotebookLM and a consolidation phase with Claude, which multiplied production speed and coverage.
+The objective was to update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a public GitHub repository. The methodology combined an agile project management approach with generative AI-assisted production via Claude, which multiplied production speed and coverage.
 
 The results exceed the initial projections: 23 Quarto Markdown files — T1–T9, L1–L6, PE, PS_T2–T5, and transversal materials — have been migrated or created from scratch, representing 95% of the course's total material. Twenty-three new exercises without equivalent in the original MIPS material have been incorporated, a documented quality system (Definition of Done, style guide, and acronym glossary) has been established, and the materials are available at a single entry point in HTML and PDF, complying with the WCAG 2.1 standard.
 
@@ -244,22 +244,32 @@ Per assolir aquest objectiu general, es defineixen els objectius específics (OE
 
 L'execució del projecte s'ha basat en un enfocament de gestió àgil de projectes (*agile*), adaptant elements del marc Scrum (Schwaber & Sutherland, 2020) a la creació de continguts educatius. Aquesta tria respon a la necessitat de gestionar una migració complexa de materials llegats (*legacy*) en un entorn de col·laboració docent on el temps disponible és fragmentat i variable.
 
-L'estratègia central ha estat la **migració iterativa i incremental**: en lloc d'abordar la totalitat del temari com un bloc monolític, s'ha treballat per unitats temàtiques funcionals, cadascuna seguint un cicle de producció que integra la Intel·ligència Artificial Generativa com a eina d'acceleració. El projecte ha passat per dues fases metodològiques diferenciades:
+L'estratègia central ha estat la **migració iterativa i incremental**: en lloc d'abordar la totalitat del temari com un bloc monolític, s'ha treballat per unitats temàtiques funcionals, cadascuna seguint un cicle de producció que integra la IA generativa com a eina d'acceleració.
 
-**Fase 1 — Exploració (NotebookLM):** En una primera fase, es va utilitzar NotebookLM com a eina d'extracció de continguts dels PDF originals i de primera traducció semàntica del codi assemblador de MIPS a RISC-V. Aquesta fase va permetre validar la viabilitat de l'enfocament assistit per IA i identificar les seves limitacions: la necessitat de múltiples *notebooks* temàtics per mantenir la coherència, i una velocitat de producció moderada que requeria una supervisió humana intensiva.
+La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assoliment dels resultats. Inicialment es va explorar NotebookLM —disponible al Google Workspace de la UPC— per a l'extracció de continguts dels PDF originals, la qual cosa va permetre validar la viabilitat de l'enfocament. Tot i que la seva orientació cap a la consulta de documents el feien útil per a una primera aproximació, el punt d'inflexió real del projecte va arribar amb l'adopció de Claude com a eina principal. La capacitat de mantenir el context complet del projecte —convencions d'estil, decisions prèvies, estructura del llibre— en una sola sessió de treball va eliminar la fragmentació i va permetre una producció de molt més alta qualitat. La velocitat de producció va augmentar de manera espectacular i la cobertura va superar amb escreix les previsions inicials, assolint el 95% del material total quan el pla inicial preveia acabar únicament la teoria al lliurament final.
 
-**Fase 2 — Acceleració (Claude):** El punt d'inflexió del projecte va arribar amb l'adopció de Claude com a eina principal de producció. El canvi va ser radical: la capacitat de mantenir el context complet del projecte (convencions d'estil, decisions prèvies, estructura del llibre) en una sola sessió de treball va eliminar la fragmentació de la fase anterior. La velocitat de producció va augmentar de manera espectacular, la qualitat dels materials va millorar i la cobertura va superar amb escreix les previsions inicials, assolint el 95% del material total quan el pla inicial preveia acabar la teoria al lliurament final.
+Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (`contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
 
-El flux de treball de cada unitat temàtica ha estat: (1) extracció i primera conversió assistida per IA; (2) edició i enriquiment en format Quarto Markdown, aplicant les convencions d'estil documentades; (3) validació tècnica del codi assemblador amb el simulador RARS; i (4) consolidació al repositori GitHub.
+El cicle de producció de cada unitat temàtica ha constat de les etapes següents:
+
+1. **Extracció i conversió assistida per IA**, secció a secció, a partir del PDF original.
+2. **Revisió tècnica iterativa** del document en conjunt: verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS, i revisió de la coherència tècnica global del tema.
+3. **Revisió lingüística iterativa**: harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`.
+4. **Actualització de la documentació transversal**: incorporació de les sigles noves al glossari (`sigles.qmd`) i actualització d'altres materials afectats.
+5. **Refinament del coneixement acumulat**: actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en els temes següents.
 
 ```{mermaid}
 %%| label: fig-flux-produccio
-%%| fig-cap: "Flux de treball de producció de cada unitat temàtica del material migrat."
+%%| fig-cap: "Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done*. L'etapa 5 capitalitza l'aprenentatge per als temes següents."
 flowchart LR
-    A["PDF original\n(material llegat)"] --> B["Extracció IA\n(NotebookLM / Claude)"]
-    B --> C["Edició .qmd\n(convencions d'estil)"]
-    C --> D["Validació RARS\n(codi assemblador)"]
-    D --> E["GitHub\n(consolidació)"]
+    A["PDF original\n(material llegat)"] --> B["1. Extracció i conversió\n(Claude, secció a secció)"]
+    B --> C["2. Revisió tècnica\n(RARS + coherència)"]
+    C --> D["3. Revisió lingüística\n(lèxic i estil)"]
+    D --> E["4. Actualització\ntransversal\n(sigles, etc.)"]
+    E --> F["5. Refinament\nconeixement acumulat\n(contrib, CLAUDE.md)"]
+    F --> G["GitHub\n(consolidació)"]
+    C -.->|iteració| B
+    D -.->|iteració| C
 ```
 
 ## 2.2. Descripció de la innovació docent dissenyada
