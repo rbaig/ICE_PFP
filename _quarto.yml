@@ -1,0 +1,42 @@
+project:
+  type: default
+  output-dir: _output
+  render:
+    - index.qmd
+
+lang: ca
+
+crossref:
+  fig-prefix: "Figura"
+  fig-title: "Figura"
+  tbl-prefix: "Taula"
+  tbl-title: "Taula"
+
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    highlight-style: a11y
+    code-line-numbers: true
+    code-copy: true
+    code-overflow: wrap
+    theme: cosmo
+  pdf:
+    documentclass: scrartcl
+    classoption: oneside
+    papersize: a4
+    geometry:
+      - top=1.5cm
+      - bottom=1cm
+      - left=2cm
+      - right=2cm
+      - includeheadfoot
+      - footskip=1cm
+    fontsize: 11pt
+    number-sections: true
+    keep-tex: false
+    colorlinks: true
+    urlcolor: blue
+    linkcolor: blue
+    citecolor: blue

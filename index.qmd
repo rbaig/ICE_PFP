@@ -5,13 +5,6 @@ date: "18 de juny de 2026"
 lang: ca
 ---
 
-<!-- ============================================================
-     NOTA PER A CLAUDE
-     Aquest fitxer és la memòria del PFP. Vegeu CLAUDE.md per al
-     context complet del projecte i l'estat actual de la feina.
-     Els comentaris <!-- TODO: ... --> marquen les seccions pendents.
-     ============================================================ -->
-
 # Resum
 
 L'assignatura Estructura de computadors (EC) del Grau en Enginyeria Informàtica de la FIB-UPC emprava MIPS com a arquitectura de referència des dels seus orígens. La pèrdua de rellevància industrial d'aquesta ISA i la consolidació de RISC-V com a estàndard obert de facto —adoptat per la Unió Europea i pels autors dels principals llibres de text del camp— han motivat la migració integral dels materials docents escrits de l'assignatura.
@@ -56,14 +49,9 @@ A AC, un cop dominada l'estructura bàsica i el repertori d'instruccions a EC, e
 
 Així doncs, l'itinerari formatiu compost per IC, EC i AC constitueix el tronc central de l'eix d'arquitectura del GEI de la FIB. Aquesta seqüència representa l'itinerari tradicional i consolidat en els plans d'estudis d'informàtica a nivell internacional, ja que permet una evolució pedagògica natural: després de comprendre la lògica digital amb un processador teòric a IC, el pas per EC utilitzant una arquitectura RISC (*Reduced Instruction Set Computer*) és fonamental; el seu joc d'instruccions reduït i altament regular actua com el pas intermedi ideal, permetent a l'estudiant dominar els conceptes d'execució i traducció sense la complexitat del maquinari real. Finalment, a AC es culmina l'aprenentatge amb el model CISC (*Complex Instruction Set Computer*), on s'estudien arquitectures com x86 que, tot i la seva riquesa i heterogeneïtat d'instruccions, s'aborden amb èxit gràcies a la base sòlida adquirida prèviament.
 
-```{mermaid}
-%%| label: fig-eix-arquitectura
-%%| fig-cap: "L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC."
-flowchart LR
-    IC["IC — Q1\nProcessador teòric\nCircuits digitals"] --> EC["EC — Q2\nISA / ABI RISC-V\nAssemblador · Memòria"]
-    EC --> AC["AC — Q4\nPipelining\nAlt rendiment"]
-    style EC fill:#cfe2ff,stroke:#084298,color:#000
-```
+
+![L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC.](figures/fig_eix_arquitectura.svg){#fig-eix-arquitectura}
+
 
 ### 1.1.2. L'assignatura Estructura de computadors (EC)
 
@@ -258,19 +246,9 @@ El cicle de producció de cada unitat temàtica ha constat de les etapes següen
 4. **Actualització de la documentació transversal**: incorporació de les sigles noves al glossari (`sigles.qmd`) i actualització d'altres materials afectats.
 5. **Refinament del coneixement acumulat**: actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en els temes següents.
 
-```{mermaid}
-%%| label: fig-flux-produccio
-%%| fig-cap: "Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done*. L'etapa 5 capitalitza l'aprenentatge per als temes següents."
-flowchart LR
-    A["PDF original\n(material llegat)"] --> B["1. Extracció i conversió\n(Claude, secció a secció)"]
-    B --> C["2. Revisió tècnica\n(RARS + coherència)"]
-    C --> D["3. Revisió lingüística\n(lèxic i estil)"]
-    D --> E["4. Actualització\ntransversal\n(sigles, etc.)"]
-    E --> F["5. Refinament\nconeixement acumulat\n(contrib, CLAUDE.md)"]
-    F --> G["GitHub\n(consolidació)"]
-    C -.->|iteració| B
-    D -.->|iteració| C
-```
+
+![Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done*. L'etapa 5 capitalitza l'aprenentatge per als temes següents.](figures/fig_flux_produccio.svg){#fig-flux-produccio}
+
 
 ## 2.2. Descripció de la innovació docent dissenyada
 
