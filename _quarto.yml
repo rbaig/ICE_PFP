@@ -40,3 +40,7 @@ format:
     urlcolor: blue
     linkcolor: blue
     citecolor: blue
+    include-in-header:
+      - portada.tex
+    include-before-body:
+      - before-body.tex
