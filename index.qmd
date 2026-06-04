@@ -330,7 +330,7 @@ Les taules següents mostren la correspondència completa entre els materials or
 | T9.2. Crides al sistema | T8 §6. Crides al sistema | Reescrit per a `ecall` RISC-V |
 | T9.3. Entrada/Sortida | T8 §7. Interrupcions | Ampliat |
 
-**Taula 1b. Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. Més enllà de l'eina, tots els enunciats han estat reescrits per a RISC-V i la sisena sessió és completament nova: la memòria cau no tenia sessió de laboratori en el material original.
+**Taula 1b. Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. A nivell de continguts la reorganització dels continguts de teoria ha comportat el canvi de sessió d'algunes parts de les pràctiques de MIPs i s'ha aprofitat el fet de treballar amb dos arxius de C simultània ment a la sessió de coma flotant (Sessió 6) per tractar la compilació separada.
 
 | Sessió RISC-V (nova) | Equivalent MIPS (original) | Observacions |
 | :--- | :--- | :--- |
