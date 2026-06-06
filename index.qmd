@@ -2,13 +2,17 @@
 
 L'assignatura Estructura de computadors (EC) del Grau en Enginyeria Informàtica de la FIB-UPC emprava MIPS com a arquitectura de referència des dels seus orígens. La pèrdua de rellevància industrial d'aquesta ISA i la consolidació de RISC-V com a estàndard obert de facto —adoptat per la Unió Europea i pels autors dels principals llibres de text del camp— han motivat la migració integral dels materials docents escrits de l'assignatura.
 
-L'objectiu ha estat actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori públic de GitHub. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa mitjançant Claude, que ha multiplicat la velocitat i la cobertura de la producció.
+L'objectiu ha estat revisar i actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori de GitLab de la UPC. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa mitjançant Claude, que ha multiplicat la velocitat i la cobertura de la producció.
 
-Els resultats superen les previsions inicials: s'han migrat o creat íntegrament 23 fitxers Quarto Markdown —T1–T9, L1–L6, PE, PS_T2–T5 i materials transversals—, que representen el 95% del material total. S'han incorporat 23 exercicis nous sense equivalent en el material MIPS original, s'ha establert un sistema de qualitat documentat (*Definition of Done*, guia de convencions i glossari de sigles), i els materials estan disponibles en un punt d'entrada únic en HTML i PDF, complint l'estàndard WCAG 2.1.
+Els resultats superen les previsions inicials: s'ha completat el 100% del corpus de l'assignatura —teoria, problemes, solucionaris i laboratoris— i la Revisió Externa ha començat, amb protocol, calendari i grups de treball establerts. Un element diferencial del projecte és l'adopció sistemàtica del concepte de *Definition of Done* (DoD), adaptat del marc Scrum, per garantir la qualitat de cada fase: criteris binaris verificables per a la producció de cada unitat temàtica (F2) i per a la revisió col·legiada (F4), amb una granularitat d'agrupament diferent en cada cas. Aquesta ortogonalitat en la definició de les unitats de treball permet un escrutini minuciós i una uniformització de criteris que fan el procés replicable i auditable.
 
 El projecte demostra que la combinació d'un format obert i estructurat, la supervisió experta de la IA generativa i una metodologia àgil multiplica la capacitat de producció docent de qualitat, i ofereix un model exportable a altres assignatures STEAM.
 
 **Paraules clau**: RISC-V, estructura de computadors, arquitectura de computadors, Quarto Markdown, metodologia àgil, aprenentatge assistit per intel·ligència artificial.
+
+**Lloc web**: [https://loi.pc.ac.upc.edu/ec](https://loi.pc.ac.upc.edu/ec)
+
+**Repositori de materials**: [https://gitlab.upc.edu/ec](https://gitlab.upc.edu/ec) (Cal tenir l'[UPClink](https://serveistic.upc.edu/ca/upclink) actiu per accedir-hi)
 
 \newpage
 
@@ -17,24 +21,28 @@ El projecte demostra que la combinació d'un format obert i estructurat, la supe
 
 The Computer Organization (EC) course in the Bachelor's Degree in Computer Science at FIB-UPC used MIPS as its reference architecture from its inception. The declining industrial relevance of this ISA and the consolidation of RISC-V as the de facto open standard — adopted by the European Union and the authors of the field's key textbooks — motivated the comprehensive migration of the course's written teaching materials.
 
-The objective was to update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a public GitHub repository. The methodology combined an agile project management approach with generative AI-assisted production via Claude, which multiplied production speed and coverage.
+The objective was to revise and update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a UPC GitLab repository. The methodology combined an agile project management approach with generative AI-assisted production via Claude, which multiplied production speed and coverage.
 
-The results exceed the initial projections: 23 Quarto Markdown files — T1–T9, L1–L6, PE, PS_T2–T5, and transversal materials — have been migrated or created from scratch, representing 95% of the course's total material. Twenty-three new exercises without equivalent in the original MIPS material have been incorporated, a documented quality system (Definition of Done, style guide, and acronym glossary) has been established, and the materials are available at a single entry point in HTML and PDF, complying with the WCAG 2.1 standard.
+The results exceed the initial projections: 100% of the course corpus — lecture notes, problem sets, solution manuals, and laboratory sessions — has been completed, and external peer review is underway, with protocol, schedule, and working groups in place. A key differentiating element of the project is the systematic adoption of the *Definition of Done* (DoD) concept, adapted from the Scrum framework, to ensure quality at each phase: verifiable binary criteria for the production of each thematic unit (F2) and for collegial review (F4), with different grouping granularity in each case. This orthogonality in the definition of work units enables thorough scrutiny and consistent quality standards, making the process both replicable and auditable.
 
 The project demonstrates that combining an open, structured format, expert-supervised generative AI, and an agile methodology multiplies the capacity for quality pedagogical production, and offers a replicable model for other STEAM courses.
 
 **Keywords**: RISC-V, computer organization, computer architecture, Quarto Markdown, agile methodology, AI-assisted learning.
 
+**Website**: [https://loi.pc.ac.upc.edu/ec](https://loi.pc.ac.upc.edu/ec)
+
+**Repository**: [https://gitlab.upc.edu/ec](https://gitlab.upc.edu/ec) (requires [UPClink](https://serveistic.upc.edu/ca/upclink) VPN)
+
 \newpage
 
 
-# Introducció
+# Introducció {#sec-introduccio}
 
 ## Context
 
-### L'eix d'arquitectura de computadors en el pla d'estudis FIB-GEI
+### L'eix d'arquitectura de computadors en el pla d'estudis FIB-GEI {#sec-context-eix-arquitectura}
 
-L'assignatura d'Estructura de computadors (EC), de la qual soc coordinador des del segon quadrimestre del curs 2024-25, és una assignatura del segon quadrimestre de la fase inicial (FI) del Grau en enginyeria informàtica (GEI) de la Facultat d'informàtica de Barcelona (FIB) de la Universitat Politècnica de Catalunya (UPC). Pel que fa a l'itinerari de l'estudiantat, tot i que el pla d'estudis del GEI no estableix requisits per a les assignatures de la FI, un gruix significatiu de continguts d'EC tenen els fonaments en continguts de l'assignatura de primer quadrimestre Introducció als computadors (IC). Superada la fase inicial, EC és requisit de Interfícies de Computadors (CI) i Sistemes operatius (SO), totes dues de tercer quadrimestre, i Arquitectura de computadors (AC), de quart quadrimestre.
+L'assignatura d'Estructura de computadors (EC), de la qual soc coordinador des del segon quadrimestre (Q2) del curs 2024-25, és una assignatura del segon quadrimestre de la fase inicial (FI) del Grau en enginyeria informàtica (GEI) de la Facultat d'informàtica de Barcelona (FIB) de la Universitat Politècnica de Catalunya (UPC). Pel que fa a l'itinerari de l'estudiantat, tot i que el pla d'estudis del GEI no estableix requisits per a les assignatures de la FI, un gruix significatiu de continguts d'EC tenen els fonaments en continguts de l'assignatura de primer quadrimestre Introducció als computadors (IC). Superada la fase inicial, EC és requisit de Interfícies de Computadors (CI) i Sistemes operatius (SO), totes dues de tercer quadrimestre, i Arquitectura de computadors (AC), de quart quadrimestre.
 
 Arquitectònicament, a IC els estudiants, sense necessitat de cap coneixement previ de circuits digitals, arriben a comprendre en detall el disseny d'un computador (teòric) senzill format per un processador que consta d'unes 3.000 portes lògiques i uns 100 biestables, una memòria principal i un subsistema d'entrada/sortida amb un teclat i una impressora. S'estudien les bases dels circuits digitals combinacionals i seqüencials, es construeixen processadors formats per una unitat de procés i una unitat de control ambdues específiques per a la resolució d'un sol problema i s'arriba al processador de l'ordinador fent generals la unitat de procés i la de control, creant un llenguatge màquina de 25 instruccions que serveix per a executar qualsevol programa que poguéssim escriure en un llenguatge d'alt nivell.
 
@@ -42,7 +50,7 @@ A EC, partint de la base del disseny de computadors senzills après a IC, els es
 
 A AC, un cop dominada l'estructura bàsica i el repertori d'instruccions a EC, els estudiants s'endinsen en el disseny de computadors d'alt rendiment mitjançant l'estudi de la segmentació (*pipelining*). Prenent com a referència l'arquitectura x86, s'analitza com dividir l'execució de les instruccions en etapes per augmentar el paral·lelisme a nivell d'instrucció (ILP), identificant i resolent els riscos o *hazards* estructurals, de dades i de control que sorgeixen en el flux de dades. Aquesta anàlisi es complementa amb l'estudi de la jerarquia de memòria avançada, on s'aprofundeix en el disseny i l'impacte de les memòries cau en el rendiment del sistema, així com en la gestió de la memòria virtual per garantir la protecció i l'eficiència en l'accés a les dades.
 
-Així doncs, l'itinerari formatiu compost per IC, EC i AC constitueix el tronc central de l'eix d'arquitectura del GEI de la FIB. Aquesta seqüència representa l'itinerari tradicional i consolidat en els plans d'estudis d'informàtica a nivell internacional, ja que permet una evolució pedagògica natural: després de comprendre la lògica digital amb un processador teòric a IC, el pas per EC utilitzant una arquitectura RISC (*Reduced Instruction Set Computer*) és fonamental; el seu joc d'instruccions reduït i altament regular actua com el pas intermedi ideal, permetent a l'estudiant dominar els conceptes d'execució i traducció sense la complexitat del maquinari real. Finalment, a AC es culmina l'aprenentatge amb el model CISC (*Complex Instruction Set Computer*), on s'estudien arquitectures com x86 que, tot i la seva riquesa i heterogeneïtat d'instruccions, s'aborden amb èxit gràcies a la base sòlida adquirida prèviament.
+Així doncs, l'itinerari formatiu compost per IC, EC i AC, totes elles impartides pel Departament d'arquitectura de computadors (DAC), constitueix el tronc central de l'eix d'arquitectura del GEI de la FIB (@fig-eix-arquitectura). Aquesta seqüència representa l'itinerari tradicional i consolidat en els plans d'estudis d'informàtica a nivell internacional, ja que permet una evolució pedagògica natural: després de comprendre la lògica digital amb un processador teòric a IC, el pas per EC utilitzant una arquitectura RISC (*Reduced Instruction Set Computer*) és fonamental; el seu joc d'instruccions reduït i altament regular actua com el pas intermedi ideal, permetent a l'estudiant dominar els conceptes d'execució i traducció sense la complexitat del maquinari real. Finalment, a AC es culmina l'aprenentatge amb el model CISC (*Complex Instruction Set Computer*), on s'estudien arquitectures com x86 que, tot i la seva riquesa i heterogeneïtat d'instruccions, s'aborden amb èxit gràcies a la base sòlida adquirida prèviament.
 
 
 ![L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC.](figures/fig_eix_arquitectura.svg){#fig-eix-arquitectura width="70%"}
@@ -56,7 +64,7 @@ L'estudiant ha de ser capaç de comprendre i analitzar la frontera entre el prog
 
 #### Resultats d'aprenentatge específics
 
-Per garantir un aprenentatge profund, els resultats d'aprenentatge específics (RA) s'estructuren segons la taxonomia de Bloom, anant des del coneixement fins a l'anàlisi i l'avaluació:
+Per garantir un aprenentatge profund, els resultats d'aprenentatge específics (RA) s'estructuren segons la taxonomia de Bloom en la seva versió revisada (Anderson & Krathwohl, 2001; Bloom et al., 1956), progressant des dels nivells de recordar i comprendre fins als d'analitzar i avaluar:
 
 - **RA1. Anàlisi del rendiment i l'arquitectura**
   - Identificar els diferents nivells d'abstracció d'un computador i la seva descripció jeràrquica.
@@ -71,60 +79,65 @@ Per garantir un aprenentatge profund, els resultats d'aprenentatge específics (
 
 - **RA4. Optimització de la jerarquia de memòria**
   - Analitzar el comportament de la memòria cau i la memòria virtual per optimitzar el rendiment del sistema basant-se en els principis de localitat espacial i temporal.
-  - Dissenyar esquemes bàsics de mapeig i associativitat, i calcular mètriques de fallada de memòria per avaluar-ne l'eficiència.
+  - Dissenyar esquemes bàsics de mapatge i associativitat, i calcular mètriques de fallada de memòria per avaluar-ne l'eficiència.
 
 - **RA5. Robustesa i gestió d'esdeveniments**
   - Comprendre el suport del maquinari per a la gestió d'excepcions i interrupcions, identificant com el processador reacciona davant de fallades de sistema (com les de la TLB) o crides al sistema operatiu (*syscalls*).
 
 #### Seqüenciació temàtica i programació temporal
 
-L'estructura actual és el resultat d'una revisió pedagògica realitzada durant la migració. Respecte a l'assignatura original (basada en MIPS), s'han pres dues decisions estructurals rellevants. D'una banda, el Tema 1 original —que agrupava la introducció conceptual i els continguts de rendiment i potència— s'ha dividit en dos temes independents: el nou T1 manté la introducció al computador i la codificació de dades, mentre que el nou T6 recull els continguts de rendiment i potència, tractats ara amb el context que l'estudiant ja ha adquirit en els temes anteriors sobre ISA i programació en assemblador. D'altra banda, l'aritmètica entera —que en l'estructura original formava part del T5 juntament amb la coma flotant— s'ha reallotjat al nou T4, i el T5 nou queda dedicat exclusivament a la coma flotant. Aquesta separació redueix la càrrega cognitiva de cada tema i clarifica la frontera conceptual entre els dos tipus d'aritmètica.
+L'estructura actual és el resultat d'una revisió pedagògica realitzada durant la migració. Respecte a l'assignatura original (basada en MIPS), s'han pres dues decisions estructurals rellevants:
 
-**Tema 1. Introducció:** Descripció jeràrquica del computador. Codificació de naturals i enters. Setmana 1.
+- El Tema 1 original —que agrupava la introducció conceptual i els continguts de rendiment i potència, temes força inconexos— s'ha dividit en dos temes independents: el nou T1 manté la introducció al computador i la codificació de dades, mentre que el nou T6 recull els continguts de rendiment i potència, com avantsala del tema dedicat a la millora del rendiment d'una de les parts funcionals bàsiques dels microprocessadors, la memòria cau (T7).
+- L'aritmètica entera —que en l'estructura original formava part del T5 juntament amb la coma flotant i se'n feia un tractament indirecte de les instruccions— s'ha reallotjat al T4, i el T5 nou queda dedicat exclusivament a la coma flotant. Aquesta separació redueix la càrrega cognitiva de cada tema i clarifica la frontera conceptual entre els dos tipus d'aritmètica.
 
-**Tema 2. Instruccions i tipus de dades bàsics:** Introducció a la ISA de RISC-V. Formats d'instrucció. Variables, memòria, operands, punters, vectors i cadenes. Setmanes 2 i 3.
+Així doncs, la seqüenciació temàtica i temporal per a 13 setmanes és la següent:
 
-**Tema 3. Traducció de programes:** Operacions lògiques i desplaçaments. Sentències *if* i bucles. Subrutines. Compilació, assemblatge, enllaçat i càrrega. Setmanes 4 i 5.
+**Tema 1. Introducció**: Descripció jeràrquica del computador. Codificació de naturals i enters. Setmana 1.
 
-**Tema 4. Aritmètica entera i matrius:** Suma, resta, multiplicació i divisió d'enters. Sobreeiximent. Matrius i optimitzacions de bucle. Setmana 6.
+**Tema 2. Instruccions i tipus de dades bàsics**: Introducció a la ISA de RISC-V. Formats d'instrucció. Variables, memòria, operands, punters, vectors i cadenes. Setmanes 2 i 3.
 
-**Tema 5. Coma flotant:** Representació IEEE 754. Operacions en coma flotant. Coma flotant a RISC-V (RV32F). Setmanes 7 i 8.
+**Tema 3. Traducció de programes**: Operacions lògiques i desplaçaments. Sentències *if* i bucles. Subrutines. Compilació, assemblatge, enllaçat i càrrega. Setmanes 4 i 5.
 
-**Tema 6. Rendiment i potència:** Mesures de rendiment. Llei d'Amdahl. Potència i escalat de Dennard. Setmana 9.
+**Tema 4. Aritmètica entera i matrius**: Suma, resta, multiplicació i divisió d'enters. Sobreeiximent. Matrius i optimitzacions de bucle. Setmana 6.
 
-**Tema 7. Memòria cau:** Jerarquia de memòria. Polítiques d'emplaçament, reemplaçament i escriptura. Rendiment. Tipologia de fallades. Caches multinivell. Setmanes 10 i 11.
+**Tema 5. Coma flotant**: Representació IEEE 754. Operacions en coma flotant. Coma flotant a RISC-V (RV32F). Setmanes 7 i 8.
 
-**Tema 8. Memòria virtual:** Paginació. Taula de pàgines. Fallada de pàgina. TLB. Setmana 12.
+**Tema 6. Rendiment i potència**: Mesures de rendiment. Llei d'Amdahl. Potència i escalat de Dennard. Setmana 9.
 
-**Tema 9. Excepcions i interrupcions:** Registres CSR de RISC-V. Flux *hardware* en detectar una excepció. Rutina de servei. Crides al sistema. Interrupcions. Fallada de TLB. Setmana 13.
+**Tema 7. Memòria cau**: Jerarquia de memòria. Polítiques d'emplaçament, reemplaçament i escriptura. Rendiment. Tipologia de fallades. Caches multinivell. Setmanes 10 i 11.
+
+**Tema 8. Memòria virtual**: Paginació. Taula de pàgines. Fallada de pàgina. TLB. Setmana 12.
+
+**Tema 9. Excepcions i interrupcions**: Registres CSR de RISC-V. Flux *hardware* en detectar una excepció. Rutina de servei. Crides al sistema. Interrupcions. Fallada de TLB. Setmana 13.
 
 #### Relació entre resultats d'aprenentatge i seqüenciació temàtica
 
-**Temes 1 i 6:** Alimenten el RA1 (Rendiment i arquitectura).
+**Temes 1 i 6**: Alimenten el RA1 (Rendiment i arquitectura).
 
-**Temes 2, 3, 4 i 5:** Construeixen el RA2 (Assemblador i traducció) i el RA3 (Aritmètica).
+**Temes 2, 3, 4 i 5**: Construeixen el RA2 (Assemblador i traducció) i el RA3 (Aritmètica).
 
-**Temes 7 i 8:** Construeixen el RA4 (Jerarquia de memòria).
+**Temes 7 i 8**: Construeixen el RA4 (Jerarquia de memòria).
 
-**Tema 9:** Finalitza amb el RA5 (Excepcions i interrupcions).
+**Tema 9**: Finalitza amb el RA5 (Excepcions i interrupcions).
 
-#### Metodologia
+#### Metodologia docent
 
-Les classes de teoria combinaran la part magistral, on el professor exposarà, explicarà i exemplificarà els conceptes objectiu de l'assignatura, amb la discussió amb l'alumnat sobre les alternatives i avantatges/inconvenients dels aspectes que sigui convenient debatre.
+Les classes de teoria combinen la part magistral, on el professor exposa, explica i exemplifica els conceptes objectiu de l'assignatura, amb la discussió amb l'alumnat sobre les alternatives i avantatges/inconvenients dels aspectes que convé debatre.
 
-Les classes de problemes es realitzaran de tres maneres: resolució directa del professor amb comentaris dels alumnes; resolució individual per part dels alumnes; i resolució cooperativa. En els dos darrers casos, el professor proporcionarà la retroalimentació necessària per corregir les parts incorrectes.
+Les classes de problemes es realitzen de tres maneres: resolució directa del professor amb comentaris dels alumnes; resolució individual per part dels alumnes; i resolució cooperativa. En els dos darrers casos, el professor proporciona la retroalimentació necessària per corregir les parts incorrectes.
 
-Les classes de laboratori seguiran una dinàmica similar a la de problemes, però la resolució d'exercicis es farà únicament en parelles i utilitzant eines que permeten la verificació semiautomàtica de les solucions. Els exercicis del laboratori s'avaluaran de forma continuada per estimular el treball regular.
+Les classes de laboratori segueixen una dinàmica similar a la de problemes, però la resolució d'exercicis es fa únicament en parelles i utilitzant eines que permeten la verificació semiautomàtica de les solucions. Els exercicis del laboratori s'avaluen de forma continuada per estimular el treball regular.
 
 #### Materials docents
 
-- **Webs:** FIB-GEI3 (guia docent oficial), Racó (campus virtual) i web de l'assignatura (DAC).
-- **Apunts de teoria** (T1–T9)
-- **Problemes i solucionaris** (PE, PS_T2–T5)
-- **Quadern de pràctiques de laboratori** (S1–S6)
+- **Apunts de teoria**
+- **Problemes i solucionaris**
+- **Quadern de pràctiques de laboratori**
 - **Compendi de referència RISC-V**
+- **Webs**: Guia docent (FIB), El Racó (campus virtual, FIB) i web de l'assignatura (DAC).
 
-Els materials, originalment en format PDF sense fonts editables, han estat migrats íntegrament a format Quarto Markdown (.qmd) i es troben disponibles en un repositori públic de GitHub, amb sortida en HTML i PDF des d'un únic punt d'entrada.
+Els materials, originalment en format PDF sense fonts editables, han estat migrats íntegrament a format Quarto Markdown (`.qmd`) i es troben disponibles en un repositori de GitLab de la UPC, amb sortida en HTML i PDF des d'un únic punt d'entrada.
 
 #### Avaluació
 
@@ -153,11 +166,13 @@ Tècnicament, RISC-V presenta avantatges significatius sobre MIPS que el fan mé
 
 Un altre punt clau és la modularitat i simplicitat del disseny de RISC-V. L'ISA base (RV32I) conté menys de 50 instruccions, la qual cosa facilita enormement la comprensió inicial dels conceptes fonamentals del disseny de processadors. A partir d'aquesta base, es poden afegir extensions estàndard de manera modular (multiplicació i divisió, coma flotant, operacions atòmiques, etc.). Aquest enfocament «a la carta» permet al professorat estructurar el curs de manera progressiva, introduint complexitat a mesura que els estudiants assimilen els conceptes bàsics.
 
-Finalment, RISC-V ha estat dissenyat des de zero tenint en compte les necessitats de la investigació i la docència modernes. Evita certes decisions de disseny heretades de MIPS que generaven confusió als estudiants, com ara el *branch delay slot*, un artefacte de dissenys de *pipeline* antics que ja no és rellevant en processadors moderns. L'eliminació d'aquestes complexitats permet centrar el temps de classe en conceptes fonamentals i actuals.
+Finalment, RISC-V ha estat dissenyat des de zero tenint en compte les necessitats de la investigació i la docència modernes. Evita certes decisions de disseny heretades de MIPS que generaven confusió als estudiants. L'eliminació d'aquestes complexitats permet centrar el temps de classe en conceptes fonamentals i actuals.
 
 ### Oportunitat 2: revisió i harmonització dels continguts
 
-S'aprofita l'actualització de l'ISA per dur a terme una revisió exhaustiva de tot el material docent. L'objectiu principal és no només adaptar els exemples i la sintaxi al nou ISA, sinó també harmonitzar i millorar la qualitat general dels recursos. Aquesta revisió inclou els apunts de teoria, les llistes de problemes, els solucionaris, el quadern de laboratori i un nou compendi de referència RISC-V que substitueix completament l'anterior compendi MIPS.
+S'aprofita l'actualització de la ISA per dur a terme una revisió exhaustiva de tot el material docent. L'objectiu principal és no només adaptar els exemples i la sintaxi al nou ISA, sinó també harmonitzar i millorar la qualitat general dels recursos. Aquesta revisió inclou els apunts de teoria, les llistes de problemes, els solucionaris, el quadern de laboratori i un nou compendi de referència RISC-V que substitueix completament l'anterior compendi MIPS.
+
+Una decisió transversal d'aquesta revisió ha estat la redacció de tots els materials en **català normatiu**, amb un ús rigorós i consistent de la terminologia tècnica. La manca de recursos de referència en català per a l'arquitectura RISC-V va fer necessari elaborar un recull terminològic propi, documentat a `contrib.qmd`, que estableix els equivalents catalans dels termes tècnics més habituals del camp. Aquest recull, fruit de les decisions preses durant la migració i validat per l'equip docent durant la Revisió Externa, té valor per a la comunitat docent més enllà d'EC: qualsevol assignatura del mateix àmbit pot adoptar-lo com a referència o punt de partida.
 
 ### Oportunitat 3: format obert, accessibilitat i processament automatitzat
 
@@ -165,7 +180,7 @@ Separar els continguts de les metadades de presentació i estructurar-los jeràr
 
 L'ús sistemàtic d'un llenguatge de marcatge jeràrquic com **Markdown** té, comparat amb el format PDF actual dels materials, dos avantatges clau: l'**accessibilitat universal** (les tecnologies assistives com els lectors de pantalla poden navegar el contingut de manera fluida) i la **integració de la IA** (els models de llenguatge interpreten amb més precisió els documents ben estructurats, facilitant la generació de resums, exercicis personalitzats i anàlisi de dades d'aprenentatge).
 
-**Quarto** és la plataforma de publicació científica i tècnica de codi obert triada per a aquest projecte. Un únic fitxer `.qmd` es pot renderitzar a múltiples formats d'alta qualitat (HTML, PDF, Word) i el sistema compleix els criteris d'accessibilitat de l'estàndard WCAG 2.1 del W3C. La integració amb **GitHub** permet el control de versions i la col·laboració asíncrona entre el professorat, assegurant que tots els materials estiguin sempre harmonitzats.
+**Quarto** és la plataforma de publicació científica i tècnica de codi obert triada per a aquest projecte. Un únic fitxer `.qmd` es pot renderitzar a múltiples formats d'alta qualitat (HTML, PDF, Word) i el sistema compleix els criteris d'accessibilitat de l'estàndard WCAG 2.1 del W3C. La integració amb **GitLab** permet el control de versions i la col·laboració asíncrona entre el professorat, assegurant que tots els materials estiguin sempre harmonitzats.
 
 ### Oportunitat 4: enfortiment de la cohesió de l'equip docent
 
@@ -189,7 +204,7 @@ La migració té implicacions directes tant en la praxi docent diària com en el
 
 En el pla institucional, adoptar RISC-V és una decisió estratègica que transcendeix una sola assignatura. Posiciona el programa acadèmic a l'avantguarda, alineant-lo amb les iniciatives de sobirania tecnològica promogudes per governs i consorcis internacionals (com l'*European Processor Initiative*). A més, l'adopció d'una plataforma oberta fomenta un ecosistema d'innovació dins de la mateixa universitat, facilitant projectes de final de grau, màsters i tesis doctorals sense les barreres de la propietat intel·lectual.
 
-## Marc teòric i conceptual: referències actuals i rellevants
+## Marc teòric i conceptual: referències actuals i rellevants {#sec-marc-teoric}
 
 El marc teòric principal per a la docència de RISC-V es troba en els llibres de text que han establert l'estàndard de facto en l'ensenyament de l'arquitectura de computadors durant dècades. Les edicions més recents d'aquestes obres han adoptat RISC-V com a eix central, la qual cosa representa l'aval acadèmic més significatiu per a la migració.
 
@@ -199,7 +214,7 @@ A nivell d'especificació tècnica, Waterman i Asanović (eds., 2019) mantenen *
 
 A nivell pràctic, Patterson i Waterman (2017) ofereixen en *The RISC-V Reader* una guia concisa de 180 pàgines que sintetitza conceptes arquitectònics complexos en un manual directe, amb 75 «punts clau de disseny» que expliquen la lògica de RISC-V en contrast amb arquitectures anteriors. Winans (2022) completa el panorama amb *RISC-V assembly language programming*, una introducció de codi obert per a principiants allotjada a GitHub, que prioritza la configuració d'entorns reals i l'aplicació pràctica.
 
-## Revisió d'experiències o pràctiques similars
+## Revisió d'experiències o pràctiques similars {#sec-revisio-experiencies}
 
 La transició de MIPS a RISC-V en l'àmbit acadèmic ha estat liderada per les mateixes institucions que van originar ambdues arquitectures. La Universitat de Califòrnia, Berkeley, bressol de RISC-V, ha estat la pionera: el seu curs CS 61C (*Great Ideas in Computer Architecture*) ha abandonat completament MIPS per adoptar RISC-V. El fet que Patterson i Hennessy hagin publicat les noves edicions del seu llibre canònic exclusivament amb RISC-V és el principal motor del canvi a escala global.
 
@@ -215,34 +230,135 @@ L'objectiu general d'aquest treball és l'actualització integral dels materials
 
 Per assolir aquest objectiu general, es defineixen els objectius específics (OE) següents:
 
-- **OE1. Transició de l'arquitectura de referència (ISA):** Migrar el corpus teòric i pràctic de l'assignatura (apunts, problemes i laboratoris) de l'arquitectura MIPS a RISC-V, assegurant la correcta aplicació de l'especificació de l'ISA i de l'ABI.
-- **OE2. Transformació digital i optimització per a IA:** Implementar un canvi de paradigma en el format dels materials, passant de formats tancats (PDF) a formats oberts i lleugers que facilitin el control de versions i siguin «IA-friendly», permetent una millor interacció amb eines d'aprenentatge basades en LLM.
-- **OE3. Harmonització, esmenes i control de qualitat:** Realitzar una revisió crítica de tots els continguts per unificar el lèxic tècnic, corregir inconsistències acumulades i alinear el discurs docent amb els estàndards actuals de la indústria i la recerca, tot aprofitant l'expertesa dels professors de l'assignatura vinculats al Barcelona Supercomputing Center (BSC).
+- **OE1. Transició de l'arquitectura de referència (ISA)**: Migrar el corpus teòric i pràctic de l'assignatura (apunts, problemes i laboratoris) de l'arquitectura MIPS a RISC-V, assegurant la correcta aplicació de l'especificació de l'ISA i de l'ABI.
+- **OE2. Transformació digital i optimització per a IA**: Implementar un canvi de paradigma en el format dels materials, passant de formats tancats (PDF) a formats oberts i lleugers que facilitin el control de versions i siguin «IA-friendly», permetent una millor interacció amb eines d'aprenentatge basades en LLM.
+- **OE3. Harmonització, esmenes i control de qualitat**: Realitzar una revisió crítica de tots els continguts per unificar el lèxic tècnic, corregir inconsistències acumulades i alinear el discurs docent amb els estàndards actuals de la indústria i la recerca, tot aprofitant l'expertesa dels professors de l'assignatura vinculats al Barcelona Supercomputing Center (BSC).
 
 
-# Metodologia
+# Metodologia {#sec-metodologia}
 
-## Enfocament metodològic i estratègies utilitzades
+## Enfocament metodològic i estratègies utilitzades {#sec-enfocament-metodologic}
 
 L'execució del projecte s'ha basat en un enfocament de gestió àgil de projectes (*agile*), adaptant elements del marc Scrum (Schwaber & Sutherland, 2020) a la creació de continguts educatius. Aquesta tria respon a la necessitat de gestionar una migració complexa de materials llegats (*legacy*) en un entorn de col·laboració docent on el temps disponible és fragmentat i variable.
 
 L'estratègia central ha estat la **migració iterativa i incremental**: en lloc d'abordar la totalitat del temari com un bloc monolític, s'ha treballat per unitats temàtiques funcionals, cadascuna seguint un cicle de producció que integra la IA generativa com a eina d'acceleració.
 
-La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assoliment dels resultats. Inicialment es va explorar NotebookLM —disponible al Google Workspace de la UPC— per a l'extracció de continguts dels PDF originals, la qual cosa va permetre validar la viabilitat de l'enfocament. Tot i que la seva orientació cap a la consulta de documents el feien útil per a una primera aproximació, el punt d'inflexió real del projecte va arribar amb l'adopció de Claude com a eina principal. La capacitat de mantenir el context complet del projecte —convencions d'estil, decisions prèvies, estructura del llibre— en una sola sessió de treball va eliminar la fragmentació i va permetre una producció de molt més alta qualitat. La velocitat de producció va augmentar de manera espectacular i la cobertura va superar amb escreix les previsions inicials, assolint el 95% del material total quan el pla inicial preveia acabar únicament la teoria al lliurament final.
+La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assoliment dels resultats. Inicialment es va explorar NotebookLM —disponible al Google Workspace de la UPC— per a l'extracció de continguts dels PDF originals, la qual cosa va permetre validar la viabilitat de l'enfocament. Tot i que la seva orientació cap a la consulta de documents el feien útil per a una primera aproximació, el punt d'inflexió real del projecte va arribar amb l'adopció de Claude com a eina principal. La capacitat de mantenir el context complet del projecte —convencions d'estil, decisions prèvies, estructura dels materials— en una sola sessió de treball va eliminar la fragmentació i va permetre una producció de molt més alta qualitat. La velocitat de producció va augmentar de manera espectacular i la cobertura va superar amb escreix les previsions inicials. El pla inicial preveia acabar únicament la teoria per al lliurament final; finalment s'ha generat tot el material docent, s'ha formatat, s'ha fet una primera Revisió de Conjunt, i ja s'ha començat a fer la Revisió Externa, amb la revisió dels T2 i T3, que són el pinyol de l'assignatura, molt avançada.
 
-Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (`contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
+Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (fitxers `contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
 
-El cicle de producció de cada unitat temàtica ha constat de les etapes següents:
+El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objectiu i un grau d'implicació de l'equip docent diferenciats (@fig-fases-produccio). El plantejament de partida va ser que el professor responsable de la migració assumís íntegrament les fases de producció —Disseny del Sistema de Producció, Producció del Corpus Docent i Revisió de Conjunt— de manera que la resta de l'equip docent pogués concentrar el seu temps en la Revisió Externa, on l'aportació disciplinar és més valuosa. Aquesta divisió del treball ha permès prendre les decisions de contingut i format de manera orgànica i coherent, i ha estat la condició que ha fet possible assolir el 100% del material en els terminis previstos. Les F3 i F4 han tingut com a objectiu consolidar la qualitat del corpus abans del desplegament: la Revisió de Conjunt per detectar i corregir errors i incoherències de manera individual, i la Revisió Externa per validar els continguts col·legiadament amb tot l'equip docent. La fletxa de retroalimentació des de la Implementació a l'Aula cap a F4 indica que el *feedback* del primer quadrimestre d'ús alimentarà una nova iteració de revisió externa; les fletxes cap a F1 indiquen que les decisions de convencions s'actualitzen de manera contínua al llarg de totes les fases.
+
+![Fases del projecte. El trapezi blau a l'esquerra codifica dues dimensions simultànies de la supervisió humana: l'amplada creixent de dalt a baix reflecteix el volum de treball humà directe en cada fase —de la configuració de l'entorn (F1) a la revisió col·legiada plena (F4–F5)—, i la intensitat del color indica el grau de validació disciplinar específica sobre el contingut tècnic i pedagògic. La Fase d'implementació (contorn discontinu) és posterior al lliurament d'aquesta memòria.](figures/fig_fases_produccio.svg){#fig-fases-produccio width="70%"}
+
+### Fase 1: Disseny del sistema de producció
+
+Molta d'aquesta feina l'he fet en paral·lel a la Fase de Producció del Corpus Docent, de manera orgànica al llarg del projecte.
+
+Productes:
+
+- Tria de l'eina d'IA generativa (NotebookLM i després Claude).
+- Definició de les convencions d'estil i format (contrib.qmd).
+- Definició de l'estructura i organització dels materials (fitxers `.qmd` i `index.qmd`).
+- Definició del flux de treball i les etapes de producció (Cicle de producció d'unitat temàtica, Revisió de conjunt i Revisió externa).
+- Entorn de producció: repositori de GitLab, estructura de fitxers, plantilla de fitxers `.qmd`, etc.
+
+Durant la resta de fases, he fet revisió constant d'aquests productes per integrar-hi l'aprenentatge adquirit a mesura que avançava el projecte.
+
+### Fase 2: Producció del corpus docent
+
+Les unitats de producció, en ordre d'execució:
+
+1. Tota la teoria, per temes (T1–T9).
+2. Tots els laboratoris, per sessions (L1–L6).
+3. Tots els problemes i solucionaris, per temes (PE_T1–T9, PS_T1–T9).
+
+Cada fitxer `.qmd` constitueix una **unitat de producció** independent: s'aborda de manera seqüencial i, un cop tancada, no es torna a reobrir llevat de decisions de la Revisió de Conjunt. Els resultats de cada unitat es lliuren en un fitxer `.qmd` revisat i formatat segons les convencions establertes.
+
+El cicle de producció de cada unitat segueix les etapes de la @fig-flux-produccio:
 
 1. **Extracció i conversió assistida per IA**, secció a secció, a partir del PDF original.
-2. **Revisió tècnica iterativa** del document en conjunt: verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS, i revisió de la coherència tècnica global del tema.
+2. **Revisió tècnica iterativa** del document en conjunt: verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS, revisió de la coherència tècnica global del tema, documentació de les decisions que s'han de prendre col·legiadament.
 3. **Revisió lingüística iterativa**: harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`.
 4. **Actualització de la documentació transversal**: incorporació de les sigles noves al glossari (`sigles.qmd`) i actualització d'altres materials afectats.
-5. **Refinament del coneixement acumulat**: actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en els temes següents.
+5. **Refinament del coneixement acumulat**: actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en les unitats següents.
+6. **Identificació de necessitats d'actualització retroactiva**: revisió dels fitxers ja produïts en unitats anteriors en funció de les decisions i aprenentatges del tema.
 
+![Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done* de F2. L'etapa 5 capitalitza l'aprenentatge per a les unitats següents.](figures/fig_flux_produccio.svg){#fig-flux-produccio width="80%"}
 
-![Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done*. L'etapa 5 capitalitza l'aprenentatge per als temes següents.](figures/fig_flux_produccio.svg){#fig-flux-produccio width="80%"}
+#### *Definition of Done* de F2 (DoD-F2) {.unnumbered}
 
+El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Sutherland, 2020) i ha estat adoptat i sistematitzat en la gestió de fluxos de producció iteratius per Poppendieck i Poppendieck (2003). En el context d'aquest projecte s'ha definit una DoD específica per a cada fase que implica producció o validació de contingut. La @tbl-dods en resumeix l'estructura:
+
+| DoD | Fase | Unitat de treball | Naturalesa dels criteris |
+| :--- | :--- | :--- | :--- |
+| **DoD-F2** | Producció | Un fitxer `.qmd` (tema / sessió / PE / PS per tema) | Binaris individuals |
+| **DoD-F3** | Revisió de Conjunt | Corpus sencer | Binaris globals |
+| **DoD-F4** | Revisió Externa | T+PE+PS per tema; cada sessió de lab per separat | Binaris col·legiats |
+: Estructura de les tres *Definitions of Done* del projecte. La granularitat de la unitat de treball és diferent en cada fase, cosa que permet un escrutini adaptat a l'objectiu de cadascuna. {#tbl-dods tbl-colwidths="[10,20,40,30]" .striped}
+
+Una unitat de producció de F2 es considera acabada quan compleix tots els criteris següents, agrupats en tres categories:
+
+**Qualitat tècnica**
+
+- Tot el codi assemblador RISC-V s'executa sense errors al simulador RARS.
+- S'han eliminat totes les referències a l'arquitectura MIPS.
+- Les figures SVG estan generades en versió *light* i *dark* i integrades correctament al `.qmd`.
+
+**Qualitat editorial**
+
+- El contingut textual és complet i correctament formatat en Quarto Markdown.
+- El lèxic i l'estil estan harmonitzats segons les convencions de `contrib.qmd`.
+- El glossari de sigles (`sigles.qmd`) ha estat actualitzat amb les sigles noves del tema.
+
+**Integritat estructural**
+
+- El document és funcional dins de l'estructura del repositori GitLab (renderitza correctament en HTML i PDF).
+
+### Fase 3: Revisió de conjunt
+
+- Detecció i esmena, quan no s'hagi de fer col·legiadament, d'errors, d'incoherències i d'oportunitats de millora tant tècniques com lingüístiques i pedagògiques.
+- Figures, enllaços, harmonització d'estil, etc.
+- Documentació de les decisions que s'han de prendre col·legiadament.
+- Revisió humana: mitjana.
+
+#### *Definition of Done* de F3 (DoD-F3) {.unnumbered}
+
+La DoD-F3 s'aplica al corpus sencer (no tema per tema) i verifica la coherència global del conjunt:
+
+- Tots els fitxers `.qmd` han superat la DoD-F2.
+- No hi ha inconsistències terminològiques o d'estil *entre* fitxers (lèxic, nomenclatura de registres, convencions de format).
+- Totes les figures SVG segueixen la mateixa paleta de colors i convencions visuals documentades a `contrib.qmd`.
+- El glossari `sigles.qmd` cobreix totes les sigles que apareixen al corpus.
+- Tots els enllaços interns i referències creuades entre fitxers són funcionals.
+- Les decisions pendents de consens col·legiat estan documentades com a *issues* oberts a GitLab.
+
+### Fase 4: Cicle de revisió externa
+
+- El meu rol com a coordinador de la revisió: facilitació de la creació dels grups de treball (GTs), assignació de temes als GT, recopilació i sistematització dels comentaris. Definició dels procediments d'esmena i de presa de decisions; GitLab: protocol per a *issues*, *merge requests*, etc.
+- Revisors externs: 6, comptant-m'hi jo. Cada revisor s'encarregarà de revisar un o més temes, segons la seva experiència i disponibilitat. La revisió es fa de manera col·laborativa, amb sessions de videotrucada per discutir els comentaris i arribar a consensos quan sigui necessari.
+- Revisió humana: alta.
+
+#### *Definition of Done* de F4 (DoD-F4) {.unnumbered}
+
+La **unitat de revisió** de F4 és diferent de la unitat de producció de F2: per a cada tema `x`, la unitat de revisió és el conjunt `{Tx.qmd, PE_Tx.qmd, PS_Tx.qmd}`, que es revisa conjuntament per garantir la coherència entre teoria, problemes i solucionari. Cada sessió de laboratori `Lx.qmd` es revisa com a unitat independent.
+
+Una unitat de revisió de F4 es considera aprovada quan:
+
+- Ha estat revisada per almenys un membre de l'equip docent extern al professor responsable de la migració.
+- El codi assemblador ha estat verificat per un segon revisor.
+- Tots els *issues* de GitLab oberts durant la revisió han estat resolts o tancats com a decisió de consens documentada.
+- No hi ha inconsistències terminològiques respecte a les unitats de revisió ja aprovades.
+- El tema ha estat aprovat mitjançant *merge request* amb almenys una aprovació explícita a GitLab.
+
+### Fase 5: Preparació de la docència
+
+- Revisió individual dels dos professors que faran la primera docència de l'assignatura al Q1 del curs 2026-27.
+- Per a la meva docència al Q1 del curs 2026-27 generaré diapositives que estaran disponibles públicament.
+
+### Fase d'implementació
+
+El primer quadrimestre del curs 2026-27 serà l'etapa on es preveu la major detecció d'errors. El fet de ser només dos grups de teoria i tres o quatre de pràctiques (en contra dels 6 de teoria i 18 de pràctiques del Q2) en facilitarà la gestió i esmena.
 
 ## Descripció de la innovació docent dissenyada
 
@@ -252,9 +368,9 @@ La innovació dissenyada es vertebra en quatre eixos fonamentals:
 
 L'adopció de RISC-V no és només un canvi d'arquitectura, sinó una aposta per un estàndard obert i modular. El nou programa se centra en la claredat pedagògica que ofereix aquesta ISA: elimina conceptes heretats de MIPS que generaven confusió (com els *branch delay slots* o els registres de multiplicació especials `HI`/`LO`) i introdueix la modularitat com a principi estructurador del curs, presentant primer la base RV32I i afegint progressivament les extensions M (multiplicació/divisió) i F (coma flotant).
 
-### Innovació en el format (Quarto Markdown i GitHub)
+### Innovació en el format (Quarto Markdown i GitLab)
 
-La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitHub com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. El resultat és un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, amb mode fosc/clar, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable.
+La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitLab com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. El resultat és un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, amb mode fosc/clar, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable.
 
 ### Reestructuració pedagògica del temari
 
@@ -262,9 +378,7 @@ La migració ha estat l'ocasió per revisar críticament l'estructura temàtica 
 
 Els canvis estructurals més rellevants són dos. En primer lloc, el Tema 1 original (Introducció) s'ha dividit en dos: el nou T1 manté la introducció conceptual a l'arquitectura de computadors i la codificació de dades, mentre que el nou T6 agrupa els continguts de rendiment i potència. Aquesta separació permet tractar el rendiment com un tema autònom, amb el context que l'estudiant ja ha adquirit en els temes anteriors sobre ISA i programació. En segon lloc, l'aritmètica entera —que en l'estructura original formava part del Tema 5 (Aritmètica d'enters i coma flotant)— s'ha reallotjat en el nou T4 (Aritmètica entera i matrius), mentre que el nou T5 queda dedicat exclusivament a la coma flotant. Aquesta reorganització clarifica la frontera entre aritmètica entera i en coma flotant, i redueix la càrrega cognitiva de cadascun dels temes.
 
-Les taules següents mostren la correspondència completa entre els materials originals (MIPS) i els nous (RISC-V), organitzades per categoria.
-
-**Taula 1a. Teoria.** La migració de la teoria ha requerit la reescriptura íntegra dels temes relacionats amb l'ISA (T2, T3, T4, T5 i T9), on la diferència entre MIPS i RISC-V és més profunda. Els temes de jerarquia de memòria (T7 i T8) han requerit menys reescriptura de base però s'han ampliat amb continguts nous rellevants per al context tecnològic actual (GPUs, sistemes multicore, taules de pàgines multinivell).
+Les taules @tbl-reestructuracio-teoria, @tbl-reestructuracio-laboratori, @tbl-reestructuracio-problemes, @tbl-reestructuracio-nou i @tbl-reestructuracio-transversals mostren la correspondència completa entre els materials originals (MIPS) i els nous (RISC-V), organitzades per categoria.
 
 | Material RISC-V (nou) | Equivalent MIPS (original) | Observacions |
 | :--- | :--- | :--- |
@@ -329,8 +443,7 @@ Les taules següents mostren la correspondència completa entre els materials or
 | T9.1. Excepcions i interrupcions | T8 §1–4. Introducció, CP0, accions HW/SW | Reescrit íntegrament per a CSR RISC-V |
 | T9.2. Crides al sistema | T8 §6. Crides al sistema | Reescrit per a `ecall` RISC-V |
 | T9.3. Entrada/Sortida | T8 §7. Interrupcions | Ampliat |
-
-**Taula 1b. Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. A nivell de continguts la reorganització dels continguts de teoria ha comportat el canvi de sessió d'algunes parts de les pràctiques de MIPs i s'ha aprofitat el fet de treballar amb dos arxius de C simultània ment a la sessió de coma flotant (Sessió 6) per tractar la compilació separada.
+: **Teoria**. La migració de la teoria ha requerit la reescriptura íntegra dels temes relacionats amb l'ISA (T2, T3, T4, T5 i T9), on la diferència entre MIPS i RISC-V és més profunda. Els temes de jerarquia de memòria (T7 i T8) han requerit menys reescriptura de base però s'han ampliat amb continguts nous rellevants per al context tecnològic actual (GPUs, sistemes multicore, taules de pàgines multinivell). {#tbl-reestructuracio-teoria}
 
 | Sessió RISC-V (nova) | Equivalent MIPS (original) | Observacions |
 | :--- | :--- | :--- |
@@ -340,258 +453,7 @@ Les taules següents mostren la correspondència completa entre els materials or
 | S4. Matrius i subrutines | S3. Tipus de dades estructurats | Ampliat amb subrutines |
 | S5. Coma flotant i compilació separada | S4. Codificació en coma flotant | Ampliat amb compilació separada |
 | S6. Memòria cau | S5. Memòria cau | Reescrit; ampliat amb *loop tiling* |
-
-**Taula 1c. Problemes i solucionaris.** Tot el banc de problemes ha estat reescrit per a RISC-V. A més, s'han afegit 23 exercicis nous que cobreixen continguts sense equivalent en el material MIPS original —principalment els derivats de la modularitat de RISC-V i dels canvis estructurals del temari— i que es detallen a l'Annex B.
-
-| Material RISC-V (nou) | Equivalent MIPS (original) | Observacions |
-| :--- | :--- | :--- |
-| PE.qmd — Enunciats (T1–T9) | PDF problemes MIPS | Reescrit íntegrament; 23 exercicis nous |
-| PS_T2.qmd — Solucionari T2 | PDF solucionari MIPS | Reescrit per a RISC-V |
-| PS_T3.qmd — Solucionari T3 | PDF solucionari MIPS | Reescrit per a RISC-V |
-| PS_T4.qmd — Solucionari T4 | PDF solucionari MIPS | Reescrit per a RISC-V |
-| PS_T5.qmd — Solucionari T5 | PDF solucionari MIPS | Reescrit per a RISC-V |
-
-**Taula 1d. Contingut nou sense equivalent MIPS.** La modularitat de RISC-V —el disseny en extensions estàndard opcionals— ha permès introduir continguts que en una arquitectura monolítica com MIPS no tenien sentit pedagògic. El canvi de paradigma de propietari a obert ha obert també la porta a continguts de sobirania tecnològica i context industrial actual que reforcen la motivació de l'estudiantat.
-
-| Contingut nou | Ubicació | Justificació pedagògica |
-| :--- | :--- | :--- |
-| RISC-V GNU Compiler Toolchain | T2 | Eina estàndard de l'ecosistema; absència total a MIPS |
-| Extensions M i F (modularitat) | T2 | Modularitat de RISC-V vs. integració de MIPS |
-| GPUs i memòria en l'era de la IA | T7 | Context tecnològic actual; motivació per a l'estudi de la jerarquia de memòria |
-| Taules de pàgines multinivell | T8 | Sistemes operatius moderns; prerequisit implícit per a SO |
-| Modes de privilegi M/S/U | T9 | Arquitectura de privilegis RISC-V; absència conceptual a MIPS |
-
-**Taula 1e. Materials transversals.** Un resultat destacat del projecte és la creació d'una infraestructura de qualitat que fa el corpus auditable i mantenible per qualsevol membre de l'equip docent, independentment de qui hagi produït cada part. Aquests tres materials no existien en cap forma en el material original.
-
-| Material | Descripció |
-| :--- | :--- |
-| `riscv.qmd` — Compendi de referència RISC-V | Taules de referència ràpida de l'ISA, l'ABI i les extensions; substitueix el compendi MIPS i l'amplifica |
-| `sigles.qmd` — Glossari de sigles | Llistat unificat de totes les sigles de l'assignatura, actualitzat incrementalment durant la migració |
-| `contrib.qmd` — Convencions i normes d'estil | Sistema de qualitat del projecte: format, lèxic, paleta SVG i decisions per tema; garanteix la coherència del corpus a llarg termini |
-### Recursos d'aprenentatge actiu
-
-- **Simulació avançada (RARS):** Substitueix MARS com a entorn de referència, mantenint una interfície familiar però adaptada al nou ISA.
-- ***Hardware* real (Raspberry Pi Pico 2 W):** Proposta de pràctica voluntària amb plaques RP2350 (nucli RISC-V) i *Debug Probes*. Permet als estudiants compilar codi assemblador i executar-lo en un dispositiu físic d'última generació.
-- **Entorn de desenvolupament professional (Docker):** Contenidor Docker amb la RISC-V GNU Compiler Toolchain oficial, que garanteix la reproductibilitat dels experiments i familiaritza l'estudiantat amb les tecnologies estàndard de la indústria.
-
-## Recollida de dades: instruments i població d'estudi
-
-Atès que el projecte es troba en fase d'implementació de materials, la recollida de dades s'ha centrat en la validació experta i el control de qualitat del procés, més que en l'avaluació directa de l'estudiantat en aquesta etapa inicial.
-
-**Població d'estudi:** El grup de treball està format pel professorat de l'assignatura d'EC i membres de l'eix d'arquitectura del Departament d'Arquitectura de Computadors (DAC), incloent-hi investigadors vinculats al Barcelona Supercomputing Center (BSC).
-
-**Instruments de recollida:**
-
-- ***Definition of Done* (DoD):** Llista de verificació per assegurar que cada tema compleix els estàndards de qualitat: format Quarto Markdown consistent, codi validat en RARS i lèxic unificat (vegeu Annex I).
-- **Sessions de coordinació:** Videotrucades puntuals i treball asíncron a través del repositori GitHub, on les *pull requests* i els *commits* documenten les decisions de contingut.
-- **Registres de traçabilitat (logs de IA):** Documentació del procés de conversió assistida per IA per avaluar l'eficiència de l'eina i la necessitat de supervisió humana.
-
-## Consideracions ètiques
-
-Tot i que en aquesta fase el treball no inclou experimentació directa amb dades personals dels estudiants, s'han tingut en compte les dimensions ètiques següents:
-
-1. **Ús responsable de la IA:** La utilització de la IA en l'elaboració dels materials s'ha regit pel principi de la supervisió humana crítica. S'ha vetllat per evitar l'acceptació d'«al·lucinacions» tècniques que poguessin perjudicar la qualitat de l'aprenentatge.
-2. **Accessibilitat i sostenibilitat:** L'elecció del format Markdown respon a un compromís ètic amb l'accessibilitat digital i el manteniment futur per part de la comunitat docent.
-3. **Transparència:** Els estudiants seran informats de l'ús d'eines d'IA en la creació del material i rebran pautes per a un ús ètic i pedagògic d'aquestes eines en el seu procés d'estudi.
-
-
-# Resultats
-
-## Volum i abast dels materials produïts
-
-La migració ha assolit el **95% del material total** de l'assignatura. La Taula 2 en detalla el volum per categoria.
-
-**Taula 2.** Volum de materials produïts.
-
-| Categoria | Fitxers .qmd | Estat |
-| :--- | :---: | :--- |
-| Teoria (T1–T9) | 9 | Preparat per a revisió externa |
-| Laboratori (L1–L6) | 6 | Preparat per a revisió externa (L1 pendent §Pseudoinstruccions) |
-| Enunciats de problemes (PE) | 1 | Preparat per a revisió externa |
-| Solucionaris (PS_T2–T5) | 4 | En procés |
-| Materials transversals (riscv, sigles, contrib) | 3 | Actius |
-| **Total** | **23** | |
-
-A aquests fitxers s'afegeixen aproximadament **50-60 figures SVG** (cadascuna en versió *light* i *dark*, ~100-120 fitxers en total), amb una previsió de superar les 100 figures úniques al tancament del projecte. Les figures han estat generades íntegrament en SVG (abandonant Mermaid per limitacions de qualitat), seguint una paleta de colors i convencions documentades a `contrib.qmd`.
-
-Pel que fa als problemes, a més de la migració i revisió dels exercicis existents, s'han afegit 23 exercicis nous que cobreixen continguts sense equivalent en el material MIPS original (vegeu Annex I per al llistat complet).
-
-## Qualitat i harmonització
-
-Un dels resultats més significatius del projecte, i que supera l'abast estrictament tècnic de la migració, és l'establiment d'un **sistema de qualitat documentat** per als materials de l'assignatura. Aquest sistema es concreta en tres artefactes:
-
-- **`contrib.qmd`:** Document de convencions i normes d'estil que recull el sistema de *callouts* i prefixos d'etiquetes, les normes d'estil (veu, puntuació, negretes, anglicismes, sigles), els criteris de format (taules, figures SVG, blocs de codi), les substitucions terminològiques obligatòries, la paleta de colors SVG i les decisions específiques per tema.
-- **`sigles.qmd`:** Glossari de sigles de l'assignatura, actualitzat incrementalment durant la migració de cada tema.
-- ***Definition of Done* (DoD):** Un tema es considera «acabat» quan: (1) el contingut textual és complet i correctament formatat en Quarto Markdown; (2) tots els exemples de codi s'executen sense errors a RARS; (3) s'han eliminat totes les referències a l'arquitectura MIPS i el lèxic està harmonitzat; i (4) el document és funcional dins de l'estructura del repositori GitHub.
-
-## Integració i accessibilitat
-
-El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un **ecosistema de materials cohesionat** amb les característiques següents:
-
-- **Punt d'entrada únic:** Una URL dona accés a tots els materials en HTML, i un botó permet descarregar el PDF complet de tot el llibre.
-- **Accessibilitat WCAG 2.1:** Marcatge HTML5 semàntic, mode fosc/clar respectant la configuració del sistema de l'usuari, disseny *responsive* i codi amb ressaltat accessible (*a11y*).
-- **Repositori públic:** Tot el material font és accessible i reutilitzable per la comunitat docent.
-- **Reproductibilitat:** Un contenidor Docker permet renderitzar el llibre complet en qualsevol sistema operatiu.
-
-## Comparativa pla→realitat
-
-La Taula 3 contrasta la planificació prevista al lliurament intermedi (març 2026) amb el que s'ha assolit efectivament.
-
-**Taula 3.** Comparativa entre la planificació inicial i els resultats assolits.
-
-| Fita | Previst (lliurament intermedi) | Assolit (lliurament final) |
-| :--- | :--- | :--- |
-| M1 (Març) | T1, T2; setup del repositori | T1, T2 + estructura completa del projecte i sistema de convencions |
-| M2 (Abril) | T3, T4, T5 | T3, T4, T5 + solucionaris PS_T2–T5 |
-| M3 (Maig) | T8 (Excepcions) + laboratoris (RARS) | T6, T7, T8, T9 + L1–L6 complets |
-| M4 (Juny) | Tancament i memòria | PE complet + 23 exercicis nous + materials transversals + memòria |
-
-La diferència entre el previst i l'assolit és directament atribuïble al **pivot metodològic de la Fase 1 a la Fase 2** descrit a §2.1: l'adopció de Claude com a eina principal va multiplicar la capacitat de producció i va permetre cobrir en els terminis previstos un volum de material molt superior al planificat.
-
-
-# Discussió, conclusions i altres propostes
-
-## Contrast dels resultats amb el marc teòric i estudis previs
-
-Els resultats descrits a §3 confirmen les premisses del marc teòric establert a §1.5 i els antecedents identificats a §1.6. La validació acadèmica més clara prové del propi camp disciplinar: la decisió de Patterson i Hennessy (2021) de reescriure íntegrament el seu llibre de referència al voltant de RISC-V és el gest que millor avala el canvi de paradigma. Que els pioners d'una arquitectura l'abandonin per adoptar-ne una d'oberta no és una anècdota circumstancial: és la prova que RISC-V representa l'estàndard emergent per a la docència de l'arquitectura de computadors en la dècada de 2020. Les migracions documentades a Berkeley (CS 61C) i Cornell (CS 3410), descrites a §1.6, confirmen que la tendència és global i sistemàtica, i que la FIB-UPC no és pionera aïllada sinó participant ben posicionada en un moviment acadèmic de fons.
-
-En l'àmbit metodològic, l'experiència d'aquest projecte valida l'ús de l'enfocament àgil (Schwaber & Sutherland, 2020) per a la producció iterativa de materials educatius tècnics. La comparativa pla→realitat de §3.4 mostra que la divisió del corpus en unitats temàtiques funcionals va permetre absorbir la variabilitat inherent al projecte —decisions terminològiques retroactives, addició d'exercicis sense equivalent en el material original, evolució del sistema de convencions— sense comprometre el calendari global. Un model de planificació seqüencial hauria estat molt menys resilient davant d'aquests ajustos.
-
-L'aportació diferencial d'aquest projecte, més enllà de la migració pròpiament dita, és triple: l'adopció de formats oberts i llegibles per màquines com a principi estructurador dels materials; l'establiment d'un sistema de qualitat documentat (DoD, `contrib.qmd`, `sigles.qmd`) que fa el corpus auditable i mantenible per qualsevol membre de l'equip docent; i la documentació del procés de producció assistit per IA, que ofereix un model replicable per a equips sense recursos de producció professional.
-
-El fet d'assolir el 95% del material quan el pla inicial preveia tancar únicament la teoria al lliurament final supera significativament les previsions. Això suggereix que les estimacions convencionals de cost i temps per a la producció de materials docents tècnics poden alterar significativament les estimacions convencionals de cost i temps per a la producció de materials docents tècnics, amb implicacions rellevants per a la planificació de projectes de millora docent.
-
-## Valoració crítica del procés, obstacles i aprenentatges
-
-El procés ha estat ric en aprenentatges tant sobre el contingut tècnic de la migració com sobre l'ús de la IA com a eina de producció educativa.
-
-**Obstacles identificats**
-
-El primer obstacle va ser la naturalesa dels materials de partida: documents PDF sense fonts editables, resultat de convertir presentacions de diapositives elaborades anys enrere. Cap eina de processament de text pot importar-los directament sense una fase de transcripció i reestructuració prèvies. En la fase inicial d'exploració, aquest pas va consumir un temps desproporcionat i va limitar la velocitat de producció.
-
-El segon obstacle, de caràcter tècnic, va ser la validació del codi assemblador. Les eines d'IA generativa produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte: errors subtils en les convencions de l'ABI, en l'ordre dels operands o en l'ús de les pseudoinstruccions passen desapercebuts en una lectura ràpida però fallen en execució al simulador. Cada exemple de codi dels apunts de teoria i cada exercici dels solucionaris ha requerit verificació manual a RARS. Aquest pas no és automatitzable i no ha de ser-ho: és precisament el punt on l'expertesa disciplinar del professor resulta imprescindible.
-
-El tercer obstacle va ser la gestió de la coherència terminològica i d'estil en un corpus de 23 fitxers. Qualsevol decisió de format o lèxic adoptada al T2 té implicacions al T3, al T4 i en endavant. Mantenir la consistència en un corpus d'aquesta escala requereix un sistema de convencions documentat, accessible i consultat sistemàticament durant la producció: aquest és l'origen de `contrib.qmd`.
-
-**El pivot NotebookLM → Claude**
-
-La Fase 1 va validar la viabilitat de la migració assistida per IA però va evidenciar un límit estructural: NotebookLM requereix la fragmentació en *notebooks* temàtics independents, cosa que impedeix propagar les decisions d'estil i contingut d'un tema a un altre de manera automàtica. La velocitat de producció era moderada i la supervisió humana, intensiva.
-
-L'adopció de Claude com a eina principal va transformar el procés. La capacitat de mantenir en una sola sessió el context complet del projecte —les convencions de `contrib.qmd`, les decisions prèvies, l'estructura del repositori, els exemples de temes ja tancats— va eliminar la fragmentació. Cada sessió de treball permetia avançar en un tema sencer amb coherència i qualitat homogènies. La cobertura final (95% del material quan el pla inicial preveia cobrir únicament la teoria al lliurament final) és la mesura més objectiva d'aquest canvi.
-
-**El rol del professor com a director tècnic**
-
-La integració de la IA no va reduir el rol del professor: el va transformar. El docent va passar de ser l'escriptor principal dels materials a ser el *director tècnic* del procés: definint les convencions d'estil, prenent les decisions pedagògiques clau (quins conceptes aprofundir, quins exemples prioritzar, quina progressió didàctica seguir), validant cada fragment de codi al simulador RARS i revisant la precisió tècnica del contingut. La IA accelera la producció; la intel·ligència pedagògica continua residint en el docent. Aquesta distinció és una conclusió central del projecte amb implicacions directes per a la formació del professorat universitari en l'era de la IA generativa.
-
-## Propostes de millora o línies de continuïtat del projecte
-
-**Implantació a l'aula (Q1 2025-26)**
-
-La primera validació real dels materials migrats tindrà lloc al primer quadrimestre del curs 2026-27 (setembre de 2026), en 2 grups de teoria i 3 o 4 grups de laboratori. L'experiència dels estudiants amb els nous materials —en format HTML navegable, accessible i integrat en el repositori GitHub— proporcionarà el *feedback* necessari per a una primera iteració de millora. La recollida de dades durant el primer quadrimestre inclourà: el seguiment del rendiment als exàmens per als temes que tradicionalment presenten les taxes de superació més baixes (T7 memòria cau, T9 excepcions i interrupcions); una enquesta de satisfacció focalitzada en la claredat i usabilitat dels materials en format web; i el registre d'incidències tècniques detectades durant les sessions de laboratori (errors de codi no detectats a la validació prèvia, formulació d'exercicis ambigua).
-
-**Completar el cicle actual**
-
-Abans del desplegament cal finalitzar els elements en procés: els solucionaris PS_T2–T5 i la secció de pseudoinstruccions de L1, que representen el 5% del material pendent. La seva finalització no és un prerequisit per a la implantació, però és necessària per poder afirmar que la migració és completa i per tancar formalment el projecte.
-
-**Extensió a l'eix d'arquitectura: IC i AC**
-
-A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC → EC → AC, descrita a §1.1.1) aconsella estendre el model a les assignatures veïnes. IC podria beneficiar-se de la migració a format obert per facilitar la sincronització conceptual amb EC. AC, que utilitza x86 com a arquitectura de referència per a l'estudi del *pipelining*, podria incorporar RISC-V com a pont pedagògic entre EC i els conceptes avançats de segmentació, aprofitant la continuïtat de l'ISA que l'estudiant ja domina en sortir d'EC. Aquesta extensió enforteix la coherència vertical del pla d'estudis i optimitza el temps d'aula dedicat a la introducció d'arquitectures noves.
-
-**Manteniment col·laboratiu i comunitat docent**
-
-El repositori públic a GitHub és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques de la DoD, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
-
-## Possibles connexions amb altres àmbits o temàtiques educatives
-
-**El model com a pràctica exportable a assignatures STEAM**
-
-L'arquitectura metodològica d'aquest projecte —gestió àgil, producció assistida per IA, format *Docs-as-Code* i repositori compartit— no és específica ni de l'arquitectura de computadors ni de l'enginyeria informàtica. Qualsevol assignatura STEAM amb un corpus de materials tècnics susceptible d'actualització pot aplicar el mateix model. Els ingredients essencials en són quatre: un format de marcatge pla (Markdown, LaTeX, reStructuredText) que separi el contingut de la presentació i el faci processable per eines automàtiques; un repositori de control de versions que garanteixi la traçabilitat i la sincronització entre l'equip docent; la IA generativa com a accelerador de producció amb supervisió humana explícitament definida; i un sistema de convencions documentat que mantingui la coherència del corpus a mesura que creix. Assignatures com Física, Matemàtiques o Electrònica comparteixen el repte de mantenir materials tècnics actualitzats amb equips reduïts i temps fragmentat. El cost d'entrada d'aquest model és baix: totes les eines emprades (Quarto, GitHub, RARS, Docker) són de codi obert o d'accés gratuït.
-
-**El paradigma *Docs-as-Code* en l'àmbit educatiu**
-
-El paradigma *Docs-as-Code* —tractar la documentació amb les mateixes eines i pràctiques que el codi font— és una pràctica consolidada en la indústria del programari que aquest projecte trasllada explícitament a la docència universitària. L'aplicació educativa aporta beneficis directes: control de versions del contingut docent, revisió col·laborativa entre iguals (anàloga al *code review*), detecció automàtica d'errors de format i desplegament automàtic dels materials actualitzats. A més, per als estudiants d'enginyeria informàtica, accedir a materials allotjats en un repositori GitHub, renderitzats amb Quarto i compatibles amb les tecnologies assistives representa en si mateix un aprenentatge implícit sobre les bones pràctiques de la indústria, alineat amb els objectius formatius del grau.
-
-**Implicacions per a la formació del professorat universitari en IA**
-
-L'experiència d'aquest projecte permet formular una conclusió amb implicacions directes per a la missió de l'ICE: la formació del professorat universitari en l'ús de la IA ha d'anar més enllà de l'adopció puntual d'eines individuals. El que resulta estratègic és una alfabetització en la *gestió de projectes assistits per IA*: com definir convencions de treball que la IA pugui seguir amb consistència, com estructurar les tasques per maximitzar l'efectivitat de la col·laboració humà-màquina, i com establir mecanismes de validació adequats al context disciplinar de cada assignatura. El professor que domina aquesta competència pot multiplicar la seva capacitat de producció docent de qualitat sense comprometre el rigor. Promoure i difondre aquest model és, per tant, una tasca estratègica per a les institucions que, com l'ICE de la UPC, lideren la innovació pedagògica a la universitat.
-
-
-# Bibliografia
-
-Hennessy, J. L., & Patterson, D. A. (2022). *Computer architecture: A quantitative approach* (6th ed.). Morgan Kaufmann.
-
-Patterson, D. A., & Hennessy, J. L. (2021). *Computer organization and design RISC-V edition: The hardware software interface* (2nd ed.). Morgan Kaufmann.
-
-Patterson, D., & Waterman, A. (2017). *The RISC-V reader: An open architecture atlas*. Strawberry Canyon LLC. <http://riscvbook.com/>
-
-RISC-V International. (2020–present). *Official RISC-V specifications*. <https://riscv.org/specifications/ratified/>
-
-Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to Scrum: The rules of the game*. Scrum.org. <https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf>
-
-Waterman, A., & Asanović, K. (Eds.). (2019). *The RISC-V instruction set manual, volume I: Unprivileged ISA*. RISC-V International. <https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html>
-
-Winans, J. (2022). *RISC-V assembly language programming*. Northern Illinois University. <https://github.com/johnwinans/rvalp>
-
-World Wide Web Consortium. (2018). *Web content accessibility guidelines (WCAG) 2.1*. <https://www.w3.org/TR/WCAG21/>
-
-
-# Annex A: Materials per a l'estudiantat {.unnumbered}
-
-Els materials migrats estan disponibles en dos formats complementaris a través d'un punt d'entrada únic:
-
-- **Web HTML**: accessible a la URL pública de l'assignatura (DAC). Navegable per capítols, amb cercador integrat, mode fosc/clar automàtic, disseny *responsive* i compliment de l'estàndard d'accessibilitat WCAG 2.1.
-- **PDF complet**: tot el material de l'assignatura —teoria, problemes, solucionaris i laboratori— en un sol fitxer descarregable des de la mateixa URL.
-
-Ambdós formats es generen automàticament des del repositori GitHub cada vegada que s'actualitza el material font.
-
-# Annex B: Corpus docent migrat {.unnumbered}
-
-## Llistat de fitxers produïts i estat de revisió {.unnumbered}
-
-| Fitxer | Descripció | Estat |
-| :--- | :--- | :--- |
-| `T1.qmd` | Tema 1: Introducció | Preparat per a revisió externa |
-| `T2.qmd` | Tema 2: Instruccions i tipus de dades bàsics | Preparat per a revisió externa |
-| `T3.qmd` | Tema 3: Traducció de programes | Preparat per a revisió externa |
-| `T4.qmd` | Tema 4: Aritmètica entera i matrius | Preparat per a revisió externa |
-| `T5.qmd` | Tema 5: Coma flotant | Preparat per a revisió externa |
-| `T6.qmd` | Tema 6: Rendiment i potència | Preparat per a revisió externa |
-| `T7.qmd` | Tema 7: Memòria cau | Preparat per a revisió externa |
-| `T8.qmd` | Tema 8: Memòria virtual | Preparat per a revisió externa |
-| `T9.qmd` | Tema 9: Excepcions i interrupcions | Preparat per a revisió externa |
-| `L1.qmd` | S1: Introducció al simulador RARS | Preparat per a revisió externa (pendent §Pseudoinstruccions) |
-| `L2.qmd` | S2: Assemblador RISC-V i tipus bàsics | Preparat per a revisió externa |
-| `L3.qmd` | S3: Traducció de programes | Preparat per a revisió externa |
-| `L4.qmd` | S4: Matrius i subrutines | Preparat per a revisió externa |
-| `L5.qmd` | S5: Coma flotant i compilació separada | Preparat per a revisió externa |
-| `L6.qmd` | S6: Memòria cau | Preparat per a revisió externa |
-| `PE.qmd` | Enunciats de problemes (T1–T9) | Preparat per a revisió externa |
-| `PS_T2.qmd` | Solucionari T2 | En procés |
-| `PS_T3.qmd` | Solucionari T3 | En procés |
-| `PS_T4.qmd` | Solucionari T4 | En procés |
-| `PS_T5.qmd` | Solucionari T5 | En procés |
-| `riscv.qmd` | Compendi de referència RISC-V | Actiu |
-| `sigles.qmd` | Glossari de sigles | Actiu |
-| `contrib.qmd` | Convencions i normes d'estil | Actiu |
-
-### Estats de revisió {.unnumbered}
-
-- **Actiu**: document de referència transversal en ús i actualització contínua durant tota la fase de producció del material.
-- **Preparat per a revisió externa**: contingut complet, codi assemblador validat al simulador RARS i lèxic harmonitzat segons `contrib.qmd`; pendent de revisió per altres membres de l'equip docent abans del desplegament.
-- **En procés**: contingut parcialment migrat; pendent de completar abans del desplegament al primer quadrimestre del curs 2025-26.
-
-### Criteris de completesa (*Definition of Done*) {.unnumbered}
-
-Un tema o sessió de laboratori es considera acabat quan compleix tots els criteris següents:
-
-1. El contingut textual és complet i correctament formatat en Quarto Markdown.
-2. Tots els exemples de codi i exercicis s'executen sense errors al simulador RARS.
-3. S'han eliminat totes les referències a l'arquitectura MIPS i el lèxic està harmonitzat segons les convencions de `contrib.qmd`.
-4. El document és accessible i funcional dins de l'estructura del repositori GitHub (renderitza correctament en HTML i PDF).
-5. Les figures SVG estan generades en versió *light* i *dark* i integrades correctament al `.qmd`.
-6. El glossari de sigles (`sigles.qmd`) ha estat actualitzat amb les sigles noves del tema.
-
-## Exercicis nous sense equivalent en el material MIPS original {.unnumbered}
+: **Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. A nivell de continguts la reorganització dels continguts de teoria ha comportat el canvi de sessió d'algunes parts de les pràctiques de MIPS i s'ha aprofitat el fet de treballar amb dos arxius de C simultàniament a la sessió de coma flotant (Sessió 6) per tractar la compilació separada. {#tbl-reestructuracio-laboratori}
 
 | Tema | Cobertura |
 | :--- | :--- |
@@ -618,3 +480,309 @@ Un tema o sessió de laboratori es considera acabat quan compleix tots els crite
 | T9 | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
 | T9 | Fallada de TLB com a excepció, gestió RSE |
 | T9 | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
+: **Problemes i solucionaris.** Tot el banc de problemes ha estat reescrit per a RISC-V. A més, s'han afegit 23 exercicis nous llistats en aquesta taula que cobreixen continguts sense equivalent en el material MIPS original —principalment els derivats de la modularitat de RISC-V i dels canvis estructurals del temari. {#tbl-reestructuracio-problemes}
+
+| Contingut nou | Ubicació | Justificació pedagògica |
+| :--- | :--- | :--- |
+| RISC-V GNU Compiler Toolchain | T2 | Eina estàndard de l'ecosistema; absència total a MIPS |
+| Extensions M i F (modularitat) | T2 | Modularitat de RISC-V vs. integració de MIPS |
+| GPUs i memòria en l'era de la IA | T7 | Context tecnològic actual; motivació per a l'estudi de la jerarquia de memòria |
+| Taules de pàgines multinivell | T8 | Sistemes operatius moderns; prerequisit implícit per a SO |
+| Modes de privilegi M/S/U | T9 | Arquitectura de privilegis RISC-V; absència conceptual a MIPS |
+: **Contingut nou sense equivalent MIPS.** La modularitat de RISC-V —el disseny en extensions estàndard opcionals— ha permès introduir continguts que en una arquitectura monolítica com MIPS no tenien sentit pedagògic. La transició cap a un estàndard obert ha permès també incorporar continguts de sobirania tecnològica i context industrial actual que reforcen la motivació de l'estudiantat. {#tbl-reestructuracio-nou tbl-colwidths="[35,15,50]" .striped}
+
+| Material | Descripció |
+| :--- | :--- |
+| `riscv.qmd` — Compendi de referència RISC-V | Taules de referència ràpida de l'ISA, l'ABI i les extensions; substitueix el compendi MIPS i l'amplifica |
+| `sigles.qmd` — Glossari de sigles | Llistat unificat de totes les sigles de l'assignatura, actualitzat incrementalment durant la migració |
+| `contrib.qmd` — Convencions i normes d'estil | Sistema de qualitat del projecte: format, lèxic, paleta SVG i decisions per tema; garanteix la coherència del corpus a llarg termini |
+: **Materials transversals.** Un resultat destacat del projecte és la creació d'una infraestructura de qualitat que fa el corpus auditable i editable per qualsevol membre de l'equip docent, independentment de qui hagi produït cada part. Aquests tres materials no existien en cap forma en el material original. {#tbl-reestructuracio-transversals}
+
+### Recursos d'aprenentatge actiu
+
+- **Simulació avançada (RARS)**: Substitueix MARS com a entorn de referència, mantenint una interfície familiar però adaptada al nou ISA.
+- ***Hardware* real (Raspberry Pi Pico 2 W)**: Proposta de pràctica voluntària amb plaques RP2350 (nucli RISC-V) i *Debug Probes*. Permet als estudiants compilar codi assemblador i executar-lo en un dispositiu físic d'última generació.
+
+## Recollida de dades: instruments i població d'estudi {#sec-recollida-dades}
+
+Atès que el projecte es troba en la Fase de Revisió Externa (F4), la recollida de dades s'ha estructurat en dues fases temporals amb objectius diferenciats.
+
+**Fase actual (F3–F4, fins al lliurament)**: La recollida se centra en la validació experta i el control de qualitat del procés, més que en l'avaluació directa de l'estudiantat.
+
+**Població d'estudi**: El grup de treball està format pel professorat de l'assignatura d'EC i membres de l'eix d'arquitectura del Departament d'Arquitectura de Computadors (DAC), incloent-hi investigadors vinculats al Barcelona Supercomputing Center (BSC).
+
+**Instruments de recollida (F3–F4)**:
+
+- ***Definitions of Done* (DoD-F2, F3 i F4)**: Sistema de criteris de tancament per fase (vegeu @sec-enfocament-metodologic). Actuen com a instrument de verificació formal en cada etapa del procés.
+- **Sessions de coordinació**: Videotrucades puntuals i treball asíncron a través del repositori GitLab, on les *pull requests* i els *commits* documenten les decisions de contingut.
+- **Registres de traçabilitat (logs de IA)**: Documentació del procés de conversió assistida per IA per avaluar l'eficiència de l'eina i la necessitat de supervisió humana.
+
+**Fase prospectiva (Implementació, Q1 2026-27)**: La primera validació amb estudiants reals tindrà lloc al primer quadrimestre del curs 2026-27, en 2 grups de teoria i 3 o 4 grups de laboratori. Els instruments previstos són:
+
+- **Seguiment del rendiment acadèmic**: Comparativa de les taxes de superació als exàmens, amb focus en els temes que presenten histò\-ricament les dificultats més altes (T7 Memòria cau i T9 Excepcions i interrupcions), contrastant amb els resultats dels cursos anteriors amb materials MIPS.
+- **Enquesta de satisfacció**: Qüestionari focalitzat en la claredat i la usabilitat dels materials en format web (navegació, accessibilitat, mode fosc/clar, funcionalitat del cercador integrat).
+- **Registre d'incidències**: Recollida sistemàtica d'errors de codi no detectats a la validació prèvia i de formulacions d'exercicis ambigues, reportats pels professors durant les sessions de laboratori.
+
+## Consideracions ètiques
+
+Tot i que en aquesta fase el treball no inclou experimentació directa amb dades personals dels estudiants, s'han tingut en compte les dimensions ètiques següents:
+
+1. **Ús responsable de la IA**: La utilització de la IA en l'elaboració dels materials s'ha regit pel principi de la supervisió humana crítica. S'ha vetllat per evitar l'acceptació d'«al·lucinacions» tècniques que poguessin perjudicar la qualitat de l'aprenentatge.
+2. **Accessibilitat i sostenibilitat**: L'elecció del format Markdown respon a un compromís ètic amb l'accessibilitat digital i el manteniment futur per part de la comunitat docent.
+3. **Transparència**: Els estudiants han estat informats de l'ús d'eines d'IA en la creació del material i han rebut pautes per a un ús ètic i pedagògic d'aquestes eines en el seu procés d'estudi.
+
+
+# Resultats {#sec-resultats}
+
+## Volum i abast dels materials produïts
+
+La migració ha assolit el **100% del material total** de l'assignatura. La revisió externa ha començat: protocol, calendari i grups de treball estan establerts. La @tbl-volum-materials en detalla el volum per categoria.
+
+| Categoria | Fitxers .qmd | Estat |
+| :--- | :---: | :--- |
+| Teoria (T1–T9) | 9 | En revisió externa (T2 i T3 avançats) |
+| Laboratori (L1–L6) | 6 | En revisió externa |
+| Enunciats de problemes (PE_T1–T9) | 9 | En revisió externa |
+| Solucionaris (PS_T1–T9) | 9 | Completats; en revisió externa (PS_T1 pendent d'integrar) |
+| Materials transversals (riscv, sigles, contrib) | 3 | Actius |
+| **Total** | **36** | |
+: Volum de materials produïts per categoria. *En revisió externa*: contingut complet, codi validat a RARS i lèxic harmonitzat; en revisió col·legiada. *En procés*: contingut parcialment migrat, pendent de completar. *Actiu*: document de referència transversal en actualització contínua. {#tbl-volum-materials tbl-colwidths="[40,15,45]" .striped}
+
+A aquests fitxers s'afegeixen <!-- TODO actualització de núm de figs. abans del lliurament --> **104 figures SVG** (cadascuna en versió *light* i *dark*, ~208 fitxers en total). Les figures han estat generades íntegrament en SVG (abandonant Mermaid per limitacions de qualitat), seguint una paleta de colors i convencions documentades a `contrib.qmd`. S'espera que els processos de revisió pendents en generin algunes més.
+
+Pel que fa als problemes, a més de la migració i revisió dels exercicis existents, s'han incorporat 23 exercicis nous sense equivalent en el material MIPS original; els criteris pedagògics que han guiat tant la selecció dels problemes nous com dels solucionaris es detallen a la @sec-disseny-pedagogic.
+
+## Disseny pedagògic del contingut {#sec-disseny-pedagogic}
+
+La migració no s'ha limitat a substituir MIPS per RISC-V: ha estat l'oportunitat de revisar i millorar la manera com el contingut es presenta i s'estructura per a l'estudiantat. Tres decisions de disseny pedagògic mereixen una justificació explícita.
+
+### Sistema de *callouts*
+
+Els materials fan servir cinc tipus de *callouts* —blocs visuals diferenciats— amb funcions pedagògiques ben delimitades:
+
+- **RISC-V**: documentació tècnica de la ISA o l'ABI directament aplicable. Separa els aspectes normatius de l'especificació de l'exposició didàctica del professor, evitant que l'estudiant confongui el «per què» amb el «com és».
+- **EC**: conveni específic de l'assignatura. Marca les decisions que no deriven de l'especificació RISC-V sinó dels acords interns del curs (convencions de nomenament, simplificacions pedagògiques, restriccions de l'avaluació).
+- **Exemple**: il·lustracions aplicades dels conceptes. Permeten seguir la prosa expositiva sense interrompre el fil argumental.
+- **Essencial**: contingut indispensable que l'estudiant ha de dominar per poder progressar. Actua com a senyal explícit de prioritat en un temari dens.
+- **Aprofundiment**: contingut opcional, no avaluable. Explicacions avançades, connexions amb recerca activa, punts d'entrada per a l'estudiant que vulgui explorar per la seva banda.
+
+El *callout* d'**Aprofundiment** respon a una necessitat pedagògica real i sistemàticament poc atesa: la bretxa entre el disseny curricular orientat al perfil mitjà i les necessitats dels estudiants amb capacitat i motivació superiors. A EC, el Centre de Formació Interdisciplinària Superior (CFIS) aporta cada any un grup d'estudiants que arriben al curs amb una base sòlida i una curiositat genuïna per la matèria, però que sovint perden l'estímul intel·lectual a mesura que el curs avança —precisament perquè el material no ofereix res més enllà del mínim exigible. El resultat és paradoxal: estudiants que podrien excel·lir acaben amb notes que no reflecteixen el seu potencial. El *callout* d'Aprofundiment no és un recurs per als que van sobrats: és el reconeixement que un bon material docent ha de tenir horitzons oberts, no un sostre baix.
+
+La decisió d'usar negretes de manera estratègica —marcant termes tècnics en la seva primera aparició i els conceptes clau de cada paràgraf— completa el sistema de senyalització visual. En un context on l'estudiant cada vegada consumeix més contingut en pantalla i en mode de lectura no lineal (cercant, saltant, rellegint punts concrets), el ressaltat explícit és una eina de navegació, no un ornament tipogràfic.
+
+### Nous problemes i criteris de selecció dels solucionaris
+
+A més de la migració i revisió dels exercicis existents, s'han incorporat 23 problemes nous (vegeu @tbl-reestructuracio-nou) que cobreixen continguts sense equivalent al material MIPS: la modularitat de RISC-V (extensions M i F), les eines de l'ecosistema obert (GNU Compiler Toolchain), els modes de privilegi i, per primera vegada a EC, exercicis sobre excepcions i interrupcions amb fonamentació operativa suficient per ser avaluables.
+
+Els solucionaris cobreixen T1–T9 amb criteris diferenciats per la naturalesa de cada bloc. T1, per la seva brevetat (dos exercicis), té el solucionari elaborat però pendent d'integrar al repositori en el format de `PE_T1.qmd`. Per als temes restants:
+
+- **T2–T5** (traducció C→assemblador): la densitat de raonament pas a pas és el nucli de l'aprenentatge i el solucionari és l'instrument principal d'autoavaluació. Els exercicis nous d'aquests temes —sense referent previ a MIPS— fan el solucionari imprescindible. T3 (salts i subrutines) i T5 (coma flotant) concentren les taxes d'errors més altes de l'assignatura.
+- **T6** (Rendiment i potència): tema atòmic amb exercicis íntegrament numèrics; el criteri de selecció i ordenació és dificultat creixent a partir de la fórmula base.
+- **T7** (Memòria cau) i **T8** (Memòria virtual): els estudiants aborden aquests continguts per primer cop. Els exercicis són bastant mecànics un cop assimilat el procediment; el solucionari actua com a model de referència per autoavaluar-se, ordenat per dificultat creixent.
+- **T9** (Excepcions i interrupcions): és una novetat respecte als materials MIPS originals, on aquest tema no tenia problemes. L'adopció de RISC-V —amb els registres CSR, els modes de privilegi i el mecanisme `ecall`— ha permès formular exercicis nous sobre continguts que ara sí que tenen prou base operativa per ser avaluables.
+
+## Qualitat i harmonització {#sec-qualitat-harmonitzacio}
+
+Un dels resultats més significatius del projecte, i que supera l'abast estrictament tècnic de la migració, és l'establiment d'un **sistema de qualitat documentat** per als materials de l'assignatura. Aquest sistema es concreta en tres artefactes:
+
+- **`contrib.qmd`**: Document de convencions i normes d'estil que recull el sistema de *callouts* i prefixos d'etiquetes, les normes d'estil (veu, puntuació, negretes, anglicismes, sigles), els criteris de format (taules, figures SVG, blocs de codi), les substitucions terminològiques obligatòries, la paleta de colors SVG i les decisions específiques per tema. Conté, a més, el **recull terminològic RISC-V en català** elaborat durant la migració: la primera referència sistemàtica d'equivalències entre la terminologia tècnica anglesa del camp i el català normatiu, disponible per a qualsevol assignatura de l'àmbit.
+- **`sigles.qmd`**: Glossari de sigles de l'assignatura, actualitzat incrementalment durant la migració de cada tema.
+- ***Definition of Done* (DoD-F2, F3 i F4)**: Sistema de criteris de tancament per fase, descrit a la @sec-enfocament-metodologic. Garanteix que cada unitat de producció i cada unitat de revisió compleix els estàndards de qualitat abans de passar a la fase següent.
+
+## Integració i accessibilitat
+
+El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un **ecosistema de materials cohesionat** amb les característiques següents:
+
+- **Punt d'entrada únic**: Una URL dona accés a tots els materials en HTML, i un botó permet descarregar el PDF complet de tot el llibre.
+- **Accessibilitat WCAG 2.1**: Marcatge HTML5 semàntic, mode fosc/clar respectant la configuració del sistema de l'usuari, disseny *responsive* i codi amb ressaltat accessible (*a11y*).
+- **Navegació no lineal amb referències creuades**: Cada secció del material conté enllaços directes cap a les seccions de teoria o laboratori relacionades. Un estudiant consultant L3 pot accedir directament als apartats de T3 que aplica; un estudiant consultant T3 pot navegar als exercicis corresponents de PE_T3 i a la correcció de PS_T3. Aquesta interconnexió sistemàtica, impossible en el format PDF original, transforma els materials d'un recurs lineal en un sistema de consulta ràpida.
+- **Validació sistemàtica a RARS**: Tot el codi assemblador del corpus —teoria, exercicis i solucionaris— ha estat verificat manualment al simulador RARS. Això garanteix que cap exemple ni exercici falla en l'entorn de laboratori dels estudiants.
+- **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero.
+
+## Característiques diferencials del corpus
+
+La @tbl-caracteristiques recull les característiques que distingeixen el corpus produït d'un material docent convencional en format PDF, organitzades per l'àmbit d'impacte principal.
+
+| Característica | Impacte pedagògic i institucional |
+| :--- | :--- |
+| **Català normatiu + recull terminològic RISC-V** | Accessibilitat lingüística per a l'estudiantat; primera referència sistemàtica de terminologia RISC-V en català, reutilitzable per altres assignatures de l'àmbit |
+| **Format obert (Quarto Markdown)** | Llegible per humans i màquines; HTML accessible (WCAG 2.1), mode fosc/clar, *responsive*; PDF d'alta qualitat des d'una sola font |
+| **Navegació no lineal amb referències creuades** | Teoria, problemes, solucionaris i laboratoris interconnectats; facilita la consulta ràpida i l'estudi no lineal en pantalla |
+| **Sistema de senyalització visual** | Cinc tipus de *callouts* + negretes estratègiques: priorització del contingut i navegació adaptada al consum en pantalla |
+| **Validació sistemàtica a RARS** | Tot el codi assemblador verificat al simulador; zero-error garantit en l'entorn de laboratori |
+| **Repositori públic i reutilitzable** | Qualsevol equip docent pot fer un *fork* i adaptar el corpus; model de manteniment col·laboratiu via GitLab |
+| **Sistema de DoDs (F2, F3, F4)** | Procés de producció i revisió auditable, traçable i replicable per a projectes similars |
+: Característiques diferencials del corpus produït respecte als materials originals en format PDF. {#tbl-caracteristiques tbl-colwidths="[35,65]" .striped}
+
+## Comparativa planificació–realitat {#sec-comparativa-planificacio-realitat}
+
+La @tbl-planificacio-execucio contrasta la planificació prevista al lliurament intermedi (març 2026) amb el que s'ha assolit efectivament.
+
+| Fita | Previst (lliurament intermedi) | Assolit (lliurament final) |
+| :--- | :--- | :--- |
+| M1 (Març) | T1, T2; setup del repositori | T1, T2 + estructura completa del projecte i sistema de convencions |
+| M2 (Abril) | T3, T4, T5 | T3, T4, T5 + solucionaris PS_T2–T5 |
+| M3 (Maig) | T9 (Excepcions i interrupcions) + laboratoris (RARS) | T6, T7, T8, T9 + L1–L6 complets + solucionaris PS_T6–T9 |
+| M4 (Juny) | Tancament i memòria | PE_T1–T9 complets + 23 exercicis nous + PS_T1 + materials transversals + memòria |
+: Comparativa entre la planificació inicial i els resultats assolits. {#tbl-planificacio-execucio tbl-colwidths="[15,40,45]"}
+
+La diferència entre el previst i l'assolit és directament atribuïble a l'adopció de Claude com a eina principal de producció, descrita a la @sec-enfocament-metodologic: la capacitat de mantenir el context complet del projecte en una sola sessió va multiplicar la capacitat de producció i va permetre cobrir en els terminis previstos un volum de material molt superior al planificat.
+
+# Discussió, conclusions i altres propostes {#sec-discussio}
+
+Aquest projecte no és un estudi experimental en el sentit clàssic: no hi ha grup de control, no hi ha mesura d'impacte sobre l'estudiantat anterior al lliurament, i les dades quantitatives de rendiment acadèmic seran disponibles només a partir del Q1 2026-27. Reconèixer-ho explícitament no és una limitació que calgui disculpar sinó una caracterització precisa del tipus d'intervenció: un projecte d'innovació docent d'envergadura real, amb un producte tangible, verificable i desplegable. El rigor no rau aquí en el disseny experimental sinó en la solidesa de l'argumentació pedagògica, la traçabilitat del procés de producció, la qualitat dels instruments de validació interns (DoD-F2, DoD-F3 i DoD-F4) i la coherència entre els objectius declarats i els resultats assolits. Tots quatre criteris estan documentats al llarg d'aquesta memòria.
+
+## Contrast dels resultats amb el marc teòric i estudis previs
+
+Els resultats descrits a la @sec-resultats confirmen les premisses del marc teòric establert a la @sec-marc-teoric i els antecedents identificats a la @sec-revisio-experiencies. La validació acadèmica més clara prové del propi camp disciplinar: la decisió de Patterson i Hennessy (2021) de reescriure íntegrament el seu llibre de referència al voltant de RISC-V és el gest que millor avala el canvi de paradigma. Que els pioners d'una arquitectura l'abandonin per adoptar-ne una d'oberta no és una anècdota circumstancial: és la prova que RISC-V representa l'estàndard emergent per a la docència de l'arquitectura de computadors en la dècada de 2020. Les migracions documentades a Berkeley (CS 61C) i Cornell (CS 3410), descrites a la @sec-revisio-experiencies, confirmen que la tendència és global i sistemàtica, i que la FIB-UPC no és pionera aïllada sinó participant ben posicionada en un moviment acadèmic de fons.
+
+En l'àmbit metodològic, l'experiència d'aquest projecte valida l'ús de l'enfocament àgil (Schwaber & Sutherland, 2020) per a la producció iterativa de materials educatius tècnics. La comparativa pla→realitat de la @sec-comparativa-planificacio-realitat mostra que la divisió del corpus en unitats temàtiques funcionals va permetre absorbir la variabilitat inherent al projecte —decisions terminològiques retroactives, addició d'exercicis sense equivalent en el material original, evolució del sistema de convencions— sense comprometre el calendari global. Un model de planificació seqüencial hauria estat molt menys resilient davant d'aquests ajustos.
+
+L'aportació diferencial d'aquest projecte, més enllà de la migració pròpiament dita, és triple: l'adopció de formats oberts i llegibles per màquines com a principi estructurador dels materials; l'establiment d'un sistema de qualitat documentat (sistema de DoDs, `contrib.qmd`, `sigles.qmd`) que fa el corpus auditable i editable per qualsevol membre de l'equip docent; i la documentació del procés de producció assistit per IA, que ofereix un model replicable per a equips sense recursos de producció professional.
+
+El fet d'assolir el 100% del conjunt del material (teoria, problemes, solucionari) quan el pla inicial preveia tancar únicament la teoria al lliurament final supera significativament les previsions. Això suggereix que l'ús d'eines IA redueix radicalment les estimacions convencionals de cost i temps per a la producció de materials docents tècnics, amb implicacions rellevants per a la planificació de projectes de millora docent.
+
+## Valoració crítica del procés, obstacles i aprenentatges
+
+El procés ha estat ric en aprenentatges tant sobre el contingut tècnic de la migració com sobre l'ús de la IA com a eina de producció educativa.
+
+**Obstacles identificats**
+
+El primer obstacle va ser la naturalesa dels materials de partida: documents PDF sense fonts editables, resultat de convertir presentacions de diapositives elaborades anys enrere. Cap eina de processament de text pot importar-los directament sense una fase de transcripció i reestructuració prèvies. En la fase inicial d'exploració, aquest pas va consumir un temps desproporcionat i va limitar la velocitat de producció.
+
+El segon obstacle, de caràcter tècnic, va ser la validació del codi assemblador. Les eines d'IA generativa produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte: errors subtils en les convencions de l'ABI, en l'ordre dels operands o en l'ús de les pseudoinstruccions passen desapercebuts en una lectura ràpida però fallen en execució al simulador. Cada exemple de codi dels apunts de teoria i cada exercici dels solucionaris ha requerit verificació manual a RARS. Aquest pas no és automatitzable i no ha de ser-ho: és precisament el punt on l'expertesa disciplinar del professor resulta imprescindible.
+
+El tercer obstacle va ser la gestió de la coherència terminològica i d'estil en un corpus de 36 fitxers. Qualsevol decisió de format o lèxic adoptada al T2 té implicacions al T3, al T4 i en endavant. Mantenir la consistència en un corpus d'aquesta escala requereix un sistema de convencions documentat, accessible i consultat sistemàticament durant la producció: aquest és l'origen de `contrib.qmd`.
+
+**El pivot NotebookLM → Claude**
+
+L'exploració inicial amb NotebookLM va validar la viabilitat de la migració assistida per IA però va evidenciar un límit estructural: aquesta eina requereix la fragmentació en *notebooks* temàtics independents, cosa que impedeix propagar les decisions d'estil i contingut d'un tema a un altre de manera automàtica. La velocitat de producció era moderada i la supervisió humana, intensiva.
+
+L'adopció de Claude com a eina principal va transformar el procés. La capacitat de mantenir en una sola sessió el context complet del projecte —les convencions de `contrib.qmd`, les decisions prèvies, l'estructura del repositori, els exemples de temes ja tancats— va eliminar la fragmentació. Cada sessió de treball permetia avançar en un tema sencer amb coherència i qualitat homogènies.
+
+**El rol del professor com a director tècnic**
+
+La integració de la IA no va reduir el rol del professor: el va transformar. El docent va passar de ser l'escriptor principal dels materials a ser el *director tècnic* del procés: definint les convencions d'estil, prenent les decisions pedagògiques clau (quins conceptes aprofundir, quins exemples prioritzar, quina progressió didàctica seguir), validant cada fragment de codi al simulador RARS i revisant la precisió tècnica del contingut. La IA accelera la producció; la intel·ligència pedagògica continua residint en el docent. Aquesta distinció és una conclusió central del projecte amb implicacions directes per a la formació del professorat universitari en l'era de la IA generativa.
+
+## Enriquiment personal
+
+El treball intens i exhaustiu que he realitzat per portar la migració des de la seva concepció fins a la Fase de Revisió Externa (F4) m'ha permès desenvolupar una sèrie de competències i coneixements que van més enllà del contingut tècnic de l'assignatura. En primer lloc, he adquirit una comprensió profunda de l'arquitectura RISC-V i les seves diferències clau amb MIPS, així com de les pràctiques de programació en assemblador i el funcionament dels simuladors com RARS. En segon lloc, he desenvolupat habilitats avançades en la formulació de prompts per a IA generativa, aprenent a guiar la producció de contingut tècnic complex i a supervisar críticament les respostes per garantir la correcció i coherència. Finalment, he millorat les meves competències en la gestió de projectes educatius, especialment en l'organització de materials, el control de versions amb GitLab i la documentació d'un procés col·laboratiu assistit per IA, i la meva capacitat per a transmetre aquests coneixements de manera clara i pedagògica.
+
+## Propostes de millora o línies de continuïtat del projecte
+
+**Implantació a l'aula (Q1 2026-27)**
+
+La primera validació real dels materials migrats tindrà lloc al primer quadrimestre del curs 2026-27 (setembre de 2026), en 2 grups de teoria i 3 o 4 grups de laboratori. Els instruments de recollida de dades previstos —seguiment del rendiment acadèmic, enquesta de satisfacció i registre d'incidències— estan descrits a la secció de Metodologia (@sec-recollida-dades). L'experiència dels estudiants amb els nous materials proporcionarà el *feedback* necessari per a una primera iteració de millora.
+
+**Completar el cicle de revisió externa**
+
+La Revisió Externa (F4), en curs en el moment del lliurament d'aquesta memòria, és l'etapa que tancarà formalment el cicle de producció. Els grups de treball establerts estan revisant els materials per temes, amb sessions de videotrucada per als punts que requereixen consens. S'espera que la F4 estigui completada abans del desplegament al Q1 2026-27.
+
+**Extensió a l'eix d'arquitectura: IC i AC**
+
+A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC → EC → AC, descrita a la @sec-context-eix-arquitectura) aconsella estendre el model a les assignatures veïnes. IC podria beneficiar-se de la migració a format obert per facilitar la sincronització conceptual amb EC. AC, que utilitza x86 com a arquitectura de referència per a l'estudi del *pipelining*, podria incorporar RISC-V com a pont pedagògic entre EC i els conceptes avançats de segmentació, aprofitant la continuïtat de l'ISA que l'estudiant ja domina en sortir d'EC. Aquesta extensió enforteix la coherència vertical del pla d'estudis i optimitza el temps d'aula dedicat a la introducció d'arquitectures noves.
+
+**Reproductibilitat del procés de renderització**
+
+Una millora pendent és la contenització del procés de renderització del llibre —per exemple, mitjançant un contenidor Docker— per garantir que qualsevol membre de l'equip docent o col·laborador extern pugui generar el PDF i l'HTML complets sense configurar un entorn local específic. Aquesta millora té un impacte directe en la sostenibilitat a llarg termini del corpus i facilita les contribucions externes.
+
+**Manteniment col·laboratiu i comunitat docent**
+
+El repositori públic a GitLab és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques del sistema de DoDs, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
+
+## Possibles connexions amb altres àmbits o temàtiques educatives
+
+**El model com a pràctica exportable a assignatures STEAM**
+
+L'arquitectura metodològica d'aquest projecte —gestió àgil, producció assistida per IA, format *Docs-as-Code* i repositori compartit— no és específica ni de l'arquitectura de computadors ni de l'enginyeria informàtica. Qualsevol assignatura STEAM amb un corpus de materials tècnics susceptible d'actualització pot aplicar el mateix model. Els ingredients essencials en són quatre: un format de marcatge pla (Markdown, LaTeX, reStructuredText) que separi el contingut de la presentació i el faci processable per eines automàtiques; un repositori de control de versions que garanteixi la traçabilitat i la sincronització entre l'equip docent; la IA generativa com a accelerador de producció amb supervisió humana explícitament definida; i un sistema de convencions documentat que mantingui la coherència del corpus a mesura que creix. Assignatures com Física, Matemàtiques o Electrònica comparteixen el repte de mantenir materials tècnics actualitzats amb equips reduïts i temps fragmentat. El cost d'entrada d'aquest model és baix: totes les eines emprades (Quarto, GitLab, RARS) són de codi obert o d'accés gratuït.
+
+**El paradigma *Docs-as-Code* en l'àmbit educatiu**
+
+El paradigma *Docs-as-Code* —tractar la documentació amb les mateixes eines i pràctiques que el codi font— és una pràctica consolidada en la indústria del programari que aquest projecte trasllada explícitament a la docència universitària. L'aplicació educativa aporta beneficis directes: control de versions del contingut docent, revisió col·laborativa entre iguals (anàloga al *code review*), detecció automàtica d'errors de format i desplegament automàtic dels materials actualitzats. A més, per als estudiants d'enginyeria informàtica, accedir a materials allotjats en un repositori GitLab, renderitzats amb Quarto i compatibles amb les tecnologies assistives representa en si mateix un aprenentatge implícit sobre les bones pràctiques de la indústria, alineat amb els objectius formatius del grau.
+
+**Implicacions per a la formació del professorat universitari en IA**
+
+L'experiència d'aquest projecte permet formular una conclusió amb implicacions directes per a la missió de l'ICE: la formació del professorat universitari en l'ús de la IA ha d'anar més enllà de l'adopció puntual d'eines individuals. El que resulta estratègic és una alfabetització en la *gestió de projectes assistits per IA*: com definir convencions de treball que la IA pugui seguir amb consistència, com estructurar les tasques per maximitzar l'efectivitat de la col·laboració humà-màquina, i com establir mecanismes de validació adequats al context disciplinar de cada assignatura. El professor que domina aquesta competència pot multiplicar la seva capacitat de producció docent de qualitat sense comprometre el rigor. Promoure i difondre aquest model és, per tant, una tasca estratègica per a les institucions que, com l'ICE de la UPC, lideren la innovació pedagògica a la universitat.
+
+
+# Bibliografia
+
+Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
+
+Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. David McKay.
+
+Hennessy, J. L., & Patterson, D. A. (2022). *Computer architecture: A quantitative approach* (6th ed.). Morgan Kaufmann.
+
+Poppendieck, M., & Poppendieck, T. (2003). *Lean software development: An agile toolkit*. Addison-Wesley.
+
+Patterson, D. A., & Hennessy, J. L. (2021). *Computer organization and design RISC-V edition: The hardware software interface* (2nd ed.). Morgan Kaufmann.
+
+Patterson, D., & Waterman, A. (2017). *The RISC-V reader: An open architecture atlas*. Strawberry Canyon LLC. <http://riscvbook.com/>
+
+RISC-V International. (2020–present). *Official RISC-V specifications*. <https://riscv.org/specifications/ratified/>
+
+Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to Scrum: The rules of the game*. Scrum.org. <https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf>
+
+Waterman, A., & Asanović, K. (Eds.). (2019). *The RISC-V instruction set manual, volume I: Unprivileged ISA*. RISC-V International. <https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html>
+
+Winans, J. (2022). *RISC-V assembly language programming*. Northern Illinois University. <https://github.com/johnwinans/rvalp>
+
+Mollick, E., & Mollick, L. (2023). *Assigning AI: Seven approaches for students, with prompts*. The Wharton School, University of Pennsylvania. <https://doi.org/10.2139/ssrn.4475995>
+
+OCDE. (2023). *Generative AI and the future of education*. OECD Publishing. <https://doi.org/10.1787/5b5d2df8-en>
+
+Selwyn, N. (2023). *Generative AI and the future of education: Panic and possibility*. Polity Press.
+
+World Wide Web Consortium. (2018). *Web content accessibility guidelines (WCAG) 2.1*. <https://www.w3.org/TR/WCAG21/>
+
+# Annex: Reflexions sobre l'impacte de la IA generativa en la docència {#sec-annex-ia .unnumbered}
+
+*Aquest annex recull reflexions personals fruit de l'experiència d'haver passat, en el transcurs d'aquest projecte, d'un ús pràcticament nul de la IA generativa a un ús intensiu i diari. No pretén ser una revisió sistemàtica de la literatura sinó un testimoni de primera mà d'un professor d'enginyeria que ha viscut la transició des de dins.*
+
+## La premissa que ho canvia tot {.unnumbered}
+
+La IA generativa ha vingut per quedar-se i transformarà pràcticament tots els sectors, inclòs l'ensenyament universitari. No és una predicció: ja està passant. Qualsevol estratègia docent que parteixi de la prohibició com a resposta principal és una estratègia condemnada al fracàs, per la mateixa raó que ho hauria estat prohibir les calculadores als anys setanta o Internet als noranta. La pregunta pertinent no és "permetem o prohibim?" sinó "com incorporem la IA de manera que afavoreixi l'aprenentatge real?" Selwyn (2023) ho articula clarament: el debat públic oscil·la entre el pànic i l'entusiasme acrítics, i cap dels dos extrems és útil pedagògicament.
+
+L'experiència d'aquest projecte m'ha convertit en un ferm partidari de la IA com a eina de treball. He atacat camps que havia defugit sistemàticament —JavaScript, Git, l'automatització del flux de publicació— perquè la barrera d'entrada s'ha reduït fins a un punt en què l'únic obstacle real és el criteri sobre *què* cal fer, no el coneixement de *com* fer-ho tècnicament. La qualitat del treball ha augmentat, el temps invertit s'ha reduït i, paradoxalment, la comprensió dels mecanismes subjacents ha millorat: quan una IA et genera codi que funciona però que no entens, la supervisió crítica que t'exigeixes a tu mateix és un accelerador d'aprenentatge molt eficient.
+
+## Com hem de fer front a l'ús de la IA a l'aula? {.unnumbered}
+
+La resposta no pot ser binària ni estàtica, perquè les capacitats i les necessitats de l'estudiant evolucionen al llarg del pla d'estudis. La meva proposta, basada en l'experiència docent a EC (Q2 del grau) i a dues assignatures optatives del màster de recerca, és la següent:
+
+**Primers quadrimestres del grau: fonamentar el pensament crític.** En les etapes inicials, l'ús de la IA s'hauria de limitar a l'estudi i la preparació, no a la resolució d'exercicis avaluables. La raó no és moral sinó pedagògica: un estudiant que no ha après a estructurar un problema no pot supervisar críticament una solució generada per una IA. Usar la IA sense aquesta base és equivalent a copiar sense entendre; el resultat és un aprenentatge superficial que es desfà en el primer examen oral. En paral·lel, el professorat ha de proporcionar guies d'ús eficient de les eines disponibles, actualitzades regularment, perquè l'ecosistema evoluciona a una velocitat que converteix en obsoleta qualsevol guia de fa dotze mesos.
+
+**Quadrimestres finals del grau: normalitzar l'ús com una eina més.** A les assignatures pràctiques dels darrers quadrimestres, la IA s'hauria de tractar exactament igual que un compilador, un depurador o un editor de text avançat: una eina que el professional usarà durant tota la seva carrera i que l'estudiant ha d'aprendre a usar bé. Mollick i Mollick (2023) proposen set enfocaments concrets per integrar la IA als treballs dels estudiants preservant l'aprenentatge real; la clau és dissenyar tasques on la IA sigui un amplificador de capacitat, no un substitut del raonament.
+
+**Màster: ús massiu per maximitzar la productivitat.** A nivell de màster, la producció assistida per IA hauria de ser la norma. L'objectiu és que l'estudiant pugui focalitzar tota la seva atenció en el consum crític, la síntesi i la contribució original, alliberant-se de la feina mecànica de producció. La OCDE (2023) identifica precisament aquest escenari —IA com a amplificador de la capacitat experta— com el cas d'ús amb l'impacte positiu més gran en educació superior.
+
+## L'avaluació, l'element que ho ha de canviar tot {.unnumbered}
+
+La transformació metodològica no és sostenible si no va acompanyada d'una transformació de l'avaluació. Els formats actuals, dissenyats en un món sense IA generativa, han quedat obsolets en molts casos.
+
+Als **quadrimestres inicials**, la resposta és clara: tornar als exàmens de paper, llapis i, com a màxim, calculadora bàsica. No és un retrocés; és reconèixer que l'examen presencial sense eines és l'únic instrument que mesura el que realment volem mesurar en aquesta etapa: si l'estudiant ha internalitzat els conceptes.
+
+Als **quadrimestres finals i al màster**, els treballs, projectes i memòries ja no poden ser l'únic recurs d'avaluació. Un document produït amb IA de qualitat és indistingible, en aparença, d'un document elaborat amb esforç genuí. La solució no és la detecció —les eines de detecció actuals no són fiables i mai ho seran prou— sinó el retorn a formats d'avaluació que no es poden delegar: l'examen oral. En una de les meves assignatures de màster del curs vinent ja el recuperem. L'examen oral no detecta si l'estudiant ha usat IA: directament fa irrellevant la pregunta, perquè l'estudiant ha de demostrar davant del professor que entén el que ha lliurat.
+
+## Els professors som necessaris? {.unnumbered}
+
+La pregunta és incòmoda però legítima. Ja ara, un estudiant amb criteri pot aprendre d'un tema tècnic interaccionant directament amb un LLM amb més eficiència que en una classe magistral estàndard: pot fer preguntes al seu ritme, aprofundir on li interessa, repetir les explicacions que no ha entès i generar exemples personalitzats al seu context. Si la funció del professor és transmetre informació, efectivament som prescindibles.
+
+Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge. És un canvi de rol profund, no una desaparició.
+
+## L'atenció als estudiants excel·lents {.unnumbered}
+
+Hi ha una qüestió que el discurs pedagògic dominant prefereix no tractar: en l'esforç per no deixar ningú enrere, hem acabat posant un sostre als qui van davant. A EC, l'experiència amb els estudiants del Centre de Formació Interdisciplinària Superior (CFIS) és il·lustrativa: arriben amb una base sòlida i una curiositat genuïna, però sovint perden l'estímul a mesura que el curs avança i acaben amb notes que no reflecteixen el seu potencial. El material docent estàndard no és el problema; el problema és que no ofereix cap horitzó més enllà del mínim exigible.
+
+El *callout* d'Aprofundiment dels nous materials és una resposta modesta però concreta a aquesta bretxa: indica a l'estudiant que hi ha més, que el tema té profunditat, i que pot explorar-la pel seu compte si vol. Amb la IA disponible com a tutor personalitzat il·limitat, aquest tipus d'indicació adquireix una dimensió nova: ja no cal esperar que el professor tingui temps per a una tutoria individual. L'estudiant que vol aprofundir ara té accés immediat a un interlocutor que el pot acompanyar fins on vulgui arribar.
+
+## El futur de la programació {.unnumbered}
+
+Una pregunta que planeja sobre tota la facultat i que ningú respon amb convicció: si un LLM pot generar codi funcional per a la majoria de tasques de programació estàndard, *quin és el valor diferencial d'un programador humà?*
+
+L'ofici de programador tal com l'hem conegut —escriure codi línia a línia per implementar especificacions donades— ha canviat irreversiblement. Però potser la pregunta està mal formulada. El que ha desaparegut és la barrera d'entrada a la producció de codi; el que no ha desaparegut és la necessitat de criteri sobre *quin* codi cal escriure, *per a quin* problema, *amb quines* restriccions i *amb quins* compromisos. Un *full-stack* que sap usar bé la IA multiplica la seva capacitat de producció per un factor difícil de quantificar. Un programador especialitzat en un domini complex —seguretat, compiladors, sistemes en temps real— continua tenint un avantatge diferencial que la IA no pot replicar fàcilment perquè requereix un context molt específic que no es pot capturar en un *prompt*.
+
+No tinc la resposta definitiva, i desconfio de qui diu que la té. El que sí sembla clar és que l'habilitat de col·laborar eficientment amb eines IA —saber formular el problema, supervisar la solució i integrar-la en un sistema complex— és ja una competència fonamental que hauria d'estar al nucli del currículum d'enginyeria informàtica. Com a departament, tenim la responsabilitat de decidir si ens n'adonem ara o quan ja sigui massa tard.
+
+## A on pot arribar la IA? {.unnumbered}
+
+No ho sé. I aquesta resposta em sembla la més honesta i la més útil. El que sí que sé, per experiència directa, és que la distància entre "no la faig servir pràcticament" i "la faig servir intensivament cada dia" ha transformat la meva pràctica professional d'una manera que hauria considerat improbable fa divuit mesos. Si aquesta és la magnitud del canvi individual en un horitzó tan curt, projectar-la a escala institucional és un exercici que hauria de mantenir el col·lectiu docent en un estat d'alerta activa, no de resistència passiva.

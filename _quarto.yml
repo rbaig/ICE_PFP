@@ -3,15 +3,16 @@ project:
   output-dir: _output
   render:
     - index.qmd
-
+ 
 lang: ca
-
+ 
 crossref:
   fig-prefix: "Figura"
   fig-title: "Figura"
   tbl-prefix: "Taula"
   tbl-title: "Taula"
-
+  sec-prefix: "§"
+ 
 format:
   html:
     toc: true
@@ -23,13 +24,14 @@ format:
     code-overflow: wrap
     theme: cosmo
   pdf:
+    output-file: "Baig_PFP_EC_MIPS-RISC-V_2026.pdf"
     toc: true
     documentclass: scrartcl
     classoption: oneside
     papersize: a4
     geometry:
       - top=1.5cm
-      - bottom=1cm
+      - bottom=2.5cm
       - left=2cm
       - right=2cm
       - includeheadfoot
