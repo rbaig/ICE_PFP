@@ -4,7 +4,7 @@ L'assignatura Estructura de computadors (EC) del Grau en Enginyeria Informàtica
 
 L'objectiu ha estat revisar i actualitzar tot el corpus escrit (apunts de teoria, problemes, solucionaris i pràctiques de laboratori) substituint MIPS per RISC-V, i transformar simultàniament el format dels materials de PDF tancat a Quarto Markdown allotjat en un repositori de GitLab de la UPC. La metodologia ha combinat un enfocament àgil de gestió del projecte amb la producció assistida per IA generativa mitjançant Claude, que ha multiplicat la velocitat i la cobertura de la producció.
 
-Els resultats superen les previsions inicials: s'ha completat el 100% del corpus de l'assignatura —teoria, problemes, solucionaris i laboratoris— i la Revisió Externa ha començat, amb protocol, calendari i grups de treball establerts. Un element diferencial del projecte és l'adopció sistemàtica del concepte de *Definition of Done* (DoD), adaptat del marc Scrum, per garantir la qualitat de cada fase: criteris binaris verificables per a la producció de cada unitat temàtica (F2) i per a la revisió col·legiada (F4), amb una granularitat d'agrupament diferent en cada cas. Aquesta ortogonalitat en la definició de les unitats de treball permet un escrutini minuciós i una uniformització de criteris que fan el procés replicable i auditable.
+Els resultats superen les previsions inicials: s'ha completat el 100% del corpus de l'assignatura —teoria, problemes, solucionaris i laboratoris— i la Revisió Externa ha començat, amb protocol, calendari i grups de treball establerts. Un element diferencial del projecte és l'adopció sistemàtica del concepte de *Definition of Done* (DoD), adaptat del marc Scrum, per garantir la qualitat de cada fase: criteris binaris verificables per a la producció de cada unitat de producció (F2) i per a la revisió col·legiada (F4), amb una granularitat d'agrupament diferent en cada cas. Aquesta ortogonalitat en la definició de les unitats de treball permet un escrutini minuciós i una uniformització de criteris que fan el procés replicable i auditable.
 
 El projecte demostra que la combinació d'un format obert i estructurat, la supervisió experta de la IA generativa i una metodologia àgil multiplica la capacitat de producció docent de qualitat, i ofereix un model exportable a altres assignatures STEAM.
 
@@ -19,13 +19,7 @@ El projecte demostra que la combinació d'un format obert i estructurat, la supe
 
 # Abstract {.unnumbered}
 
-The Computer Organization (EC) course in the Bachelor's Degree in Computer Science at FIB-UPC used MIPS as its reference architecture from its inception. The declining industrial relevance of this ISA and the consolidation of RISC-V as the de facto open standard — adopted by the European Union and the authors of the field's key textbooks — motivated the comprehensive migration of the course's written teaching materials.
-
-The objective was to revise and update the entire written corpus (lecture notes, problem sets, solution manuals, and laboratory sessions) replacing MIPS with RISC-V, while simultaneously transforming the material format from closed PDF to Quarto Markdown hosted in a UPC GitLab repository. The methodology combined an agile project management approach with generative AI-assisted production via Claude, which multiplied production speed and coverage.
-
-The results exceed the initial projections: 100% of the course corpus — lecture notes, problem sets, solution manuals, and laboratory sessions — has been completed, and external peer review is underway, with protocol, schedule, and working groups in place. A key differentiating element of the project is the systematic adoption of the *Definition of Done* (DoD) concept, adapted from the Scrum framework, to ensure quality at each phase: verifiable binary criteria for the production of each thematic unit (F2) and for collegial review (F4), with different grouping granularity in each case. This orthogonality in the definition of work units enables thorough scrutiny and consistent quality standards, making the process both replicable and auditable.
-
-The project demonstrates that combining an open, structured format, expert-supervised generative AI, and an agile methodology multiplies the capacity for quality pedagogical production, and offers a replicable model for other STEAM courses.
+TODO: Traduir a l'anglès
 
 **Keywords**: RISC-V, computer organization, computer architecture, Quarto Markdown, agile methodology, AI-assisted learning.
 
@@ -52,9 +46,7 @@ A AC, un cop dominada l'estructura bàsica i el repertori d'instruccions a EC, e
 
 Així doncs, l'itinerari formatiu compost per IC, EC i AC, totes elles impartides pel Departament d'arquitectura de computadors (DAC), constitueix el tronc central de l'eix d'arquitectura del GEI de la FIB (@fig-eix-arquitectura). Aquesta seqüència representa l'itinerari tradicional i consolidat en els plans d'estudis d'informàtica a nivell internacional, ja que permet una evolució pedagògica natural: després de comprendre la lògica digital amb un processador teòric a IC, el pas per EC utilitzant una arquitectura RISC (*Reduced Instruction Set Computer*) és fonamental; el seu joc d'instruccions reduït i altament regular actua com el pas intermedi ideal, permetent a l'estudiant dominar els conceptes d'execució i traducció sense la complexitat del maquinari real. Finalment, a AC es culmina l'aprenentatge amb el model CISC (*Complex Instruction Set Computer*), on s'estudien arquitectures com x86 que, tot i la seva riquesa i heterogeneïtat d'instruccions, s'aborden amb èxit gràcies a la base sòlida adquirida prèviament.
 
-
-![L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC.](figures/fig_eix_arquitectura.svg){#fig-eix-arquitectura width="70%"}
-
+![L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC.](figures/eix_arquitectura.svg){#fig-eix-arquitectura width="70%"}
 
 ### L'assignatura Estructura de computadors (EC)
 
@@ -239,6 +231,20 @@ Per assolir aquest objectiu general, es defineixen els objectius específics (OE
 
 ## Enfocament metodològic i estratègies utilitzades {#sec-enfocament-metodologic}
 
+TODO Explicar que hi ha dues etapes:
+- Etapa de producció
+    - Inputs: Corpus de materials MIPS (Teoria, Problemaris, Solucionaris, Laboratoris)
+    - Productes: Corpus de materials RISC-V v0
+    - Execució: PFP TODO data_d_inici -- juliol 2026
+- Etapa d'explotació
+    - Inputs: Corpus de materials RISC-V v0
+    - Productes: Corpus de materials RISC-V v1 + Diapositives de classe
+    - Execució: iterativa per quadrimestres,
+        - 1a iteració: juliol 2026 -- setembre 2026
+            - 2 professors
+
+### Etapa de producció {#sec-etapa-produccio}
+
 L'execució del projecte s'ha basat en un enfocament de gestió àgil de projectes (*agile*), adaptant elements del marc Scrum (Schwaber & Sutherland, 2020) a la creació de continguts educatius. Aquesta tria respon a la necessitat de gestionar una migració complexa de materials llegats (*legacy*) en un entorn de col·laboració docent on el temps disponible és fragmentat i variable.
 
 L'estratègia central ha estat la **migració iterativa i incremental**: en lloc d'abordar la totalitat del temari com un bloc monolític, s'ha treballat per unitats temàtiques funcionals, cadascuna seguint un cicle de producció que integra la IA generativa com a eina d'acceleració.
@@ -247,36 +253,57 @@ La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assolimen
 
 Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (fitxers `contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
 
-El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objectiu i un grau d'implicació de l'equip docent diferenciats (@fig-fases-produccio). El plantejament de partida va ser que el professor responsable de la migració assumís íntegrament les fases de producció —Disseny del Sistema de Producció, Producció del Corpus Docent i Revisió de Conjunt— de manera que la resta de l'equip docent pogués concentrar el seu temps en la Revisió Externa, on l'aportació disciplinar és més valuosa. Aquesta divisió del treball ha permès prendre les decisions de contingut i format de manera orgànica i coherent, i ha estat la condició que ha fet possible assolir el 100% del material en els terminis previstos. Les F3 i F4 han tingut com a objectiu consolidar la qualitat del corpus abans del desplegament: la Revisió de Conjunt per detectar i corregir errors i incoherències de manera individual, i la Revisió Externa per validar els continguts col·legiadament amb tot l'equip docent. La fletxa de retroalimentació des de la Implementació a l'Aula cap a F4 indica que el *feedback* del primer quadrimestre d'ús alimentarà una nova iteració de revisió externa; les fletxes cap a F1 indiquen que les decisions de convencions s'actualitzen de manera contínua al llarg de totes les fases.
+El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objectiu i un grau d'implicació de l'equip docent diferenciats (@fig-etapa-produccio). El plantejament de partida va ser que el professor responsable de la migració assumís íntegrament les fases de producció —Disseny del Sistema de Producció, Producció del Corpus Docent i Revisió de Conjunt— de manera que la resta de l'equip docent pogués concentrar el seu temps en la Revisió Externa, on l'aportació disciplinar és més valuosa. Aquesta divisió del treball ha permès prendre les decisions de contingut i format de manera orgànica i coherent, i ha estat la condició que ha fet possible assolir el 100% del material en els terminis previstos. Les F3 i F4 han tingut com a objectiu consolidar la qualitat del corpus abans del desplegament: la Revisió de Conjunt per detectar i corregir errors i incoherències de manera individual, i la Revisió Externa per validar els continguts col·legiadament amb tot l'equip docent. La fletxa de retroalimentació des de la Implementació a l'Aula cap a F4 indica que el *feedback* del primer quadrimestre d'ús alimentarà una nova iteració de revisió externa; les fletxes cap a F1 indiquen que les decisions de convencions s'actualitzen de manera contínua al llarg de totes les fases.
 
-![Fases del projecte. El trapezi blau a l'esquerra codifica dues dimensions simultànies de la supervisió humana: l'amplada creixent de dalt a baix reflecteix el volum de treball humà directe en cada fase —de la configuració de l'entorn (F1) a la revisió col·legiada plena (F4–F5)—, i la intensitat del color indica el grau de validació disciplinar específica sobre el contingut tècnic i pedagògic. La Fase d'implementació (contorn discontinu) és posterior al lliurament d'aquesta memòria.](figures/fig_fases_produccio.svg){#fig-fases-produccio width="70%"}
+<!-- TODO actualitzar caption de la figura següent -->
+![Fases de l'Etapa de producció. La fletxa de l'esquerra codifica la intensitat del color indica el grau de validació disciplinar específica sobre el contingut tècnic i pedagògic. La Fase d'implementació (contorn discontinu) és posterior al lliurament d'aquesta memòria.](figures/etapa_produccio.svg){#fig-etapa-produccio width="70%"}
 
-### Fase 1: Disseny del sistema de producció
+<!-- TODO Revisar la integració en aquesta secció del paràgraf i la taula següents -->
+El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Sutherland, 2020) i ha estat adoptat i sistematitzat en la gestió de fluxos de producció iteratius per Poppendieck i Poppendieck (2003). En el context d'aquest projecte s'ha definit una DoD específica per a cada fase que implica producció o validació de contingut. La @tbl-dods en resumeix l'estructura:
+
+| DoD | Fase | Unitat de treball | Nom de la unitat  de treball | Naturalesa dels criteris |
+| :--- | :--- | :--- | :--- | :--- |
+| **DoD-F2** | Producció | Tema o Problemari o Solucionari o Sessió | Unitat de producció | Binaris individuals |
+| **DoD-F3** | Revisió de Conjunt | Corpus sencer | - | Binaris globals |
+| **DoD-F4** | Revisió Externa | Tema + Problemari + Solucionari per tema; Sessió | Unitat de revisió (externa) | Binaris col·legiats |
+: Estructura de les tres *Definitions of Done* del projecte. La granularitat de la unitat de treball és diferent en cada fase, cosa que permet un escrutini adaptat a l'objectiu de cadascuna. {#tbl-dods tbl-colwidths="[10,20,30,20,20]" .striped}
+
+#### Fase P1: Disseny del sistema de producció
 
 Molta d'aquesta feina l'he fet en paral·lel a la Fase de Producció del Corpus Docent, de manera orgànica al llarg del projecte.
 
-Productes:
+##### Productes
 
-- Tria de l'eina d'IA generativa (NotebookLM i després Claude).
-- Definició de les convencions d'estil i format (contrib.qmd).
-- Definició de l'estructura i organització dels materials (fitxers `.qmd` i `index.qmd`).
-- Definició del flux de treball i les etapes de producció (Cicle de producció d'unitat temàtica, Revisió de conjunt i Revisió externa).
+- Establiment de l'eina d'IA generativa (NotebookLM, primer, i Claude, després).
+- Definició de les convencions d'estil i format (a fitxer `contrib.qmd`).
+- Definició de l'estructura i organització dels materials (a `_quarto.yml`).
+- Definició del flux de treball i les etapes de producció (Cicle de producció, Revisió de conjunt i Revisió externa).
 - Entorn de producció: repositori de GitLab, estructura de fitxers, plantilla de fitxers `.qmd`, etc.
 
-Durant la resta de fases, he fet revisió constant d'aquests productes per integrar-hi l'aprenentatge adquirit a mesura que avançava el projecte.
+Durant la resta de fases, he fet revisió constant d'aquests productes per integrar-hi l'aprenentatge adquirit a mesura que avançava el projecte i he aplicat, sistemàticament, el procediment de primer esmenar els protocols, plantilles, etc. i aplicar-los després a el cas d'ús que n'havia motivat el canvi i finalment, actualitzar els documents ja produïts.
 
-### Fase 2: Producció del corpus docent
+#### Fase P2: Unitats de producció
 
-Les unitats de producció, en ordre d'execució:
+L'ordre d'execució, ha estat:
 
-1. Tota la teoria, per temes (T1–T9).
-2. Tots els laboratoris, per sessions (L1–L6).
-3. Tots els problemes i solucionaris, per temes (PE_T1–T9, PS_T1–T9).
+1. Tota la teoria
+2. Tots els problemes i solucionaris
+3. Tots els laboratoris
 
-Cada fitxer `.qmd` constitueix una **unitat de producció** independent: s'aborda de manera seqüencial i, un cop tancada, no es torna a reobrir llevat de decisions de la Revisió de Conjunt. Els resultats de cada unitat es lliuren en un fitxer `.qmd` revisat i formatat segons les convencions establertes.
+##### Productes
 
-El cicle de producció de cada unitat segueix les etapes de la @fig-flux-produccio:
+- 9 fitxers `Tx.qmd`, essent `x` el número de tema.
+- 9 fitxers `Px.qmd`.
+- 9 fitxers `Sx.qmd`.
+- 6 fitxers `Ly.qmd`, essent `y` el número de sessió
 
+Cada fitxer `.qmd` constitueix una **unitat de producció** independent: s'aborda de manera seqüencial i, un cop tancada, no es torna a reobrir llevat de decisions de la Revisió de Conjunt. 
+
+##### Cicle de producció unitària
+
+El cicle de producció de cada unitat de producció segueix les etapes de la @fig-unitat-produccio:
+
+<!-- TODO actualitzar llista amb les fases de la figura -->
 1. **Extracció i conversió assistida per IA**, secció a secció, a partir del PDF original.
 2. **Revisió tècnica iterativa** del document en conjunt: verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS, revisió de la coherència tècnica global del tema, documentació de les decisions que s'han de prendre col·legiadament.
 3. **Revisió lingüística iterativa**: harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`.
@@ -284,18 +311,10 @@ El cicle de producció de cada unitat segueix les etapes de la @fig-flux-producc
 5. **Refinament del coneixement acumulat**: actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en les unitats següents.
 6. **Identificació de necessitats d'actualització retroactiva**: revisió dels fitxers ja produïts en unitats anteriors en funció de les decisions i aprenentatges del tema.
 
-![Cicle de producció de cada unitat temàtica. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done* de F2. L'etapa 5 capitalitza l'aprenentatge per a les unitats següents.](figures/fig_flux_produccio.svg){#fig-flux-produccio width="80%"}
+<!-- TODO actualitzar caption de la figura -->
+![Cicle de producció unitària. Les etapes 2 i 3 són iteratives amb Claude fins a satisfer la *Definition of Done* de F2. L'etapa 5 capitalitza l'aprenentatge per a les unitats següents.](figures/unitat_produccio.svg){#fig-unitat-produccio width="80%"}
 
-#### *Definition of Done* de F2 (DoD-F2) {.unnumbered}
-
-El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Sutherland, 2020) i ha estat adoptat i sistematitzat en la gestió de fluxos de producció iteratius per Poppendieck i Poppendieck (2003). En el context d'aquest projecte s'ha definit una DoD específica per a cada fase que implica producció o validació de contingut. La @tbl-dods en resumeix l'estructura:
-
-| DoD | Fase | Unitat de treball | Naturalesa dels criteris |
-| :--- | :--- | :--- | :--- |
-| **DoD-F2** | Producció | Un fitxer `.qmd` (tema / sessió / PE / PS per tema) | Binaris individuals |
-| **DoD-F3** | Revisió de Conjunt | Corpus sencer | Binaris globals |
-| **DoD-F4** | Revisió Externa | T+PE+PS per tema; cada sessió de lab per separat | Binaris col·legiats |
-: Estructura de les tres *Definitions of Done* del projecte. La granularitat de la unitat de treball és diferent en cada fase, cosa que permet un escrutini adaptat a l'objectiu de cadascuna. {#tbl-dods tbl-colwidths="[10,20,40,30]" .striped}
+##### *Definition of Done* de F2 (DoD-F2) {.unnumbered}
 
 Una unitat de producció de F2 es considera acabada quan compleix tots els criteris següents, agrupats en tres categories:
 
@@ -315,14 +334,14 @@ Una unitat de producció de F2 es considera acabada quan compleix tots els crite
 
 - El document és funcional dins de l'estructura del repositori GitLab (renderitza correctament en HTML i PDF).
 
-### Fase 3: Revisió de conjunt
+#### Fase 3: Revisió de conjunt
 
 - Detecció i esmena, quan no s'hagi de fer col·legiadament, d'errors, d'incoherències i d'oportunitats de millora tant tècniques com lingüístiques i pedagògiques.
 - Figures, enllaços, harmonització d'estil, etc.
 - Documentació de les decisions que s'han de prendre col·legiadament.
 - Revisió humana: mitjana.
 
-#### *Definition of Done* de F3 (DoD-F3) {.unnumbered}
+###### *Definition of Done* de F3 (DoD-F3) {.unnumbered}
 
 La DoD-F3 s'aplica al corpus sencer (no tema per tema) i verifica la coherència global del conjunt:
 
@@ -333,13 +352,13 @@ La DoD-F3 s'aplica al corpus sencer (no tema per tema) i verifica la coherència
 - Tots els enllaços interns i referències creuades entre fitxers són funcionals.
 - Les decisions pendents de consens col·legiat estan documentades com a *issues* oberts a GitLab.
 
-### Fase 4: Cicle de revisió externa
+#### Fase 4: Cicle de revisió externa
 
 - El meu rol com a coordinador de la revisió: facilitació de la creació dels grups de treball (GTs), assignació de temes als GT, recopilació i sistematització dels comentaris. Definició dels procediments d'esmena i de presa de decisions; GitLab: protocol per a *issues*, *merge requests*, etc.
 - Revisors externs: 6, comptant-m'hi jo. Cada revisor s'encarregarà de revisar un o més temes, segons la seva experiència i disponibilitat. La revisió es fa de manera col·laborativa, amb sessions de videotrucada per discutir els comentaris i arribar a consensos quan sigui necessari.
 - Revisió humana: alta.
 
-#### *Definition of Done* de F4 (DoD-F4) {.unnumbered}
+##### *Definition of Done* de F4 (DoD-F4) {.unnumbered}
 
 La **unitat de revisió** de F4 és diferent de la unitat de producció de F2: per a cada tema `x`, la unitat de revisió és el conjunt `{Tx.qmd, PE_Tx.qmd, PS_Tx.qmd}`, que es revisa conjuntament per garantir la coherència entre teoria, problemes i solucionari. Cada sessió de laboratori `Lx.qmd` es revisa com a unitat independent.
 
@@ -351,14 +370,20 @@ Una unitat de revisió de F4 es considera aprovada quan:
 - No hi ha inconsistències terminològiques respecte a les unitats de revisió ja aprovades.
 - El tema ha estat aprovat mitjançant *merge request* amb almenys una aprovació explícita a GitLab.
 
-### Fase 5: Preparació de la docència
+#### Fase 5: Preparació de la docència
 
 - Revisió individual dels dos professors que faran la primera docència de l'assignatura al Q1 del curs 2026-27.
 - Per a la meva docència al Q1 del curs 2026-27 generaré diapositives que estaran disponibles públicament.
 
-### Fase d'implementació
+### Etapa d'explotació {#sec-etapa-explotacio}
 
+<!-- TODO Explicar que aquesta etapa és iterativa i que el feedback del primer quadrimestre d'ús alimentarà una nova iteració de revisió externa per al segon quadrimestre. -->
 El primer quadrimestre del curs 2026-27 serà l'etapa on es preveu la major detecció d'errors. El fet de ser només dos grups de teoria i tres o quatre de pràctiques (en contra dels 6 de teoria i 18 de pràctiques del Q2) en facilitarà la gestió i esmena.
+
+<!-- TODO integrar referència a la figura @fig-etapa-explotacio -->
+
+<!-- TODO actualitzar caption de la figura següent -->
+![Fases de l'Etapa d'explotació. ](figures/etapa_explotacio.svg){#fig-etapa-explotacio width="70%"}
 
 ## Descripció de la innovació docent dissenyada
 
@@ -597,7 +622,7 @@ El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un 
 - **Accessibilitat WCAG 2.1**: Marcatge HTML5 semàntic, mode fosc/clar respectant la configuració del sistema de l'usuari, disseny *responsive* i codi amb ressaltat accessible (*a11y*).
 - **Navegació no lineal amb referències creuades**: Cada secció del material conté enllaços directes cap a les seccions de teoria o laboratori relacionades. Un estudiant consultant L3 pot accedir directament als apartats de T3 que aplica; un estudiant consultant T3 pot navegar als exercicis corresponents de PE_T3 i a la correcció de PS_T3. Aquesta interconnexió sistemàtica, impossible en el format PDF original, transforma els materials d'un recurs lineal en un sistema de consulta ràpida.
 - **Validació sistemàtica a RARS**: Tot el codi assemblador del corpus —teoria, exercicis i solucionaris— ha estat verificat manualment al simulador RARS. Això garanteix que cap exemple ni exercici falla en l'entorn de laboratori dels estudiants.
-- **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero.
+- **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero. El `README.md` del repositori inclou instruccions detallades per a la reproducció del procés de renderització.
 
 ## Característiques diferencials del corpus
 
@@ -682,10 +707,6 @@ La Revisió Externa (F4), en curs en el moment del lliurament d'aquesta memòria
 
 A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC → EC → AC, descrita a la @sec-context-eix-arquitectura) aconsella estendre el model a les assignatures veïnes. IC podria beneficiar-se de la migració a format obert per facilitar la sincronització conceptual amb EC. AC, que utilitza x86 com a arquitectura de referència per a l'estudi del *pipelining*, podria incorporar RISC-V com a pont pedagògic entre EC i els conceptes avançats de segmentació, aprofitant la continuïtat de l'ISA que l'estudiant ja domina en sortir d'EC. Aquesta extensió enforteix la coherència vertical del pla d'estudis i optimitza el temps d'aula dedicat a la introducció d'arquitectures noves.
 
-**Reproductibilitat del procés de renderització**
-
-Una millora pendent és la contenització del procés de renderització del llibre —per exemple, mitjançant un contenidor Docker— per garantir que qualsevol membre de l'equip docent o col·laborador extern pugui generar el PDF i l'HTML complets sense configurar un entorn local específic. Aquesta millora té un impacte directe en la sostenibilitat a llarg termini del corpus i facilita les contribucions externes.
-
 **Manteniment col·laboratiu i comunitat docent**
 
 El repositori públic a GitLab és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques del sistema de DoDs, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
@@ -704,6 +725,57 @@ El paradigma *Docs-as-Code* —tractar la documentació amb les mateixes eines i
 
 L'experiència d'aquest projecte permet formular una conclusió amb implicacions directes per a la missió de l'ICE: la formació del professorat universitari en l'ús de la IA ha d'anar més enllà de l'adopció puntual d'eines individuals. El que resulta estratègic és una alfabetització en la *gestió de projectes assistits per IA*: com definir convencions de treball que la IA pugui seguir amb consistència, com estructurar les tasques per maximitzar l'efectivitat de la col·laboració humà-màquina, i com establir mecanismes de validació adequats al context disciplinar de cada assignatura. El professor que domina aquesta competència pot multiplicar la seva capacitat de producció docent de qualitat sense comprometre el rigor. Promoure i difondre aquest model és, per tant, una tasca estratègica per a les institucions que, com l'ICE de la UPC, lideren la innovació pedagògica a la universitat.
 
+# Annex: Reflexions sobre l'impacte de la IA generativa en la docència {#sec-annex-ia .unnumbered}
+
+*Aquest annex recull reflexions personals fruit de l'experiència d'haver passat, en el transcurs d'aquest projecte, d'un ús pràcticament nul de la IA generativa a un ús intensiu i diari. No pretén ser una revisió sistemàtica de la literatura sinó un testimoni de primera mà d'un professor d'enginyeria que ha viscut la transició des de dins.*
+
+## La premissa que ho canvia tot {.unnumbered}
+
+La IA generativa ha vingut per quedar-se i transformarà pràcticament tots els sectors, inclòs l'ensenyament universitari. No és una predicció: ja està passant. Qualsevol estratègia docent que parteixi de la prohibició com a resposta principal és una estratègia condemnada al fracàs, per la mateixa raó que ho hauria estat prohibir les calculadores als anys setanta o Internet als noranta. La pregunta pertinent no és "permetem o prohibim?" sinó "com incorporem la IA de manera que afavoreixi l'aprenentatge real?" Selwyn (2023) ho articula clarament: el debat públic oscil·la entre el pànic i l'entusiasme acrítics, i cap dels dos extrems és útil pedagògicament.
+
+L'experiència d'aquest projecte m'ha convertit en un ferm partidari de la IA com a eina de treball. He atacat camps que havia defugit sistemàticament —JavaScript, Git, l'automatització del flux de publicació— perquè la barrera d'entrada s'ha reduït fins a un punt en què l'únic obstacle real és el criteri sobre *què* cal fer, no el coneixement de *com* fer-ho tècnicament. La qualitat del treball ha augmentat, el temps invertit s'ha reduït i, paradoxalment, la comprensió dels mecanismes subjacents ha millorat: quan una IA et genera codi que funciona però que no entens, la supervisió crítica que t'exigeixes a tu mateix és un accelerador d'aprenentatge molt eficient.
+
+## Com hem de fer front a l'ús de la IA a l'aula? {.unnumbered}
+
+La resposta no pot ser binària ni estàtica, perquè les capacitats i les necessitats de l'estudiant evolucionen al llarg de l'itinerari formatiu. La meva proposta, basada en l'experiència docent a EC (Q2 del grau) i a les assignatures optatives Future Internet Networks (FINE) i Decentralized Systems (DS) del màster de recerca Master in Innovation and Research in Informatics (MIRI), és la següent:
+
+**Primers quadrimestres del grau: fonamentar el pensament crític.** En les etapes inicials, l'ús de la IA s'hauria de limitar a l'estudi i la preparació, no a la resolució d'exercicis avaluables. La raó no és moral sinó pedagògica: un estudiant que no ha après a estructurar un problema no pot supervisar críticament una solució generada per una IA. Usar la IA sense aquesta base és equivalent a copiar sense entendre; el resultat és un aprenentatge superficial que no supera cap acte d'avaluació que requereixi un mínim de raonament o elaboració intel·lectual. En aquest estadi, l'activitat docent entorn a la IA ha de focalitzar-se en guiar l'estudiant en l'ús crític de les eines disponibles. La velocitat a la que evoluciona l'ecosistema requereix el reciclatge constant del professorat.
+
+**Quadrimestres finals del grau: normalitzar l'ús com una eina més.** A les assignatures pràctiques dels darrers quadrimestres, el control de les IA *assistives* s'ha de tractar exactament igual que un compilador, un depurador o un editor de text avançat: una eina que el professional usarà durant tota la seva carrera i que, per tant, en la fase d'estudiant ha d'aprendre a usar bé. Mollick i Mollick (2023) proposen set enfocaments concrets per integrar la IA als treballs dels estudiants preservant l'aprenentatge real; la clau és dissenyar tasques on la IA sigui un amplificador de capacitat, no un substitut del raonament.
+
+**Màster: ús massiu per maximitzar la productivitat.** A nivell de màster, la producció assistida per IA hauria de ser la norma. L'objectiu és que l'estudiant pugui focalitzar tota la seva atenció en la contribució original, alliberant-se de la feina mecànica de producció. La OCDE (2023) identifica precisament aquest escenari —IA com a amplificador de la capacitat experta— com el cas d'ús amb l'impacte positiu més gran en educació superior. El consum crític, la capacitat de relacionar conceptes complexos i la síntesi i esdevenen, com mai abans, competències vertebradores de la tasca docent.
+
+## L'avaluació, l'element que ho ha de canviar tot {.unnumbered}
+
+La transformació metodològica no és sostenible si no va acompanyada d'una transformació de l'avaluació. Els formats actuals, dissenyats en un món sense IA generativa, han quedat obsolets en molts casos.
+
+Als **quadrimestres inicials**, la resposta és clara: tornar als exàmens de paper, llapis i, com a màxim, calculadora bàsica. No és un retrocés; és reconèixer que l'examen presencial sense eines és l'únic instrument que mesura el que realment volem mesurar en aquesta etapa: si l'estudiant ha internalitzat els conceptes.
+
+Als **quadrimestres finals i màster**, els treballs, projectes i memòries ja no poden ser l'únic recurs d'avaluació. Un document produït amb IA de qualitat és indistingible, en aparença, d'un document elaborat amb esforç genuí. La solució no és la detecció —les eines de detecció actuals no són fiables i mai ho seran prou— sinó el retorn a formats d'avaluació que no es poden delegar: l'examen oral. En una de les meves assignatures de màster del curs vinent ja el recuperem. L'examen oral no detecta si l'estudiant ha usat IA: directament fa irrellevant la pregunta, perquè l'estudiant ha de demostrar davant del professor que entén el que ha lliurat.
+
+## Els professors som necessaris? {.unnumbered}
+
+La pregunta és incòmoda però legítima. Ja ara, un estudiant amb criteri pot aprendre d'un tema tècnic interaccionant directament amb un LLM amb més eficiència que en una classe magistral estàndard: pot fer preguntes al seu ritme, aprofundir on li interessa, repetir les explicacions que no ha entès i generar exemples personalitzats al seu context. Si la funció del professor es reduïda a la transmissió d'informació, efectivament en tornem prescindibles.
+
+Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge i el referent de l'estudiantat en l'oceà de la informació. És un canvi de rol profund, no una desaparició.
+
+## L'atenció als estudiants excel·lents {.unnumbered}
+
+Hi ha una qüestió que el discurs pedagògic dominant prefereix no tractar: en l'esforç per no deixar ningú enrere, hem acabat posant un sostre als qui van davant. A EC, l'experiència amb els estudiants del Centre de Formació Interdisciplinària Superior (CFIS) de l'UPC és il·lustrativa: arriben amb una base sòlida i una curiositat genuïna, però sovint perden l'estímul a mesura que el curs avança i acaben amb notes que no reflecteixen el seu potencial. El material docent estàndard no és el problema; el problema és que no ofereix cap horitzó més enllà del mínim exigible.
+
+El *callout* d'Aprofundiment dels nous materials és una resposta modesta però concreta a aquesta bretxa: indica a l'estudiant que hi ha més, que el tema té profunditat, i que pot explorar-la pel seu compte si vol. Amb la IA disponible com a tutor personalitzat il·limitat, aquest tipus d'indicació adquireix una dimensió nova: ja no cal esperar que el professor tingui temps per a una tutoria individual. L'estudiant que vol aprofundir ara té accés immediat a un interlocutor que el pot acompanyar fins on vulgui arribar.
+
+## El futur de la programació {.unnumbered}
+
+Una pregunta que planeja sobre tot l'ecosistema informàtic, i que ningú respon amb convicció: si un LLM pot generar codi funcional per a la majoria de tasques de programació estàndard, *quin és el valor diferencial d'un programador humà?*
+
+L'ofici de programador tal com l'hem conegut —escriure codi línia a línia per implementar especificacions donades— ha canviat irreversiblement. Però potser la pregunta està mal formulada. El que ha desaparegut és la barrera d'entrada a la producció de codi; el que no ha desaparegut és la necessitat de criteri sobre *quin* codi cal escriure, *per a quin* problema, *amb quines* restriccions i *amb quins* compromisos. Un *full-stack* que sap usar bé la IA multiplica la seva capacitat de producció per un factor difícil de quantificar. Un programador especialitzat en un domini complex —seguretat, compiladors, sistemes en temps real— continua tenint un avantatge diferencial que la IA no pot replicar fàcilment perquè requereix un context molt específic que no es pot capturar en un *prompt*.
+
+No tinc la resposta definitiva, i desconfio de qui diu que la té. El que sí sembla clar és que l'habilitat de col·laborar eficientment amb eines IA —saber formular el problema, supervisar la solució i integrar-la en un sistema complex— és ja una competència fonamental que hauria d'estar al nucli del currículum d'enginyeria informàtica. Com a responsables de les generacions futures, tenim la responsabilitat de decidir si ens n'adonem ara o quan ja sigui massa tard.
+
+## A on pot arribar la IA? {.unnumbered}
+
+No ho sé. I aquesta resposta em sembla la més honesta i la més útil. El que sí que sé, per experiència directa, és que la distància entre "no la faig servir pràcticament" i "la faig servir intensivament cada dia" ha transformat la meva pràctica professional d'una manera que hauria considerat improbable fa quatre dies. Si aquesta és la magnitud del canvi individual en un horitzó tan curt, projectar-la a escala institucional és un exercici que hauria de mantenir el col·lectiu docent en un estat d'alerta activa, no de resistència passiva.
 
 # Bibliografia
 
@@ -734,55 +806,3 @@ OCDE. (2023). *Generative AI and the future of education*. OECD Publishing. <htt
 Selwyn, N. (2023). *Generative AI and the future of education: Panic and possibility*. Polity Press.
 
 World Wide Web Consortium. (2018). *Web content accessibility guidelines (WCAG) 2.1*. <https://www.w3.org/TR/WCAG21/>
-
-# Annex: Reflexions sobre l'impacte de la IA generativa en la docència {#sec-annex-ia .unnumbered}
-
-*Aquest annex recull reflexions personals fruit de l'experiència d'haver passat, en el transcurs d'aquest projecte, d'un ús pràcticament nul de la IA generativa a un ús intensiu i diari. No pretén ser una revisió sistemàtica de la literatura sinó un testimoni de primera mà d'un professor d'enginyeria que ha viscut la transició des de dins.*
-
-## La premissa que ho canvia tot {.unnumbered}
-
-La IA generativa ha vingut per quedar-se i transformarà pràcticament tots els sectors, inclòs l'ensenyament universitari. No és una predicció: ja està passant. Qualsevol estratègia docent que parteixi de la prohibició com a resposta principal és una estratègia condemnada al fracàs, per la mateixa raó que ho hauria estat prohibir les calculadores als anys setanta o Internet als noranta. La pregunta pertinent no és "permetem o prohibim?" sinó "com incorporem la IA de manera que afavoreixi l'aprenentatge real?" Selwyn (2023) ho articula clarament: el debat públic oscil·la entre el pànic i l'entusiasme acrítics, i cap dels dos extrems és útil pedagògicament.
-
-L'experiència d'aquest projecte m'ha convertit en un ferm partidari de la IA com a eina de treball. He atacat camps que havia defugit sistemàticament —JavaScript, Git, l'automatització del flux de publicació— perquè la barrera d'entrada s'ha reduït fins a un punt en què l'únic obstacle real és el criteri sobre *què* cal fer, no el coneixement de *com* fer-ho tècnicament. La qualitat del treball ha augmentat, el temps invertit s'ha reduït i, paradoxalment, la comprensió dels mecanismes subjacents ha millorat: quan una IA et genera codi que funciona però que no entens, la supervisió crítica que t'exigeixes a tu mateix és un accelerador d'aprenentatge molt eficient.
-
-## Com hem de fer front a l'ús de la IA a l'aula? {.unnumbered}
-
-La resposta no pot ser binària ni estàtica, perquè les capacitats i les necessitats de l'estudiant evolucionen al llarg del pla d'estudis. La meva proposta, basada en l'experiència docent a EC (Q2 del grau) i a dues assignatures optatives del màster de recerca, és la següent:
-
-**Primers quadrimestres del grau: fonamentar el pensament crític.** En les etapes inicials, l'ús de la IA s'hauria de limitar a l'estudi i la preparació, no a la resolució d'exercicis avaluables. La raó no és moral sinó pedagògica: un estudiant que no ha après a estructurar un problema no pot supervisar críticament una solució generada per una IA. Usar la IA sense aquesta base és equivalent a copiar sense entendre; el resultat és un aprenentatge superficial que es desfà en el primer examen oral. En paral·lel, el professorat ha de proporcionar guies d'ús eficient de les eines disponibles, actualitzades regularment, perquè l'ecosistema evoluciona a una velocitat que converteix en obsoleta qualsevol guia de fa dotze mesos.
-
-**Quadrimestres finals del grau: normalitzar l'ús com una eina més.** A les assignatures pràctiques dels darrers quadrimestres, la IA s'hauria de tractar exactament igual que un compilador, un depurador o un editor de text avançat: una eina que el professional usarà durant tota la seva carrera i que l'estudiant ha d'aprendre a usar bé. Mollick i Mollick (2023) proposen set enfocaments concrets per integrar la IA als treballs dels estudiants preservant l'aprenentatge real; la clau és dissenyar tasques on la IA sigui un amplificador de capacitat, no un substitut del raonament.
-
-**Màster: ús massiu per maximitzar la productivitat.** A nivell de màster, la producció assistida per IA hauria de ser la norma. L'objectiu és que l'estudiant pugui focalitzar tota la seva atenció en el consum crític, la síntesi i la contribució original, alliberant-se de la feina mecànica de producció. La OCDE (2023) identifica precisament aquest escenari —IA com a amplificador de la capacitat experta— com el cas d'ús amb l'impacte positiu més gran en educació superior.
-
-## L'avaluació, l'element que ho ha de canviar tot {.unnumbered}
-
-La transformació metodològica no és sostenible si no va acompanyada d'una transformació de l'avaluació. Els formats actuals, dissenyats en un món sense IA generativa, han quedat obsolets en molts casos.
-
-Als **quadrimestres inicials**, la resposta és clara: tornar als exàmens de paper, llapis i, com a màxim, calculadora bàsica. No és un retrocés; és reconèixer que l'examen presencial sense eines és l'únic instrument que mesura el que realment volem mesurar en aquesta etapa: si l'estudiant ha internalitzat els conceptes.
-
-Als **quadrimestres finals i al màster**, els treballs, projectes i memòries ja no poden ser l'únic recurs d'avaluació. Un document produït amb IA de qualitat és indistingible, en aparença, d'un document elaborat amb esforç genuí. La solució no és la detecció —les eines de detecció actuals no són fiables i mai ho seran prou— sinó el retorn a formats d'avaluació que no es poden delegar: l'examen oral. En una de les meves assignatures de màster del curs vinent ja el recuperem. L'examen oral no detecta si l'estudiant ha usat IA: directament fa irrellevant la pregunta, perquè l'estudiant ha de demostrar davant del professor que entén el que ha lliurat.
-
-## Els professors som necessaris? {.unnumbered}
-
-La pregunta és incòmoda però legítima. Ja ara, un estudiant amb criteri pot aprendre d'un tema tècnic interaccionant directament amb un LLM amb més eficiència que en una classe magistral estàndard: pot fer preguntes al seu ritme, aprofundir on li interessa, repetir les explicacions que no ha entès i generar exemples personalitzats al seu context. Si la funció del professor és transmetre informació, efectivament som prescindibles.
-
-Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge. És un canvi de rol profund, no una desaparició.
-
-## L'atenció als estudiants excel·lents {.unnumbered}
-
-Hi ha una qüestió que el discurs pedagògic dominant prefereix no tractar: en l'esforç per no deixar ningú enrere, hem acabat posant un sostre als qui van davant. A EC, l'experiència amb els estudiants del Centre de Formació Interdisciplinària Superior (CFIS) és il·lustrativa: arriben amb una base sòlida i una curiositat genuïna, però sovint perden l'estímul a mesura que el curs avança i acaben amb notes que no reflecteixen el seu potencial. El material docent estàndard no és el problema; el problema és que no ofereix cap horitzó més enllà del mínim exigible.
-
-El *callout* d'Aprofundiment dels nous materials és una resposta modesta però concreta a aquesta bretxa: indica a l'estudiant que hi ha més, que el tema té profunditat, i que pot explorar-la pel seu compte si vol. Amb la IA disponible com a tutor personalitzat il·limitat, aquest tipus d'indicació adquireix una dimensió nova: ja no cal esperar que el professor tingui temps per a una tutoria individual. L'estudiant que vol aprofundir ara té accés immediat a un interlocutor que el pot acompanyar fins on vulgui arribar.
-
-## El futur de la programació {.unnumbered}
-
-Una pregunta que planeja sobre tota la facultat i que ningú respon amb convicció: si un LLM pot generar codi funcional per a la majoria de tasques de programació estàndard, *quin és el valor diferencial d'un programador humà?*
-
-L'ofici de programador tal com l'hem conegut —escriure codi línia a línia per implementar especificacions donades— ha canviat irreversiblement. Però potser la pregunta està mal formulada. El que ha desaparegut és la barrera d'entrada a la producció de codi; el que no ha desaparegut és la necessitat de criteri sobre *quin* codi cal escriure, *per a quin* problema, *amb quines* restriccions i *amb quins* compromisos. Un *full-stack* que sap usar bé la IA multiplica la seva capacitat de producció per un factor difícil de quantificar. Un programador especialitzat en un domini complex —seguretat, compiladors, sistemes en temps real— continua tenint un avantatge diferencial que la IA no pot replicar fàcilment perquè requereix un context molt específic que no es pot capturar en un *prompt*.
-
-No tinc la resposta definitiva, i desconfio de qui diu que la té. El que sí sembla clar és que l'habilitat de col·laborar eficientment amb eines IA —saber formular el problema, supervisar la solució i integrar-la en un sistema complex— és ja una competència fonamental que hauria d'estar al nucli del currículum d'enginyeria informàtica. Com a departament, tenim la responsabilitat de decidir si ens n'adonem ara o quan ja sigui massa tard.
-
-## A on pot arribar la IA? {.unnumbered}
-
-No ho sé. I aquesta resposta em sembla la més honesta i la més útil. El que sí que sé, per experiència directa, és que la distància entre "no la faig servir pràcticament" i "la faig servir intensivament cada dia" ha transformat la meva pràctica professional d'una manera que hauria considerat improbable fa divuit mesos. Si aquesta és la magnitud del canvi individual en un horitzó tan curt, projectar-la a escala institucional és un exercici que hauria de mantenir el col·lectiu docent en un estat d'alerta activa, no de resistència passiva.

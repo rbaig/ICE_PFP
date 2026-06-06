@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="344.73477"
+   viewBox="0 0 344.73477 578.73207"
+   font-family="'Source Sans Pro', sans-serif"
+   version="1.1"
+   id="svg19"
+   sodipodi:docname="unitat_produccio_1.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   height="578.73206"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview19"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1153846"
+     inkscape:cx="-218.75862"
+     inkscape:cy="306.6207"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19"
+     showborder="false" />
+  <title
+     id="title1">Cicle de producció de cada unitat temàtica</title>
+  <desc
+     id="desc1">Diagrama del cicle de 5 etapes de producció, amb iteracions entre les etapes 2-3 i fletxa de consolidació final a GitHub.</desc>
+  <defs
+     id="defs1">
+    <marker
+       id="arrow"
+       markerWidth="8"
+       markerHeight="7"
+       refX="7"
+       refY="3.5"
+       orient="auto"
+       viewBox="0 0 8 7"
+       preserveAspectRatio="xMidYMid">
+      <polygon
+         points="0,7 0,0 8,3.5 "
+         fill="#6c757d"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrow-4"
+       markerWidth="8"
+       markerHeight="7"
+       refX="7"
+       refY="3.5"
+       orient="auto"
+       viewBox="0 0 8 7"
+       preserveAspectRatio="xMidYMid">
+      <polygon
+         points="0,0 8,3.5 0,7 "
+         fill="#6c757d"
+         id="polygon1-7" />
+    </marker>
+    <marker
+       id="arrow-4-3"
+       markerWidth="8"
+       markerHeight="7"
+       refX="7"
+       refY="3.5"
+       orient="auto"
+       viewBox="0 0 8 7"
+       preserveAspectRatio="xMidYMid">
+      <polygon
+         points="8,3.5 0,7 0,0 "
+         fill="#6c757d"
+         id="polygon1-7-0" />
+    </marker>
+    <marker
+       id="arr-0"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-7" />
+    </marker>
+    <marker
+       id="arr-0-2"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-7-7" />
+    </marker>
+    <marker
+       id="arr-0-2-1"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-7-7-5" />
+    </marker>
+  </defs>
+  <!-- PDF original (gris) -->
+  <text
+     x="160.45755"
+     y="6.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text1">PDF original</text>
+  <text
+     x="160.45755"
+     y="24.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text2">Material llegat sense fonts editables</text>
+  <text
+     x="160.70728"
+     y="558.44397"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text1-9"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#343a40"><tspan
+       sodipodi:role="line"
+       id="tspan12"
+       x="160.70728"
+       y="558.44397">Unitat de producció</tspan></text>
+  <text
+     x="160.70728"
+     y="576.44397"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text2-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan13"
+       x="160.70728"
+       y="576.44397">Tx.qmd / Px.qmd / Sx.qmd / Ly.qmd + .svg</tspan></text>
+  <!-- Fletxa 0→1 -->
+  <line
+     x1="160.45755"
+     y1="36.5"
+     x2="160.45755"
+     y2="60.5"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line2" />
+  <!-- Etapa 1: Extracció (blau) -->
+  <rect
+     x="0.45755386"
+     y="62.5"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#cfe2ff"
+     stroke="#084298"
+     stroke-width="0.5"
+     id="rect2" />
+  <text
+     x="160.45755"
+     y="84.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#084298"
+     dominant-baseline="central"
+     id="text3">U1 · Extracció i conversió</text>
+  <text
+     x="160.45755"
+     y="104.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#084298"
+     id="text4">(Tx.qmd / Px.qmd / Sx.qmd / Ly.qmd)</text>
+  <!-- Fletxa 1→2 -->
+  <line
+     x1="160.45755"
+     y1="118.5"
+     x2="160.45755"
+     y2="140.5"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line4" />
+  <!-- Etapa 2: Revisió tècnica (amber) -->
+  <rect
+     x="0.45755386"
+     y="142.5"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#fff3cd"
+     stroke="#664d03"
+     stroke-width="0.5"
+     id="rect4" />
+  <text
+     x="160.45755"
+     y="164.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#664d03"
+     dominant-baseline="central"
+     id="text5">U2 · Revisió tècnica</text>
+  <text
+     x="160.45755"
+     y="184.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#664d03"
+     id="text6">Codi RARS · Coherència tècnica global</text>
+  <!-- Fletxa iteració 2→1 (esquerra) -->
+  <!-- Fletxa 2→3 -->
+  <line
+     x1="160.45755"
+     y1="198.5"
+     x2="160.45755"
+     y2="220.5"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line7" />
+  <!-- Etapa 3: Revisió lingüística (verd) -->
+  <rect
+     x="0.45755386"
+     y="222.5"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#d1e7dd"
+     stroke="#0a3622"
+     stroke-width="0.5"
+     id="rect7" />
+  <text
+     x="160.45755"
+     y="244.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0a3622"
+     dominant-baseline="central"
+     id="text8">U3 · Revisió lingüística</text>
+  <text
+     x="160.45755"
+     y="264.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#0a3622"
+     id="text9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#0a3622"><tspan
+       sodipodi:role="line"
+       id="tspan7"
+       x="160.45755"
+       y="264.5">Lèxic · Sintaxi · etc.</tspan></text>
+  <!-- Fletxa iteració 3→2 (esquerra) -->
+  <!-- Fletxa 3→4 -->
+  <line
+     x1="160.45755"
+     y1="278.5"
+     x2="160.45755"
+     y2="300.5"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line9" />
+  <!-- Etapa 4: Actualització transversal (gris) -->
+  <rect
+     x="0.45755386"
+     y="302.5"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#f8f9fa"
+     stroke="#adb5bd"
+     stroke-width="0.5"
+     id="rect9" />
+  <text
+     x="160.45755"
+     y="324.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text10">U4 · Figures</text>
+  <text
+     x="160.45755"
+     y="342.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text11"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan9"
+       x="160.45755"
+       y="342.5">(fitxers .svg)</tspan></text>
+  <!-- Fletxa 4→5 -->
+  <line
+     x1="160.45755"
+     y1="358.5"
+     x2="160.45755"
+     y2="380.5"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line11" />
+  <rect
+     x="0.25"
+     y="382.48315"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#f8f9fa"
+     stroke="#adb5bd"
+     stroke-width="0.5"
+     id="rect9-2" />
+  <text
+     x="160.25002"
+     y="404.48315"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text10-2">U5 · Actualització transversal</text>
+  <text
+     x="160.25002"
+     y="422.48315"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text11-6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan9-1"
+       x="160.25002"
+       y="422.48315">(sigles.qmd, risc.qmd)</tspan></text>
+  <line
+     x1="160.25002"
+     y1="438.48315"
+     x2="160.25002"
+     y2="460.48315"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0-2)"
+     id="line11-0"
+     style="marker-end:url(#arr-0-2)" />
+  <line
+     x1="160.22595"
+     y1="518.43042"
+     x2="160.22595"
+     y2="540.43042"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0-2-1)"
+     id="line11-0-9"
+     style="marker-end:url(#arr-0-2-1)" />
+  <!-- Etapa 5: Refinament (lila) -->
+  <rect
+     x="0.45755386"
+     y="462.5"
+     width="320"
+     height="56"
+     rx="6"
+     fill="#e9d8fd"
+     stroke="#4a1fb8"
+     stroke-width="0.5"
+     id="rect11" />
+  <text
+     x="160.45755"
+     y="484.50003"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#4a1fb8"
+     dominant-baseline="central"
+     id="text12"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#4a1fb8"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       x="160.45755"
+       y="484.50003">U6 · Refinament protocols de producció</tspan></text>
+  <text
+     x="160.45755"
+     y="502.50003"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#4a1fb8"
+     id="text13">(contrib.qmd, CLAUDE.md, TODO.md)</text>
+  <!-- Fletxa 5→GitHub -->
+  <path
+     d="m 320.49608,248.98783 h 23.48868 v -80.82592 h -22.0158"
+     fill="none"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     id="path13-6"
+     style="stroke-width:1.5;stroke-dasharray:none;marker-end:url(#arr-0)" />
+  <!-- GitHub (verd fosc) -->
+  <!-- Nota efecte acumulatiu -->
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Cicle de producció de cada unitat temàtica</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#7d6d6c;stroke:#6c757d;stroke-width:1.5"
+     x="174.54594"
+     y="265.48386"
+     id="text7"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       x="174.54594"
+       y="265.48386"> </tspan></text>
+</svg>

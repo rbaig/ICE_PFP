@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="497.71429"
+   viewBox="0 0 497.71429 485.13525"
+   role="img"
+   font-family="'Source Sans Pro', sans-serif"
+   version="1.1"
+   id="svg25"
+   sodipodi:docname="sistema_produccio.svg"
+   height="485.13525"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview25"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="275.49999"
+     inkscape:cy="252.99999"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg25" />
+  <title
+     id="title1">Fases del projecte de migració EC MIPS→RISC-V</title>
+  <defs
+     id="defs4">
+    <marker
+       id="arr"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1" />
+    </marker>
+    <linearGradient
+       id="triGrad"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#cfe2ff"
+         stop-opacity="0.5"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#084298"
+         stop-opacity="0.55"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="legendGrad"
+       x1="76.026314"
+       y1="1135.9225"
+       x2="93.914856"
+       y2="1135.9225"
+       gradientTransform="scale(2.236068,0.4472136)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="#cfe2ff"
+         stop-opacity="0.5"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#084298"
+         stop-opacity="0.55"
+         id="stop4" />
+    </linearGradient>
+    <marker
+       id="arr-8"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-4" />
+    </marker>
+    <marker
+       id="arr-0"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-7" />
+    </marker>
+    <marker
+       id="arr-9"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-2" />
+    </marker>
+    <marker
+       id="arr-95"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1-0" />
+    </marker>
+    <marker
+       id="marker2"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 2,1 8,5 2,9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path2" />
+    </marker>
+  </defs>
+  <rect
+     x="64.116631"
+     y="58.057087"
+     width="370"
+     height="56"
+     rx="4"
+     fill="#f8f9fa"
+     stroke="#adb5bd"
+     stroke-width="0.5"
+     id="rect4" />
+  <text
+     x="249.11664"
+     y="72.057083"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text5">P1 · Disseny del sistema de producció</text>
+  <text
+     x="249.11664"
+     y="92.057083"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text6"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan10"
+       x="249.11664"
+       y="92.057083">Convencions · Entorn · Flux de treball</tspan><tspan
+       sodipodi:role="line"
+       id="tspan11"
+       x="249.11664"
+       y="105.80708">(contrib.qmd, CLAUDE.md, TODO.md)</tspan></text>
+  <text
+     x="249.76953"
+     y="6.5"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text5-1"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#343a40"><tspan
+       sodipodi:role="line"
+       id="tspan12">Corpus docent MIPS</tspan></text>
+  <text
+     x="249.76953"
+     y="26.5"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text6-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan16"
+       x="249.76953"
+       y="26.5">Teoria · Problemaris · Solucionaris · Laboratoris</tspan></text>
+  <text
+     x="250.0083"
+     y="464.97949"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#343a40"
+     dominant-baseline="central"
+     id="text5-1-1"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#343a40"><tspan
+       sodipodi:role="line"
+       id="tspan18"
+       x="250.0083"
+       y="464.97949">Corpus docent RISC-V (v0)</tspan></text>
+  <text
+     x="250.0083"
+     y="484.97949"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text6-7-9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan16-7"
+       x="250.0083"
+       y="484.97949">Teoria · Problemaris · Solucionaris · Laboratoris</tspan></text>
+  <text
+     x="3.0083008"
+     y="120.29676"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#6c757d"
+     id="text6-7-9-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.66667px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan17"
+       x="3.0083008"
+       y="120.29676">per unitat de</tspan><tspan
+       sodipodi:role="line"
+       id="tspan20"
+       x="3.0083008"
+       y="131.1301">producció</tspan></text>
+  <line
+     x1="249.11664"
+     y1="114.05708"
+     x2="249.11664"
+     y2="135.05708"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr)"
+     id="line6" />
+  <line
+     x1="48.275688"
+     y1="123.4594"
+     x2="48.275688"
+     y2="204.4594"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     id="line6-0" />
+  <line
+     x1="47.528404"
+     y1="124.38966"
+     x2="102.12217"
+     y2="124.38966"
+     stroke="#6c757d"
+     stroke-width="1.49038"
+     id="line6-0-6" />
+  <line
+     x1="48.116631"
+     y1="204.56595"
+     x2="102.12475"
+     y2="204.56595"
+     stroke="#6c757d"
+     stroke-width="1.49595"
+     id="line6-0-6-8" />
+  <line
+     x1="249.39166"
+     y1="35.479492"
+     x2="249.39166"
+     y2="56.479511"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-0)"
+     id="line6-8"
+     style="marker-end:url(#arr-0)" />
+  <rect
+     x="64.116631"
+     y="137.05708"
+     width="370"
+     height="56"
+     rx="4"
+     fill="#cfe2ff"
+     stroke="#084298"
+     stroke-width="1"
+     id="rect6" />
+  <text
+     x="249.11664"
+     y="149.05708"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#084298"
+     dominant-baseline="central"
+     id="text7"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#084298"><tspan
+       sodipodi:role="line"
+       id="tspan13">P2 · Unitats de producció</tspan></text>
+  <text
+     x="249.11664"
+     y="169.05708"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#084298"
+     id="text8"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#084298"><tspan
+       sodipodi:role="line"
+       id="tspan8"
+       x="249.11664"
+       y="169.05708">Continguts</tspan><tspan
+       sodipodi:role="line"
+       id="tspan9"
+       x="249.11664"
+       y="182.80708">(Tx.qmd, Px.qmd, Sx.qmd, Ly.qmd, .svg)</tspan></text>
+  <line
+     x1="249.11664"
+     y1="193.05708"
+     x2="249.11664"
+     y2="214.05708"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr)"
+     id="line8" />
+  <line
+     x1="101.39165"
+     y1="123.94096"
+     x2="101.39165"
+     y2="134.94096"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr-95)"
+     id="line6-4"
+     style="marker-end:url(#arr-95)" />
+  <line
+     x1="101.39165"
+     y1="193.55965"
+     x2="101.39165"
+     y2="204.82481"
+     stroke="#6c757d"
+     stroke-width="1.51797"
+     id="line8-8" />
+  <line
+     x1="29.236443"
+     y1="156.00537"
+     x2="29.236443"
+     y2="444.59656"
+     stroke="#6c757d"
+     stroke-width="5.56062"
+     marker-end="url(#arr-8)"
+     id="line8-5"
+     style="marker-end:url(#arr-8)" />
+  <rect
+     x="64.116631"
+     y="216.05708"
+     width="370"
+     height="56"
+     rx="4"
+     fill="#fff3cd"
+     stroke="#664d03"
+     stroke-width="0.5"
+     id="rect8" />
+  <text
+     x="249.11664"
+     y="228.05708"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#664d03"
+     dominant-baseline="central"
+     id="text9">P3 · Integració</text>
+  <text
+     x="249.11664"
+     y="248.05708"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#664d03"
+     id="text10"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#664d03"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       x="249.11664"
+       y="248.05708">Presentació · Llicència · Instruccions</tspan><tspan
+       sodipodi:role="line"
+       x="249.11664"
+       y="261.80707"
+       id="tspan4">(index.qmd, LICENSE.md, README.md)</tspan></text>
+  <line
+     x1="249.11664"
+     y1="272.05707"
+     x2="249.11664"
+     y2="293.0571"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr)"
+     id="line10" />
+  <rect
+     x="64.116631"
+     y="295.0571"
+     width="370"
+     height="56"
+     rx="4"
+     fill="#d1e7dd"
+     stroke="#0a3622"
+     stroke-width="0.5"
+     id="rect10" />
+  <text
+     x="249.11664"
+     y="317.0571"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0a3622"
+     dominant-baseline="central"
+     id="text11"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#0a3622"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       x="249.11664"
+       y="317.0571">P4 · Revisió de conjunt</tspan></text>
+  <text
+     x="249.11664"
+     y="337.0571"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#0a3622"
+     id="text12"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#0a3622"><tspan
+       sodipodi:role="line"
+       id="tspan15"
+       x="249.11664"
+       y="337.0571">Errors, incoherències, mancances, etc. · Estil</tspan></text>
+  <line
+     x1="249.11664"
+     y1="351.0571"
+     x2="249.11664"
+     y2="372.0571"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr)"
+     id="line12" />
+  <rect
+     x="64.116631"
+     y="374.0571"
+     width="370"
+     height="56"
+     rx="4"
+     fill="#e9d8fd"
+     stroke="#4a1fb8"
+     stroke-width="0.5"
+     id="rect12" />
+  <text
+     x="249.11664"
+     y="396.0571"
+     text-anchor="middle"
+     font-size="13px"
+     font-weight="bold"
+     fill="#4a1fb8"
+     dominant-baseline="central"
+     id="text13"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#4a1fb8"><tspan
+       sodipodi:role="line"
+       id="tspan14"
+       x="249.11664"
+       y="396.0571">P5 · Revisió externa</tspan></text>
+  <text
+     x="249.11664"
+     y="416.0571"
+     text-anchor="middle"
+     font-size="11px"
+     fill="#4a1fb8"
+     id="text14">6 revisors · 3 grups de treball · Consens</text>
+  <line
+     x1="249.11664"
+     y1="430.0571"
+     x2="249.11664"
+     y2="451.0571"
+     stroke="#6c757d"
+     stroke-width="1.5"
+     marker-end="url(#arr)"
+     id="line14" />
+  <path
+     d="m 434.11663,165.05708 h 40"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     id="path17"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0" />
+  <path
+     d="m 434.11663,244.05708 h 40"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     id="path18"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0" />
+  <path
+     d="m 434.11663,323.05708 h 40"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     id="path19"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0" />
+  <path
+     d="m 434.11663,402.05708 h 40"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     id="path20"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0" />
+  <path
+     d="M 474.11663,402.55708 V 86.057087"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     id="path22"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0" />
+  <path
+     d="m 474.11663,86.057087 h -38"
+     fill="none"
+     stroke="#adb5bd"
+     stroke-width="0.75"
+     stroke-dasharray="3 3"
+     marker-end="url(#arr)"
+     id="path23"
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0;marker-end:url(#arr-8)" />
+  <text
+     x="244.05708"
+     y="-490.11664"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#adb5bd"
+     transform="rotate(90)"
+     id="text23"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#adb5bd"><tspan
+       sodipodi:role="line"
+       id="tspan3"
+       x="244.05708"
+       y="-490.11664">Millora de convencions, d'entorn, de flux de treball</tspan></text>
+  <text
+     x="-395.77917"
+     y="7.9980469"
+     font-size="10px"
+     fill="#6c757d"
+     id="text25"
+     transform="rotate(-90)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan6"
+       x="-395.77917"
+       y="7.9980469">Proporció de supervisió humana del contingut</tspan><tspan
+       sodipodi:role="line"
+       id="tspan7"
+       x="-395.77917"
+       y="20.498047">tècnic i pedagògic del material produït per IA</tspan></text>
+  <metadata
+     id="metadata33">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Fases del projecte de migració EC MIPS→RISC-V</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
