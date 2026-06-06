@@ -377,6 +377,9 @@ Una unitat de revisió de F4 es considera aprovada quan:
 
 ### Etapa d'explotació {#sec-etapa-explotacio}
 
+<!-- TODO dir que aquesta etapa inclou (òbviament) el manteniment i actualitaciós dels materials -->
+<!-- TODO dir que la primera iteració inclourà la preparació de les diapositives -->
+<!-- TODO dir s'hi poden incloure materials de suport a la docència. -->
 <!-- TODO Explicar que aquesta etapa és iterativa i que el feedback del primer quadrimestre d'ús alimentarà una nova iteració de revisió externa per al segon quadrimestre. -->
 El primer quadrimestre del curs 2026-27 serà l'etapa on es preveu la major detecció d'errors. El fet de ser només dos grups de teoria i tres o quatre de pràctiques (en contra dels 6 de teoria i 18 de pràctiques del Q2) en facilitarà la gestió i esmena.
 
