@@ -9,7 +9,7 @@ Universitari STEAM de l'Institut de Ciències de l'Educació (ICE) de la UPC.
 computadors (EC) del GEI; adopció de RISC-V com a arquitectura de
 referència.*
 
-**Autor**: [Nom i Cognoms]
+**Autor**: Roger Baig
 **Tutor**: Agustín Fernández Jiménez
 **Col·laborador**: Pedro José Martínez Ferrer
 **Data de lliurament**: 18 de juny de 2026
@@ -17,53 +17,78 @@ referència.*
 ## Recursos relacionats
 
 - **Repo del producte** (material migrat): https://github.com/rbaig/migracio.ec.gitlab.upc.edu
-- **Memòria de treball** (Google Doc): https://docs.google.com/document/d/1HtpZh0ttS7QQrrJrVNihTAMCkIOcU9t_Qj0_z-P399o
-- **Guia ICE**: `Guia_Projecte_Postgrau_2025-2026.pdf`
+- **Guia ICE**: `ICE_guiaPFP.pdf`
+
+## Fitxers principals
+
+- `index.qmd` — document principal de la memòria (Quarto Markdown)
+- `_quarto.yml` — configuració de Quarto (HTML + PDF)
+- `portada.tex` / `before-body.tex` — portada i preàmbul LaTeX
+- `figures/` — figures SVG (`fig_eix_arquitectura.svg`, `fig_flux_produccio.svg`, `fig_fases_produccio.svg`)
 
 ## Estructura del document
 
-`memoria.md` és el fitxer principal. Segueix l'estructura obligatòria de la
-Guia ICE:
+`index.qmd` segueix l'estructura de la Guia ICE:
 
-1. Introducció (~2.000 paraules)
-2. Metodologia (~2.000 paraules)
-3. Resultats (~2.000 paraules)
-4. Discussió, conclusions i altres propostes (~2.000 paraules)
-5. Bibliografia (estil APA 7a edició, ~25 referències)
-6. Annexos
+1. Introducció
+2. Metodologia
+3. Resultats
+4. Discussió, conclusions i altres propostes
+5. Bibliografia (estil APA 7a edició, ordre alfabètic)
+6. Annex: Reflexions sobre l'impacte de la IA generativa en la docència
 
 ## Convencions
 
-- Llengua: **català**
+- Llengua: **català normatiu**
 - Bibliografia: **APA 7a edició** (ordre alfabètic)
-- Tot el contingut generat ha de ser en blocs de codi markdown
-- No editar fitxers directament: l'usuari fa el commit/push
-- En cas de dubte: atura't i pregunta
+- Figures: SVG amb `width="680"`, font Source Sans Pro, paleta Bootstrap
+- Noms de fases: tractats com a noms propis (majúscula inicial)
+- Unitats de producció (F2): un fitxer `.qmd` per tema/sessió/PE/PS
+- Unitats de revisió (F4): `{Tx.qmd + PE_Tx.qmd + PS_Tx.qmd}` per tema; cada `Lx.qmd` per separat
+
+## Guia ICE: restriccions que no apliquen
+
+La guia estableix un límit de 8.000 paraules al cos del text. Aquest límit
+**no és una restricció operativa** per a aquest projecte: preval la qualitat
+i completesa del contingut. El tribunal avaluarà el fons, no el recompte.
 
 ## Flux de treball
 
-1. Claude escriu/edita `memoria.md` directament al repo.
-2. L'usuari fa `git pull`, revisa amb VS Code i fa `git push` quan és llest.
+1. Claude edita `index.qmd` directament a la sessió de treball.
+2. L'usuari descarrega, revisa localment amb VS Code i fa `quarto render`.
+3. L'usuari fa `git push` quan el resultat és satisfactori.
+4. Claude no edita fitxers directament al repositori.
 
-## Context clau per a Claude
+## Context clau
 
 - La memòria és per a l'ICE: la **innovació pedagògica és el centre de la narrativa**.
-- El producte del projecte és la migració del material docent d'EC de MIPS a RISC-V en format Quarto Markdown, allotjat al repo de producte.
-- La migració ha assolit el **95% del material**: T1–T9, L1–L6, PE, PS_T2–T5.
-- L'eina principal ha estat **Claude** (prèviament NotebookLM en fase inicial).
-- La implantació a l'aula està prevista per al **Q1 del curs 2025-26** (setembre).
-- La memòria ha de servir també com a base per a la **proposta del concurs d'estabilització** de plaça a la UPC.
-- Límit de paraules de la guia (8.000): no és una restricció operativa; preval la qualitat i completesa.
+- El producte és la migració del material docent d'EC de MIPS a RISC-V en format Quarto Markdown.
+- El corpus és de **36 fitxers** `.qmd`: T1–T9, L1–L6, PE_T1–T9, PS_T1–T9 i materials transversals.
+- El material és al **100%** complet; la **Revisió Externa (F4)** és en curs.
+- L'eina principal ha estat **Claude** (prèviament NotebookLM en fase d'exploració).
+- La implantació a l'aula és al **Q1 del curs 2026-27** (setembre 2026).
+- La data de referència de la memòria és el **18 de juny de 2026**.
+- Les tres **Definitions of Done** (DoD-F2, DoD-F3, DoD-F4) són un element diferencial del projecte.
+
+## Estructura de fases del projecte
+
+| Fase | Nom | Unitat de treball |
+|------|-----|-------------------|
+| F1 | Disseny del sistema de producció | — |
+| F2 | Producció del corpus docent | Un fitxer `.qmd` |
+| F3 | Revisió de Conjunt | Corpus sencer |
+| F4 | Cicle de Revisió Externa | T+PE+PS per tema; Lx per separat |
+| F5 | Preparació de la docència | — |
+| — | Implementació a l'aula | Q1 2026-27 |
 
 ## Estat actual
 
-- [x] Revisió completa del Google Doc
-- [x] Nova estructura del document acordada
-- [x] §1 complet (incl. nota reestructuració §1.1.2; TODO §1.7 eliminat)
-- [x] §2 complet (incl. §2.2.3 amb taula de mapping MIPS→RISC-V)
-- [x] §3 complet (les 4 subseccions)
-- [x] §4 complet (les 4 subseccions: contrast teòric, valoració crítica, continuïtat, connexions)
-- [x] Annex I complet
-- [x] Bibliografia: 8 refs APA 7a (corregit Waterman, URL Winans, afegit WCAG 2.1)
-- [x] §2.1/§2.2/§2.3: Addenda inexistent al doc; contingut ja integrat
-- [x] Resum/Abstract: reescrits amb resultats reals
+- [x] Estructura completa del document acordada i implementada
+- [x] §1 Introducció complet
+- [x] §2 Metodologia complet (incl. DoD-F2, DoD-F3, DoD-F4)
+- [x] §3 Resultats complet (incl. taula de característiques diferencials)
+- [x] §4 Discussió complet (incl. Enriquiment personal, Propostes, Connexions)
+- [x] Annex IA complet
+- [x] Bibliografia: APA 7a, ordre alfabètic
+- [x] Figures: `fig_eix_arquitectura.svg`, `fig_flux_produccio.svg`, `fig_fases_produccio.svg`
+- [x] Revisió profunda de consistència completada
