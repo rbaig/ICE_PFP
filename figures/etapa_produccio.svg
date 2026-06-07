@@ -6,7 +6,7 @@
    font-family="'Source Sans Pro', sans-serif"
    version="1.1"
    id="svg25"
-   sodipodi:docname="sistema_produccio.svg"
+   sodipodi:docname="etapa_produccio.svg"
    height="485.13525"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,8 +26,8 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.0000001"
-     inkscape:cx="275.49999"
-     inkscape:cy="252.99999"
+     inkscape:cx="182.99999"
+     inkscape:cy="252.49999"
      inkscape:window-width="2560"
      inkscape:window-height="1371"
      inkscape:window-x="0"
@@ -196,7 +196,7 @@
      font-weight="bold"
      fill="#343a40"
      dominant-baseline="central"
-     id="text5">P1 · Disseny del sistema de producció</text>
+     id="text5">P1. Disseny del sistema de producció</text>
   <text
      x="249.11664"
      y="92.057083"
@@ -343,7 +343,9 @@
      id="text7"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#084298"><tspan
        sodipodi:role="line"
-       id="tspan13">P2 · Unitats de producció</tspan></text>
+       id="tspan13"
+       x="249.11664"
+       y="149.05708">P2. Unitats de producció</tspan></text>
   <text
      x="249.11664"
      y="169.05708"
@@ -415,7 +417,7 @@
      font-weight="bold"
      fill="#664d03"
      dominant-baseline="central"
-     id="text9">P3 · Integració</text>
+     id="text9">P3. Revisió de Conjunt</text>
   <text
      x="249.11664"
      y="248.05708"
@@ -427,11 +429,7 @@
        sodipodi:role="line"
        id="tspan2"
        x="249.11664"
-       y="248.05708">Presentació · Llicència · Instruccions</tspan><tspan
-       sodipodi:role="line"
-       x="249.11664"
-       y="261.80707"
-       id="tspan4">(index.qmd, LICENSE.md, README.md)</tspan></text>
+       y="248.05708">Errors, incoherències, mancances, etc. · Estil</tspan></text>
   <line
      x1="249.11664"
      y1="272.05707"
@@ -464,7 +462,7 @@
        sodipodi:role="line"
        id="tspan1"
        x="249.11664"
-       y="317.0571">P4 · Revisió de conjunt</tspan></text>
+       y="317.0571">P4. Cicle de Revisió Externa</tspan></text>
   <text
      x="249.11664"
      y="337.0571"
@@ -476,7 +474,7 @@
        sodipodi:role="line"
        id="tspan15"
        x="249.11664"
-       y="337.0571">Errors, incoherències, mancances, etc. · Estil</tspan></text>
+       y="337.0571">6 revisors · 3 grups de treball · Consens</tspan></text>
   <line
      x1="249.11664"
      y1="351.0571"
@@ -509,14 +507,14 @@
        sodipodi:role="line"
        id="tspan14"
        x="249.11664"
-       y="396.0571">P5 · Revisió externa</tspan></text>
+       y="396.0571">P5. Preparació de la docència</tspan></text>
   <text
      x="249.11664"
      y="416.0571"
      text-anchor="middle"
      font-size="11px"
      fill="#4a1fb8"
-     id="text14">6 revisors · 3 grups de treball · Consens</text>
+     id="text14">Diapositives · Guies docents</text>
   <line
      x1="249.11664"
      y1="430.0571"
@@ -613,4 +611,65 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <!-- DoD gates entre fases -->
+  <rect
+     x="258"
+     y="196.55708"
+     width="66"
+     height="14"
+     rx="7"
+     fill="#d1e7dd"
+     stroke="#0a3622"
+     stroke-width="0.5"
+     id="rect-dod-up"
+     style="fill:#cfe2ff;fill-opacity:1;stroke:#084298;stroke-opacity:1" />
+  <text
+     x="291"
+     y="203.55708"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="bold"
+     fill="#0a3622"
+     dominant-baseline="central"
+     id="text-dod-up">DoD-UP</text>
+  <rect
+     x="258"
+     y="275.55708"
+     width="66"
+     height="14"
+     rx="7"
+     fill="#d1e7dd"
+     stroke="#0a3622"
+     stroke-width="0.5"
+     id="rect-dod-cc"
+     style="fill:#fff3cd;fill-opacity:1;stroke:#664d03;stroke-opacity:1" />
+  <text
+     x="291"
+     y="282.55708"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="bold"
+     fill="#0a3622"
+     dominant-baseline="central"
+     id="text-dod-cc"
+     style="fill:#664d03;fill-opacity:1">DoD-CC</text>
+  <rect
+     x="258"
+     y="354.5571"
+     width="66"
+     height="14"
+     rx="7"
+     fill="#d1e7dd"
+     stroke="#0a3622"
+     stroke-width="0.5"
+     id="rect-dod-ur" />
+  <text
+     x="291"
+     y="361.5571"
+     text-anchor="middle"
+     font-size="10px"
+     font-weight="bold"
+     fill="#0a3622"
+     dominant-baseline="central"
+     id="text-dod-ur">DoD-UR</text>
 </svg>
