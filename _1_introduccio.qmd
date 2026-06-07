@@ -196,4 +196,4 @@ Per assolir aquest objectiu general, es defineixen els objectius específics (OE
 <br>
 
 **OE3. Harmonització, esmenes i sistema de qualitat**
-:   Realitzar una revisió crítica de tots els continguts per unificar el lèxic tècnic, corregir inconsistències acumulades i alinear el discurs docent amb els estàndards actuals de la indústria i la recerca, tot aprofitant l'expertesa dels professors de l'assignatura vinculats al Barcelona Supercomputing Center (BSC), i establir un sistema de qualitat documentat (`contrib.qmd`, `sigles.qmd`, DoD-P2/P3/P4) que faci el corpus auditable i replicable.
+:   Realitzar una revisió crítica de tots els continguts per unificar el lèxic tècnic, corregir inconsistències acumulades i alinear el discurs docent amb els estàndards actuals de la indústria i la recerca, tot aprofitant l'expertesa dels professors de l'assignatura vinculats al Barcelona Supercomputing Center (BSC), i establir un sistema de qualitat documentat (`contrib.qmd`, `sigles.qmd`, DoD-UP/CC/UR) que faci el corpus auditable i replicable.

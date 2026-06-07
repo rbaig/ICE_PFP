@@ -22,9 +22,9 @@ El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Suth
 
 | DoD | Fase | Unitat de treball | Nom de la unitat  de treball | Naturalesa dels criteris |
 | :--- | :--- | :--- | :--- | :--- |
-| **P2** | Producció | Tema / Problemari / Solucionari / Sessió | Unitat de producció | Binaris individuals |
-| **P3** | Revisió de Conjunt | Corpus sencer | - | Binaris globals |
-| **P4** | Revisió Externa | Tema + Problemari + Solucionari / Sessió | Unitat de revisió (externa) | Binaris col·legiats |
+| **UP** | Producció | Tema / Problemari / Solucionari / Sessió | Unitat de producció | Binaris individuals |
+| **CC** | Revisió de Conjunt | Corpus sencer | - | Binaris globals |
+| **UR** | Revisió Externa | Tema + Problemari + Solucionari / Sessió | Unitat de revisió (externa) | Binaris col·legiats |
 : Estructura de les tres *Definitions of Done* del projecte. L'ortogonalitat entre les unitats de treball de cada fase —amb granularitats diferents— permet un escrutini adaptat a l'objectiu de cadascuna. {#tbl-dods tbl-colwidths="[10,10,25,25,25]" .striped}
 
 #### Fase P1: Disseny del sistema de producció
@@ -67,7 +67,7 @@ Tal com mostra la figura @fig-unitat-produccio, el cicle de producció de cada u
 **U2. Revisió tècnica**
 :   Verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS i revisió de la coherència tècnica global del tema.
 **U3. Revisió lingüística**
-:   Harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`. Les fases U2 i U3 s'alternen iterativament fins a satisfer la DoD-P2.
+:   Harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`. Les fases U2 i U3 s'alternen iterativament fins a satisfer la DoD-UP.
 **U4. Figures**
 :   Generació de les figures SVG en versió *light* i *dark*.
 **U5. Actualització transversal**
@@ -75,9 +75,9 @@ Tal com mostra la figura @fig-unitat-produccio, el cicle de producció de cada u
 **U6. Refinament dels protocols de producció**
 :   Actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en les unitats següents.
 
-![Cicle de producció de cada unitat de producció. Les fases U2 i U3 s'alternen iterativament fins a satisfer la DoD-P2. La fase U6 capitalitza l'aprenentatge acumulat per a les unitats següents.](figures/unitat_produccio.svg){#fig-unitat-produccio width="45%"}
+![Cicle de producció de cada unitat de producció. Les fases U2 i U3 s'alternen iterativament fins a satisfer la DoD-UP. La fase U6 capitalitza l'aprenentatge acumulat per a les unitats següents.](figures/unitat_produccio.svg){#fig-unitat-produccio width="45%"}
 
-##### *Definition of Done* de P2 (DoD-P2) {.unnumbered}
+##### *Definition of Done* d'Unitat de Producció (DoD-UP) {.unnumbered}
 
 Una unitat de producció de P2 es considera acabada quan compleix tots els criteris següents, agrupats en tres categories:
 
@@ -104,11 +104,11 @@ Una unitat de producció de P2 es considera acabada quan compleix tots els crite
 - Documentació de les decisions que s'han de prendre col·legiadament.
 - Revisió humana: mitjana.
 
-##### *Definition of Done* de P3 (DoD-P3) {.unnumbered}
+##### *Definition of Done* de Corpus Complet (DoD-CC) {.unnumbered}
 
-La DoD-P3 s'aplica al corpus sencer (no tema per tema) i verifica la coherència global del conjunt:
+La DoD-CC s'aplica al corpus sencer (no tema per tema) i verifica la coherència global del conjunt:
 
-- Tots els fitxers `.qmd` han superat la DoD-P2.
+- Tots els fitxers `.qmd` han superat la DoD-UP.
 - No hi ha inconsistències terminològiques o d'estil *entre* fitxers (lèxic, nomenclatura de registres, convencions de format).
 - Totes les figures SVG segueixen la mateixa paleta de colors i convencions visuals documentades a `contrib.qmd`.
 - El glossari `sigles.qmd` cobreix totes les sigles que apareixen al corpus.
@@ -121,7 +121,7 @@ La DoD-P3 s'aplica al corpus sencer (no tema per tema) i verifica la coherència
 - Revisors externs: 6, comptant-m'hi jo. Cada revisor s'encarregarà de revisar un o més temes, segons la seva experiència i disponibilitat. La revisió es fa de manera col·laborativa, amb sessions de videotrucada per discutir els comentaris i arribar a consensos quan sigui necessari.
 - Revisió humana: alta.
 
-##### *Definition of Done* de P4 (DoD-P4) {.unnumbered}
+##### *Definition of Done* d'Unitat de Revisió (DoD-UR) {.unnumbered}
 
 La **unitat de revisió** de P4 és diferent de la unitat de producció de P2: per a cada tema `x`, la unitat de revisió és el conjunt `{Tx.qmd, PE_Tx.qmd, PS_Tx.qmd}`, que es revisa conjuntament per garantir la coherència entre teoria, problemes i solucionari. Cada sessió de laboratori `Lx.qmd` es revisa com a unitat independent. Aquesta ortogonalitat entre les unitats de producció i les unitats de revisió és una decisió de disseny deliberada: permet que la fase P2 avanci tema a tema amb independència, mentre que la fase P4 avalua la coherència del conjunt teoria-problemes-solucionari com una unitat indivisible.
 
@@ -297,7 +297,7 @@ Atès que el projecte es troba en la Fase de Revisió Externa (P4), la recollida
 
 **Instruments de recollida (P3–P4)**:
 
-- ***Definitions of Done* (DoD-P2, P3 i P4)**: Sistema de criteris de tancament per fase (vegeu @sec-enfocament-metodologic). Actuen com a instrument de verificació formal en cada fase del procés.
+- ***Definitions of Done* (DoD-UP, DoD-CC i DoD-UR)**: Sistema de criteris de tancament per fase (vegeu @sec-enfocament-metodologic). Actuen com a instrument de verificació formal en cada fase del procés.
 - **Sessions de coordinació**: Videotrucades puntuals i treball asíncron a través del repositori GitLab, on les *pull requests* i els *commits* documenten les decisions de contingut.
 - **Registres de traçabilitat (logs de IA)**: Documentació del procés de conversió assistida per IA per avaluar l'eficiència de l'eina i la necessitat de supervisió humana.
 

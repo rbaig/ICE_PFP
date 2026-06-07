@@ -126,17 +126,17 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 ### `index.qmd`
 - [x] Estructura completa del document acordada i implementada
 - [x] §1 Introducció complet
-- [x] §2 Metodologia complet (incl. DoD-P2, DoD-P3, DoD-P4; estructura en dues etapes P/E)
+- [x] §2 Metodologia complet (incl. DoD-UP, DoD-CC, DoD-UR; estructura en dues etapes P/E)
 - [x] §3 Resultats complet (incl. taula de característiques diferencials)
 - [x] §4 Discussió complet (incl. Enriquiment personal, Propostes, Connexions)
 - [x] Annex IA complet
 - [x] Bibliografia: APA 7a, ordre alfabètic
 - [x] Figures: `eix_arquitectura.svg`, `etapa_produccio.svg`, `etapa_explotacio.svg`, `unitat_produccio.svg`
-- [x] Revisió profunda de consistència completada (nomenclatura P1–P5, E1–E2, U1–U6, DoD-P2/P3/P4)
+- [x] Revisió profunda de consistència completada (nomenclatura P1–P5, E1–E2, U1–U6, DoD-UP/DoD-CC/DoD-UR)
 - [x] Revisió lingüística completada
 - [ ] Resum en català: pendent d'actualització final
 - [ ] Abstract en anglès: pendent (fer com a últim pas, un cop el Resum català estigui tancat)
-- [ ] Canvi de nomenclatura DoD: DoD-P2→DoD-UP, DoD-P3→DoD-CC, DoD-P4→DoD-UR (pendent, tasca del xat nou)
+- [x] Canvi de nomenclatura DoD: DoD-UP, DoD-CC, DoD-UR (completat)
 
 ### `article.qmd`
 - [x] Esquelet creat amb YAML front matter i seccions placeholder

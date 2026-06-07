@@ -55,7 +55,7 @@ Un dels resultats més significatius del projecte, i que supera l'abast estricta
 
 - **`contrib.qmd`**: Document de convencions i normes d'estil que recull el sistema de *callouts* i prefixos d'etiquetes, les normes d'estil (veu, puntuació, negretes, anglicismes, sigles), els criteris de format (taules, figures SVG, blocs de codi), les substitucions terminològiques obligatòries, la paleta de colors SVG i les decisions específiques per tema. Conté, a més, el **recull terminològic RISC-V en català** elaborat durant la migració: la primera referència sistemàtica d'equivalències entre la terminologia tècnica anglesa del camp i el català normatiu, disponible per a qualsevol assignatura de l'àmbit.
 - **`sigles.qmd`**: Glossari de sigles de l'assignatura, actualitzat incrementalment durant la migració de cada tema.
-- ***Definition of Done* (DoD-P2, P3 i P4)**: Sistema de criteris de tancament per fase, descrit a la @sec-enfocament-metodologic. Garanteix que cada unitat de producció i cada unitat de revisió compleix els estàndards de qualitat abans de passar a la fase següent.
+- ***Definition of Done* (DoD-UP, DoD-CC i DoD-UR)**: Sistema de criteris de tancament per fase, descrit a la @sec-enfocament-metodologic. Garanteix que cada unitat de producció i cada unitat de revisió compleix els estàndards de qualitat abans de passar a la fase següent.
 
 Aquests tres artefactes, que reflecteixen l'ortogonalitat del sistema de qualitat respecte al cicle de producció, donen per assolit l'OE3.
 
