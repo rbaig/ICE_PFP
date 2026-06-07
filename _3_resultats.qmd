@@ -1,0 +1,101 @@
+# Resultats {#sec-resultats}
+
+## Volum i abast dels materials produïts
+
+La migració ha assolit el **100% del material total** de l'assignatura. La revisió externa ha començat: protocol, calendari i grups de treball estan establerts. La @tbl-volum-materials en detalla el volum per categoria.
+
+| Categoria | Fitxers .qmd | Estat a 18 de juny |
+| :--- | :---: | :--- |
+| Teoria (T1–T9) | 9 | En revisió externa |
+| Laboratori (L1–L6) | 6 | En revisió externa |
+| Enunciats de problemes (PE_T1–T9) | 9 | En revisió externa |
+| Solucionaris (PS_T1–T9) | 9 | En revisió externa |
+| Materials transversals (riscv, sigles, contrib) | 3 | Actius |
+| **Total** | **36** | |
+: Volum de materials produïts per categoria. *En revisió externa*: contingut complet, codi validat a RARS i lèxic harmonitzat; en revisió col·legiada. *En procés*: contingut parcialment migrat, pendent de completar. *Actiu*: document de referència transversal en actualització contínua. {#tbl-volum-materials .striped}
+
+A aquests fitxers s'afegeixen <!-- TODO actualització de núm de figs. abans del lliurament --> **104 figures SVG** (cadascuna en versió *light* i *dark*, ~208 fitxers en total). Les figures han estat generades íntegrament en SVG (abandonant Mermaid per limitacions de qualitat), seguint una paleta de colors i convencions documentades a `contrib.qmd`. S'espera que els processos de revisió pendents en generin algunes més.
+
+Pel que fa als problemes, a més de la migració i revisió dels exercicis existents, s'han incorporat 23 exercicis nous sense equivalent en el material MIPS original; els criteris pedagògics que han guiat tant la selecció dels problemes nous com dels solucionaris es detallen a la @sec-disseny-pedagogic.
+
+## Disseny pedagògic del contingut {#sec-disseny-pedagogic}
+
+La migració no s'ha limitat a substituir MIPS per RISC-V: ha estat l'oportunitat de revisar i millorar la manera com el contingut es presenta i s'estructura per a l'estudiantat. Tres decisions de disseny pedagògic mereixen una justificació explícita.
+
+### Sistema de *callouts*
+
+Els materials fan servir cinc tipus de *callouts* —blocs visuals diferenciats— amb funcions pedagògiques ben delimitades:
+
+- **RISC-V**: documentació tècnica de la ISA o l'ABI directament aplicable. Separa els aspectes normatius de l'especificació de l'exposició didàctica del professor, evitant que l'estudiant confongui el «per què» amb el «com és».
+- **EC**: conveni específic de l'assignatura. Marca les decisions que no deriven de l'especificació RISC-V sinó dels acords interns del curs (convencions de nomenament, simplificacions pedagògiques, restriccions de l'avaluació).
+- **Exemple**: il·lustracions aplicades dels conceptes. Permeten seguir la prosa expositiva sense interrompre el fil argumental.
+- **Essencial**: contingut indispensable que l'estudiant ha de dominar per poder progressar. Actua com a senyal explícit de prioritat en un temari dens.
+- **Aprofundiment**: contingut opcional, no avaluable. Explicacions avançades, connexions amb recerca activa, punts d'entrada per a l'estudiant que vulgui explorar per la seva banda.
+
+El *callout* d'**Aprofundiment** respon a una necessitat pedagògica real i sistemàticament poc atesa: la bretxa entre el disseny curricular orientat al perfil mitjà i les necessitats dels estudiants amb capacitat i motivació superiors. A EC, el Centre de Formació Interdisciplinària Superior (CFIS) aporta cada any un grup d'estudiants que arriben al curs amb una base sòlida i una curiositat genuïna per la matèria, però que sovint perden l'estímul intel·lectual a mesura que el curs avança —precisament perquè el material no ofereix res més enllà del mínim exigible. El resultat és paradoxal: estudiants que podrien excel·lir acaben amb notes que no reflecteixen el seu potencial. El *callout* d'Aprofundiment no és un recurs per als que van sobrats: és el reconeixement que un bon material docent ha de tenir horitzons oberts, no un sostre baix.
+
+La decisió d'usar negretes de manera estratègica —marcant termes tècnics en la seva primera aparició i els conceptes clau de cada paràgraf— completa el sistema de senyalització visual. En un context on l'estudiant cada vegada consumeix més contingut en pantalla i en mode de lectura no lineal (cercant, saltant, rellegint punts concrets), el ressaltat explícit és una eina de navegació, no un ornament tipogràfic.
+
+### Nous problemes i criteris de selecció dels solucionaris
+
+A més de la migració i revisió dels exercicis existents, s'han incorporat 23 problemes nous (vegeu @tbl-reestructuracio-nou) que cobreixen continguts sense equivalent al material MIPS: la modularitat de RISC-V (extensions M i F), les eines de l'ecosistema obert (GNU Compiler Toolchain), els modes de privilegi i, per primera vegada a EC, exercicis sobre excepcions i interrupcions amb fonamentació operativa suficient per ser avaluables.
+
+Els solucionaris cobreixen T1–T9 amb criteris diferenciats per la naturalesa de cada bloc. T1, per la seva brevetat (dos exercicis), té el solucionari elaborat però pendent d'integrar al repositori en el format de `PS_T1.qmd`. Per als temes restants:
+
+- **T2–T5** (traducció C→assemblador): la densitat de raonament pas a pas és el nucli de l'aprenentatge i el solucionari és l'instrument principal d'autoavaluació. Els exercicis nous d'aquests temes —sense referent previ a MIPS— fan el solucionari imprescindible. T3 (salts i subrutines) i T5 (coma flotant) concentren les taxes d'errors més altes de l'assignatura.
+- **T6** (Rendiment i potència): tema atòmic amb exercicis íntegrament numèrics; el criteri de selecció i ordenació és dificultat creixent a partir de la fórmula base.
+- **T7** (Memòria cau) i **T8** (Memòria virtual): els estudiants aborden aquests continguts per primer cop. Els exercicis són bastant mecànics un cop assimilat el procediment; el solucionari actua com a model de referència per autoavaluar-se, ordenat per dificultat creixent.
+- **T9** (Excepcions i interrupcions): és una novetat respecte als materials MIPS originals, on aquest tema no tenia problemes. L'adopció de RISC-V —amb els registres CSR, els modes de privilegi i el mecanisme `ecall`— ha permès formular exercicis nous sobre continguts que ara sí que tenen prou base operativa per ser avaluables.
+
+El conjunt de la migració del corpus i la incorporació dels 23 exercicis nous dóna per assolit l'OE1.
+
+## Qualitat i harmonització {#sec-qualitat-harmonitzacio}
+
+Un dels resultats més significatius del projecte, i que supera l'abast estrictament tècnic de la migració, és l'establiment d'un **sistema de qualitat documentat** per als materials de l'assignatura. Aquest sistema es concreta en tres artefactes:
+
+- **`contrib.qmd`**: Document de convencions i normes d'estil que recull el sistema de *callouts* i prefixos d'etiquetes, les normes d'estil (veu, puntuació, negretes, anglicismes, sigles), els criteris de format (taules, figures SVG, blocs de codi), les substitucions terminològiques obligatòries, la paleta de colors SVG i les decisions específiques per tema. Conté, a més, el **recull terminològic RISC-V en català** elaborat durant la migració: la primera referència sistemàtica d'equivalències entre la terminologia tècnica anglesa del camp i el català normatiu, disponible per a qualsevol assignatura de l'àmbit.
+- **`sigles.qmd`**: Glossari de sigles de l'assignatura, actualitzat incrementalment durant la migració de cada tema.
+- ***Definition of Done* (DoD-P2, P3 i P4)**: Sistema de criteris de tancament per fase, descrit a la @sec-enfocament-metodologic. Garanteix que cada unitat de producció i cada unitat de revisió compleix els estàndards de qualitat abans de passar a la fase següent.
+
+Aquests tres artefactes, que reflecteixen l'ortogonalitat del sistema de qualitat respecte al cicle de producció, donen per assolit l'OE3.
+
+## Integració i accessibilitat
+
+El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un **ecosistema de materials cohesionat** amb les característiques següents:
+
+- **Punt d'entrada únic**: Una URL dona accés a tots els materials en HTML, i un botó permet descarregar el PDF complet de tot el llibre.
+- **Accessibilitat WCAG 2.1**: Marcatge HTML5 semàntic, mode fosc/clar respectant la configuració del sistema de l'usuari, disseny *responsive* i codi amb ressaltat accessible (*a11y*).
+- **Navegació no lineal amb referències creuades**: Cada secció del material conté enllaços directes cap a les seccions de teoria o laboratori relacionades. Un estudiant consultant L3 pot accedir directament als apartats de T3 que aplica; un estudiant consultant T3 pot navegar als exercicis corresponents de PE_T3 i a la correcció de PS_T3. Aquesta interconnexió sistemàtica, impossible en el format PDF original, transforma els materials d'un recurs lineal en un sistema de consulta ràpida.
+- **Validació sistemàtica a RARS**: Tot el codi assemblador del corpus —teoria, exercicis i solucionaris— ha estat verificat manualment al simulador RARS. Això garanteix que cap exemple ni exercici falla en l'entorn de laboratori dels estudiants.
+- **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero. El `README.md` del repositori inclou instruccions detallades per a la reproducció del procés de renderització.
+
+El conjunt d'aquestes característiques dóna per assolit l'OE2.
+
+## Característiques diferencials del corpus
+
+La @tbl-caracteristiques recull les característiques que distingeixen el corpus produït d'un material docent convencional en format PDF, organitzades per l'àmbit d'impacte principal.
+
+| Característica | Impacte pedagògic i institucional |
+| :--- | :--- |
+| **Català normatiu + recull terminològic RISC-V** | Accessibilitat lingüística per a l'estudiantat; primera referència sistemàtica de terminologia RISC-V en català, reutilitzable per altres assignatures de l'àmbit |
+| **Format obert (Quarto Markdown)** | Llegible per humans i màquines; HTML accessible (WCAG 2.1), mode fosc/clar, *responsive*; PDF d'alta qualitat des d'una sola font |
+| **Navegació no lineal amb referències creuades** | Teoria, problemes, solucionaris i laboratoris interconnectats; facilita la consulta ràpida i l'estudi no lineal en pantalla |
+| **Sistema de senyalització visual** | Cinc tipus de *callouts* + negretes estratègiques: priorització del contingut i navegació adaptada al consum en pantalla |
+| **Validació sistemàtica a RARS** | Tot el codi assemblador verificat al simulador; zero-error garantit en l'entorn de laboratori |
+| **Repositori públic i reutilitzable** | Qualsevol equip docent pot fer un *fork* i adaptar el corpus; model de manteniment col·laboratiu via GitLab |
+| **Sistema de DoDs (P2, P3, P4)** | Procés de producció i revisió auditable, traçable i replicable per a projectes similars |
+: Característiques diferencials del corpus produït respecte als materials originals en format PDF. {#tbl-caracteristiques tbl-colwidths="[35,65]" .striped}
+
+## Comparativa planificació–realitat {#sec-comparativa-planificacio-realitat}
+
+La @tbl-planificacio-execucio contrasta la planificació prevista al lliurament intermedi (març 2026) amb el que s'ha assolit efectivament.
+
+| Fita | Previst (lliurament intermedi) | Assolit (lliurament final) |
+| :--- | :--- | :--- |
+| M1 (Març) | T1, T2; setup del repositori | T1, T2 + estructura completa del projecte i sistema de convencions |
+| M2 (Abril) | T3, T4, T5 | T3, T4, T5 + solucionaris PS_T2–T5 |
+| M3 (Maig) | T9 (Excepcions i interrupcions) + Laboratoris | T6, T7, T8, T9 + L1–L6 complets + solucionaris PS_T6–T9 |
+| M4 (Juny) | Tancament i memòria | PE_T1–T9 complets + 23 exercicis nous + PS_T1 + materials transversals + memòria |
+: Comparativa entre la planificació inicial i els resultats assolits. {#tbl-planificacio-execucio tbl-colwidths="[15,35,50]"}
+
+La diferència entre el previst i l'assolit és directament atribuïble a l'adopció de Claude com a eina principal de producció, descrita a la @sec-enfocament-metodologic: la capacitat de mantenir el context complet del projecte en una sola sessió va multiplicar la capacitat de producció i va permetre cobrir en els terminis previstos un volum de material molt superior al planificat.

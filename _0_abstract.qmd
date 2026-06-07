@@ -1,0 +1,12 @@
+# Abstract {.unnumbered}
+
+<!-- PLACEHOLDER: versió reduïda a ~2.000 paraules. — a traduir el Resum al'anglès un cop la versió catalana estigui tancada un cop la versió llarga estigui consolidada -->
+
+**Keywords**: RISC-V, computer organization, computer architecture, Quarto Markdown, agile methodology, AI-assisted learning.
+
+**Website**: [https://loi.pc.ac.upc.edu/ec](https://loi.pc.ac.upc.edu/ec)
+
+**Repository**: [https://gitlab.upc.edu/ec](https://gitlab.upc.edu/ec) (requires [UPClink](https://serveistic.upc.edu/ca/upclink) VPN)
+
+\newpage
+

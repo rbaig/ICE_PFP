@@ -1,0 +1,23 @@
+# Bibliografia
+
+Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
+
+Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. David McKay.
+
+Hennessy, J. L., & Patterson, D. A. (2022). *Computer architecture: A quantitative approach* (6th ed.). Morgan Kaufmann.
+
+Poppendieck, M., & Poppendieck, T. (2003). *Lean software development: An agile toolkit*. Addison-Wesley.
+
+Patterson, D. A., & Hennessy, J. L. (2021). *Computer organization and design RISC-V edition: The hardware software interface* (2nd ed.). Morgan Kaufmann.
+
+Patterson, D., & Waterman, A. (2017). *The RISC-V reader: An open architecture atlas*. Strawberry Canyon LLC. <http://riscvbook.com/>
+
+RISC-V International. (2020–present). *Official RISC-V specifications*. <https://riscv.org/specifications/ratified/>
+
+Schwaber, K., & Sutherland, J. (2020). *The Scrum guide: The definitive guide to Scrum: The rules of the game*. Scrum.org. <https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf>
+
+Waterman, A., & Asanović, K. (Eds.). (2019). *The RISC-V instruction set manual, volume I: Unprivileged ISA*. RISC-V International. <https://docs.riscv.org/reference/isa/unpriv/unpriv-index.html>
+
+Winans, J. (2022). *RISC-V assembly language programming*. Northern Illinois University. <https://github.com/johnwinans/rvalp>
+
+World Wide Web Consortium. (2018). *Web content accessibility guidelines (WCAG) 2.1*. <https://www.w3.org/TR/WCAG21/>

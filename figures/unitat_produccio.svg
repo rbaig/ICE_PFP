@@ -305,15 +305,15 @@
      stroke-width="1.5"
      marker-end="url(#arr-0)"
      id="line9" />
-  <!-- Etapa 4: Actualització transversal (gris) -->
+  <!-- Etapa 4: Figures (taronja càlid) -->
   <rect
      x="0.45755386"
      y="302.5"
      width="320"
      height="56"
      rx="6"
-     fill="#f8f9fa"
-     stroke="#adb5bd"
+     fill="#ffe8d6"
+     stroke="#7d3505"
      stroke-width="0.5"
      id="rect9" />
   <text
@@ -322,7 +322,7 @@
      text-anchor="middle"
      font-size="13px"
      font-weight="bold"
-     fill="#343a40"
+     fill="#7d3505"
      dominant-baseline="central"
      id="text10">U4 · Figures</text>
   <text
@@ -330,9 +330,9 @@
      y="342.5"
      text-anchor="middle"
      font-size="11px"
-     fill="#6c757d"
+     fill="#7d3505"
      id="text11"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#7d3505"><tspan
        sodipodi:role="line"
        id="tspan9"
        x="160.45755"
@@ -353,8 +353,8 @@
      width="320"
      height="56"
      rx="6"
-     fill="#f8f9fa"
-     stroke="#adb5bd"
+     fill="#d0f0f8"
+     stroke="#0a4d5e"
      stroke-width="0.5"
      id="rect9-2" />
   <text
@@ -363,7 +363,7 @@
      text-anchor="middle"
      font-size="13px"
      font-weight="bold"
-     fill="#343a40"
+     fill="#0a4d5e"
      dominant-baseline="central"
      id="text10-2">U5 · Actualització transversal</text>
   <text
@@ -371,9 +371,9 @@
      y="422.48315"
      text-anchor="middle"
      font-size="11px"
-     fill="#6c757d"
+     fill="#0a4d5e"
      id="text11-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#6c757d"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'Source Sans Pro', sans-serif;-inkscape-font-specification:'Source Sans Pro, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#0a4d5e"><tspan
        sodipodi:role="line"
        id="tspan9-1"
        x="160.25002"

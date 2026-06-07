@@ -1,0 +1,72 @@
+# Discussió, conclusions i altres propostes {#sec-discussio}
+
+Aquest projecte no és un estudi experimental en el sentit clàssic: no hi ha grup de control, no hi ha mesura d'impacte sobre l'estudiantat anterior al lliurament, i les dades quantitatives de rendiment acadèmic seran disponibles només a partir del Q1 2026-27. Reconèixer-ho explícitament no és una limitació que calgui disculpar sinó una caracterització precisa del tipus d'intervenció: un projecte d'innovació docent d'envergadura real, amb un producte tangible, verificable i desplegable. El rigor no rau aquí en el disseny experimental sinó en la solidesa de l'argumentació pedagògica, la traçabilitat del procés de producció, la qualitat dels instruments de validació interns (DoD-P2, DoD-P3 i DoD-P4) i la coherència entre els objectius declarats i els resultats assolits. Tots quatre criteris estan documentats al llarg d'aquesta memòria. L'**objectiu general** —l'actualització integral dels materials docents de MIPS a RISC-V— s'ha assolit al 100% en l'Etapa de producció, i els tres objectius específics han quedat tancats a la @sec-resultats: **OE1** amb la migració completa del corpus i la incorporació de 23 exercicis nous, **OE2** amb la transformació a format obert i accessible, i **OE3** amb l'establiment del sistema de qualitat documentat.
+
+## Contrast dels resultats amb el marc teòric i estudis previs
+
+Els resultats descrits a la @sec-resultats confirmen les premisses del marc teòric establert a la @sec-marc-teoric i els antecedents identificats a la @sec-revisio-experiencies. La validació acadèmica més clara prové del propi camp disciplinar: la decisió de Patterson i Hennessy (2021) de reescriure íntegrament el seu llibre de referència al voltant de RISC-V és el gest que millor avala el canvi de paradigma. Que els pioners d'una arquitectura l'abandonin per adoptar-ne una d'oberta no és una anècdota circumstancial: és la prova que RISC-V representa l'estàndard emergent per a la docència de l'arquitectura de computadors en la dècada de 2020. Les migracions documentades a Berkeley (CS 61C) i Cornell (CS 3410), descrites a la @sec-revisio-experiencies, confirmen que la tendència és global i sistemàtica, i que la FIB-UPC no és pionera aïllada sinó participant ben posicionada en un moviment acadèmic de fons.
+
+En l'àmbit metodològic, l'experiència d'aquest projecte valida l'ús de l'enfocament àgil (Schwaber & Sutherland, 2020) per a la producció iterativa de materials educatius tècnics. La comparativa pla→realitat de la @sec-comparativa-planificacio-realitat mostra que la divisió del corpus en unitats temàtiques funcionals va permetre absorbir la variabilitat inherent al projecte —decisions terminològiques retroactives, addició d'exercicis sense equivalent en el material original, evolució del sistema de convencions— sense comprometre el calendari global. Un model de planificació seqüencial hauria estat molt menys resilient davant d'aquests ajustos.
+
+L'aportació diferencial d'aquest projecte, més enllà de la migració pròpiament dita, és triple: l'adopció de formats oberts i llegibles per màquines com a principi estructurador dels materials; l'establiment d'un sistema de qualitat documentat (sistema de DoDs, `contrib.qmd`, `sigles.qmd`) que fa el corpus auditable i editable per qualsevol membre de l'equip docent; i la documentació del procés de producció assistit per IA, que ofereix un model replicable per a equips sense recursos de producció professional.
+
+El fet d'assolir el 100% del conjunt del material (teoria, problemes, solucionari) quan el pla inicial preveia tancar únicament la teoria al lliurament final supera significativament les previsions. Això suggereix que l'ús d'eines IA redueix radicalment les estimacions convencionals de cost i temps per a la producció de materials docents tècnics, amb implicacions rellevants per a la planificació de projectes de millora docent.
+
+## Valoració crítica del procés, obstacles i aprenentatges
+
+El procés ha estat ric en aprenentatges tant sobre el contingut tècnic de la migració com sobre l'ús de la IA com a eina de producció educativa.
+
+**Obstacles identificats**
+
+El primer obstacle va ser la naturalesa dels materials de partida: documents PDF sense fonts editables, resultat de convertir presentacions de diapositives elaborades anys enrere. Cap eina de processament de text pot importar-los directament sense una fase de transcripció i reestructuració prèvies. En la fase inicial d'exploració, aquest pas va consumir un temps desproporcionat i va limitar la velocitat de producció.
+
+El segon obstacle, de caràcter tècnic, va ser la validació del codi assemblador. Les eines d'IA generativa produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte: errors subtils en les convencions de l'ABI, en l'ordre dels operands o en l'ús de les pseudoinstruccions passen desapercebuts en una lectura ràpida però fallen en execució al simulador. Cada exemple de codi dels apunts de teoria i cada exercici dels solucionaris ha requerit verificació manual a RARS. Aquest pas no és automatitzable i no ha de ser-ho: és precisament el punt on l'expertesa disciplinar del professor resulta imprescindible.
+
+El tercer obstacle va ser la gestió de la coherència terminològica i d'estil en un corpus de 36 fitxers. Qualsevol decisió de format o lèxic adoptada al T2 té implicacions al T3, al T4 i en endavant. Mantenir la consistència en un corpus d'aquesta escala requereix un sistema de convencions documentat, accessible i consultat sistemàticament durant la producció: aquest és l'origen de `contrib.qmd`.
+
+**El pivot NotebookLM → Claude**
+
+L'exploració inicial amb NotebookLM va validar la viabilitat de la migració assistida per IA però va evidenciar un límit estructural: aquesta eina requereix la fragmentació en *notebooks* temàtics independents, cosa que impedeix propagar les decisions d'estil i contingut d'un tema a un altre de manera automàtica. La velocitat de producció era moderada i la supervisió humana, intensiva.
+
+L'adopció de Claude com a eina principal va transformar el procés. La capacitat de mantenir en una sola sessió el context complet del projecte —les convencions de `contrib.qmd`, les decisions prèvies, l'estructura del repositori, els exemples de temes ja tancats— va eliminar la fragmentació. Cada sessió de treball permetia avançar en un tema sencer amb coherència i qualitat homogènies.
+
+**El rol del professor com a director tècnic**
+
+La integració de la IA no va reduir el rol del professor: el va transformar. El docent va passar de ser l'escriptor principal dels materials a ser el *director tècnic* del procés: definint les convencions d'estil, prenent les decisions pedagògiques clau (quins conceptes aprofundir, quins exemples prioritzar, quina progressió didàctica seguir), validant cada fragment de codi al simulador RARS i revisant la precisió tècnica del contingut. La IA accelera la producció; la intel·ligència pedagògica continua residint en el docent. Aquesta distinció és una conclusió central del projecte amb implicacions directes per a la formació del professorat universitari en l'era de la IA generativa.
+
+## Enriquiment personal
+
+El treball intens i exhaustiu que he realitzat per portar la migració des de la seva concepció fins a la Fase de Revisió Externa (P4) m'ha permès desenvolupar un conjunt de competències i coneixements que van més enllà del contingut tècnic de l'assignatura. En primer lloc, he adquirit una comprensió profunda de l'arquitectura RISC-V i les seves diferències clau amb MIPS, així com de les pràctiques de programació en assemblador i el funcionament dels simuladors com RARS. En segon lloc, he desenvolupat habilitats avançades en la formulació de prompts per a IA generativa, aprenent a guiar la producció de contingut tècnic complex i a supervisar críticament les respostes per garantir la correcció i coherència. Finalment, he millorat les meves competències en la gestió de projectes educatius, especialment en l'organització de materials, el control de versions amb GitLab i la documentació d'un procés col·laboratiu assistit per IA, i la meva capacitat per a transmetre aquests coneixements de manera clara i pedagògica.
+
+## Propostes de millora o línies de continuïtat del projecte
+
+**Implantació a l'aula (Q1 2026-27)**
+
+La primera validació real dels materials migrats tindrà lloc al primer quadrimestre del curs 2026-27 (setembre de 2026), en 2 grups de teoria i 3 o 4 grups de laboratori. Els instruments de recollida de dades previstos —seguiment del rendiment acadèmic, enquesta de satisfacció i registre d'incidències— estan descrits a la secció de Metodologia (@sec-recollida-dades). L'experiència dels estudiants amb els nous materials proporcionarà el *feedback* necessari per a una primera iteració de millora.
+
+**Completar el cicle de revisió externa**
+
+La Revisió externa (P4), en curs en el moment del lliurament d'aquesta memòria, és la fase que tancarà formalment el cicle de producció. Els grups de treball establerts estan revisant els materials per temes, amb sessions de videotrucada per als punts que requereixen consens. S'espera que la P4 estigui completada abans del desplegament al Q1 2026-27.
+
+**Extensió a l'eix d'arquitectura: IC i AC**
+
+A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC → EC → AC, descrita a la @sec-context-eix-arquitectura) aconsella estendre el model a les assignatures veïnes. IC podria beneficiar-se de la migració a format obert per facilitar la sincronització conceptual amb EC. AC, que utilitza x86 com a arquitectura de referència per a l'estudi del *pipelining*, podria incorporar RISC-V com a pont pedagògic entre EC i els conceptes avançats de segmentació, aprofitant la continuïtat de l'ISA que l'estudiant ja domina en sortir d'EC. Aquesta extensió enforteix la coherència vertical del pla d'estudis i optimitza el temps d'aula dedicat a la introducció d'arquitectures noves.
+
+**Manteniment col·laboratiu i comunitat docent**
+
+El repositori públic a GitLab és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques del sistema de DoDs, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
+
+## Possibles connexions amb altres àmbits o temàtiques educatives
+
+**El model com a pràctica exportable a assignatures STEAM**
+
+L'arquitectura metodològica d'aquest projecte —gestió àgil, producció assistida per IA, format *Docs-as-Code* i repositori compartit— no és específica ni de l'arquitectura de computadors ni de l'enginyeria informàtica. Qualsevol assignatura STEAM amb un corpus de materials tècnics susceptible d'actualització pot aplicar el mateix model. Els ingredients essencials en són quatre: un format de marcatge pla (Markdown, LaTeX, reStructuredText) que separi el contingut de la presentació i el faci processable per eines automàtiques; un repositori de control de versions que garanteixi la traçabilitat i la sincronització entre l'equip docent; la IA generativa com a accelerador de producció amb supervisió humana explícitament definida; i un sistema de convencions documentat que mantingui la coherència del corpus a mesura que creix. Assignatures com Física, Matemàtiques o Electrònica comparteixen el repte de mantenir materials tècnics actualitzats amb equips reduïts i temps fragmentat. El cost d'entrada d'aquest model és baix: totes les eines emprades (Quarto, GitLab, RARS) són de codi obert o d'accés gratuït.
+
+**El paradigma *Docs-as-Code* en l'àmbit educatiu**
+
+El paradigma *Docs-as-Code* —tractar la documentació amb les mateixes eines i pràctiques que el codi font— és una pràctica consolidada en la indústria del programari que aquest projecte trasllada explícitament a la docència universitària. L'aplicació educativa aporta beneficis directes: control de versions del contingut docent, revisió col·laborativa entre iguals (anàloga al *code review*), detecció automàtica d'errors de format i desplegament automàtic dels materials actualitzats. A més, per als estudiants d'enginyeria informàtica, accedir a materials allotjats en un repositori GitLab, renderitzats amb Quarto i compatibles amb les tecnologies assistives representa en si mateix un aprenentatge implícit sobre les bones pràctiques de la indústria, alineat amb els objectius formatius del grau.
+
+**Implicacions per a la formació del professorat universitari en IA**
+
+L'experiència d'aquest projecte permet formular una conclusió amb implicacions directes per a la missió de l'ICE: la formació del professorat universitari en l'ús de la IA ha d'anar més enllà de l'adopció puntual d'eines individuals. El que resulta estratègic és una alfabetització en la *gestió de projectes assistits per IA*: com definir convencions de treball que la IA pugui seguir amb consistència, com estructurar les tasques per maximitzar l'efectivitat de la col·laboració humà-màquina, i com establir mecanismes de validació adequats al context disciplinar de cada assignatura. El professor que domina aquesta competència pot multiplicar la seva capacitat de producció docent de qualitat sense comprometre el rigor. Promoure i difondre aquest model és, per tant, una tasca estratègica per a les institucions que, com l'ICE de la UPC, lideren la innovació pedagògica a la universitat.
+

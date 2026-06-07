@@ -1,0 +1,24 @@
+---
+title: "Actualització de continguts de l'assignatura Estructura de computadors (EC) del GEI; adopció de RISC-V com a arquitectura de referència"
+author:
+  - name: Roger Baig
+    affiliation: "Facultat d'Informàtica de Barcelona (FIB), Universitat Politècnica de Catalunya (UPC)"
+date: "18 de juny de 2026"
+lang: ca
+---
+
+{{< include _0_resum.qmd >}}
+
+{{< include _0_abstract.qmd >}}
+
+{{< include _1_introduccio_article.qmd >}}
+
+{{< include _2_metodologia.qmd >}}
+
+{{< include _3_resultats_article.qmd >}}
+
+{{< include _4_discussio.qmd >}}
+
+{{< include _5_bibliografia.qmd >}}
+
+{{< include _6_annex.qmd >}}

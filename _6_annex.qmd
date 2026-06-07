@@ -1,0 +1,59 @@
+# Annex: Reflexions sobre l'impacte de la IA generativa en la docència {#sec-annex-ia .unnumbered}
+
+*Aquest annex recull reflexions personals fruit de l'experiència d'haver passat, en el transcurs d'aquest projecte, d'un ús pràcticament nul de la IA generativa a un ús intensiu i diari. No pretén ser una revisió sistemàtica de la literatura sinó un testimoni de primera mà d'un professor d'enginyeria que ha viscut la transició des de dins.*
+
+## La premissa que ho canvia tot {.unnumbered}
+
+La IA generativa ha vingut per quedar-se i transformarà pràcticament tots els sectors, inclòs l'ensenyament universitari. No és una predicció: ja està passant. Qualsevol estratègia docent que parteixi de la prohibició com a resposta principal és una estratègia condemnada al fracàs, per la mateixa raó que ho hauria estat prohibir les calculadores als anys setanta o Internet als noranta. La pregunta pertinent no és «permetem o prohibim?» sinó «com incorporem la IA de manera que afavoreixi l'aprenentatge real?» Selwyn (2023) ho articula clarament: el debat públic oscil·la entre el pànic i l'entusiasme acrítics, i cap dels dos extrems és útil pedagògicament.
+
+L'experiència d'aquest projecte m'ha convertit en un ferm partidari de la IA com a eina de treball. He atacat camps que havia defugit sistemàticament —JavaScript, Git, l'automatització del flux de publicació— perquè la barrera d'entrada s'ha reduït fins a un punt en què l'únic obstacle real és el criteri sobre *què* cal fer, no el coneixement de *com* fer-ho tècnicament. La qualitat del treball ha augmentat, el temps invertit s'ha reduït i, paradoxalment, la comprensió dels mecanismes subjacents ha millorat: quan una IA et genera codi que funciona però que no entens, la supervisió crítica que t'exigeixes a tu mateix és un accelerador d'aprenentatge molt eficient.
+
+## Com hem de fer front a l'ús de la IA a l'aula? {.unnumbered}
+
+La resposta no pot ser binària ni estàtica, perquè les capacitats i les necessitats de l'estudiant evolucionen al llarg de l'itinerari formatiu. La meva proposta, basada en l'experiència docent a EC (Q2 del grau) i a les assignatures optatives Future Internet Networks (FINE) i Decentralized Systems (DS) del màster de recerca Master in Innovation and Research in Informatics (MIRI), és la següent:
+
+**Primers quadrimestres del grau: fonamentar el pensament crític.** En les etapes inicials, l'ús de la IA s'hauria de limitar a l'estudi i la preparació, no a la resolució d'exercicis avaluables. La raó no és moral sinó pedagògica: un estudiant que no ha après a estructurar un problema no pot supervisar críticament una solució generada per una IA. Usar la IA sense aquesta base és equivalent a copiar sense entendre; el resultat és un aprenentatge superficial que no supera cap acte d'avaluació que requereixi un mínim de raonament o elaboració intel·lectual. En aquest estadi, l'activitat docent entorn a la IA ha de focalitzar-se en guiar l'estudiant en l'ús crític de les eines disponibles. La velocitat a la qual evoluciona l'ecosistema requereix el reciclatge constant del professorat.
+
+**Quadrimestres finals del grau: normalitzar l'ús com una eina més.** A les assignatures pràctiques dels darrers quadrimestres, el control de les IA *assistives* s'ha de tractar exactament igual que un compilador, un depurador o un editor de text avançat: una eina que el professional usarà durant tota la seva carrera i que, per tant, en la fase d'estudiant ha d'aprendre a usar bé. Mollick i Mollick (2023) proposen set enfocaments concrets per integrar la IA als treballs dels estudiants preservant l'aprenentatge real; la clau és dissenyar tasques on la IA sigui un amplificador de capacitat, no un substitut del raonament.
+
+**Màster: ús massiu per maximitzar la productivitat.** A nivell de màster, la producció assistida per IA hauria de ser la norma. L'objectiu és que l'estudiant pugui focalitzar tota la seva atenció en la contribució original, alliberant-se de la feina mecànica de producció. La OCDE (2023) identifica precisament aquest escenari —IA com a amplificador de la capacitat experta— com el cas d'ús amb l'impacte positiu més gran en educació superior. El consum crític, la capacitat de relacionar conceptes complexos i la síntesi esdevenen, com mai abans, competències vertebradores de la tasca docent.
+
+## L'avaluació, l'element que ho ha de canviar tot {.unnumbered}
+
+La transformació metodològica no és sostenible si no va acompanyada d'una transformació de l'avaluació. Els formats actuals, dissenyats en un món sense IA generativa, han quedat obsolets en molts casos.
+
+Als **quadrimestres inicials**, la resposta és clara: tornar als exàmens de paper, llapis i, com a màxim, calculadora bàsica. No és un retrocés; és reconèixer que l'examen presencial sense eines és l'únic instrument que mesura el que realment volem mesurar en aquesta etapa: si l'estudiant ha internalitzat els conceptes.
+
+Als **quadrimestres finals i màster**, els treballs, projectes i memòries ja no poden ser l'únic recurs d'avaluació. Un document produït amb IA de qualitat és indistingible, en aparença, d'un document elaborat amb esforç genuí. La solució no és la detecció —les eines de detecció actuals no són fiables i mai ho seran prou— sinó el retorn a formats d'avaluació que no es poden delegar: l'examen oral. En una de les meves assignatures de màster del curs vinent ja el recuperem. L'examen oral no detecta si l'estudiant ha usat IA: directament fa irrellevant la pregunta, perquè l'estudiant ha de demostrar davant del professor que entén el que ha lliurat.
+
+## Els professors som necessaris? {.unnumbered}
+
+La pregunta és incòmoda però legítima. Ja ara, un estudiant amb criteri pot aprendre d'un tema tècnic interaccionant directament amb un LLM amb més eficiència que en una classe magistral estàndard: pot fer preguntes al seu ritme, aprofundir on li interessa, repetir les explicacions que no ha entès i generar exemples personalitzats al seu context. Si la funció del professor es redueix a la transmissió d'informació, efectivament en tornem prescindibles.
+
+Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge i el referent de l'estudiantat en l'oceà de la informació. És un canvi de rol profund, no una desaparició.
+
+## L'atenció als estudiants excel·lents {.unnumbered}
+
+Hi ha una qüestió que el discurs pedagògic dominant prefereix no tractar: en l'esforç per no deixar ningú enrere, hem acabat posant un sostre als qui van davant. A EC, l'experiència amb els estudiants del Centre de Formació Interdisciplinària Superior (CFIS) de l'UPC és il·lustrativa: arriben amb una base sòlida i una curiositat genuïna, però sovint perden l'estímul a mesura que el curs avança i acaben amb notes que no reflecteixen el seu potencial. El material docent estàndard no és el problema; el problema és que no ofereix cap horitzó més enllà del mínim exigible.
+
+El *callout* d'Aprofundiment dels nous materials és una resposta modesta però concreta a aquesta bretxa: indica a l'estudiant que hi ha més, que el tema té profunditat, i que pot explorar-la pel seu compte si vol. Amb la IA disponible com a tutor personalitzat il·limitat, aquest tipus d'indicació adquireix una dimensió nova: ja no cal esperar que el professor tingui temps per a una tutoria individual. L'estudiant que vol aprofundir ara té accés immediat a un interlocutor que el pot acompanyar fins on vulgui arribar.
+
+## El futur de la programació {.unnumbered}
+
+Una pregunta que planeja sobre tot l'ecosistema informàtic, i que ningú respon amb convicció: si un LLM pot generar codi funcional per a la majoria de tasques de programació estàndard, *quin és el valor diferencial d'un programador humà?*
+
+L'ofici de programador tal com l'hem conegut —escriure codi línia a línia per implementar especificacions donades— ha canviat irreversiblement. Però potser la pregunta està mal formulada. El que ha desaparegut és la barrera d'entrada a la producció de codi; el que no ha desaparegut és la necessitat de criteri sobre *quin* codi cal escriure, *per a quin* problema, *amb quines* restriccions i *amb quins* compromisos. Un *full-stack* que sap usar bé la IA multiplica la seva capacitat de producció per un factor difícil de quantificar. Un programador especialitzat en un domini complex —seguretat, compiladors, sistemes en temps real— continua tenint un avantatge diferencial que la IA no pot replicar fàcilment perquè requereix un context molt específic que no es pot capturar en un *prompt*.
+
+No tinc la resposta definitiva, i desconfio de qui diu que la té. El que sí sembla clar és que l'habilitat de col·laborar eficientment amb eines IA —saber formular el problema, supervisar la solució i integrar-la en un sistema complex— és ja una competència fonamental que hauria d'estar al nucli del currículum d'enginyeria informàtica. Com a responsables de les generacions futures, tenim la responsabilitat de decidir si ens n'adonem ara o quan ja sigui massa tard.
+
+## A on pot arribar la IA? {.unnumbered}
+
+No ho sé. I aquesta resposta em sembla la més honesta i la més útil. El que sí que sé, per experiència directa, és que la distància entre «no la faig servir pràcticament» i «la faig servir intensivament cada dia» ha transformat la meva pràctica professional d'una manera que hauria considerat improbable fa quatre dies. Si aquesta és la magnitud del canvi individual en un horitzó tan curt, projectar-la a escala institucional és un exercici que hauria de mantenir el col·lectiu docent en un estat d'alerta activa, no de resistència passiva.
+
+## Bibliografia
+
+Mollick, E., & Mollick, L. (2023). *Assigning AI: Seven approaches for students, with prompts*. The Wharton School, University of Pennsylvania. <https://doi.org/10.2139/ssrn.4475995>
+
+OCDE. (2023). *Generative AI and the future of education*. OECD Publishing. <https://doi.org/10.1787/5b5d2df8-en>
+
+Selwyn, N. (2023). *Generative AI and the future of education: Panic and possibility*. Polity Press.

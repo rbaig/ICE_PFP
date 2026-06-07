@@ -1,0 +1,9 @@
+project:
+  render:
+    - index_article.qmd
+
+format:
+  pdf:
+    output-file: "Baig_PFP_EC_article_2026.pdf"
+    documentclass: article
+    toc: false

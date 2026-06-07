@@ -14,17 +14,17 @@ crossref:
   sec-prefix: "§"
  
 format:
-  html:
-    toc: true
-    toc-location: left
-    number-sections: true
-    highlight-style: a11y
-    code-line-numbers: true
-    code-copy: true
-    code-overflow: wrap
-    theme: cosmo
+  # html:
+  #   toc: true
+  #   toc-location: left
+  #   number-sections: true
+  #   highlight-style: a11y
+  #   code-line-numbers: true
+  #   code-copy: true
+  #   code-overflow: wrap
+  #   theme: cosmo
   pdf:
-    output-file: "Baig_PFP_EC_MIPS-RISC-V_2026.pdf"
+    output-file: "projecte_docent.pdf"
     toc: true
     documentclass: scrartcl
     classoption: oneside
@@ -45,5 +45,12 @@ format:
     citecolor: blue
     include-in-header:
       - portada.tex
+      - text: |
+          \usepackage{caption}
+          \captionsetup{font=small}               % Redueix la mida de la font de les llegendes
+          \captionsetup{width=0.85\textwidth}     % Limita l'amplada de les llegendes al 85% de l'amplada del text
+          \usepackage{etoolbox}
+          \AtBeginEnvironment{longtable}{\small}  % Redueix la mida de la font de les taules llargues
+          \AtBeginEnvironment{tabular}{\small}    % Redueix la mida de la font de les taules normals
     include-before-body:
       - before-body.tex
