@@ -24,7 +24,7 @@ format:
   #   code-overflow: wrap
   #   theme: cosmo
   pdf:
-    output-file: "projecte_docent.pdf"
+    output-file: "ICE_STEAM_PFP_RogerBaigViñas_llarg.pdf"
     toc: true
     documentclass: scrartcl
     classoption: oneside

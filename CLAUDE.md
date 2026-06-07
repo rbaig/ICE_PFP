@@ -134,7 +134,7 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 - [x] Figures: `eix_arquitectura.svg`, `etapa_produccio.svg`, `etapa_explotacio.svg`, `unitat_produccio.svg`
 - [x] Revisió profunda de consistència completada (nomenclatura P1–P5, E1–E2, U1–U6, DoD-UP/DoD-CC/DoD-UR)
 - [x] Revisió lingüística completada
-- [ ] Resum en català: pendent d'actualització final
+- [x] Resum en català: tancat
 - [ ] Abstract en anglès: pendent (fer com a últim pas, un cop el Resum català estigui tancat)
 - [x] Canvi de nomenclatura DoD: DoD-UP, DoD-CC, DoD-UR (completat)
 

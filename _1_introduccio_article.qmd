@@ -1,3 +1,103 @@
 # Introducció {#sec-introduccio}
 
-<!-- PLACEHOLDER: versió reduïda a ~2.000 paraules. — a redactar un cop la versió llarga estigui consolidada -->
+## Context de la migració {#sec-context-eix-arquitectura}
+
+L'assignatura Estructura de computadors (EC), de la qual soc coordinador des del Q2 del curs 2024-25, és una assignatura de la fase inicial del Grau en enginyeria informàtica (GEI) de la Facultat d'informàtica de Barcelona (FIB, UPC). L'assignatura ocupa el nexe central d'un eix d'arquitectura que abasta des de la lògica digital fins al disseny d'alt rendiment, impartit pel Departament d'Arquitectura de Computadors (DAC) (@fig-eix-arquitectura).
+
+![L'eix d'arquitectura de computadors del GEI (FIB-UPC). EC és el nexe central entre la lògica digital d'IC i el disseny d'alt rendiment d'AC.](figures/eix_arquitectura.svg){#fig-eix-arquitectura width="60%"}
+
+A la primera assignatura de l'eix, Introducció als computadors (IC), els estudiants comprenen el disseny d'un computador senzill sense coneixements previs de circuits digitals, construint des de les portes lògiques fins a un processador de 25 instruccions. A EC fan el salt cap a un microprocessador real: s'aprofundeix en l'ISA (*Instruction Set Architecture*) i l'ABI (*Application Binary Interface*), s'estudia la jerarquia de memòria (cau i virtual) i es tracten el rendiment i la gestió d'excepcions i interrupcions. A Arquitectura de computadors (AC), partint de la base d'EC, els estudiants estudien la segmentació (*pipelining*) i les tècniques d'alt rendiment. Aquesta seqüència IC→EC→AC representa l'itinerari consolidat internacionalment: del processador teòric a l'ISA real, de l'ISA real al disseny d'alt rendiment.
+
+## L'assignatura Estructura de computadors (EC)
+
+### Objectiu general i resultats d'aprenentatge
+
+L'estudiant ha de ser capaç de comprendre i analitzar la frontera entre el programari i el maquinari (*Hardware/Software Interface*), dominant el funcionament intern d'un processador industrial basat en RISC-V i els mecanismes que regeixen el rendiment i la robustesa del sistema.
+
+Els resultats d'aprenentatge s'estructuren seguint la taxonomia de Bloom revisada (Anderson & Krathwohl, 2001; Bloom et al., 1956), progressant des dels nivells de recordar i comprendre fins als d'analitzar i avaluar:
+
+**RA1. Rendiment i arquitectura**: Identificar els nivells d'abstracció d'un computador i avaluar el rendiment i el consum de potència aplicant la Llei d'Amdahl.
+
+**RA2. Frontera Programari-Maquinari (ISA/ABI)**: Relacionar la representació de dades (naturals, enters, vectors, matrius, cadenes) amb la seva implementació en memòria; traduir codi C a assemblador RISC-V fent ús de les convencions de l'ABI.
+
+**RA3. Aritmètica del computador**: Explicar el funcionament de l'aritmètica d'enters i la representació en coma flotant (IEEE 754).
+
+**RA4. Jerarquia de memòria**: Analitzar el comportament de la memòria cau i la memòria virtual per optimitzar el rendiment del sistema basant-se en els principis de localitat.
+
+**RA5. Robustesa**: Comprendre el suport del maquinari per a la gestió d'excepcions i interrupcions.
+
+### Seqüenciació temàtica
+
+La nova estructura organitza el curs en 9 temes per a un quadrimestre de 13 setmanes (@tbl-sequenciacio-tematica). Respecte a l'assignatura original (MIPS), s'han pres dues decisions estructurals rellevants: el Tema 1 original s'ha dividit en T1 (introducció conceptual i codificació de dades) i T6 (rendiment i potència, com a avantsala de la memòria cau T7), i l'aritmètica entera s'ha segregat de la coma flotant en temes independents (T4 i T5), reduint la càrrega cognitiva i clarificant la frontera conceptual entre ambdós tipus.
+
+| Set. | Tema | Contingut |
+| :---: | :--- | :--- |
+| 1 | 1 Introducció | Descripció jeràrquica del computador. Codificació de naturals i enters |
+| 2 | 2 Instruccions i tipus de dades bàsics | Introducció a la ISA de RISC-V. Formats d'instrucció. Variables, memòria, operands, punters, vectors i cadenes |
+| 3 | 3 Traducció de programes | Operacions lògiques i desplaçaments. Sentències *if* i bucles. Subrutines. Compilació, assemblatge, enllaçat i càrrega |
+| 4 | 4 Aritmètica entera i matrius | Suma, resta, multiplicació i divisió d'enters. Sobreeiximent. Matrius. Optimitzacions de bucle |
+| 5 | 5 Coma flotant | Representació IEEE 754. Operacions en coma flotant. Coma flotant a RISC-V |
+| 6 | 6 Rendiment i potència | Mesures de rendiment. Llei d'Amdahl. Potència i escalat de Dennard |
+| 7 | 7 Memòria cau | Jerarquia de memòria. Polítiques d'emplaçament, reemplaçament i escriptura. Rendiment. Memòries cau multinivell |
+| 8 | 8 Memòria virtual | Paginació. Taula de pàgines. Fallada de pàgina. TLB |
+| 9 | 9 Excepcions i interrupcions | Registres CSR. Flux maquinari. Rutina de servei. Crides al sistema. Interrupcions |
+: Seqüenciació temàtica i temporal per a un quadrimestre de 13 setmanes. {#tbl-sequenciacio-tematica tbl-colwidths="[5,35,55,5]" .striped}
+
+### Metodologia docent i materials
+
+Les sessions de teoria combinen la part magistral amb la discussió amb l'alumnat sobre alternatives i compromisos de disseny. Les sessions de problemes es realitzen mitjançant resolució directa del professor, resolució individual i resolució cooperativa. Les sessions de laboratori, en parelles, incorporen la verificació semiautomàtica de les solucions i l'avaluació continuada.
+
+Els materials docents comprenen apunts de teoria, problemaris i solucionaris, quadern de pràctiques de laboratori i compendi de referència RISC-V. Tots els materials, originalment en format PDF sense fonts editables, han estat migrats íntegrament a Quarto Markdown i es troben disponibles en un repositori GitLab amb sortida en HTML i PDF des d'un únic punt d'entrada.
+
+### Avaluació
+
+Nota numèrica: 0,20·max{EP,EF} + 0,60·EF + 0,20·(0,85·EL + 0,15·AC)
+(EP: examen parcial; EF: examen final; EL: examen de laboratori; AC: avaluació continuada de laboratori)
+
+## Necessitat i oportunitats de la migració
+
+### Necessitat: rellevància de RISC-V
+
+L'arquitectura MIPS va revolucionar la computació en introduir el *pipeline* sense bloquejos, però ha perdut progressivament la seva quota industrial i rellevància acadèmica. RISC-V, sorgida de la Universitat de Califòrnia, Berkeley, pels mateixos enginyers que van dissenyar MIPS, se'n beneficia de quaranta anys d'experiència i n'elimina les decisions de disseny que generaven confusió docent. La seva llicència oberta i permissiva ha propiciat una adopció massiva per part d'empreses (Google, Nvidia, Samsung, Intel) i governs, inclosa la Unió Europea, que la considera clau per a la sobirania tecnològica. La migració de MIPS a RISC-V a EC no és una simple actualització de continguts, sinó una decisió estratègica que alinea la formació dels futurs enginyers amb les tendències actuals i futures de la indústria i l'acadèmia.
+
+### Oportunitats pedagògiques
+
+**Claredat didàctica (O1)**: La ISA base RV32I conté menys de 50 instruccions i n'elimina els artefactes de MIPS que generaven confusió als estudiants (*branch delay slots*, registres especials `HI`/`LO`). La modularitat permet introduir la base i afegir les extensions M (multiplicació/divisió) i F (coma flotant) progressivament, alineant la complexitat amb la progressió del curs.
+
+**Harmonització de continguts (O2)**: L'actualització ha estat l'ocasió per revisar críticament la totalitat del material: s'han unificat lèxic i estil, s'ha elaborat terminologia catalana pròpia per a RISC-V (documentada a `contrib.qmd`), i s'ha ampliat el corpus amb 23 exercicis nous sense equivalent en el material MIPS.
+
+**Format obert i accessible (O3)**: La transició al paradigma *Docs-as-Code* (Quarto Markdown + GitLab) fa els materials llegibles per màquines, compatibles amb tecnologies assistives (WCAG 2.1) i interoperables amb eines d'IA. El control de versions garanteix la traçabilitat i la col·laboració asíncrona entre el professorat.
+
+**Cohesió de l'equip docent (O4)**: L'equip d'EC és divers (10 professors, incloent professors novells i sènior vinculats al Barcelona Supercomputing Center). La revisió col·legiada dels materials a través de GitLab ha servit com a mecanisme de transferència de bones pràctiques i d'alineació pedagògica entre tot l'equip.
+
+## Motivació personal i relació amb la pràctica docent
+
+Des de la perspectiva del professor, la decisió de migrar a RISC-V es fonamenta en diversos arguments de pes. El principal és la **rellevància industrial i la projecció de futur**: MIPS ha perdut pràcticament tota la seva quota de mercat, mentre que RISC-V experimenta una adopció massiva en sectors que van dels sistemes encastats i dispositius IoT fins als centres de dades i la computació d'alt rendiment. Ensenyar MIPS avui és, en certa manera, ensenyar una tecnologia obsoleta; ensenyar RISC-V és invertir directament en l'ocupabilitat dels futurs graduats. Un altre motiu és l'**abundància de recursos educatius moderns**: simuladors avançats com RARS, plaques de desenvolupament assequibles (com la Raspberry Pi Pico 2 W, amb nucli RP2350 RISC-V, que obre la porta a pràctiques amb maquinari real) i llibres de referència en edicions recents. Finalment, la naturalesa oberta de RISC-V permet als estudiants i investigadors experimentar amb noves idees en disseny de processadors, compiladors o sistemes operatius sense les restriccions d'un ISA propietari.
+
+Des del punt de vista institucional, adoptar RISC-V posiciona el programa acadèmic a l'avantguarda, alineant-lo amb les iniciatives de sobirania tecnològica de la Unió Europea (com l'*European Processor Initiative*) i facilitant projectes de final de grau, màsters i tesis sense les barreres de la propietat intel·lectual.
+
+## Marc teòric i conceptual {#sec-marc-teoric}
+
+El marc teòric principal es fonamenta en les obres que han establert l'estàndard de facto en l'ensenyament de l'arquitectura de computadors. Patterson i Hennessy (2021) presenten en la segona edició de *Computer Organization and Design RISC-V Edition* l'obra de referència fonamental per a qualsevol curs introductori. El fet que els seus autors, pioners de MIPS, hagin reescrit completament el llibre al voltant de RISC-V és la declaració més clara del canvi de paradigma. En la mateixa línia, Hennessy i Patterson (2022) consoliden en la sisena edició de *Computer Architecture: A Quantitative Approach* RISC-V com a arquitectura vàlida per a la computació d'altes prestacions.
+
+A nivell d'especificació tècnica, Waterman i Asanović (2019) mantenen *The RISC-V Instruction Set Manual* com el document fundacional que defineix l'ISA base i les extensions estàndard. Patterson i Waterman (2017) ofereixen en *The RISC-V Reader* una síntesi concisa de 180 pàgines amb 75 «punts clau de disseny» que expliquen la lògica de RISC-V en contrast amb arquitectures anteriors. Winans (2022) completa el panorama amb *RISC-V assembly language programming*, una guia d'introducció de codi obert orientada a la pràctica.
+
+El marc pedagògic s'ancora en la taxonomia de Bloom revisada (Anderson & Krathwohl, 2001), que estructura els resultats d'aprenentatge en nivells cognitius progressius, i en l'enfocament àgil (Schwaber & Sutherland, 2020; Poppendieck & Poppendieck, 2003), que orienta el disseny del procés de producció dels materials.
+
+## Revisió d'experiències similars {#sec-revisio-experiencies}
+
+La transició de MIPS a RISC-V en l'àmbit acadèmic ha estat liderada per les mateixes institucions que van originar ambdues arquitectures. La Universitat de Califòrnia, Berkeley (bressol de RISC-V) ha abandonat completament MIPS al seu curs CS 61C (*Great Ideas in Computer Architecture*), i la publicació de les noves edicions del llibre canònic de Patterson i Hennessy exclusivament amb RISC-V ha estat el principal motor del canvi a escala global. La Universitat Cornell ha migrat la seva assignatura CS 3410 (*Computer System Organization and Programming*) a RISC-V de 64 bits, contribuint activament a l'ecosistema amb el seu propi intèrpret en línia i fent ús de simuladors visuals com Venus. A Europa, centres com l'ETH Zürich mostren un compromís profund amb RISC-V especialment en recerca i cursos avançats.
+
+A Catalunya, la transició és objecte de debat i planificació activa. La FIB-UPC ha formalitzat propostes d'innovació docent per a la migració d'EC, justificant el canvi per l'obsolescència industrial de MIPS i l'alineament amb RISC-V com a eina de sobirania tecnològica. L'adopció progressiva, impulsada per la creació de la Xarxa-RISC-V de recerca dins de la UPC, assegura una transició coherent que s'estén des de la docència bàsica fins a la investigació de frontera.
+
+## Objectiu general i objectius específics
+
+L'**objectiu general** d'aquest treball és l'actualització integral dels materials docents escrits de l'assignatura EC del GEI a la FIB, substituint l'arquitectura MIPS per RISC-V com a nou referent d'aprenentatge.
+
+Per assolir-lo, es defineixen tres objectius específics:
+
+**OE1. Transició de l'arquitectura de referència (ISA)**: Migrar el corpus teòric i pràctic (apunts, problemes i laboratoris) de MIPS a RISC-V, assegurant la correcció de l'especificació ISA i ABI i incorporant continguts nous sense equivalent en el material original.
+
+**OE2. Transformació digital i accessibilitat**: Passar de formats tancats (PDF) a formats oberts amb control de versions, garantint l'accessibilitat WCAG 2.1 i habilitant la interacció amb eines d'aprenentatge basades en IA.
+
+**OE3. Harmonització i sistema de qualitat**: Revisar críticament tots els continguts per unificar el lèxic i corregir inconsistències, tot aprofitant l'expertesa dels professors vinculats al BSC, i establir un sistema de qualitat documentat (`contrib.qmd`, `sigles.qmd`, DoD-UP/CC/UR) que faci el corpus auditable i replicable.

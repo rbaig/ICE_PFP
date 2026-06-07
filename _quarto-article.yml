@@ -4,6 +4,6 @@ project:
 
 format:
   pdf:
-    output-file: "Baig_PFP_EC_article_2026.pdf"
+    output-file: "ICE_STEAM_PFP_RogerBaigViñas_article.pdf"
     documentclass: article
-    toc: false
+    toc: true
