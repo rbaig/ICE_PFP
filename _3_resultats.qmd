@@ -83,7 +83,7 @@ La @tbl-caracteristiques recull les característiques que distingeixen el corpus
 | **Sistema de senyalització visual** | Cinc tipus de *callouts* + negretes estratègiques: priorització del contingut i navegació adaptada al consum en pantalla |
 | **Validació sistemàtica a RARS** | Tot el codi assemblador verificat al simulador; zero-error garantit en l'entorn de laboratori |
 | **Repositori públic i reutilitzable** | Qualsevol equip docent pot fer un *fork* i adaptar el corpus; model de manteniment col·laboratiu via GitLab |
-| **Sistema de DoDs (P2, P3, P4)** | Procés de producció i revisió auditable, traçable i replicable per a projectes similars |
+| **Sistema de DoDs (DoD-UP, DoD-CC i DoD-UR)** | Procés de producció i revisió auditable, traçable i replicable per a projectes similars |
 : Característiques diferencials del corpus produït respecte als materials originals en format PDF. {#tbl-caracteristiques tbl-colwidths="[35,65]" .striped}
 
 ## Comparativa planificació–realitat {#sec-comparativa-planificacio-realitat}

@@ -145,13 +145,9 @@ La diversitat en la trajectòria docent ofereix un espai de transferència de bo
 
 ## Motivació personal i justificació de la temàtica escollida
 
-Des de la perspectiva del professor, la decisió de migrar a RISC-V es fonamenta en diversos arguments de pes.
+Des de la perspectiva del professor, la migració a RISC-V obre l'accés a un ecosistema de **recursos educatius moderns**. L'ecosistema RISC-V ha crescut exponencialment, amb simuladors avançats (com RARS), plaques de desenvolupament assequibles —com la Raspberry Pi Pico 2 W, amb nucli RP2350 RISC-V, que obre la porta a pràctiques amb maquinari real— i les darreres edicions dels llibres de referència de Patterson i Hennessy, que utilitzen RISC-V com a arquitectura principal.
 
-El principal és la **rellevància industrial i la projecció de futur**. MIPS ha perdut pràcticament tota la seva quota de mercat i rellevància en la indústria. En canvi, RISC-V està experimentant una adopció massiva en una àmplia gamma de sectors, des de sistemes encastats i dispositius IoT fins a centres de dades i computació d'alt rendiment (HPC). Empreses capdavanteres com Google, Nvidia, Samsung i Intel estan invertint fortament en l'ecosistema RISC-V. Ensenyar MIPS avui dia és, en certa manera, ensenyar una tecnologia obsoleta, mentre que ensenyar RISC-V és invertir directament en l'ocupabilitat i la capacitat d'innovació dels futurs graduats.
-
-Un altre motiu important és l'**abundància de recursos educatius moderns**. L'ecosistema RISC-V ha crescut exponencialment, amb simuladors avançats (com RARS), plaques de desenvolupament assequibles i llibres de text de referència —com les darreres edicions de *Computer Organization and Design* de Patterson i Hennessy— que ara utilitzen RISC-V com a arquitectura principal.
-
-Finalment, adoptar RISC-V obre la porta a **projectes de recerca i innovació** molt més rellevants. La naturalesa oberta de l'arquitectura permet als estudiants i investigadors experimentar amb noves idees en disseny de processadors, seguretat, compiladors o sistemes operatius sense les restriccions d'un ISA propietari.
+A més, la naturalesa oberta de l'arquitectura obre la porta a **projectes de recerca i innovació** molt més rellevants. Permet als estudiants i investigadors experimentar amb noves idees en disseny de processadors, seguretat, compiladors o sistemes operatius sense les restriccions d'un ISA propietari.
 
 ## Relació amb la pràctica docent i el context institucional
 
