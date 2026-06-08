@@ -14,9 +14,9 @@ La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assolimen
 
 Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (fitxers `contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
 
-El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objectiu i un grau d'implicació de l'equip docent diferenciats (@fig-etapa-produccio). El plantejament de partida va ser que el professor responsable de la migració assumís íntegrament les fases individuals —P1 (Disseny del sistema de producció), P2 (Unitats de producció) i P3 (Revisió de Conjunt)— de manera que la resta de l'equip docent pogués concentrar el seu temps en la fase col·legiada P4 (Cicle de Revisió Externa), on l'aportació disciplinar és més valuosa. Aquesta divisió del treball ha permès prendre les decisions de contingut i format de manera orgànica i coherent, i ha estat la condició que ha fet possible assolir el 100% del material en els terminis previstos. Les fases P3 i P4 han tingut com a objectiu consolidar la qualitat del corpus abans del desplegament: la Revisió de Conjunt (P3) per detectar i corregir errors i incoherències de manera individual, i el Cicle de Revisió Externa (P4) per validar els continguts col·legiadament amb tot l'equip docent. La fletxa puntejada de la dreta indica que les decisions de convencions i entorn es milloren de manera contínua al llarg de totes les fases, retroalimentant P1.
+El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objectiu i un grau d'implicació de l'equip docent diferenciats (@fig-etapa-produccio). El plantejament de partida va ser que el professor responsable de la migració assumís íntegrament les fases individuals —P1 (Disseny del sistema de producció), P2 (Unitats de producció) i P3 (Revisió de Conjunt)— de manera que la resta de l'equip docent pogués concentrar el seu temps en la fase col·legiada P4 (Cicle de Revisió Externa), on l'aportació disciplinar és més valuosa. Aquesta divisió del treball ha permès prendre les decisions de contingut i format de manera orgànica i coherent, i ha estat la condició que ha fet possible assolir el 100% del material en els terminis previstos. Les fases P3 i P4 han tingut com a objectiu consolidar la qualitat del corpus abans del desplegament: la Revisió de Conjunt (P3) per detectar i corregir errors i incoherències de manera individual, i el Cicle de Revisió Externa (P4) per validar els continguts col·legiadament amb tot l'equip docent.
 
-![Fases de l'Etapa de producció. La barra de l'esquerra indica la proporció de supervisió humana del contingut tècnic i pedagògic: és mínima a P2 (Unitats de producció) i màxima a P4 (Cicle de Revisió Externa). La fletxa puntejada de la dreta indica la millora contínua de convencions i entorn al llarg de totes les fases.](figures/etapa_produccio.svg){#fig-etapa-produccio width="55%"}
+![Fases de l'Etapa de producció. La fletxa de l'esquerra indica el grau de supervisió humana del contingut tècnic i pedagògic: és mínima a P2 (Unitats de producció) i màxima a P4 (Cicle de Revisió Externa).](figures/etapa_produccio.svg){#fig-etapa-produccio width="55%"}
 
 El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Sutherland, 2020) i ha estat adoptat i sistematitzat en la gestió de fluxos de producció iteratius per Poppendieck i Poppendieck (2003). En el context d'aquest projecte s'ha definit una DoD específica per a cada fase que implica producció o validació de contingut. La @tbl-dods en resumeix l'estructura:
 
@@ -58,20 +58,27 @@ L'ordre d'execució ha estat:
 
 Cada fitxer `.qmd` constitueix una **unitat de producció** independent: s'aborda de manera seqüencial i, un cop tancada, no es torna a reobrir llevat de decisions de la Revisió de Conjunt. 
 
+* **Grau de supervisió humana del contingut tècnic i pedagògic**: Bàsic.
+
 ##### Cicle de producció unitària
 
 Tal com mostra la figura @fig-unitat-produccio, el cicle de producció de cada unitat de producció està format per les fases següents, que s'executen de manera seqüencial:
 
 **U1. Extracció i conversió assistida per IA**
 :   Secció a secció, a partir del PDF original.
+
 **U2. Revisió tècnica**
 :   Verificació de la correcció de tot el codi assemblador RISC-V al simulador RARS i revisió de la coherència tècnica global del tema.
+
 **U3. Revisió lingüística**
 :   Harmonització del lèxic i l'estil segons les convencions de `contrib.qmd`. Les fases U2 i U3 s'alternen iterativament fins a satisfer la DoD-UP.
+
 **U4. Figures**
 :   Generació de les figures SVG en versió *light* i *dark*.
+
 **U5. Actualització transversal**
 :   Incorporació de les sigles noves al glossari (`sigles.qmd`) i actualització d'altres materials afectats (`riscv.qmd`).
+
 **U6. Refinament dels protocols de producció**
 :   Actualització de `contrib.qmd`, `CLAUDE.md` i `TODO.md` amb les decisions i aprenentatges del tema, per capitalitzar-los en les unitats següents.
 
@@ -102,7 +109,7 @@ Una unitat de producció de P2 es considera acabada quan compleix tots els crite
 - Detecció i esmena, quan no s'hagi de fer col·legiadament, d'errors, d'incoherències i d'oportunitats de millora tant tècniques com lingüístiques i pedagògiques.
 - Figures, enllaços, harmonització d'estil, etc.
 - Documentació de les decisions que s'han de prendre col·legiadament.
-- Revisió humana: mitjana.
+- **Grau de supervisió humana del contingut tècnic i pedagògic**: Moderat.
 
 ##### *Definition of Done* de Corpus Complet (DoD-CC) {.unnumbered}
 
@@ -119,7 +126,7 @@ La DoD-CC s'aplica al corpus sencer (no tema per tema) i verifica la coherència
 
 - El meu rol com a coordinador de la revisió: facilitació de la creació dels grups de treball (GTs), assignació de temes als GT, recopilació i sistematització dels comentaris. Definició dels procediments d'esmena i de presa de decisions; GitLab: protocol per a *issues*, *merge requests*, etc.
 - Revisors externs: 6, comptant-m'hi jo. Cada revisor s'encarregarà de revisar un o més temes, segons la seva experiència i disponibilitat. La revisió es fa de manera col·laborativa, amb sessions de videotrucada per discutir els comentaris i arribar a consensos quan sigui necessari.
-- Revisió humana: alta.
+- **Grau de supervisió humana del contingut tècnic i pedagògic**: Alt.
 
 ##### *Definition of Done* d'Unitat de Revisió (DoD-UR) {.unnumbered}
 
@@ -137,6 +144,7 @@ Una unitat de revisió de P4 es considera aprovada quan:
 
 - Revisió individual dels dos professors que faran la primera docència de l'assignatura al Q1 del curs 2026-27.
 - Per a la meva docència al Q1 del curs 2026-27 generaré diapositives que estaran disponibles públicament.
+- **Grau de supervisió humana del contingut tècnic i pedagògic**: Producció.
 
 ### Etapa d'explotació {#sec-etapa-explotacio}
 
@@ -152,17 +160,9 @@ La innovació dissenyada es vertebra en quatre eixos fonamentals:
 
 L'adopció de RISC-V no és només un canvi d'arquitectura, sinó una aposta per un estàndard obert i modular. El nou programa se centra en la claredat pedagògica que ofereix aquesta ISA: elimina conceptes heretats de MIPS que generaven confusió (com els *branch delay slots* o els registres de multiplicació especials `HI`/`LO`) i introdueix la modularitat com a principi estructurador del curs, presentant primer la base RV32I i afegint progressivament les extensions M (multiplicació/divisió) i F (coma flotant).
 
-### Innovació en el format (Quarto Markdown i GitLab)
-
-La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitLab com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. El resultat és un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, amb mode fosc/clar, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable.
-
 ### Reestructuració pedagògica del temari
 
-La migració ha estat l'ocasió per revisar críticament l'estructura temàtica de l'assignatura. La nova organització no és un mapatge 1:1 dels materials originals: s'han pres decisions pedagògiques explícites per millorar la progressió didàctica i la coherència interna.
-
-Els canvis estructurals més rellevants són dos. En primer lloc, el Tema 1 original (Introducció) s'ha dividit en dos: el nou T1 manté la introducció conceptual a l'arquitectura de computadors i la codificació de dades, mentre que el nou T6 agrupa els continguts de rendiment i potència. Aquesta separació permet tractar el rendiment com un tema autònom, amb el context que l'estudiant ja ha adquirit en els temes anteriors sobre ISA i programació. En segon lloc, l'aritmètica entera —que en l'estructura original formava part del Tema 5 (Aritmètica d'enters i coma flotant)— s'ha reallotjat en el nou T4 (Aritmètica entera i matrius), mentre que el nou T5 queda dedicat exclusivament a la coma flotant. Aquesta reorganització clarifica la frontera entre aritmètica entera i en coma flotant, i redueix la càrrega cognitiva de cadascun dels temes.
-
-Les taules @tbl-reestructuracio-teoria, @tbl-reestructuracio-laboratori, @tbl-reestructuracio-problemes, @tbl-reestructuracio-nou i @tbl-reestructuracio-transversals mostren la correspondència completa entre els materials originals (MIPS) i els nous (RISC-V), organitzades per categoria.
+La migració ha estat l'ocasió per revisar críticament l'estructura temàtica de l'assignatura, amb les decisions estructurals descrites a la @sec-introduccio. Les taules @tbl-reestructuracio-teoria, @tbl-reestructuracio-laboratori, @tbl-reestructuracio-problemes, @tbl-reestructuracio-nou i @tbl-reestructuracio-transversals mostren la correspondència completa entre els materials originals (MIPS) i els nous (RISC-V), organitzada per categoria.
 
 | Material RISC-V (nou) | Equivalent MIPS (original) | Observacions |
 | :--- | :--- | :--- |
@@ -284,8 +284,11 @@ Les taules @tbl-reestructuracio-teoria, @tbl-reestructuracio-laboratori, @tbl-re
 
 ### Recursos d'aprenentatge actiu
 
-- **Simulació avançada (RARS)**: Substitueix MARS com a entorn de referència, mantenint una interfície familiar però adaptada al nou ISA.
-- **Maquinari real (Raspberry Pi Pico 2 W)**: Proposta de pràctica voluntària amb plaques RP2350 (nucli RISC-V) i *Debug Probes*. Permet als estudiants compilar codi assemblador i executar-lo en un dispositiu físic d'última generació.
+**Pràctica voluntària, assistida amb IA, sobre vectorització RISC-V**: Proposta de pràctica voluntària desenvolupada pel col·laborador d'aquest projecte, Pedro José Martínez Ferrer com a part del seu PFP del Màster STEAM, disponible a https://github.com/estructura-de-computadors/, on s'utilitza el producte escalar de vectors i la multiplicació de matrius com a cas d'estudi per a la vectorització amb RISC-V. Des del punt de vista docent, aquesta pràctica és molt innovadora perquè fa interaccionar l'alumne amb uns agents d'IA que els guia per tota la pràctica, talment com si fos un tutor personalitzat.
+
+### Innovació en el format
+
+La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitLab com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. La renderització del projecte Quarto a HTML permet establir un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable.
 
 ## Recollida de dades: instruments i població d'estudi {#sec-recollida-dades}
 

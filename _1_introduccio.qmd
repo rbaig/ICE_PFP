@@ -145,13 +145,13 @@ La diversitat en la trajectòria docent ofereix un espai de transferència de bo
 
 ## Motivació personal i justificació de la temàtica escollida
 
-Des de la perspectiva del professor, la migració a RISC-V obre l'accés a un ecosistema de **recursos educatius moderns**. L'ecosistema RISC-V ha crescut exponencialment, amb simuladors avançats (com RARS), plaques de desenvolupament assequibles —com la Raspberry Pi Pico 2 W, amb nucli RP2350 RISC-V, que obre la porta a pràctiques amb maquinari real— i les darreres edicions dels llibres de referència de Patterson i Hennessy, que utilitzen RISC-V com a arquitectura principal.
+Des de la perspectiva del professor, la migració a RISC-V obre l'accés a un ecosistema de **recursos educatius moderns**. L'ecosistema RISC-V ha crescut exponencialment, amb simuladors avançats (com RARS), plaques de desenvolupament assequibles, com la Raspberry Pi Pico 2, amb doble nucli RP2350 RISC-V, per uns 5 EUR, que obre la porta a pràctiques amb maquinari real i les darreres edicions dels llibres de referència de Patterson i Hennessy, que utilitzen RISC-V com a arquitectura principal.
 
 A més, la naturalesa oberta de l'arquitectura obre la porta a **projectes de recerca i innovació** molt més rellevants. Permet als estudiants i investigadors experimentar amb noves idees en disseny de processadors, seguretat, compiladors o sistemes operatius sense les restriccions d'un ISA propietari.
 
 ## Relació amb la pràctica docent i el context institucional
 
-La migració té implicacions directes tant en la praxi docent diària com en el posicionament estratègic de la institució. Des del punt de vista de la pràctica docent, s'abandonen eines de simulació com MARS o SPIM —estancades en el seu desenvolupament— per adoptar simuladors moderns com RARS, en desenvolupament actiu per part d'una comunitat global. Més enllà del programari, el canvi obre la porta a pràctiques de laboratori amb maquinari real: l'ecosistema RISC-V ofereix plaques de baix cost (com la Raspberry Pi Pico 2 W, amb nucli RP2350 RISC-V) que permeten als estudiants compilar codi assemblador i executar-lo en un dispositiu físic.
+La migració té implicacions directes tant en la praxi docent diària com en el posicionament estratègic de la institució. Des del punt de vista de la pràctica docent, s'abandonen eines de simulació com MARS o SPIM —estancades en el seu desenvolupament— per adoptar simuladors moderns com RARS, en desenvolupament actiu per part d'una comunitat global.
 
 En el pla institucional, adoptar RISC-V és una decisió estratègica que transcendeix una sola assignatura. Posiciona el programa acadèmic a l'avantguarda, alineant-lo amb les iniciatives de sobirania tecnològica promogudes per governs i consorcis internacionals (com l'*European Processor Initiative*). A més, l'adopció d'una plataforma oberta fomenta un ecosistema d'innovació dins de la mateixa universitat i facilita projectes de final de grau, màsters i tesis doctorals sense les barreres de la propietat intel·lectual.
 

@@ -28,7 +28,7 @@ Els resultats d'aprenentatge s'estructuren seguint la taxonomia de Bloom revisad
 
 ### Seqüenciació temàtica
 
-La nova estructura organitza el curs en 9 temes per a un quadrimestre de 13 setmanes (@tbl-sequenciacio-tematica). Respecte a l'assignatura original (MIPS), s'han pres dues decisions estructurals rellevants: el Tema 1 original s'ha dividit en T1 (introducció conceptual i codificació de dades) i T6 (rendiment i potència, com a avantsala de la memòria cau T7), i l'aritmètica entera s'ha segregat de la coma flotant en temes independents (T4 i T5), reduint la càrrega cognitiva i clarificant la frontera conceptual entre ambdós tipus.
+La nova estructura organitza el curs en 9 temes per a un quadrimestre de 13 setmanes (@tbl-sequenciacio-tematica). L'estructura és el resultat d'una revisió pedagògica realitzada durant la migració, amb dues decisions estructurals rellevants. El Tema 1 original —que agrupava la introducció conceptual i els continguts de rendiment i potència, temàticament inconnexos— s'ha dividit en T1 (introducció i codificació de dades) i T6 (rendiment i potència, com a avantsala de la memòria cau T7); la separació permet tractar el rendiment com a tema autònom un cop l'estudiant ja domina ISA i programació. L'aritmètica entera s'ha segregat de la coma flotant en temes independents (T4 i T5), reduint la càrrega cognitiva de cadascun i clarificant la frontera conceptual entre els dos tipus d'aritmètica.
 
 | Set. | Tema | Contingut |
 | :---: | :--- | :--- |
@@ -42,6 +42,8 @@ La nova estructura organitza el curs en 9 temes per a un quadrimestre de 13 setm
 | 8 | 8 Memòria virtual | Paginació. Taula de pàgines. Fallada de pàgina. TLB |
 | 9 | 9 Excepcions i interrupcions | Registres CSR. Flux maquinari. Rutina de servei. Crides al sistema. Interrupcions |
 : Seqüenciació temàtica i temporal per a un quadrimestre de 13 setmanes. {#tbl-sequenciacio-tematica tbl-colwidths="[5,35,55,5]" .striped}
+
+Cada resultat d'aprenentatge s'articula en un bloc temàtic: RA1 (Rendiment i arquitectura) en T1 i T6; RA2 (Frontera Programari-Maquinari) i RA3 (Aritmètica) en T2–T5; RA4 (Jerarquia de memòria) en T7 i T8; i RA5 (Robustesa) en T9.
 
 ### Metodologia docent i materials
 
@@ -66,19 +68,21 @@ L'arquitectura MIPS va revolucionar la computació en introduir el *pipeline* se
 
 **Harmonització de continguts (O2)**: L'actualització ha estat l'ocasió per revisar críticament la totalitat del material: s'han unificat lèxic i estil, s'ha elaborat terminologia catalana pròpia per a RISC-V (documentada a `contrib.qmd`), i s'ha ampliat el corpus amb 23 exercicis nous sense equivalent en el material MIPS.
 
-**Format obert i accessible (O3)**: La transició al paradigma *Docs-as-Code* (Quarto Markdown + GitLab) fa els materials llegibles per màquines, compatibles amb tecnologies assistives (WCAG 2.1) i interoperables amb eines d'IA. El control de versions garanteix la traçabilitat i la col·laboració asíncrona entre el professorat.
+**Format obert i accessible (O3)**: La transició al paradigma *Docs-as-Code* (Quarto Markdown + GitLab) es fonamenta en un principi pedagògic: separar el contingut —on resideix el valor— de la seva presentació. L'ús de Markdown com a llenguatge de marcatge jeràrquic ofereix dos avantatges clau respecte al PDF: l'**accessibilitat universal** (les tecnologies assistives com els lectors de pantalla naveguen el contingut de manera fluida) i la **integració amb eines d'IA** (els models de llenguatge interpreten amb més precisió els documents ben estructurats, cosa que facilita la generació de resums, exercicis personalitzats i anàlisi de dades d'aprenentatge). Un únic fitxer `.qmd` es renderitza simultàniament a HTML i PDF des d'una sola font. El control de versions a GitLab garanteix la traçabilitat i la col·laboració asíncrona entre el professorat.
 
-**Cohesió de l'equip docent (O4)**: L'equip d'EC és divers (10 professors, incloent professors novells i sènior vinculats al Barcelona Supercomputing Center). La revisió col·legiada dels materials a través de GitLab ha servit com a mecanisme de transferència de bones pràctiques i d'alineació pedagògica entre tot l'equip.
+**Cohesió de l'equip docent (O4)**: L'equip d'EC és divers tant en experiència docent com en àrees de recerca: 10 professors, 2 a temps parcial i 4 professors lectors, dos incorporats el curs 2025-26. Aquesta diversitat obre un espai de transferència bidireccional: els professors novells adquireixen estratègies i recursos dels docents sènior, mentre que aquests aprenen a aprofitar noves eines pedagògiques —com les basades en IA— i mètodes innovadors. La metodologia de treball, que combina sessions de videotrucada puntuals i treball asíncron a través del repositori GitLab, enforteix la cohesió de l'equip i genera una cultura de col·laboració que transcendeix la migració.
 
 ## Motivació personal i relació amb la pràctica docent
 
-Des de la perspectiva del professor, la migració a RISC-V obre l'accés a un ecosistema de **recursos educatius moderns**: simuladors avançats com RARS (en desenvolupament actiu per una comunitat global), plaques de baix cost amb nucli RISC-V (com la Raspberry Pi Pico 2 W) que permeten pràctiques amb maquinari real, i les edicions actualitzades dels llibres de referència de Patterson i Hennessy. A més, la naturalesa oberta de l'arquitectura permet als estudiants i investigadors experimentar amb noves idees —en disseny de processadors, compiladors o sistemes operatius— sense les restriccions d'un ISA propietari, i facilita projectes de final de grau, màsters i tesis sense barreres de propietat intel·lectual.
+Des de la perspectiva del professor, la migració a RISC-V obre l'accés a un ecosistema de **recursos educatius moderns**: simuladors avançats com RARS (en desenvolupament actiu per una comunitat global), plaques de baix cost amb nucli RISC-V (com la Raspberry Pi Pico, que val uns 5 EUR) que permeten pràctiques amb maquinari real, i les edicions actualitzades dels llibres de referència de Patterson i Hennessy. A més, la naturalesa oberta de l'arquitectura permet als estudiants i investigadors experimentar amb noves idees —en disseny de processadors, compiladors o sistemes operatius— sense les restriccions d'un ISA propietari, i facilita projectes de final de grau, màsters i tesis sense barreres de propietat intel·lectual.
+
+Des del punt de vista institucional, adoptar RISC-V és una decisió que transcendeix una sola assignatura: posiciona el programa a l'avantguarda de les iniciatives de sobirania tecnològica de la Unió Europea —com l'*European Processor Initiative*— i fomenta un ecosistema d'innovació dins la UPC que no es limita a EC. En la pràctica docent immediata, el canvi suposa abandonar simuladors com MARS o SPIM —sense manteniment actiu des de fa anys— per eines en evolució contínua.
 
 ## Marc teòric i conceptual {#sec-marc-teoric}
 
 El marc teòric principal es fonamenta en les obres que han establert l'estàndard de facto en l'ensenyament de l'arquitectura de computadors. Patterson i Hennessy (2021) presenten en la segona edició de *Computer Organization and Design RISC-V Edition* l'obra de referència fonamental per a qualsevol curs introductori. El fet que els seus autors, pioners de MIPS, hagin reescrit completament el llibre al voltant de RISC-V és la declaració més clara del canvi de paradigma. En la mateixa línia, Hennessy i Patterson (2022) consoliden en la sisena edició de *Computer Architecture: A Quantitative Approach* RISC-V com a arquitectura vàlida per a la computació d'altes prestacions.
 
-A nivell d'especificació tècnica, Waterman i Asanović (2019) mantenen *The RISC-V Instruction Set Manual* com el document fundacional que defineix l'ISA base i les extensions estàndard. Patterson i Waterman (2017) ofereixen en *The RISC-V Reader* una síntesi concisa de 180 pàgines amb 75 «punts clau de disseny» que expliquen la lògica de RISC-V en contrast amb arquitectures anteriors. Winans (2022) completa el panorama amb *RISC-V assembly language programming*, una guia d'introducció de codi obert orientada a la pràctica.
+A nivell d'especificació tècnica, Waterman i Asanović (eds., 2019) mantenen *The RISC-V Instruction Set Manual* com el document fundacional que defineix l'ISA base i les extensions estàndard. Patterson i Waterman (2017) ofereixen en *The RISC-V Reader* una síntesi concisa de 180 pàgines amb 75 «punts clau de disseny» que expliquen la lògica de RISC-V en contrast amb arquitectures anteriors. Winans (2022) completa el panorama amb *RISC-V assembly language programming*, una guia d'introducció de codi obert orientada a la pràctica.
 
 El marc pedagògic s'ancora en la taxonomia de Bloom revisada (Anderson & Krathwohl, 2001), que estructura els resultats d'aprenentatge en nivells cognitius progressius, i en l'enfocament àgil (Schwaber & Sutherland, 2020; Poppendieck & Poppendieck, 2003), que orienta el disseny del procés de producció dels materials.
 
@@ -98,4 +102,4 @@ Per assolir-lo, es defineixen tres objectius específics:
 
 **OE2. Transformació digital i accessibilitat**: Passar de formats tancats (PDF) a formats oberts amb control de versions, garantint l'accessibilitat WCAG 2.1 i habilitant la interacció amb eines d'aprenentatge basades en IA.
 
-**OE3. Harmonització i sistema de qualitat**: Revisar críticament tots els continguts per unificar el lèxic i corregir inconsistències, tot aprofitant l'expertesa dels professors vinculats al BSC, i establir un sistema de qualitat documentat (`contrib.qmd`, `sigles.qmd`, DoD-UP/CC/UR) que faci el corpus auditable i replicable.
+**OE3. Harmonització i sistema de qualitat**: Revisar críticament tots els continguts per unificar el lèxic i corregir inconsistències, tot aprofitant l'expertesa dels professors vinculats al BSC, i establir un sistema de qualitat documentat (`contrib.qmd`, `sigles.qmd`, DoD-UP, DoD-CC i DoD-UR) que faci el corpus auditable i replicable.

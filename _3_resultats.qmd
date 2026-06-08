@@ -14,7 +14,7 @@ La migració ha assolit el **100% del material total** de l'assignatura. La revi
 | **Total** | **36** | |
 : Volum de materials produïts per categoria. *En revisió externa*: contingut complet, codi validat a RARS i lèxic harmonitzat; en revisió col·legiada. *En procés*: contingut parcialment migrat, pendent de completar. *Actiu*: document de referència transversal en actualització contínua. {#tbl-volum-materials .striped}
 
-A aquests fitxers s'afegeixen <!-- TODO actualització de núm de figs. abans del lliurament --> **104 figures SVG** (cadascuna en versió *light* i *dark*, ~208 fitxers en total). Les figures han estat generades íntegrament en SVG (abandonant Mermaid per limitacions de qualitat), seguint una paleta de colors i convencions documentades a `contrib.qmd`. S'espera que els processos de revisió pendents en generin algunes més.
+A aquests fitxers s'afegeixen **104 figures SVG** (cadascuna en versió *light* i *dark*, ~208 fitxers en total), que abasten diagrames de formats d'instrucció, mapes de l'espai de memòria, esquemes de polítiques de memòria cau i diagrames de flux per a la gestió d'excepcions. Les figures han estat generades íntegrament en SVG —abandonant Mermaid per limitacions de qualitat— seguint una paleta de colors i convencions documentades a `contrib.qmd`. El format SVG garanteix renderització d'alta qualitat tant en pantalla com en impressió, i és compatible amb les tecnologies assistives. S'espera que els processos de revisió pendents en generin algunes més.
 
 Pel que fa als problemes, a més de la migració i revisió dels exercicis existents, s'han incorporat 23 exercicis nous sense equivalent en el material MIPS original; els criteris pedagògics que han guiat tant la selecció dels problemes nous com dels solucionaris es detallen a la @sec-disseny-pedagogic.
 
@@ -57,6 +57,8 @@ Un dels resultats més significatius del projecte, i que supera l'abast estricta
 - **`sigles.qmd`**: Glossari de sigles de l'assignatura, actualitzat incrementalment durant la migració de cada tema.
 - ***Definition of Done* (DoD-UP, DoD-CC i DoD-UR)**: Sistema de criteris de tancament per fase, descrit a la @sec-enfocament-metodologic. Garanteix que cada unitat de producció i cada unitat de revisió compleix els estàndards de qualitat abans de passar a la fase següent.
 
+El sistema de DoDs ha tingut un impacte concret sobre la qualitat del corpus. La llista de verificació del DoD-UP ha detectat, entre d'altres, inconsistències en la nomenclatura dels registres RISC-V entre temes i errors subtils de validació a RARS que haurien passat desapercebuts en una revisió lineal. El DoD-UR ha operat, a més, com a mecanisme de transferència de coneixement dins l'equip: les anotacions als *merge requests* de GitLab constitueixen un registre de les decisions pedagògiques preses col·legialment, consultable per qualsevol membre de l'equip —present o futur.
+
 Aquests tres artefactes, que reflecteixen l'ortogonalitat del sistema de qualitat respecte al cicle de producció, donen per assolit l'OE3.
 
 ## Integració i accessibilitat
@@ -98,4 +100,4 @@ La @tbl-planificacio-execucio contrasta la planificació prevista al lliurament 
 | M4 (Juny) | Tancament i memòria | PE_T1–T9 complets + 23 exercicis nous + PS_T1 + materials transversals + memòria |
 : Comparativa entre la planificació inicial i els resultats assolits. {#tbl-planificacio-execucio tbl-colwidths="[15,35,50]"}
 
-La diferència entre el previst i l'assolit és directament atribuïble a l'adopció de Claude com a eina principal de producció, descrita a la @sec-enfocament-metodologic: la capacitat de mantenir el context complet del projecte en una sola sessió va multiplicar la capacitat de producció i va permetre cobrir en els terminis previstos un volum de material molt superior al planificat.
+La diferència entre el previst i l'assolit és directament atribuïble a l'adopció de Claude com a eina principal de producció, descrita a la @sec-enfocament-metodologic: la capacitat de mantenir el context complet del projecte en una sola sessió va multiplicar la capacitat de producció i va permetre cobrir en els terminis previstos un volum de material molt superior al planificat. La contribució de Claude es va concentrar en les tasques de transformació sistemàtica: conversió de format, harmonització lèxica i adaptació del codi assemblador a RISC-V. Les tasques de judici pedagògic —disseny dels exercicis nous, decisions terminològiques i validació de tot el material generat— van recaure íntegrament sobre el professor. Aquesta divisió entre producció assistida per IA i validació humana experta és el model que el projecte proposa com a exportable a altres contextos de producció de materials docents.

@@ -23,7 +23,7 @@ referència.*
 ## Fitxers principals
 
 - `index.qmd` — document principal complet (sense límit de paraules)
-- `article.qmd` — versió ICE reduïda (≤8.000 paraules al cos); en construcció
+- `index_article.qmd` — versió ICE reduïda (≤8.000 paraules al cos)
 - `_quarto.yml` — configuració Quarto base (HTML + PDF complet, KOMA `scrartcl`)
 - `_quarto-article.yml` — perfil Quarto per a la versió ICE (`article`, sense TOC)
 - `portada.tex` / `before-body.tex` — portada i preàmbul LaTeX (plantilla ICE; s'inclou a totes dues versions)
@@ -43,7 +43,7 @@ referència.*
 5. Bibliografia (estil APA 7a edició, ordre alfabètic)
 6. Annex: Reflexions sobre l'impacte de la IA generativa en la docència
 
-**Nota**: `article.qmd` redueix Introducció i Resultats.
+**Nota**: `index_article.qmd` usa versions reduïdes de la Introducció i la Metodologia.
 
 ## Convencions
 
@@ -51,9 +51,9 @@ referència.*
     - No Camel Case
 - Bibliografia: **APA 7a edició** (ordre alfabètic)
 - Figures: SVG amb `width="680"`, font Source Sans Pro, paleta Bootstrap; **sense versió dark**
-- El terme "etapa" es fa servir exclusivament per referir-se a l'Etapa de producció o a l'Etapa d'explotació ()
+- El terme "etapa" es fa servir exclusivament per referir-se a l'Etapa de producció o a l'Etapa d'explotació
 - Noms de fases de l'Etapa de producció: tractats com a noms propis (majúscula inicial)
-- Les etapes estan formades per "fases" (P1, P2, etc., U1, U2, etc. i E0 i E1)
+- Les etapes estan formades per "fases" (P1, P2, etc., U1, U2, etc. i E1, E2)
 - Unitats de producció (P2): un fitxer `.qmd` per tema/sessió/PE/PS
 - Unitats de revisió (P4): `{Tx.qmd + PE_Tx.qmd + PS_Tx.qmd}` per tema; cada `Lx.qmd` per separat
 - Nom correcte del fitxer: `figures/eix_arquitectura.svg` (no `fig_eix_arquitectura.svg`)
@@ -62,14 +62,14 @@ referència.*
 
 La guia estableix un límit de 8.000 paraules al cos del text.
 - Per a `index.qmd`: **no és una restricció operativa**; preval la qualitat i completesa.
-- Per a `article.qmd`: **és una restricció estricta** (versió de lliurament formal a l'ICE).
+- Per a `index_article.qmd`: **és una restricció estricta** (versió de lliurament formal a l'ICE).
 
 ## Flux de treball
 
-1. Claude edita `index.qmd` i/o `article.qmd` a la sessió de treball.
+1. Claude edita `index.qmd` i/o `index_article.qmd` a la sessió de treball.
 2. L'usuari descarrega, revisa localment amb VS Code i fa `quarto render`.
    - Versió completa: `quarto render index.qmd`
-   - Versió ICE: `quarto render article.qmd --profile article`
+   - Versió ICE: `quarto render index_article.qmd --profile article`
 3. L'usuari fa `git push` quan el resultat és satisfactori.
 4. Claude no edita fitxers directament al repositori.
 
@@ -103,7 +103,7 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 | U3 | Revisió lingüística (lèxic, sintaxi) — itera amb U2 |
 | U4 | Figures (`.svg`) |
 | U5 | Actualització transversal (`sigles.qmd`, `risc.qmd`) |
-| U6 | Refinament protocols (`contrib.qmd`, `CLAUDE.md`, `TODO.md`) |
+| U6 | Refinament protocols (`contrib.qmd`, `CLAUDE.md`) |
 
 ### Definitions of Done
 
@@ -123,25 +123,20 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 
 ## Estat actual
 
-### `index.qmd`
-- [x] Estructura completa del document acordada i implementada
-- [x] §1 Introducció complet
-- [x] §2 Metodologia complet (incl. DoD-UP, DoD-CC, DoD-UR; estructura en dues etapes P/E)
-- [x] §3 Resultats complet (incl. taula de característiques diferencials)
-- [x] §4 Discussió complet (incl. Enriquiment personal, Propostes, Connexions)
-- [x] Annex IA complet
-- [x] Bibliografia: APA 7a, ordre alfabètic
-- [x] Figures: `eix_arquitectura.svg`, `etapa_produccio.svg`, `etapa_explotacio.svg`, `unitat_produccio.svg`
-- [x] Revisió profunda de consistència completada (nomenclatura P1–P5, E1–E2, U1–U6, DoD-UP/DoD-CC/DoD-UR)
-- [x] Revisió lingüística completada
-- [x] Resum en català: tancat
-- [ ] Abstract en anglès: pendent (fer com a últim pas, un cop el Resum català estigui tancat)
-- [x] Canvi de nomenclatura DoD: DoD-UP, DoD-CC, DoD-UR (completat)
+### `index.qmd` (versió completa)
 
-### `article.qmd`
-- [x] Esquelet creat amb YAML front matter i seccions placeholder
-- [ ] Reducció de la Introducció (~3.873 → ~2.000 paraules)
-- [ ] Reducció dels Resultats (~3.078 → ~2.000 paraules)
-- [ ] Revisió/retall de la Metodologia (~2.384 → acceptable sense canvis o retall mínim)
-- [ ] Verificació del recompte final (objectiu: ≤8.000 paraules al cos)
-- [ ] Abstract en anglès (fer com a últim pas)
+Complet. Revisió profunda de consistència i lingüística finalitzada.
+
+### `index_article.qmd` (versió ICE, ≤8.000 paraules)
+
+Complet. Recompte de juny 2026: **7.352 paraules** al cos.
+
+| Secció | Fitxer | Paraules |
+|--------|--------|---------|
+| Introducció | `_1_introduccio_article.qmd` | 1.968 |
+| Metodologia | `_2_metodologia_article.qmd` | 1.953 |
+| Resultats | `_3_resultats.qmd` (compartit) | 1.655 |
+| Discussió | `_4_discussio.qmd` (compartit) | 1.776 |
+| **Total cos** | | **7.352** |
+
+Resum, abstract, bibliografia i annex no compten per al límit.

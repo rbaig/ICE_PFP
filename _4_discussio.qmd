@@ -26,17 +26,11 @@ El tercer obstacle va ser la gestió de la coherència terminològica i d'estil 
 
 **El pivot NotebookLM → Claude**
 
-L'exploració inicial amb NotebookLM va validar la viabilitat de la migració assistida per IA però va evidenciar un límit estructural: aquesta eina requereix la fragmentació en *notebooks* temàtics independents, cosa que impedeix propagar les decisions d'estil i contingut d'un tema a un altre de manera automàtica. La velocitat de producció era moderada i la supervisió humana, intensiva.
-
-L'adopció de Claude com a eina principal va transformar el procés. La capacitat de mantenir en una sola sessió el context complet del projecte —les convencions de `contrib.qmd`, les decisions prèvies, l'estructura del repositori, els exemples de temes ja tancats— va eliminar la fragmentació. Cada sessió de treball permetia avançar en un tema sencer amb coherència i qualitat homogènies.
+El pivot de NotebookLM a Claude —descrit a la @sec-enfocament-metodologic— va ser l'accelerador decisiu: mentre el primer requeria fragmentar el projecte en *notebooks* independents —impedint la propagació de decisions entre temes, amb velocitat moderada i supervisió humana intensiva—, Claude va eliminar aquesta fragmentació mantenint el context complet del projecte en una sola sessió i permetent avançar un tema sencer per sessió de treball.
 
 **El rol del professor com a director tècnic**
 
 La integració de la IA no va reduir el rol del professor: el va transformar. El docent va passar de ser l'escriptor principal dels materials a ser el *director tècnic* del procés: definint les convencions d'estil, prenent les decisions pedagògiques clau (quins conceptes aprofundir, quins exemples prioritzar, quina progressió didàctica seguir), validant cada fragment de codi al simulador RARS i revisant la precisió tècnica del contingut. La IA accelera la producció; la intel·ligència pedagògica continua residint en el docent. Aquesta distinció és una conclusió central del projecte amb implicacions directes per a la formació del professorat universitari en l'era de la IA generativa.
-
-## Enriquiment personal
-
-El treball intens i exhaustiu que he realitzat per portar la migració des de la seva concepció fins a la Fase de Revisió Externa (P4) m'ha permès desenvolupar un conjunt de competències i coneixements que van més enllà del contingut tècnic de l'assignatura. En primer lloc, he adquirit una comprensió profunda de l'arquitectura RISC-V i les seves diferències clau amb MIPS, així com de les pràctiques de programació en assemblador i el funcionament dels simuladors com RARS. En segon lloc, he desenvolupat habilitats avançades en la formulació de prompts per a IA generativa, aprenent a guiar la producció de contingut tècnic complex i a supervisar críticament les respostes per garantir la correcció i coherència. Finalment, he millorat les meves competències en la gestió de projectes educatius, especialment en l'organització de materials, el control de versions amb GitLab i la documentació d'un procés col·laboratiu assistit per IA, i la meva capacitat per a transmetre aquests coneixements de manera clara i pedagògica.
 
 ## Propostes de millora o línies de continuïtat del projecte
 
@@ -56,7 +50,7 @@ A mitjà termini, la coherència horitzontal de l'eix d'arquitectura del GEI (IC
 
 El repositori públic a GitLab és la infraestructura que habilita un model de manteniment sostenible més enllà d'un sol professor. Altres membres de l'equip docent d'EC, o de departaments amb assignatures anàlogues a d'altres universitats, poden contribuir directament al repositori, reportar errors, proposar millores o afegir exercicis nous. Mantenir viu aquest ecosistema —amb revisions periòdiques del sistema de DoDs, actualitzacions derivades de noves versions de l'especificació RISC-V i incorporació del *feedback* dels estudiants— constitueix el cicle de millora contínua que garanteix la vigència dels materials a llarg termini.
 
-## Possibles connexions amb altres àmbits o temàtiques educatives
+## Connexions possibles amb altres àmbits o temàtiques educatives
 
 **El model com a pràctica exportable a assignatures STEAM**
 
