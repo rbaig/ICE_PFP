@@ -10,7 +10,7 @@ L'execució del projecte s'ha basat en un enfocament de gestió àgil de project
 
 L'estratègia central ha estat la **migració iterativa i incremental**: en lloc d'abordar la totalitat del temari com un bloc monolític, s'ha treballat per unitats temàtiques funcionals, cadascuna seguint un cicle de producció que integra la IA generativa com a eina d'acceleració.
 
-La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assoliment dels resultats. Inicialment es va explorar NotebookLM —disponible al Google Workspace de la UPC— per a l'extracció de continguts dels PDF originals, la qual cosa va permetre validar la viabilitat de l'enfocament. Tot i que la seva orientació cap a la consulta de documents el feien útil per a una primera aproximació, el punt d'inflexió real del projecte va arribar amb l'adopció de Claude com a eina principal. La capacitat de mantenir el context complet del projecte —convencions d'estil, decisions prèvies, estructura dels materials— en una sola sessió de treball va eliminar la fragmentació i va permetre una producció de molt més alta qualitat. La velocitat de producció va augmentar de manera espectacular i la cobertura va superar amb escreix les previsions inicials. El pla inicial preveia acabar únicament la teoria per al lliurament final; finalment s'ha generat tot el material docent, s'ha formatat, s'ha fet una primera Revisió de Conjunt, i ja s'ha començat a fer la Revisió Externa, amb la revisió dels T2 i T3, que són el pinyol de l'assignatura, molt avançada.
+La decisió d'adoptar eines d'IA generativa va ser determinant per a l'assoliment dels resultats. Inicialment es va explorar NotebookLM (Google, 2024), disponible al Google Workspace de la UPC, per a l'extracció de continguts dels PDF originals, la qual cosa va permetre validar la viabilitat de l'enfocament. Tot i que la seva orientació cap a la consulta de documents el feien útil per a una primera aproximació, el punt d'inflexió real del projecte va arribar amb l'adopció de Claude (Claude 2025) com a eina principal. La capacitat de mantenir el context complet del projecte —convencions d'estil, decisions prèvies, estructura dels materials— en una sola sessió de treball va eliminar la fragmentació i va permetre una producció de molt més alta qualitat. La velocitat de producció va augmentar de manera espectacular i la cobertura va superar amb escreix les previsions inicials. El pla inicial preveia acabar únicament la teoria per al lliurament final; finalment s'ha generat tot el material docent, s'ha formatat, s'ha fet una primera Revisió de Conjunt, i ja s'ha començat a fer la Revisió Externa, amb la revisió dels T2 i T3, que són el pinyol de l'assignatura, molt avançada.
 
 Un segon factor d'acceleració va ser l'efecte d'aprenentatge acumulat al llarg del projecte: a mesura que avançava la migració, el coneixement sobre les convencions, les decisions de contingut i les particularitats de cada tema s'anava consolidant al repositori (fitxers `contrib.qmd`, `CLAUDE.md`), de manera que cada tema nou s'abordava amb un context més ric i produïa resultats de millor qualitat en menys iteracions.
 
@@ -20,7 +20,7 @@ El procés s'ha estructurat en cinc fases seqüencials, cadascuna amb un objecti
 
 El concepte de *Definition of Done* (DoD) prové del marc Scrum (Schwaber & Sutherland, 2020) i ha estat adoptat i sistematitzat en la gestió de fluxos de producció iteratius per Poppendieck i Poppendieck (2003). En el context d'aquest projecte s'ha definit una DoD específica per a cada fase que implica producció o validació de contingut. La @tbl-dods en resumeix l'estructura:
 
-| DoD | Fase | Unitat de treball | Nom de la unitat  de treball | Naturalesa dels criteris |
+| DoD | Fase | Unitat de treball | Nom de la unitat de treball | Naturalesa dels criteris |
 | :--- | :--- | :--- | :--- | :--- |
 | **UP** | Producció | Tema / Problemari / Solucionari / Sessió | Unitat de producció | Binaris individuals |
 | **CC** | Revisió de Conjunt | Corpus sencer | - | Binaris globals |
@@ -144,7 +144,7 @@ Una unitat de revisió de P4 es considera aprovada quan:
 
 - Revisió individual dels dos professors que faran la primera docència de l'assignatura al Q1 del curs 2026-27.
 - Per a la meva docència al Q1 del curs 2026-27 generaré diapositives que estaran disponibles públicament.
-- **Grau de supervisió humana del contingut tècnic i pedagògic**: Producció.
+- **Grau de supervisió humana del contingut tècnic i pedagògic**: Màxim.
 
 ### Etapa d'explotació {#sec-etapa-explotacio}
 
@@ -154,141 +154,43 @@ L'Etapa d'explotació és de naturalesa iterativa: s'executa per quadrimestres i
 
 ## Descripció de la innovació docent dissenyada
 
-La innovació dissenyada es vertebra en quatre eixos fonamentals:
+La innovació docent dissenyada s'articula en cinc eixos, cadascun adreçant una dimensió diferent de la millora del corpus:
 
-### Innovació en el contingut (RISC-V)
+### Innovació 1: Adopció de RISC-V com a arquitectura de referència
 
 L'adopció de RISC-V no és només un canvi d'arquitectura, sinó una aposta per un estàndard obert i modular. El nou programa se centra en la claredat pedagògica que ofereix aquesta ISA: elimina conceptes heretats de MIPS que generaven confusió (com els *branch delay slots* o els registres de multiplicació especials `HI`/`LO`) i introdueix la modularitat com a principi estructurador del curs, presentant primer la base RV32I i afegint progressivament les extensions M (multiplicació/divisió) i F (coma flotant).
 
-### Reestructuració pedagògica del temari
+### Innovació 2: Reestructuració pedagògica del temari {#sec-metodologia-reestructuracio-temari}
 
-La migració ha estat l'ocasió per revisar críticament l'estructura temàtica de l'assignatura, amb les decisions estructurals descrites a la @sec-introduccio. Les taules @tbl-reestructuracio-teoria, @tbl-reestructuracio-laboratori, @tbl-reestructuracio-problemes, @tbl-reestructuracio-nou i @tbl-reestructuracio-transversals mostren la correspondència completa entre els materials originals (MIPS) i els nous (RISC-V), organitzada per categoria.
+S'ha aprofitat la migració per reordenar continguts que en l'estructura original eren inconnexos o excessivament densos. La justificació pedagògica i les taules de correspondència detallades es troben a la @sec-disseny-pedagogic.
 
-| Material RISC-V (nou) | Equivalent MIPS (original) | Observacions |
-| :--- | :--- | :--- |
-| **T1. Introducció** | | |
-| T1.1. La gestió de la complexitat: Capes i interfícies | T1 §1. Descripció jeràrquica | Reorganitzat i ampliat |
-| T1.2. El cicle de vida del programa | T1 §1. Descripció jeràrquica | Segregat com a secció independent |
-| T1.3. El model de Von Neumann | T1 §1. Descripció jeràrquica | Segregat com a secció independent |
-| T1.4. Codificació de naturals en base 2 | T2 §5. Repàs de naturals | Avançat a T1; integrat al flux conceptual |
-| T1.5. Codificació d'enters en base 2 | T2 §6. Repàs d'enters | Avançat a T1; integrat al flux conceptual |
-| **T2. Instruccions i tipus de dades bàsics** | | |
-| T2.1. Introducció a l'ISA de RISC-V | T2 §1. Introducció a la MIPS ISA | Reescrit íntegrament per a RISC-V |
-| T2.2. Format de les instruccions RV32I | T2 §8. Format de les instruccions MIPS | Reescrit íntegrament per a RISC-V |
-| T2.3. Estructura d'un programa en assemblador | T2 §3. (implícit) | Formalitzat com a secció independent |
-| T2.4. Variables escalars | T2 §3. Variables | Reorganitzat |
-| T2.5. La memòria | T2 §2. La memòria | — |
-| T2.6. Operands i modes d'adreçament | T2 §4. Operands | Ampliat amb modes d'adreçament |
-| T2.7. Punters | T2 §11. Punters | — |
-| T2.8. Vectors | T2 §9. Vectors | — |
-| T2.9. Caràcters i cadenes de caràcters | T2 §10. Cadenes de caràcters | Ampliat amb caràcters |
-| **T3. Traducció de programes** | | |
-| T3.1. Desplaçaments de bits | T3 §1. Desplaçaments de bits | — |
-| T3.2. Operacions lògiques bit a bit | T3 §2. Operacions lògiques bit a bit | — |
-| T3.3. Comparacions i operacions booleanes | T3 §3. Comparacions i operacions booleanes | — |
-| T3.4. Salts | T3 §4. Salts | Reescrit per a RISC-V (eliminat *branch delay slot*) |
-| T3.5. Revisió dels modes d'adreçament | — | Nou: consolidació didàctica sense equivalent MIPS |
-| T3.6. Sentències alternatives: if-then-else i switch | T3 §5. Sentències alternatives | — |
-| T3.7. Sentències iteratives: while, for i do-while | T3 §6. Sentències iteratives | — |
-| T3.8. Estructura de la memòria | T3 §8. Estructura de la memòria | — |
-| T3.9. Subrutines | T3 §7. Subrutines | Reescrit per a ABI RISC-V |
-| T3.10. Compilació, assemblatge, enllaçat i càrrega | T3 §9. Compilació, muntatge i càrrega | Ampliat amb GCC/Clang toolchain |
-| **T4. Aritmètica entera i matrius** | | |
-| T4.1. Suma, resta i canvi de signe | T5 §1. Overflow de suma i resta | Avançat de T5 a T4 |
-| T4.2. Sobreeiximent en suma i resta d'enters | T5 §1. Overflow de suma i resta | Avançat de T5 a T4 |
-| T4.3. Multiplicació entera | T5 §2. Multiplicació entera; T4 §1. mult/mflo/mfhi | Fusionat i reescrit per a RV32IM |
-| T4.4. Matrius | T4 §2. Matrius | — |
-| T4.5. Optimitzacions de bucle | T4 §3–4. Accés seqüencial i recorreguts | Ampliat i formalitzat |
-| T4.6. Divisió entera | T5 §3. Divisió entera | Avançat de T5 a T4 |
-| **T5. Coma flotant** | | |
-| T5.1. Representació en coma flotant | T5 §4. Representació CF | — |
-| T5.2. Operacions en coma flotant | T5 §5–6. Suma i multiplicació CF | — |
-| T5.3. Coma flotant a RISC-V (RV32F) | T5 §7. La coma flotant en MIPS | Reescrit íntegrament per a RV32F |
-| **T6. Rendiment i potència** | | |
-| T6.1. Rendiment | T1 §2. Rendiment i potència | Segregat de T1 com a tema independent |
-| T6.2. Llei d'Amdahl | T1 §3. Llei d'Amdahl | Segregat de T1 |
-| T6.3. Potència | T1 §4. Mesures de dissipació | Segregat de T1; ampliat amb escalat de Dennard |
-| **T7. Memòria cau** | | |
-| T7.1. La jerarquia de memòria | T6 §1. Introducció | Ampliat amb context GPU i IA |
-| T7.2. La memòria cau | T6 §2. Disseny bàsic | — |
-| T7.3. Política d'emplaçament | T6 §3. Correspondència directa | Ampliat amb associativitat |
-| T7.4. Política de reemplaçament | T6 §6. Associativitat | Reorganitzat |
-| T7.5. Política d'escriptura | T6 §4. Polítiques d'escriptura | — |
-| T7.6. Rendiment | T6 §5. Mesures de rendiment | — |
-| T7.7. Tipologia de les fallades | T6 §8. Tipologia de les fallades | — |
-| T7.8. Memòries cau multinivell | T6 §7. Caches multinivell | — |
-| **T8. Memòria virtual** | | |
-| T8.1. Introducció | T7 §1. Introducció | — |
-| T8.2. Paginació | T7 §2. Funcionament de la MV | Reorganitzat i ampliat |
-| T8.3. La taula de pàgines | T7 §2. Funcionament de la MV | Segregat; ampliat amb taules multinivell |
-| T8.4. Fallada de pàgina | T7 §3. Fallada de pàgina | — |
-| T8.5. Traducció ràpida: el TLB | T7 §4. Traducció ràpida amb TLB | Ampliat amb *TLB shootdown* multicore |
-| **T9. Excepcions i interrupcions** | | |
-| T9.1. Excepcions i interrupcions | T8 §1–4. Introducció, CP0, accions HW/SW | Reescrit íntegrament per a CSR RISC-V |
-| T9.2. Crides al sistema | T8 §6. Crides al sistema | Reescrit per a `ecall` RISC-V |
-| T9.3. Entrada/Sortida | T8 §7. Interrupcions | Ampliat |
-: **Teoria**. La migració de la teoria ha requerit la reescriptura íntegra dels temes relacionats amb l'ISA (T2, T3, T4, T5 i T9), on la diferència entre MIPS i RISC-V és més profunda. Els temes de jerarquia de memòria (T7 i T8) han requerit menys reescriptura de base però s'han ampliat amb continguts nous rellevants per al context tecnològic actual (GPUs, sistemes multicore, taules de pàgines multinivell). {#tbl-reestructuracio-teoria}
+### Innovació 3: Sistema de qualitat i harmonització terminològica
 
-| Sessió RISC-V (nova) | Equivalent MIPS (original) | Observacions |
-| :--- | :--- | :--- |
-| L1. Introducció al simulador RARS | S0. Introducció (MARS) | Eina substituïda: MARS → RARS |
-| L2. Assemblador RISC-V i tipus bàsics | S1. Assemblador MIPS i tipus bàsics | Reescrit íntegrament per a RISC-V |
-| L3. Traducció de programes | S2. Traducció de programes | Reescrit íntegrament per a RISC-V |
-| L4. Matrius i subrutines | S3. Tipus de dades estructurats | Ampliat amb subrutines |
-| L5. Coma flotant i compilació separada | S4. Codificació en coma flotant | Ampliat amb compilació separada |
-| L6. Memòria cau | S5. Memòria cau | Reescrit; ampliat amb *loop tiling* |
-: **Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. Pel que fa als continguts, la reorganització de la teoria ha comportat el canvi de sessió d'algunes parts de les pràctiques de MIPS, i s'ha aprofitat el fet de treballar amb dos arxius de C simultàniament a la sessió de coma flotant (L5) per tractar la compilació separada. {#tbl-reestructuracio-laboratori}
+La migració ha estat l'ocasió per establir un sistema de qualitat documentat que no existia en cap forma en el material original. El sistema consta de tres artefactes complementaris: `contrib.qmd`, que recull les convencions d'estil, format, paleta SVG i decisions per tema; `sigles.qmd`, que centralitza totes les sigles de l'assignatura i s'actualitza incrementalment durant la producció; i el sistema de DoDs, que estableix criteris binaris verificables per garantir la qualitat de cada fase. Paral·lelament, s'ha dut a terme una harmonització terminològica exhaustiva en català normatiu, amb decisions documentades a `contrib.qmd` que constitueixen un recurs de referència per a la comunitat docent més àmplia.
 
-| Tema | Cobertura |
-| :--- | :--- |
-| T2 | *Little-endian*, ordre de bytes |
-| T2 | Bucles sobre vectors (init, suma, còpia inversa) |
-| T2 | Cerca en vector, retorn −1 |
-| T2 | Aritmètica de punters sobre `short` |
-| T2 | Funció `longitud` amb `'\0'` |
-| T2 | Còpia de string |
-| T3 | `switch` amb salts encadenats i *jump table* |
-| T3 | Compilació separada, símbols externs, `auipc` |
-| T4 | Optimització #2: condició al final |
-| T4 | Optimització #3: eliminació variable d'inducció |
-| T5 | `flw`/`fsw`, `flt.s` |
-| T5 | `fcvt.w.s`, `fcvt.s.w`, truncament vs. arrodoniment |
-| T6 | Amdahl bàsic, límit teòric |
-| T6 | Amdahl amb tres components simultanis |
-| T6 | Amdahl invers: quin % de CF cal per a speedup 10× |
-| T7 | *Cold-start*, conflicte, capacitat amb seqüències concretes |
-| T7 | Conflictes entre dos vectors, efecte de l'adreça base |
-| T8 | Taula de pàgines de dos nivells, mida, avantatge |
-| T8 | Bit de protecció W, excepcions de protecció |
-| T8 | Integració TLB+cau, VIPT, condició antialiàsing |
-| T9 | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
-| T9 | Fallada de TLB com a excepció, gestió RSE |
-| T9 | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
-: **Problemes i solucionaris.** Tot el banc de problemes ha estat reescrit per a RISC-V. A més, s'han afegit 23 exercicis nous llistats en aquesta taula que cobreixen continguts sense equivalent en el material MIPS original —principalment els derivats de la modularitat de RISC-V i dels canvis estructurals del temari. {#tbl-reestructuracio-problemes}
+### Innovació 4: Format obert, accessibilitat i processament automatitzat
 
-| Contingut nou | Ubicació | Justificació pedagògica |
-| :--- | :--- | :--- |
-| RISC-V GNU Compiler Toolchain | T2 | Eina estàndard de l'ecosistema; absència total a MIPS |
-| Extensions M i F (modularitat) | T2 | Modularitat de RISC-V vs. integració de MIPS |
-| GPUs i memòria en l'era de la IA | T7 | Context tecnològic actual; motivació per a l'estudi de la jerarquia de memòria |
-| Taules de pàgines multinivell | T8 | Sistemes operatius moderns; prerequisit implícit per a SO |
-| Modes de privilegi M/S/U | T9 | Arquitectura de privilegis RISC-V; absència conceptual a MIPS |
-: **Contingut nou sense equivalent MIPS.** La modularitat de RISC-V —el disseny en extensions estàndard opcionals— ha permès introduir continguts que en una arquitectura monolítica com MIPS no tenien sentit pedagògic. La transició cap a un estàndard obert ha permès també incorporar continguts de sobirania tecnològica i context industrial actual que reforcen la motivació de l'estudiantat. {#tbl-reestructuracio-nou tbl-colwidths="[35,10,55]" .striped}
+La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitLab com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. La renderització del projecte Quarto a HTML permet establir un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable. La llegibilitat per màquines habilita la interacció amb eines d'aprenentatge basades en LLM, que poden generar resums, exercicis personalitzats i anàlisi de dades d'aprenentatge a partir del corpus estructurat.
 
-| Material | Descripció |
-| :--- | :--- |
-| `riscv.qmd` — Compendi de referència RISC-V | Taules de referència ràpida de l'ISA, l'ABI i les extensions; substitueix el compendi MIPS i l'amplifica |
-| `sigles.qmd` — Glossari de sigles | Llistat unificat de totes les sigles de l'assignatura, actualitzat incrementalment durant la migració |
-| `contrib.qmd` — Convencions i normes d'estil | Sistema de qualitat del projecte: format, lèxic, paleta SVG i decisions per tema; garanteix la coherència del corpus a llarg termini |
-: **Materials transversals.** Un resultat destacat del projecte és la creació d'una infraestructura de qualitat que fa el corpus auditable i editable per qualsevol membre de l'equip docent, independentment de qui hagi produït cada part. Aquests tres materials no existien en cap forma en el material original. {#tbl-reestructuracio-transversals tbl-colwidths="[45,55]" .striped}
+### Innovació 5: Recursos d'aprenentatge actiu
 
-### Recursos d'aprenentatge actiu
+Els materials incorporen un sistema de senyalització visual i recursos de pràctica que reforcen l'aprenentatge actiu en dues dimensions complementàries.
 
-**Pràctica voluntària, assistida amb IA, sobre vectorització RISC-V**: Proposta de pràctica voluntària desenvolupada pel col·laborador d'aquest projecte, Pedro José Martínez Ferrer com a part del seu PFP del Màster STEAM, disponible a https://github.com/estructura-de-computadors/, on s'utilitza el producte escalar de vectors i la multiplicació de matrius com a cas d'estudi per a la vectorització amb RISC-V. Des del punt de vista docent, aquesta pràctica és molt innovadora perquè fa interaccionar l'alumne amb uns agents d'IA que els guia per tota la pràctica, talment com si fos un tutor personalitzat.
+Els materials fan servir cinc tipus de *callouts* —blocs visuals diferenciats— amb funcions pedagògiques ben delimitades:
 
-### Innovació en el format
+- **RISC-V**: documentació tècnica de la ISA o l'ABI directament aplicable. Separa els aspectes normatius de l'especificació de l'exposició didàctica del professor, evitant que l'estudiant confongui el «per què» amb el «com és».
+- **EC**: conveni específic de l'assignatura. Marca les decisions que no deriven de l'especificació RISC-V sinó dels acords internals del curs (convencions de nomenament, simplificacions pedagògiques, restriccions de l'avaluació).
+- **Exemple**: il·lustracions aplicades dels conceptes. Permeten seguir la prosa expositiva sense interrompre el fil argumental.
+- **Essencial**: contingut indispensable que l'estudiant ha de dominar per poder progressar. Actua com a senyal explícit de prioritat en un temari dens.
+- **Aprofundiment**: contingut opcional, no avaluable. Explicacions avançades, connexions amb recerca activa, punts d'entrada per a l'estudiant que vulgui explorar per la seva banda.
 
-La transició a Quarto Markdown permet que els materials siguin llegibles tant per humans com per màquines, seguint el paradigma *Docs-as-Code*. L'ús de GitLab com a repositori centralitzat facilita el control de versions i la sincronització entre el professorat. La renderització del projecte Quarto a HTML permet establir un **punt d'entrada únic**: una URL que dona accés a tot el material en HTML (navegable, *responsive* i accessible WCAG 2.1) i un únic fitxer PDF descarregable.
+El *callout* d'**Aprofundiment** respon a una necessitat pedagògica real i sistemàticament poc atesa: la bretxa entre el disseny curricular orientat al perfil mitjà i les necessitats dels estudiants amb capacitat i motivació superiors. A EC, el Centre de Formació Interdisciplinària Superior (CFIS) aporta cada any un grup d'estudiants que arriben al curs amb una base sòlida i una curiositat genuïna per la matèria, però que sovint perden l'estímul intel·lectual a mesura que el curs avança —precisament perquè el material no ofereix res més enllà del mínim exigible. El *callout* d'Aprofundiment no és un recurs per als que van sobrats: és el reconeixement que un bon material docent ha de tenir horitzons oberts, no un sostre baix.
+
+La decisió d'usar negretes de manera estratègica —marcant termes tècnics en la seva primera aparició i els conceptes clau de cada paràgraf— completa el sistema de senyalització visual. En un context on l'estudiant cada vegada consumeix més contingut en pantalla i en mode de lectura no lineal (cercant, saltant, rellegint punts concrets), el ressaltat explícit és una eina de navegació, no un ornament tipogràfic.
+
+Pel que fa als recursos de pràctica, el projecte incorpora una **pràctica voluntària, assistida amb IA, sobre vectorització RISC-V**, desenvolupada pel col·laborador Pedro José Martínez Ferrer com a part del seu PFP del Màster STEAM, disponible a <https://github.com/estructura-de-computadors/>. Utilitza el producte escalar de vectors i la multiplicació de matrius com a cas d'estudi per a la vectorització amb RISC-V, i fa interaccionar l'alumne amb agents d'IA que actuen com a tutors personalitzats al llarg de tota la pràctica.
+
+Les cinc innovacions responen de manera natural a les oportunitats identificades a la @sec-introduccio: la Innovació 1 materialitza l'Oportunitat 1 (migració de l'ISA); la Innovació 2 dona resposta a l'Oportunitat 2 (revisió i harmonització del temari); la Innovació 3 i la Innovació 4 cobreixen conjuntament l'Oportunitat 3 (format obert, accessibilitat i processament automatitzat); i la Innovació 5 emergeix del procés com a extensió natural sense correspondència directa amb cap oportunitat prèviament declarada. L'Oportunitat 4 (enfortiment de la cohesió de l'equip docent) és transversal a totes les innovacions i es materialitza especialment a través del sistema de qualitat (Innovació 3) i del repositori compartit (Innovació 4).
 
 ## Recollida de dades: instruments i població d'estudi {#sec-recollida-dades}
 

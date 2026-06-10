@@ -5,13 +5,17 @@
 Memòria del **Projecte Fi de Postgrau** del Postgrau en Ensenyament
 Universitari STEAM de l'Institut de Ciències de l'Educació (ICE) de la UPC.
 
-**Títol**: *Actualització de continguts de l'assignatura Estructura de
-computadors (EC) del GEI; adopció de RISC-V com a arquitectura de
-referència.*
+**Títol**: Adopció de RISC-V com a arquitectura de
+referència: Una oportunitat per a
+l’actualització de continguts de l’assignatura
+Estructura de computadors (EC) del Grau
+en Enginyeria Informàtica (GEI) de la
+Facultat d’informàtica de Barcelona (FIB)
 
-**Autor**: Roger Baig
+**Autor**: Roger Baig Viñas
 **Tutor**: Agustín Fernández Jiménez
 **Col·laborador**: Pedro José Martínez Ferrer
+**Agraïments**: David López Álvarez
 **Data de lliurament**: 18 de juny de 2026
 
 ## Recursos relacionats
@@ -125,11 +129,31 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 
 ### `index.qmd` (versió completa)
 
-Complet. Revisió profunda de consistència i lingüística finalitzada.
+Revisió profunda completada (sessió 2, juny 2026):
+- Costures polides: 2 bullets de reestructuració pedagògica (T1→T1+T6; T4/T5) integrats a `_3_resultats.qmd §Redisseny del contingut`; Innovació 2 a `_2_metodologia.qmd` referencia `@sec-disseny-pedagogic`.
+- Errors corregits: RA2 (MIPS→RISC-V), errades tipogràfiques i llegendes de taules.
+- Totes les referències creuades (`@sec-`, `@tbl-`, `@fig-`) verificades correctes.
+- Escala de supervisió P2–P5 homogeneïtzada (P5: ara "Màxim").
+
+**TODO obert**: columna `Solució` de `tbl-reestructuracio-problemes` (`_3_resultats.qmd`, comentari `<!-- TODO afegir si solució -->`). 23 exercicis nous; caldrà confirmar si tots tenen solució als `PS_Tx.qmd` i omplir-la o eliminar-la.
+
+**Pendent**: actualitzar el recompte de paraules (ha canviat per les edicions d'aquesta sessió).
+
+Recompte post-revisió profunda (juny 2026, sessió 2):
+
+| Secció | Fitxer | Paraules |
+|--------|--------|---------|
+| Introducció | `_1_introduccio.qmd` | 3.670 |
+| Metodologia | `_2_metodologia.qmd` | 3.281 |
+| Resultats | `_3_resultats.qmd` | 1.577 |
+| Discussió | `_4_discussio.qmd` | 1.823 |
+| **Total cos** | | **10.351** |
 
 ### `index_article.qmd` (versió ICE, ≤8.000 paraules)
 
-Complet. Recompte de juny 2026: **7.352 paraules** al cos.
+Pendent de consolidar un cop tancada la revisió de `index.qmd`.
+
+Recompte previ a la reestructuració (referència):
 
 | Secció | Fitxer | Paraules |
 |--------|--------|---------|
@@ -140,3 +164,10 @@ Complet. Recompte de juny 2026: **7.352 paraules** al cos.
 | **Total cos** | | **7.352** |
 
 Resum, abstract, bibliografia i annex no compten per al límit.
+
+## Propera sessió
+
+### Tancament de `index.qmd` (`scrartcl`)
+
+1. Actualitzar el recompte de paraules a `README.md` i `CLAUDE.md` (fer `quarto render` i executar `count_prose.py`).
+2. Resoldre el TODO de la columna `Solució` de `tbl-reestructuracio-problemes` (`_3_resultats.qmd`, comentari `<!-- TODO afegir si solució -->`): confirmar si tots els 23 exercicis nous tenen solució als `PS_Tx.qmd` i omplir-la o eliminar-la.

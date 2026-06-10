@@ -1,6 +1,6 @@
 # Resultats {#sec-resultats}
 
-## Volum i abast dels materials produïts
+## Volum, abast i estat dels materials produïts
 
 La migració ha assolit el **100% del material total** de l'assignatura. La revisió externa ha començat: protocol, calendari i grups de treball estan establerts. La @tbl-volum-materials en detalla el volum per categoria.
 
@@ -12,42 +12,165 @@ La migració ha assolit el **100% del material total** de l'assignatura. La revi
 | Solucionaris (PS_T1–T9) | 9 | En revisió externa |
 | Materials transversals (riscv, sigles, contrib) | 3 | Actius |
 | **Total** | **36** | |
-: Volum de materials produïts per categoria. *En revisió externa*: contingut complet, codi validat a RARS i lèxic harmonitzat; en revisió col·legiada. *En procés*: contingut parcialment migrat, pendent de completar. *Actiu*: document de referència transversal en actualització contínua. {#tbl-volum-materials .striped}
+: **Volum de materials produïts** per categoria. *En revisió externa*: contingut complet, codi validat a RARS i lèxic harmonitzat; en revisió col·legiada. *En procés*: contingut parcialment migrat, pendent de completar. *Actiu*: document de referència transversal en actualització contínua. {#tbl-volum-materials .striped}
 
 A aquests fitxers s'afegeixen **104 figures SVG** (cadascuna en versió *light* i *dark*, ~208 fitxers en total), que abasten diagrames de formats d'instrucció, mapes de l'espai de memòria, esquemes de polítiques de memòria cau i diagrames de flux per a la gestió d'excepcions. Les figures han estat generades íntegrament en SVG —abandonant Mermaid per limitacions de qualitat— seguint una paleta de colors i convencions documentades a `contrib.qmd`. El format SVG garanteix renderització d'alta qualitat tant en pantalla com en impressió, i és compatible amb les tecnologies assistives. S'espera que els processos de revisió pendents en generin algunes més.
 
-Pel que fa als problemes, a més de la migració i revisió dels exercicis existents, s'han incorporat 23 exercicis nous sense equivalent en el material MIPS original; els criteris pedagògics que han guiat tant la selecció dels problemes nous com dels solucionaris es detallen a la @sec-disseny-pedagogic.
+## Redisseny del contingut {#sec-disseny-pedagogic}
 
-## Disseny pedagògic del contingut {#sec-disseny-pedagogic}
+La migració ha estat l'ocasió per reordenar continguts que en l'assignatura original eren inconnexos o excessivament densos. Els canvis estructurals més rellevants respecte a l'organització original de l'assignatura són els següents:
 
-La migració no s'ha limitat a substituir MIPS per RISC-V: ha estat l'oportunitat de revisar i millorar la manera com el contingut es presenta i s'estructura per a l'estudiantat. Tres decisions de disseny pedagògic mereixen una justificació explícita.
+- El Tema 1 original, que agrupava la introducció conceptual i els continguts de rendiment i potència, temes força inconnexos, s'ha dividit en dos temes independents: el nou T1 manté la introducció al computador i la codificació de dades, mentre que el nou T6 recull els continguts de rendiment i potència, com avantsala del tema dedicat a la millora del rendiment d'una de les parts funcionals bàsiques dels microprocessadors, la memòria cau (T7).
+- L'aritmètica entera —que en l'estructura original formava part del T5 juntament amb la coma flotant i se'n feia un tractament indirecte de les instruccions— s'ha reallotjat al T4, i el T5 nou queda dedicat exclusivament a la coma flotant. Aquesta separació redueix la càrrega cognitiva de cada tema i clarifica la frontera conceptual entre els dos tipus d'aritmètica.
 
-### Sistema de *callouts*
+### Apunts
+ 
+ La migració de la teoria ha requerit la reescriptura íntegra dels temes relacionats amb l'ISA (T2, T3, T4, T5 i T9), on la diferència entre MIPS i RISC-V és més profunda. Els temes de jerarquia de memòria (T7 i T8) han requerit menys reescriptura de base però s'han ampliat amb continguts nous rellevants per al context tecnològic actual (GPUs, sistemes multicore, taules de pàgines multinivell).
+ 
+ La @tbl-reestructuracio-teoria mostra la correspondència entre els temes originals (MIPS) i els nous (RISC-V), organitzada per categoria. La @tbl-reestructuracio-nou detalla els continguts nous que s'han introduït a RISC-V sense equivalent previ a MIPS.
 
-Els materials fan servir cinc tipus de *callouts* —blocs visuals diferenciats— amb funcions pedagògiques ben delimitades:
+| Material RISC-V (nou) | Equivalent MIPS (original) | Observacions |
+| :--- | :--- | :--- |
+| **T1. Introducció** | | |
+| T1.1. La gestió de la complexitat: Capes i interfícies | T1 §1. Descripció jeràrquica | Reorganitzat i ampliat |
+| T1.2. El cicle de vida del programa | T1 §1. Descripció jeràrquica | Segregat com a secció independent |
+| T1.3. El model de Von Neumann | T1 §1. Descripció jeràrquica | Segregat com a secció independent |
+| T1.4. Codificació de naturals en base 2 | T2 §5. Repàs de naturals | Avançat a T1; integrat al flux conceptual |
+| T1.5. Codificació d'enters en base 2 | T2 §6. Repàs d'enters | Avançat a T1; integrat al flux conceptual |
+| **T2. Instruccions i tipus de dades bàsics** | | |
+| T2.1. Introducció a l'ISA de RISC-V | T2 §1. Introducció a la MIPS ISA | Reescrit íntegrament per a RISC-V |
+| T2.2. Format de les instruccions RV32I | T2 §8. Format de les instruccions MIPS | Reescrit íntegrament per a RISC-V |
+| T2.3. Estructura d'un programa en assemblador | T2 §3. (implícit) | Formalitzat com a secció independent |
+| T2.4. Variables escalars | T2 §3. Variables | Reorganitzat |
+| T2.5. La memòria | T2 §2. La memòria | — |
+| T2.6. Operands i modes d'adreçament | T2 §4. Operands | Ampliat amb modes d'adreçament |
+| T2.7. Punters | T2 §11. Punters | — |
+| T2.8. Vectors | T2 §9. Vectors | — |
+| T2.9. Caràcters i cadenes de caràcters | T2 §10. Cadenes de caràcters | Ampliat amb caràcters |
+| **T3. Traducció de programes** | | |
+| T3.1. Desplaçaments de bits | T3 §1. Desplaçaments de bits | — |
+| T3.2. Operacions lògiques bit a bit | T3 §2. Operacions lògiques bit a bit | — |
+| T3.3. Comparacions i operacions booleanes | T3 §3. Comparacions i operacions booleanes | — |
+| T3.4. Salts | T3 §4. Salts | Reescrit per a RISC-V (eliminat *branch delay slot*) |
+| T3.5. Revisió dels modes d'adreçament | — | Nou: consolidació didàctica sense equivalent MIPS |
+| T3.6. Sentències alternatives: if-then-else i switch | T3 §5. Sentències alternatives | — |
+| T3.7. Sentències iteratives: while, for i do-while | T3 §6. Sentències iteratives | — |
+| T3.8. Estructura de la memòria | T3 §8. Estructura de la memòria | — |
+| T3.9. Subrutines | T3 §7. Subrutines | Reescrit per a ABI RISC-V |
+| T3.10. Compilació, assemblatge, enllaçat i càrrega | T3 §9. Compilació, muntatge i càrrega | Ampliat amb GCC/Clang toolchain |
+| **T4. Aritmètica entera i matrius** | | |
+| T4.1. Suma, resta i canvi de signe | T5 §1. Overflow de suma i resta | Avançat de T5 a T4 |
+| T4.2. Sobreeiximent en suma i resta d'enters | T5 §1. Overflow de suma i resta | Avançat de T5 a T4 |
+| T4.3. Multiplicació entera | T5 §2. Multiplicació entera; T4 §1. mult/mflo/mfhi | Fusionat i reescrit per a RV32IM |
+| T4.4. Matrius | T4 §2. Matrius | — |
+| T4.5. Optimitzacions de bucle | T4 §3–4. Accés seqüencial i recorreguts | Ampliat i formalitzat |
+| T4.6. Divisió entera | T5 §3. Divisió entera | Avançat de T5 a T4 |
+| **T5. Coma flotant** | | |
+| T5.1. Representació en coma flotant | T5 §4. Representació CF | — |
+| T5.2. Operacions en coma flotant | T5 §5–6. Suma i multiplicació CF | — |
+| T5.3. Coma flotant a RISC-V (RV32F) | T5 §7. La coma flotant en MIPS | Reescrit íntegrament per a RV32F |
+| **T6. Rendiment i potència** | | |
+| T6.1. Rendiment | T1 §2. Rendiment i potència | Segregat de T1 com a tema independent |
+| T6.2. Llei d'Amdahl | T1 §3. Llei d'Amdahl | Segregat de T1 |
+| T6.3. Potència | T1 §4. Mesures de dissipació | Segregat de T1; ampliat amb escalat de Dennard |
+| **T7. Memòria cau** | | |
+| T7.1. La jerarquia de memòria | T6 §1. Introducció | Ampliat amb context GPU i IA |
+| T7.2. La memòria cau | T6 §2. Disseny bàsic | — |
+| T7.3. Política d'emplaçament | T6 §3. Correspondència directa | Ampliat amb associativitat |
+| T7.4. Política de reemplaçament | T6 §6. Associativitat | Reorganitzat |
+| T7.5. Política d'escriptura | T6 §4. Polítiques d'escriptura | — |
+| T7.6. Rendiment | T6 §5. Mesures de rendiment | — |
+| T7.7. Tipologia de les fallades | T6 §8. Tipologia de les fallades | — |
+| T7.8. Memòries cau multinivell | T6 §7. Caches multinivell | — |
+| **T8. Memòria virtual** | | |
+| T8.1. Introducció | T7 §1. Introducció | — |
+| T8.2. Paginació | T7 §2. Funcionament de la MV | Reorganitzat i ampliat |
+| T8.3. La taula de pàgines | T7 §2. Funcionament de la MV | Segregat; ampliat amb taules multinivell |
+| T8.4. Fallada de pàgina | T7 §3. Fallada de pàgina | — |
+| T8.5. Traducció ràpida: el TLB | T7 §4. Traducció ràpida amb TLB | Ampliat amb *TLB shootdown* multicore |
+| **T9. Excepcions i interrupcions** | | |
+| T9.1. Excepcions i interrupcions | T8 §1–4. Introducció, CP0, accions HW/SW | Reescrit íntegrament per a CSR RISC-V |
+| T9.2. Crides al sistema | T8 §6. Crides al sistema | Reescrit per a `ecall` RISC-V |
+| T9.3. Entrada/Sortida | T8 §7. Interrupcions | Ampliat |
+: **Teoria**. Equivalència entre temes i continguts dels materials antics (MIPS) i els nous (RISC-V). {#tbl-reestructuracio-teoria}
 
-- **RISC-V**: documentació tècnica de la ISA o l'ABI directament aplicable. Separa els aspectes normatius de l'especificació de l'exposició didàctica del professor, evitant que l'estudiant confongui el «per què» amb el «com és».
-- **EC**: conveni específic de l'assignatura. Marca les decisions que no deriven de l'especificació RISC-V sinó dels acords interns del curs (convencions de nomenament, simplificacions pedagògiques, restriccions de l'avaluació).
-- **Exemple**: il·lustracions aplicades dels conceptes. Permeten seguir la prosa expositiva sense interrompre el fil argumental.
-- **Essencial**: contingut indispensable que l'estudiant ha de dominar per poder progressar. Actua com a senyal explícit de prioritat en un temari dens.
-- **Aprofundiment**: contingut opcional, no avaluable. Explicacions avançades, connexions amb recerca activa, punts d'entrada per a l'estudiant que vulgui explorar per la seva banda.
+| Contingut nou | Ubicació | Justificació pedagògica |
+| :--- | :--- | :--- |
+| RISC-V GNU Compiler Toolchain | T2 | Eina estàndard de l'ecosistema; absència total a MIPS |
+| Extensions M i F (modularitat) | T2 | Modularitat de RISC-V vs. integració de MIPS |
+| GPUs i memòria en l'era de la IA | T7 | Context tecnològic actual; motivació per a l'estudi de la jerarquia de memòria |
+| Taules de pàgines multinivell | T8 | Sistemes operatius moderns; prerequisit implícit per a SO |
+| Modes de privilegi M/S/U | T9 | Arquitectura de privilegis RISC-V; absència conceptual a MIPS |
+: **Contingut nou sense equivalent MIPS.** Continguts nous incorporats sense equivalent als materials originals MIPS. {#tbl-reestructuracio-nou tbl-colwidths="[35,10,55]" .striped}
 
-El *callout* d'**Aprofundiment** respon a una necessitat pedagògica real i sistemàticament poc atesa: la bretxa entre el disseny curricular orientat al perfil mitjà i les necessitats dels estudiants amb capacitat i motivació superiors. A EC, el Centre de Formació Interdisciplinària Superior (CFIS) aporta cada any un grup d'estudiants que arriben al curs amb una base sòlida i una curiositat genuïna per la matèria, però que sovint perden l'estímul intel·lectual a mesura que el curs avança —precisament perquè el material no ofereix res més enllà del mínim exigible. El resultat és paradoxal: estudiants que podrien excel·lir acaben amb notes que no reflecteixen el seu potencial. El *callout* d'Aprofundiment no és un recurs per als que van sobrats: és el reconeixement que un bon material docent ha de tenir horitzons oberts, no un sostre baix.
+### Problemaris i solucionaris
 
-La decisió d'usar negretes de manera estratègica —marcant termes tècnics en la seva primera aparició i els conceptes clau de cada paràgraf— completa el sistema de senyalització visual. En un context on l'estudiant cada vegada consumeix més contingut en pantalla i en mode de lectura no lineal (cercant, saltant, rellegint punts concrets), el ressaltat explícit és una eina de navegació, no un ornament tipogràfic.
-
-### Nous problemes i criteris de selecció dels solucionaris
-
-A més de la migració i revisió dels exercicis existents, s'han incorporat 23 problemes nous (vegeu @tbl-reestructuracio-nou) que cobreixen continguts sense equivalent al material MIPS: la modularitat de RISC-V (extensions M i F), les eines de l'ecosistema obert (GNU Compiler Toolchain), els modes de privilegi i, per primera vegada a EC, exercicis sobre excepcions i interrupcions amb fonamentació operativa suficient per ser avaluables.
+A més de la migració i revisió dels exercicis existents, s'han incorporat 23 exercicis nous que cobreixen continguts sense equivalent al material MIPS: la modularitat de RISC-V (extensions M i F), les eines de l'ecosistema obert (GNU Compiler Toolchain), els modes de privilegi i, per primera vegada a EC, exercicis sobre excepcions i interrupcions amb fonamentació operativa suficient per ser avaluables.
 
 Els solucionaris cobreixen T1–T9 amb criteris diferenciats per la naturalesa de cada bloc. T1, per la seva brevetat (dos exercicis), té el solucionari elaborat però pendent d'integrar al repositori en el format de `PS_T1.qmd`. Per als temes restants:
 
-- **T2–T5** (traducció C→assemblador): la densitat de raonament pas a pas és el nucli de l'aprenentatge i el solucionari és l'instrument principal d'autoavaluació. Els exercicis nous d'aquests temes —sense referent previ a MIPS— fan el solucionari imprescindible. T3 (salts i subrutines) i T5 (coma flotant) concentren les taxes d'errors més altes de l'assignatura.
+- **T2–T5** (traducció C → assemblador): la densitat de raonament pas a pas és el nucli de l'aprenentatge i el solucionari és l'instrument principal d'autoavaluació. Els exercicis nous d'aquests temes —sense referent previ a MIPS— fan el solucionari imprescindible. T3 (salts i subrutines) i T5 (coma flotant) concentren les taxes d'errors més altes de l'assignatura.
 - **T6** (Rendiment i potència): tema atòmic amb exercicis íntegrament numèrics; el criteri de selecció i ordenació és dificultat creixent a partir de la fórmula base.
 - **T7** (Memòria cau) i **T8** (Memòria virtual): els estudiants aborden aquests continguts per primer cop. Els exercicis són bastant mecànics un cop assimilat el procediment; el solucionari actua com a model de referència per autoavaluar-se, ordenat per dificultat creixent.
 - **T9** (Excepcions i interrupcions): és una novetat respecte als materials MIPS originals, on aquest tema no tenia problemes. L'adopció de RISC-V —amb els registres CSR, els modes de privilegi i el mecanisme `ecall`— ha permès formular exercicis nous sobre continguts que ara sí que tenen prou base operativa per ser avaluables.
 
-El conjunt de la migració del corpus i la incorporació dels 23 exercicis nous dóna per assolit l'OE1.
+La @tbl-reestructuracio-problemes mostra la distribució dels exercicis nous per tema, amb una breu descripció del seu contingut.
+
+<!-- TODO afegir si solució -->
+| Tema | Solució | Cobertura |
+| :--- | :--- | :--- |
+| T2 |  | *Little-endian*, ordre de bytes |
+| T2 |  | Bucles sobre vectors (init, suma, còpia inversa) |
+| T2 |  | Cerca en vector, retorn −1 |
+| T2 |  | Aritmètica de punters sobre `short` |
+| T2 |  | Funció `longitud` amb `'\0'` |
+| T2 |  | Còpia de string |
+| T3 |  | `switch` amb salts encadenats i *jump table* |
+| T3 |  | Compilació separada, símbols externs, `auipc` |
+| T4 |  | Optimització #2: condició al final |
+| T4 |  | Optimització #3: eliminació variable d'inducció |
+| T5 |  | `flw`/`fsw`, `flt.s` |
+| T5 |  | `fcvt.w.s`, `fcvt.s.w`, truncament vs. arrodoniment |
+| T6 |  | Amdahl bàsic, límit teòric |
+| T6 |  | Amdahl amb tres components simultanis |
+| T6 |  | Amdahl invers: quin % de CF cal per a speedup 10× |
+| T7 |  | *Cold-start*, conflicte, capacitat amb seqüències concretes |
+| T7 |  | Conflictes entre dos vectors, efecte de l'adreça base |
+| T8 |  | Taula de pàgines de dos nivells, mida, avantatge |
+| T8 |  | Bit de protecció W, excepcions de protecció |
+| T8 |  | Integració TLB+cau, VIPT, condició antialiàsing |
+| T9 |  | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
+| T9 |  | Fallada de TLB com a excepció, gestió RSE |
+| T9 |  | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
+: **Problemes i solucions noves.** Exercicis nous afegits al problemari. {#tbl-reestructuracio-problemes}
+
+### Laboratoris
+
+Es manté l'estructura de sis sessions de laboratori. Pel que fa als continguts, la reorganització de la teoria ha comportat el canvi de sessió d'algunes parts de les pràctiques de MIPS, i s'ha aprofitat el fet de treballar amb dos arxius de C simultàniament a la sessió de coma flotant (L5) per afegir el tractament de la compilació separada.
+
+La @tbl-reestructuracio-laboratori mostra la correspondència entre les sessions originals (MIPS) i les noves (RISC-V), amb una breu descripció de les diferències.
+
+| Sessió RISC-V (nova) | Equivalent MIPS (original) | Observacions |
+| :--- | :--- | :--- |
+| L1. Introducció al simulador RARS | S0. Introducció (MARS) | Eina substituïda: MARS → RARS |
+| L2. Assemblador RISC-V i tipus bàsics | S1. Assemblador MIPS i tipus bàsics | Reescrit íntegrament per a RISC-V |
+| L3. Traducció de programes | S2. Traducció de programes | Reescrit íntegrament per a RISC-V |
+| L4. Matrius i subrutines | S3. Tipus de dades estructurats | Ampliat amb subrutines |
+| L5. Coma flotant i compilació separada | S4. Codificació en coma flotant | Ampliat amb compilació separada |
+| L6. Memòria cau | S5. Memòria cau | Reescrit; ampliat amb *loop tiling* |
+: **Laboratori.** El canvi més visible al laboratori és la substitució de MARS per RARS com a simulador de referència. {#tbl-reestructuracio-laboratori}
+
+
+### Materials transversals
+
+Un resultat destacat del projecte és la creació d'una infraestructura de qualitat que fa el corpus auditable i editable per qualsevol membre de l'equip docent, independentment de qui hagi produït cada part. Aquests tres materials no existien en cap forma en el material original.
+
+| Material | Descripció |
+| :--- | :--- |
+| `riscv.qmd` — Compendi de referència RISC-V | Taules de referència ràpida de l'ISA, l'ABI i les extensions; substitueix el compendi MIPS i l'amplifica |
+| `sigles.qmd` — Glossari de sigles | Llistat unificat de totes les sigles de l'assignatura, actualitzat incrementalment durant la migració |
+| `contrib.qmd` — Convencions i normes d'estil | Guia d'estil: format, lèxic, paleta SVG i decisions per tema; garanteix la coherència del corpus a llarg termini |
+: **Materials transversals.** {#tbl-reestructuracio-transversals tbl-colwidths="[45,55]" .striped}
 
 ## Qualitat i harmonització {#sec-qualitat-harmonitzacio}
 
@@ -79,6 +202,7 @@ La @tbl-caracteristiques recull les característiques que distingeixen el corpus
 
 | Característica | Impacte pedagògic i institucional |
 | :--- | :--- |
+| **Autocontingut** | No s'utilitza cap terme, nomenclatura o concepte que no hagi estat introduït de manera explícita prèviament |
 | **Català normatiu + recull terminològic RISC-V** | Accessibilitat lingüística per a l'estudiantat; primera referència sistemàtica de terminologia RISC-V en català, reutilitzable per altres assignatures de l'àmbit |
 | **Format obert (Quarto Markdown)** | Llegible per humans i màquines; HTML accessible (WCAG 2.1), mode fosc/clar, *responsive*; PDF d'alta qualitat des d'una sola font |
 | **Navegació no lineal amb referències creuades** | Teoria, problemes, solucionaris i laboratoris interconnectats; facilita la consulta ràpida i l'estudi no lineal en pantalla |
@@ -86,7 +210,7 @@ La @tbl-caracteristiques recull les característiques que distingeixen el corpus
 | **Validació sistemàtica a RARS** | Tot el codi assemblador verificat al simulador; zero-error garantit en l'entorn de laboratori |
 | **Repositori públic i reutilitzable** | Qualsevol equip docent pot fer un *fork* i adaptar el corpus; model de manteniment col·laboratiu via GitLab |
 | **Sistema de DoDs (DoD-UP, DoD-CC i DoD-UR)** | Procés de producció i revisió auditable, traçable i replicable per a projectes similars |
-: Característiques diferencials del corpus produït respecte als materials originals en format PDF. {#tbl-caracteristiques tbl-colwidths="[35,65]" .striped}
+: **Característiques diferencials del corpus** produït respecte als materials originals en format PDF. {#tbl-caracteristiques tbl-colwidths="[35,65]" .striped}
 
 ## Comparativa planificació–realitat {#sec-comparativa-planificacio-realitat}
 

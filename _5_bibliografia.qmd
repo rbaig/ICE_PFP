@@ -2,7 +2,11 @@
 
 Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. Longman.
 
+Anthropic. (2025). Claude (Claude Sonnet 4.6) [Large language model]. https://www.anthropic.com
+
 Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. David McKay.
+
+Google. (2024). NotebookLM [Artificial intelligence research tool]. https://notebooklm.google.com
 
 Hennessy, J. L., & Patterson, D. A. (2022). *Computer architecture: A quantitative approach* (6th ed.). Morgan Kaufmann.
 
