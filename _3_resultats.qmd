@@ -116,24 +116,24 @@ Els solucionaris cobreixen T1–T9 amb criteris diferenciats per la naturalesa d
 
 La @tbl-reestructuracio-problemes mostra la distribució dels exercicis nous per tema, amb una breu descripció del seu contingut.
 
-<!-- TODO afegir si solució -->
+<!-- TODO afegir si solució T7--T9 -->
 | Tema | Solució | Cobertura |
 | :--- | :--- | :--- |
 | T2 |  | *Little-endian*, ordre de bytes |
-| T2 |  | Bucles sobre vectors (init, suma, còpia inversa) |
+| T2 | Sí | Bucles sobre vectors (init, suma, còpia inversa) |  <!-- Exercici 2.32 -->
 | T2 |  | Cerca en vector, retorn −1 |
 | T2 |  | Aritmètica de punters sobre `short` |
-| T2 |  | Funció `longitud` amb `'\0'` |
+| T2 | Sí | Funció `longitud` amb `'\0'` | <!-- Exercici 2.36 -->
 | T2 |  | Còpia de string |
 | T3 |  | `switch` amb salts encadenats i *jump table* |
-| T3 |  | Compilació separada, símbols externs, `auipc` |
-| T4 |  | Optimització #2: condició al final |
-| T4 |  | Optimització #3: eliminació variable d'inducció |
-| T5 |  | `flw`/`fsw`, `flt.s` |
-| T5 |  | `fcvt.w.s`, `fcvt.s.w`, truncament vs. arrodoniment |
-| T6 |  | Amdahl bàsic, límit teòric |
-| T6 |  | Amdahl amb tres components simultanis |
-| T6 |  | Amdahl invers: quin % de CF cal per a speedup 10× |
+| T3 | Sí | Compilació separada, símbols externs, `auipc` | <!-- Exercici 3.37 -->
+| T4 | Sí | Optimització #2: condició al final | <!-- Exercici 4.31 -->
+| T4 | Sí | Optimització #3: eliminació variable d'inducció | <!-- Exercici 4.32 -->
+| T5 | Sí | `flw`/`fsw`, `flt.s` | <!-- Exercici 5.19 -->
+| T5 | Sí | `fcvt.w.s`, `fcvt.s.w`, truncament vs. arrodoniment | <!-- Exercici 5.20 -->
+| T6 | Sí | Amdahl bàsic, límit teòric | <!-- Exercici 6.11 -->
+| T6 | Sí | Amdahl amb tres components simultanis | <!-- Exercici 6.12 -->
+| T6 | Sí | Amdahl invers: quin % de CF cal per a speedup 10× |  <!-- Exercici 6.13 -->
 | T7 |  | *Cold-start*, conflicte, capacitat amb seqüències concretes |
 | T7 |  | Conflictes entre dos vectors, efecte de l'adreça base |
 | T8 |  | Taula de pàgines de dos nivells, mida, avantatge |
