@@ -34,13 +34,13 @@ La nova estructura organitza el curs en 9 temes per a un quadrimestre de 13 setm
 | :---: | :--- | :--- |
 | 1 | 1 Introducció | Descripció jeràrquica del computador. Codificació de naturals i enters |
 | 2 | 2 Instruccions i tipus de dades bàsics | Introducció a la ISA de RISC-V. Formats d'instrucció. Variables, memòria, operands, punters, vectors i cadenes |
-| 3 | 3 Traducció de programes | Operacions lògiques i desplaçaments. Sentències *if* i bucles. Subrutines. Compilació, assemblatge, enllaçat i càrrega |
-| 4 | 4 Aritmètica entera i matrius | Suma, resta, multiplicació i divisió d'enters. Sobreeiximent. Matrius. Optimitzacions de bucle |
-| 5 | 5 Coma flotant | Representació IEEE 754. Operacions en coma flotant. Coma flotant a RISC-V |
-| 6 | 6 Rendiment i potència | Mesures de rendiment. Llei d'Amdahl. Potència i escalat de Dennard |
-| 7 | 7 Memòria cau | Jerarquia de memòria. Polítiques d'emplaçament, reemplaçament i escriptura. Rendiment. Memòries cau multinivell |
-| 8 | 8 Memòria virtual | Paginació. Taula de pàgines. Fallada de pàgina. TLB |
-| 9 | 9 Excepcions i interrupcions | Registres CSR. Flux maquinari. Rutina de servei. Crides al sistema. Interrupcions |
+| 2 | 3 Traducció de programes | Operacions lògiques i desplaçaments. Sentències *if* i bucles. Subrutines. Compilació, assemblatge, enllaçat i càrrega |
+| 1.5 | 4 Aritmètica entera i matrius | Suma, resta, multiplicació i divisió d'enters. Sobreeiximent. Matrius. Optimitzacions de bucle |
+| 1 | 5 Coma flotant | Representació IEEE 754. Operacions en coma flotant. Coma flotant a RISC-V |
+| 1 | 6 Rendiment i potència | Mesures de rendiment. Llei d'Amdahl. Potència i escalat de Dennard |
+| 2 | 7 Memòria cau | Jerarquia de memòria. Polítiques d'emplaçament, reemplaçament i escriptura. Rendiment. Memòries cau multinivell |
+| 1.5 | 8 Memòria virtual | Paginació. Taula de pàgines. Fallada de pàgina. TLB |
+| 1 | 9 Excepcions i interrupcions | Registres CSR. Flux maquinari. Rutina de servei. Crides al sistema. Interrupcions |
 : Seqüenciació temàtica i temporal per a un quadrimestre de 13 setmanes. {#tbl-sequenciacio-tematica tbl-colwidths="[5,35,55,5]" .striped}
 
 Cada resultat d'aprenentatge s'articula en un bloc temàtic: RA1 (Rendiment i arquitectura) en T1 i T6; RA2 (Frontera Programari-Maquinari) i RA3 (Aritmètica) en T2–T5; RA4 (Jerarquia de memòria) en T7 i T8; i RA5 (Robustesa) en T9.
