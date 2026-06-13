@@ -1,3 +1,9 @@
+<!-- Esmena del problema clàssic de hyperref amb seccions no numerades ({.unnumbered}). Per a \section*{}, Pandoc genera \addcontentsline però sense \phantomsection previ, de manera que el marcador del PDF (outline) s'ancora a la pàgina anterior en lloc de la de la secció. L'índex (TOC) queda bé perquè el seu hipervincle apunta a l'àncora \hypertarget, però el marcador de l'outline s'ancora en el punt on es crida \addcontentsline. -->
+
+```{=latex}
+\phantomsection
+```
+
 # Annex 1: Reflexions sobre l'impacte de la IA generativa en la docència {#sec-annex-ia .unnumbered}
 
 *Aquest annex recull reflexions personals fruit de l'experiència d'haver passat, en el transcurs d'aquest projecte, d'un ús pràcticament nul de la IA generativa a un ús intensiu i diari. No pretén ser una revisió sistemàtica de la literatura sinó un testimoni de primera mà d'un professor d'enginyeria que ha viscut la transició des de dins.*
@@ -7,6 +13,10 @@
 La IA generativa ha vingut per quedar-se i transformarà pràcticament tots els sectors, inclòs l'ensenyament universitari. No és una predicció: ja està passant. Qualsevol estratègia docent que parteixi de la prohibició com a resposta principal és una estratègia condemnada al fracàs, per la mateixa raó que ho hauria estat prohibir les calculadores als anys setanta o Internet als noranta. La pregunta pertinent no és «permetem o prohibim?» sinó «com incorporem la IA de manera que afavoreixi l'aprenentatge real?» Selwyn (2023) ho articula clarament: el debat públic oscil·la entre el pànic i l'entusiasme acrítics, i cap dels dos extrems és útil pedagògicament.
 
 L'experiència d'aquest projecte m'ha convertit en un ferm partidari de la IA com a eina de treball. He atacat camps que havia defugit sistemàticament —JavaScript, Git, l'automatització del flux de publicació— perquè la barrera d'entrada s'ha reduït fins a un punt en què l'únic obstacle real és el criteri sobre *què* cal fer, no el coneixement de *com* fer-ho tècnicament. La qualitat del treball ha augmentat, el temps invertit s'ha reduït i, paradoxalment, la comprensió dels mecanismes subjacents ha millorat: quan una IA et genera codi que funciona però que no entens, la supervisió crítica que t'exigeixes a tu mateix és un accelerador d'aprenentatge molt eficient.
+
+```{=latex}
+\phantomsection
+```
 
 ## A1.2 Com hem de fer front a l'ús de la IA a l'aula? {.unnumbered}
 
@@ -18,6 +28,10 @@ La resposta no pot ser binària ni estàtica, perquè les capacitats i les neces
 
 **Màster: ús massiu per maximitzar la productivitat.** A nivell de màster, la producció assistida per IA hauria de ser la norma. L'objectiu és que l'estudiant pugui focalitzar tota la seva atenció en la contribució original, alliberant-se de la feina mecànica de producció. La OCDE (2023) identifica precisament aquest escenari —IA com a amplificador de la capacitat experta— com el cas d'ús amb l'impacte positiu més gran en educació superior. El consum crític, la capacitat de relacionar conceptes complexos i la síntesi esdevenen, com mai abans, competències vertebradores de la tasca docent.
 
+```{=latex}
+\phantomsection
+```
+
 ## A1.3 L'avaluació, l'element que ho ha de canviar tot {.unnumbered}
 
 La transformació metodològica no és sostenible si no va acompanyada d'una transformació de l'avaluació. Els formats actuals, dissenyats en un món sense IA generativa, han quedat obsolets en molts casos.
@@ -25,6 +39,10 @@ La transformació metodològica no és sostenible si no va acompanyada d'una tra
 Als **quadrimestres inicials**, la resposta és clara: tornar als exàmens de paper, llapis i, com a màxim, calculadora bàsica. No és un retrocés; és reconèixer que l'examen presencial sense eines és l'únic instrument que mesura el que realment volem mesurar en aquesta etapa: si l'estudiant ha internalitzat els conceptes.
 
 Als **quadrimestres finals i màster**, els treballs, projectes i memòries ja no poden ser l'únic recurs d'avaluació. Un document produït amb IA de qualitat és indistingible, en aparença, d'un document elaborat amb esforç genuí. La solució no és la detecció —les eines de detecció actuals no són fiables i mai ho seran prou— sinó el retorn a formats d'avaluació que no es poden delegar: l'examen oral. En una de les meves assignatures de màster del curs vinent ja el recuperem. L'examen oral no detecta si l'estudiant ha usat IA: directament fa irrellevant la pregunta, perquè l'estudiant ha de demostrar davant del professor que entén el que ha lliurat.
+
+```{=latex}
+\phantomsection
+```
 
 ## A1.4 Som els professors necessaris? {.unnumbered}
 
@@ -34,11 +52,19 @@ Hi ha una ironia profunda en tot això que val la pena assenyalar. Les mateixes 
 
 Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge i el referent de l'estudiantat en l'oceà de la informació. És un canvi de rol profund, no una desaparició.
 
+```{=latex}
+\phantomsection
+```
+
 ## A1.5 L'atenció als estudiants excel·lents {.unnumbered}
 
 Hi ha una qüestió que el discurs pedagògic dominant prefereix no tractar: en l'esforç per no deixar ningú enrere, hem acabat posant un sostre als qui van davant. Any rere any, EC acull estudiants amb una base tècnica molt per sobre de la mitjana; el ritme estàndard del curs no els ofereix cap horitzó més enllà del mínim exigible, i les seves notes rarament reflecteixen el que serien capaços de fer.
 
 El *callout* d'Aprofundiment dels nous materials és una resposta modesta però concreta a aquesta bretxa: indica a l'estudiant que hi ha més, que el tema té profunditat, i que pot explorar-la pel seu compte si vol. Amb la IA disponible com a tutor personalitzat il·limitat, aquest tipus d'indicació adquireix una dimensió nova: ja no cal esperar que el professor tingui temps per a una tutoria individual. L'estudiant que vol aprofundir ara té accés immediat a un interlocutor que el pot acompanyar fins on vulgui arribar.
+
+```{=latex}
+\phantomsection
+```
 
 ## A1.6 El futur de la programació {.unnumbered}
 
@@ -48,9 +74,17 @@ L'ofici de programador tal com l'hem conegut —escriure codi línia a línia pe
 
 No tinc la resposta definitiva, i desconfio de qui diu que la té. El que sí sembla clar és que l'habilitat de col·laborar eficientment amb eines IA —saber formular el problema, supervisar la solució i integrar-la en un sistema complex— és ja una competència fonamental que hauria d'estar al nucli del currículum d'enginyeria informàtica. Com a responsables de les generacions futures, tenim la responsabilitat de decidir si ens n'adonem ara o quan ja sigui massa tard.
 
+```{=latex}
+\phantomsection
+```
+
 ## A1.7 On pot arribar la IA? {.unnumbered}
 
 No ho sé. I aquesta resposta em sembla la més honesta i la més útil. El que sí que sé, per experiència directa, és que la distància entre «no la faig servir pràcticament» i «la faig servir intensivament cada dia» ha transformat la meva pràctica professional d'una manera que hauria considerat improbable fa quatre dies. Si aquesta és la magnitud del canvi individual en un horitzó tan curt, projectar-la a escala institucional és un exercici que hauria de mantenir el col·lectiu docent en un estat d'alerta activa, no de resistència passiva.
+
+```{=latex}
+\phantomsection
+```
 
 ## A1.8 Bibliografia {.unnumbered}
 

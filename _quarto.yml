@@ -31,7 +31,7 @@ format:
     papersize: a4
     geometry:
       - top=1.5cm
-      - bottom=2.5cm
+      - bottom=1.5cm
       - left=2cm
       - right=2cm
       - includeheadfoot
