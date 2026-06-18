@@ -1,9 +1,0 @@
-project:
-  render:
-    - index_article.qmd
-
-format:
-  pdf:
-    output-file: "ICE_STEAM_PFP_RogerBaigViñas_article.pdf"
-    documentclass: article
-    toc: true

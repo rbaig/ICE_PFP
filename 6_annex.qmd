@@ -52,6 +52,8 @@ Hi ha una ironia profunda en tot això que val la pena assenyalar. Les mateixes 
 
 Però la funció del professor mai ha estat només transmetre informació. El que no pot fer —encara— un LLM és tenir criteri sobre *què* és important en un camp, detectar que un estudiant ha entès malament un concepte fonamental i intervenir en el moment precís, establir la connexió entre el que s'aprèn a l'aula i el que realment es fa a la indústria, i generar l'entorn de treball rigorós que prepara per al món professional. El professor deixa de ser el dipositari del coneixement i passa a ser el garant de la qualitat del procés d'aprenentatge i el referent de l'estudiantat en l'oceà de la informació. És un canvi de rol profund, no una desaparició.
 
+Aquest canvi de rol té una implicació directa sobre una pregunta que sovint s'amaga darrere del debat sobre la IA generativa: la de la qualitat intrínseca del contingut que produeix. En el cas d'aquests apunts, on un percentatge significatiu del text inicial ha estat generat per Claude i posteriorment revisat, la resposta és empírica: el contingut tècnic és correcte —verificat instrucció per instrucció al simulador RARS—, el lèxic és consistent i el nivell d'explicació és adequat al perfil de l'estudiant. La IA no ha «inventat» física ni matemàtica; ha organitzat, explicat i formatat coneixement que existia als materials originals i a la seva base d'entrenament. El valor dels apunts no el dona l'origen del text sinó la qualitat de la supervisió humana que l'ha validat. Dit d'una altra manera: el percentatge de text sintètic és irrellevant si el procés de revisió és rigorós. I és precisament per garantir aquest rigor que existeixen les DoD-UP, DoD-CC i DoD-UR.
+
 ```{=latex}
 \phantomsection
 ```

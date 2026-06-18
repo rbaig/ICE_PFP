@@ -114,18 +114,20 @@ Els solucionaris cobreixen T1–T9 amb criteris diferenciats per la naturalesa d
 - **T7** (Memòria cau) i **T8** (Memòria virtual): els estudiants aborden aquests continguts per primer cop. Els exercicis són bastant mecànics un cop assimilat el procediment; el solucionari actua com a model de referència per autoavaluar-se, ordenat per dificultat creixent.
 - **T9** (Excepcions i interrupcions): és una novetat respecte als materials MIPS originals, on aquest tema no tenia problemes. L'adopció de RISC-V —amb els registres CSR, els modes de privilegi i el mecanisme `ecall`— ha permès formular exercicis nous sobre continguts que ara sí que tenen prou base operativa per ser avaluables.
 
+El conjunt de la migració del corpus i la incorporació dels 23 exercicis nous dóna per assolit l'OE1.
+
 La @tbl-reestructuracio-problemes mostra la distribució dels exercicis nous per tema, amb una breu descripció del seu contingut.
 
 <!-- TODO afegir si solució T7--T9 -->
 | Tema | Solució | Cobertura |
 | :--- | :--- | :--- |
-| T2 |  | *Little-endian*, ordre de bytes |
+| T2 | Sí | *Little-endian*, ordre de bytes |
 | T2 | Sí | Bucles sobre vectors (init, suma, còpia inversa) |  <!-- Exercici 2.32 -->
-| T2 |  | Cerca en vector, retorn −1 |
-| T2 |  | Aritmètica de punters sobre `short` |
+| T2 | Sí | Cerca en vector, retorn −1 |
+| T2 | Sí | Aritmètica de punters sobre `short` |
 | T2 | Sí | Funció `longitud` amb `'\0'` | <!-- Exercici 2.36 -->
-| T2 |  | Còpia de string |
-| T3 |  | `switch` amb salts encadenats i *jump table* |
+| T2 | Sí | Còpia de string |
+| T3 | Sí | `switch` amb salts encadenats i *jump table* |
 | T3 | Sí | Compilació separada, símbols externs, `auipc` | <!-- Exercici 3.37 -->
 | T4 | Sí | Optimització #2: condició al final | <!-- Exercici 4.31 -->
 | T4 | Sí | Optimització #3: eliminació variable d'inducció | <!-- Exercici 4.32 -->
@@ -134,15 +136,15 @@ La @tbl-reestructuracio-problemes mostra la distribució dels exercicis nous per
 | T6 | Sí | Amdahl bàsic, límit teòric | <!-- Exercici 6.11 -->
 | T6 | Sí | Amdahl amb tres components simultanis | <!-- Exercici 6.12 -->
 | T6 | Sí | Amdahl invers: quin % de CF cal per a speedup 10× |  <!-- Exercici 6.13 -->
-| T7 |  | *Cold-start*, conflicte, capacitat amb seqüències concretes |
-| T7 |  | Conflictes entre dos vectors, efecte de l'adreça base |
-| T8 |  | Taula de pàgines de dos nivells, mida, avantatge |
-| T8 |  | Bit de protecció W, excepcions de protecció |
-| T8 |  | Integració TLB+cau, VIPT, condició antialiàsing |
-| T9 |  | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
-| T9 |  | Fallada de TLB com a excepció, gestió RSE |
-| T9 |  | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
-: **Problemes i solucions noves.** Exercicis nous afegits al problemari. {#tbl-reestructuracio-problemes}
+| T7 | Sí | *Cold-start*, conflicte, capacitat amb seqüències concretes |
+| T7 | Sí | Conflictes entre dos vectors, efecte de l'adreça base |
+| T8 | Sí | Taula de pàgines de dos nivells, mida, avantatge |
+| T8 | Sí | Bit de protecció W, excepcions de protecció |
+| T8 | Sí | Integració TLB+cau, VIPT, condició antialiàsing |
+| T9 | Sí | `mepc`, `mtvec` direct/vectored, ajust +4 per `ecall` |
+| T9 | Sí | Fallada de TLB com a excepció, gestió RSE |
+| T9 | Sí | Interrupcions E/S, `MIE`/`MEIE`, RSE de teclat |
+: **Problemes i solucions noves.** Exercicis nous afegits al problemari. {#tbl-reestructuracio-problemes tbl-colwidths="[10,10,60]" .striped}
 
 ### Laboratoris
 
@@ -188,11 +190,20 @@ Aquests tres artefactes, que reflecteixen l'ortogonalitat del sistema de qualita
 
 El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un **ecosistema de materials cohesionat** amb les característiques següents:
 
-- **Punt d'entrada únic**: Una URL dona accés a tots els materials en HTML, i un botó permet descarregar el PDF complet de tot el llibre.
+- **Punt d'entrada únic**: Una URL dona accés a tots els materials en HTML, i un botó permet descarregar el PDF complet de tot el llibre. La @fig-html-pdf il·lustra el mateix fragment de contingut renderitzat en tots dos formats.
 - **Accessibilitat WCAG 2.1**: Marcatge HTML5 semàntic, mode fosc/clar respectant la configuració del sistema de l'usuari, disseny *responsive* i codi amb ressaltat accessible (*a11y*).
 - **Navegació no lineal amb referències creuades**: Cada secció del material conté enllaços directes cap a les seccions de teoria o laboratori relacionades. Un estudiant consultant L3 pot accedir directament als apartats de T3 que aplica; un estudiant consultant T3 pot navegar als exercicis corresponents de PE_T3 i a la correcció de PS_T3. Aquesta interconnexió sistemàtica, impossible en el format PDF original, transforma els materials d'un recurs lineal en un sistema de consulta ràpida.
 - **Validació sistemàtica a RARS**: Tot el codi assemblador del corpus —teoria, exercicis i solucionaris— ha estat verificat manualment al simulador RARS. Això garanteix que cap exemple ni exercici falla en l'entorn de laboratori dels estudiants.
 - **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero. El `README.md` del repositori inclou instruccions detallades per a la reproducció del procés de renderització.
+
+::: {#fig-html-pdf layout-ncol=2}
+
+![**Format HTML** (Mozilla Firefox). La barra de navegació lateral inclou el nom de l'assignatura, les icones de descàrrega en PDF i de commutació de mode clar/fosc, un camp de cerca, i el contingut desplegable fins a nivell de tema. A la part inferior de la barra, la taula de continguts del tema actiu (fins a nivell de secció) amb ressaltat de la secció en curs. Tot és clicable. El contingut principal mostra text amb negretes estratègiques, llistes, figures SVG, *callouts* i referències creuades actives.](figures/captura_Firefox.png){#fig-html}
+
+![**Format PDF** (GNU Evince). El mateix contingut renderitzat per LuaLaTeX. La barra lateral del visor mostra l'índex del document; el contingut principal preserva la tipografia, la numeració automàtica de figures i seccions, i els *callouts* amb el mateix sistema de colors.](figures/captura_Evince.png){#fig-pdf}
+
+El mateix fragment del corpus en format HTML (esquerra, @fig-html) i PDF (dreta, @fig-pdf). Tots dos s'obtenen des d'una única font en Quarto Markdown sense cap modificació manual.
+:::
 
 El conjunt d'aquestes característiques dóna per assolit l'OE2.
 

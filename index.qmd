@@ -1,15 +1,17 @@
-{{< include _0_resum.qmd >}}
+{{< include 0_1_resum.qmd >}}
 
-{{< include _0_abstract.qmd >}}
+{{< include 0_2_abstract.qmd >}}
 
-{{< include _1_introduccio.qmd >}}
+{{< include 1_introduccio.qmd >}}
 
-{{< include _2_metodologia.qmd >}}
+{{< include 2_metodologia.qmd >}}
 
-{{< include _3_resultats.qmd >}}
+{{< include 3_resultats.qmd >}}
 
-{{< include _4_discussio.qmd >}}
+{{< include 4_discussio.qmd >}}
 
-{{< include _5_bibliografia.qmd >}}
+{{< include 5_bibliografia.qmd >}}
 
-{{< include _6_annex.qmd >}}
+{{< include 6_annex.qmd >}}
+
+{{< include LICENSE.md >}}
