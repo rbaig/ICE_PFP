@@ -94,6 +94,6 @@ python3 ~/bin/count_prose.py \
 
 Resum, abstract, bibliografia i annex no compten per al límit.
 
-## TODO obert
+## Estat
 
-- **Columna `Solució` de `tbl-reestructuracio-problemes`** (`_3_resultats.qmd`, comentari `<!-- TODO afegir si solució -->`): 23 exercicis nous amb la columna buida. Confirmar si tots tenen solució als `PS_Tx.qmd` i omplir-la o eliminar-la.
+Treball lliurat a l'ICE el 18 de juny de 2026. ✓

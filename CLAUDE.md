@@ -127,19 +127,9 @@ El projecte s'estructura en dues etapes amb nomenclatura pròpia:
 
 ## Estat actual
 
-### `index.qmd` (versió completa)
+**Treball lliurat a l'ICE el 18 de juny de 2026. ✓**
 
-Revisió profunda completada (sessió 2, juny 2026):
-- Costures polides: 2 bullets de reestructuració pedagògica (T1→T1+T6; T4/T5) integrats a `_3_resultats.qmd §Redisseny del contingut`; Innovació 2 a `_2_metodologia.qmd` referencia `@sec-disseny-pedagogic`.
-- Errors corregits: RA2 (MIPS→RISC-V), errades tipogràfiques i llegendes de taules.
-- Totes les referències creuades (`@sec-`, `@tbl-`, `@fig-`) verificades correctes.
-- Escala de supervisió P2–P5 homogeneïtzada (P5: ara "Màxim").
-
-**TODO obert**: columna `Solució` de `tbl-reestructuracio-problemes` (`_3_resultats.qmd`, comentari `<!-- TODO afegir si solució -->`). 23 exercicis nous; caldrà confirmar si tots tenen solució als `PS_Tx.qmd` i omplir-la o eliminar-la.
-
-**Pendent**: actualitzar el recompte de paraules (ha canviat per les edicions d'aquesta sessió).
-
-Recompte post-revisió profunda (juny 2026, sessió 2):
+### Recompte final de paraules — `index.qmd` (versió completa)
 
 | Secció | Fitxer | Paraules |
 |--------|--------|---------|
@@ -149,11 +139,7 @@ Recompte post-revisió profunda (juny 2026, sessió 2):
 | Discussió | `_4_discussio.qmd` | 1.823 |
 | **Total cos** | | **10.351** |
 
-### `index_article.qmd` (versió ICE, ≤8.000 paraules)
-
-Pendent de consolidar un cop tancada la revisió de `index.qmd`.
-
-Recompte previ a la reestructuració (referència):
+### Recompte final de paraules — `index_article.qmd` (versió ICE, ≤8.000 paraules)
 
 | Secció | Fitxer | Paraules |
 |--------|--------|---------|
@@ -164,10 +150,3 @@ Recompte previ a la reestructuració (referència):
 | **Total cos** | | **7.352** |
 
 Resum, abstract, bibliografia i annex no compten per al límit.
-
-## Propera sessió
-
-### Tancament de `index.qmd` (`scrartcl`)
-
-1. Actualitzar el recompte de paraules a `README.md` i `CLAUDE.md` (fer `quarto render` i executar `count_prose.py`).
-2. Resoldre el TODO de la columna `Solució` de `tbl-reestructuracio-problemes` (`_3_resultats.qmd`, comentari `<!-- TODO afegir si solució -->`): confirmar si tots els 23 exercicis nous tenen solució als `PS_Tx.qmd` i omplir-la o eliminar-la.
