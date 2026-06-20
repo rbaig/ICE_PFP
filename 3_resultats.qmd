@@ -196,9 +196,9 @@ El resultat final del projecte no és un conjunt de fitxers dispersos, sinó un 
 - **Validació sistemàtica a RARS**: Tot el codi assemblador del corpus —teoria, exercicis i solucionaris— ha estat verificat manualment al simulador RARS. Això garanteix que cap exemple ni exercici falla en l'entorn de laboratori dels estudiants.
 - **Repositori públic i reutilitzable**: Tot el material font és accessible i reutilitzable per la comunitat docent. Qualsevol equip docent amb una assignatura anàloga pot fer un *fork* del repositori i adaptar-lo al seu context sense partir de zero. El `README.md` del repositori inclou instruccions detallades per a la reproducció del procés de renderització.
 
-::: {#fig-html-pdf layout-ncol=2}
+::: {#fig-html-pdf layout="[55,-10,55]" layout-valign="center"}
 
-![**Format HTML** (Mozilla Firefox). La barra de navegació lateral inclou el nom de l'assignatura, les icones de descàrrega en PDF i de commutació de mode clar/fosc, un camp de cerca, i el contingut desplegable fins a nivell de tema. A la part inferior de la barra, la taula de continguts del tema actiu (fins a nivell de secció) amb ressaltat de la secció en curs. Tot és clicable. El contingut principal mostra text amb negretes estratègiques, llistes, figures SVG, *callouts* i referències creuades actives.](figures/captura_Firefox.png){#fig-html}
+![**Format HTML** (Mozilla Firefox). La barra de navegació lateral inclou el nom de l'assignatura, les icones de descàrrega en PDF i de commutació de mode clar/fosc, un camp de cerca, i el contingut desplegable fins a nivell de tema. A la part inferior de la barra, la taula de continguts del tema actiu (fins a nivell de secció) amb ressaltat de la secció en curs. Totes les entrades són clicable. El contingut principal mostra text amb negretes estratègiques, llistes, figures SVG, *callouts* i referències creuades actives. Al principi de cada pàgina, hi ha un botó que mostra el codi Markdown de la pàgina.](figures/captura_Firefox.png){#fig-html}
 
 ![**Format PDF** (GNU Evince). El mateix contingut renderitzat per LuaLaTeX. La barra lateral del visor mostra l'índex del document; el contingut principal preserva la tipografia, la numeració automàtica de figures i seccions, i els *callouts* amb el mateix sistema de colors.](figures/captura_Evince.png){#fig-pdf}
 

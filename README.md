@@ -1,99 +1,89 @@
 # README — Memòria PFP ICE-UPC
 
-## Fitxers principals
-
-| Fitxer | Descripció |
-|--------|------------|
-| `index.qmd` | Document principal complet (sense límit de paraules) |
-| `index_article.qmd` | Versió ICE reduïda (≤8.000 paraules al cos) |
-| `_quarto.yml` | Configuració Quarto base (HTML + PDF complet) |
-| `_quarto-article.yml` | Perfil Quarto per a la versió ICE |
-| `portada.tex` | Portada LaTeX (plantilla ICE; s'inclou a totes dues versions) |
-| `before-body.tex` | Preàmbul LaTeX (s'inclou a totes dues versions) |
-| `CLAUDE.md` | Context del projecte per a Claude |
-
-## Renderització
-
-### Versió completa (`index.qmd`)
-```bash
-quarto render index.qmd
-```
-Usa `_quarto.yml` directament. Genera HTML i PDF (KOMA `scrartcl`).
-
-### Versió ICE (`index_article.qmd`)
-```bash
-quarto render index_article.qmd --profile article
-```
-Quarto fusiona `_quarto.yml` (base) amb `_quarto-article.yml` (perfil).
-Genera PDF amb classe `article` estàndard, sense TOC.
-
-## Com funcionen els profiles de Quarto
-
-Quarto fusiona els YAMLs per *deep merge*:
-- **Valors escalars** (`toc: false`, `documentclass: article`): el perfil sobreescriu el base.
-- **Llistes** (`include-in-header`, `render`): el perfil **substitueix** la llista sencera.
-  - Per tant, `include-in-header: []` al perfil eliminaria `portada.tex`.
-  - Per **mantenir** `portada.tex` i `before-body.tex` a la versió article, cal **no declarar** `include-in-header` ni `include-before-body` al perfil (s'hereten del base).
-  - Si calgués **afegir** un fitxer addicional, caldria repetir tota la llista al perfil.
-- **Claus absents** al perfil: s'hereten del base sense canvis.
-
-## Recompte de paraules — versió completa (`index.qmd`, juny 2026)
-
-Recompte de les seccions del cos (exclou resum, abstract, bibliografia i annex):
-```bash
-python3 ~/bin/count_prose.py \
-  _1_introduccio.qmd \
-  _2_metodologia.qmd \
-  _3_resultats.qmd \
-  _4_discussio.qmd
-```
-
-| Secció | Fitxer font | Paraules |
-|--------|-------------|---------|
-| Introducció | `_1_introduccio.qmd` | 3.670 |
-| Metodologia | `_2_metodologia.qmd` | 3.281 |
-| Resultats | `_3_resultats.qmd` | 1.577 |
-| Discussió | `_4_discussio.qmd` | 1.823 |
-| **Total cos** | | **10.351** |
-
-## Recompte de paraules — versió ICE (`index_article.qmd`, juny 2026)
-
-L'script `count_prose.py` compta paraules de prosa excloent taules, figures,
-blocs de codi, peus de taula, capçaleres i YAML front matter.
-
-### Instal·lació
-
-Desa l'script en qualsevol ubicació permanent, per exemple:
-```bash
-cp count_prose.py ~/bin/count_prose.py
-```
-
-### Ús
-
-Recompte d'un fitxer:
-```bash
-python3 ~/bin/count_prose.py _3_resultats.qmd
-```
-
-Recompte de totes les seccions del cos de `index_article.qmd`:
-```bash
-python3 ~/bin/count_prose.py \
-  _1_introduccio_article.qmd \
-  _2_metodologia_article.qmd \
-  _3_resultats.qmd \
-  _4_discussio.qmd
-```
-
-| Secció | Fitxer font | Paraules | Límit ICE |
-|--------|-------------|---------|-----------|
-| Introducció | `_1_introduccio_article.qmd` | 1.968 | ~2.000 |
-| Metodologia | `_2_metodologia_article.qmd` | 1.953 | ~2.000 |
-| Resultats | `_3_resultats.qmd` (compartit) | 1.655 | ~2.000 |
-| Discussió | `_4_discussio.qmd` (compartit) | 1.776 | ~2.000 |
-| **Total cos** | | **7.352** | **≤8.000** |
-
-Resum, abstract, bibliografia i annex no compten per al límit.
-
 ## Estat
 
-Treball lliurat a l'ICE el 18 de juny de 2026. ✓
+- ICE: lliurat el 18 de juny de 2026.
+
+## Recursos relacionats
+
+- **Repositori de la memòria**: https://github.com/rbaig/EIC_PFP
+- **Repositori dels materials didàctics** (material migrat): https://github.com/rbaig/migracio.ec.gitlab.upc.edu
+- **Guia ICE**: `ICE_guiaPFP.pdf`
+
+## Fitxers principals
+
+- `index.qmd` — document principal complet (sense límit de paraules)
+- `index_article.qmd` — versió ICE reduïda (≤8.000 paraules al cos)
+- `_quarto.yml` — configuració Quarto base (HTML + PDF complet, KOMA `scrartcl`)
+- `_quarto-article.yml` — perfil Quarto per a la versió ICE (`article`, sense TOC)
+- `portada.tex` / `before-body.tex` — portada i preàmbul LaTeX (plantilla ICE; s'inclou a totes dues versions)
+- `figures/` — figures SVG:
+  - `eix_arquitectura.svg`
+  - `etapa_produccio.svg`
+  - `etapa_explotacio.svg`
+  - `unitat_produccio.svg`
+- `README.md` — documentació tècnica del projecte (renderització, profiles, recompte de paraules)
+- `scripts/`
+  - `count_prose.py` — Compta paraules del cos del text (e.g. `count_prose.py 1_introduccio.qmd 2_metodologia.qmd 3_resultats.qmd 4_discussio.qmd`)
+- `TODO.md` — Notes per a Pla de docència concurs Agregat
+
+## Convencions
+
+- Llengua: **català normatiu**
+    - No Camel Case
+- Bibliografia: **APA 7a edició** (ordre alfabètic)
+- Figures: SVG amb `width="680"`, font Source Sans Pro, paleta Bootstrap; **sense versió dark**
+- El terme "etapa" es fa servir exclusivament per referir-se a l'Etapa de producció o a l'Etapa d'explotació
+- Noms de fases de l'Etapa de producció: tractats com a noms propis (majúscula inicial)
+- Les etapes estan formades per "fases" (P1, P2, etc., U1, U2, etc. i E1, E2)
+- Unitats de producció (P2): un fitxer `.qmd` per tema/sessió/PE/PS
+- Unitats de revisió (P4): `{Tx.qmd + PE_Tx.qmd + PS_Tx.qmd}` per tema; cada `Lx.qmd` per separat
+- Nom correcte del fitxer: `figures/eix_arquitectura.svg` (no `fig_eix_arquitectura.svg`)
+
+## Nomenclatura de fases del projecte
+
+El projecte s'estructura en dues etapes amb nomenclatura pròpia:
+
+### Etapa de producció
+
+| Fase | Nom | Unitat de treball |
+|------|-----|-------------------|
+| P1 | Disseny del sistema de producció | — |
+| P2 | Unitats de producció | Un fitxer `.qmd` |
+| P3 | Revisió de Conjunt | Corpus sencer |
+| P4 | Cicle de Revisió Externa | `{Tx.qmd + PE_Tx.qmd + PS_Tx.qmd}` per tema; `Lx.qmd` per separat |
+| P5 | Preparació de la docència | — |
+
+### Etapa d'explotació (iterativa per quadrimestres)
+
+| Fase | Nom |
+|------|-----|
+| E1 | Disseny del sistema d'explotació |
+| E2 | Preparació docent (`Dx.qmd`) |
+
+### Cicle de producció unitària (dins P2)
+
+| Etapa | Nom |
+|-------|-----|
+| U1 | Extracció i conversió |
+| U2 | Revisió tècnica (RARS + coherència) |
+| U3 | Revisió lingüística (lèxic, sintaxi) — itera amb U2 |
+| U4 | Figures (`.svg`) |
+| U5 | Actualització transversal (`sigles.qmd`, `risc.qmd`) |
+| U6 | Refinament protocols (`contrib.qmd`, `CLAUDE.md`) |
+
+### Definitions of Done
+
+- **DoD-UP** (DoD d'Unitat de Producció): criteris per a cada unitat de producció; s'aplica 33 vegades (una per fitxer .qmd)
+- **DoD-CC** (DoD de Corpus Complet): criteris per a la Revisió de Conjunt; s'aplica una sola vegada
+- **DoD-UR** (DoD d'Unitat de Revisió): criteris per a la Revisió Externa; s'aplica una vegada per unitat de revisió
+
+## Context clau
+
+- La memòria és per a l'ICE: la **innovació pedagògica és el centre de la narrativa**.
+- El producte és la migració del material docent d'EC de MIPS a RISC-V en format Quarto Markdown.
+- El corpus és de **36 fitxers** `.qmd`: T1–T9, L1–L6, PE_T1–T9, PS_T1–T9 i materials transversals.
+- El material és al **100%** complet; la **Revisió Externa (P4)** és en curs.
+- L'eina principal ha estat **Claude** (prèviament NotebookLM en fase d'exploració).
+- La implantació a l'aula és al **Q1 del curs 2026-27** (setembre 2026).
+- La data de referència de la memòria és el **18 de juny de 2026**.

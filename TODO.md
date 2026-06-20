@@ -1,0 +1,2 @@
+- Versió agregat
+    - Integrar-hi tota la primera part (FIB, DAC, GEI) de Pla de docència del concurs de Lector https://docs.google.com/document/d/1QCbnAkMtNOM84uqYsXZ8wrcxCq5fG3X-vbva2Hug_hI/edit?tab=t.0#heading=h.jbgnb8o1d7bv
