@@ -1,0 +1,143 @@
+---
+title: "Banc de preguntes del tribunal"
+subtitle: "Defensa PFP · Estructura de Computadors (MIPS → RISC-V)"
+author: "Roger Baig Viñas"
+date: 2026-07-14
+date-format: "D [de] MMMM [de] YYYY"
+---
+
+
+**Acte:** 14/07/2026, 9:15–9:50, Aula S216 (Omega). 15 min exposició + 10 min preguntes.
+**Tribunal:** David López (president, DAC), Sisco Vallverdú (secretari, física/senyal), Antoni Hernández (vocal, ICE — física + lingüística, IA en educació i ètica de la IA).
+
+## Com usar aquest banc
+
+No memoritzis respostes: interioritza el **nucli** de cada una (la idea que has de dir sí o sí) i digues-la amb les teves paraules. Cada resposta és de 20–40 s. Si una pregunta té "trampa", està anotada. Assaja en veu alta les 6 crítiques fins que et surtin soles; la resta, llegeix-les una vegada i confia.
+
+## Fets a tenir frescos
+
+- Eina: **Claude** (a la bibliografia, citat com a *Claude Sonnet 4.6*). Primer NotebookLM (Google), després pivot a Claude.
+- Volum: **36 fitxers** `.qmd`, **>100 figures SVG** (×2 amb dark ≈ 208), **23 exercicis nous**, **6 revisors** externs (t'hi comptes).
+- Simulador: **RARS** (substitueix MARS). Llibre de referència: **Patterson & Hennessy, RISC-V edition (2021, 2a ed.)**.
+- Precedents: **Berkeley CS 61C**, **Cornell CS 3410**, ETH Zürich. Xarxa-RISC-V a la UPC.
+- Marc pedagògic: resultats d'aprenentatge amb **taxonomia de Bloom** (Anderson & Krathwohl, 2001).
+- Estat: 100% corpus produït; **Revisió Externa (P4) en curs**; desplegament **Q1 2026-27** (2 grups teoria, 3–4 laboratori).
+
+---
+
+# Tier 1 — Les crítiques (dominar)
+
+### C1. «No teniu grup de control ni dades d'estudiants. Com podeu parlar de resultats?»
+*(La més probable. Ja pre-emptada a la Discussió — juga-ho a favor.)*
+
+**Nucli:** És una caracterització correcta, no una limitació que hagi de disculpar. Això no és un estudi experimental: és un projecte d'innovació docent amb un producte tangible, verificable i desplegable. El rigor aquí no rau en el disseny experimental sinó en quatre coses documentades a la memòria: la solidesa de l'argumentació pedagògica, la traçabilitat del procés, la qualitat dels instruments de validació interns (els tres DoDs) i la coherència entre objectius i resultats. Les dades de rendiment amb estudiants arribaran al Q1 2026-27, i el disseny de recollida (rendiment, satisfacció, incidències) ja està definit.
+
+**Evita:** posar-te a la defensiva o inventar mètriques. La força és reconèixer-ho abans que ells i reenquadrar què vol dir "rigor" en aquest tipus de treball.
+
+### C2. «Valideu el codi a RARS, però com valideu que les *explicacions* que va escriure la IA són conceptualment correctes?»
+*(La pregunta afilada d'Hernández. RARS només cobreix el codi.)*
+
+**Nucli:** Bona distinció. RARS és l'oracle automàtic per al codi, però no n'hi ha cap per a la prosa conceptual, i per això la validació és humana i en tres capes. Primera: jo sóc l'expert del domini i he llegit i reescrit cada secció — la IA redacta, el judici pedagògic i la correcció conceptual són meus. Segona: el DoD-UP inclou una revisió tècnica de coherència global del tema, no només del codi. Tercera, i clau: la Revisió Externa amb sis revisors, alguns vinculats al BSC, és precisament la capa que caça errors conceptuals subtils de manera col·legiada. A més, el principi d'autocontingut força la consistència interna: cap terme s'usa sense haver-se definit abans.
+
+**Evita:** donar a entendre que la IA "s'autovalida" o que la lectura ràpida n'hi ha prou.
+
+### C3. «Què és realment vostre i què ha fet la IA? On és la vostra aportació?»
+*(Autoria. Terreny d'Hernández, però tots hi pensen.)*
+
+**Nucli:** La IA va accelerar la *transformació sistemàtica*: conversió de format, harmonització lèxica, adaptació de codi. Les tasques de judici van recaure íntegrament en mi: el disseny dels exercicis nous, les decisions terminològiques, el redisseny pedagògic del temari i la validació de tot el material. El meu rol no es va reduir, es va transformar: d'escriptor a director tècnic. La IA multiplica la producció; la intel·ligència pedagògica continua sent humana. I ho declaro amb transparència: Claude està citat com a eina a la bibliografia.
+
+### C4. «Migrar materials i canviar de format, és realment innovació docent d'un postgrau STEAM?»
+*(El cop a la línia de flotació. Preveu-lo.)*
+
+**Nucli:** Si fos una traducció MIPS→RISC-V, la pregunta seria justa. Però el projecte fa tres coses que sí que són innovació docent i cap d'elles existia: un **redisseny pedagògic** del temari basat en càrrega cognitiva (dividir temes inconnexos, reordenar l'aritmètica); un **sistema de qualitat documentat** (DoDs, convencions) que fa el corpus auditable i replicable; i, sobretot, un **model de producció docent assistida per IA amb supervisió experta** que és exportable a qualsevol assignatura STEAM. La contribució de fons per a l'ICE no és el material d'EC: és l'alfabetització en gestió de projectes assistits per IA.
+
+### C5. «Justifiqueu les decisions de redisseny. Per què *aquestes* i no unes altres?»
+*(La pregunta d'en David López — el redisseny és la seva empremta. Vol veure que és pedagògic, no arbitrari.)*
+
+**Nucli:** Cada moviment respon a un criteri pedagògic explícit i documentat amb taules de correspondència. Exemple: el T1 original barrejava introducció conceptual amb rendiment i potència, dos blocs sense connexió cognitiva; separar-los en T1 i T6 redueix la densitat i fa que T6 sigui l'avantsala natural de la memòria cau. L'aritmètica entera, avançada de T5 a T4, separa dos tipus d'aritmètica que compartien tema i n'augmentaven la càrrega; deixa el T5 amb una frontera conceptual neta. No és reordenar per gust: és reduir càrrega cognitiva i clarificar fronteres conceptuals.
+
+**Nota:** aquí pots reconèixer-li el mèrit amb naturalitat ("aquesta orientació cap al redisseny, i no només el port tècnic, va sorgir d'una conversa amb tu al principi").
+
+### C6. «Sostenibilitat: què passa amb tot això quan vós no hi sigueu? (bus factor)»
+
+**Nucli:** És exactament el problema que el disseny ataca. El material original vivia en PDFs sense font editable: insostenible per definició. Ara tot és Quarto Markdown en un repositori públic a GitLab, amb convencions documentades (`contrib.qmd`), glossari (`sigles.qmd`) i un sistema de DoDs que fa el corpus editable per qualsevol membre de l'equip, independentment de qui va produir cada part. Qualsevol pot fer un fork, reportar errors o contribuir. El manteniment passa de dependre d'una persona a ser un procés col·laboratiu i traçable. Aquest és, precisament, un dels resultats del projecte (OE3).
+
+---
+
+# Tier 2 — Previsibles per examinador
+
+## David López (president · DAC · expert de domini)
+
+**«Per què RARS i no un altre simulador? Per què RV32 i no RV64?»**
+RARS manté una interfície familiar per a qui venia de MARS (transició suau per a l'equip) i cobreix RV32I/M/F i Zicsr, que és tot el que necessita l'assignatura. RV32 perquè l'objectiu és introductori: 32 bits simplifica l'aritmètica d'adreces i la representació sense perdre cap concepte fonamental; RV64 s'introdueix com a aprofundiment on cal (p. ex. Cornell fa RV64, i ho citem).
+
+**«Les extensions M i F, els CSR, els modes de privilegi… no és massa per a un curs introductori?»**
+La modularitat de RISC-V ho fa gestionable: es presenta primer la base RV32I i s'afegeixen M i F com a capes. Els CSR i els modes de privilegi només apareixen a T9 amb la fonamentació justa perquè les excepcions i interrupcions siguin *avaluables* per primer cop — cosa impossible a MIPS. És profunditat opcional marcada amb el callout d'Aprofundiment, no matèria bàsica ampliada.
+
+**«Coherència amb IC i AC de l'eix d'arquitectura?»**
+És una línia de continuïtat que proposo: IC podria migrar a format obert per sincronitzar-se conceptualment amb EC, i AC (que usa x86 per al pipelining) podria fer servir RISC-V com a pont, aprofitant que l'estudiant ja el domina en sortir d'EC. Enforteix la coherència vertical del pla d'estudis.
+
+## Antoni Hernández (vocal · IA en educació + ètica de la IA + lingüística)
+
+**«Quines consideracions ètiques heu tingut en l'ús de la IA?»** → *Vegeu la resposta reforçada més avall (R-ÈTICA). Aquesta és la teva pregunta clau; prepara-la a fons.*
+
+**«Com garantiu que no propagueu biaixos o al·lucinacions de la IA a material docent?»**
+Amb supervisió crítica sistemàtica: el codi, validat línia a línia a RARS; la prosa conceptual, revisada per mi com a expert i després col·legiadament. El principi rector va ser no acceptar mai cap "al·lucinació" tècnica. La IA no és una autoritat, és un accelerador supervisat.
+
+**«El recull terminològic RISC-V en català: quines fonts normatives?»** *(Terreny seu com a lingüista — pot ser un moment de connexió.)*
+Català normatiu com a criteri, amb consulta de Termcat i fonts normatives per a les decisions dubtoses (p. ex. "maquinari", "memòria cau", "sobreeiximent", "arrossegament"). És, que jo sàpiga, la primera referència sistemàtica d'equivalències RISC-V anglès→català normatiu, i queda com a recurs reutilitzable per a altres assignatures de l'àmbit.
+
+**«Aprenentatge actiu: com el materialitzeu, més enllà del text?»** *(La seva recerca: gamificació, ABP.)*
+Dos mecanismes. Un sistema de senyalització visual amb cinc tipus de *callouts* de funció pedagògica delimitada (RISC-V, EC, Exemple, Essencial, Aprofundiment) que prioritza el contingut i s'adapta a la lectura no lineal en pantalla. I una pràctica voluntària de vectorització assistida amb agents d'IA que actuen com a tutors personalitzats (PFP d'un col·laborador). El callout d'Aprofundiment ataca específicament la bretxa dels estudiants CFIS amb capacitat alta que perden estímul.
+
+**«Heu verificat l'accessibilitat WCAG 2.1 o només la reclameu?»**
+Quarto genera HTML5 semàntic, mode fosc/clar segons el sistema, disseny responsive i ressaltat de codi accessible (a11y). És una base sòlida per disseny; la verificació formal completa amb tecnologies assistives és una de les tasques de la fase de desplegament.
+
+## Sisco Vallverdú (secretari · física/senyal · pedagògic, planer, interactiu)
+
+**«El model és realment exportable a altres assignatures STEAM, o és específic d'informàtica?»**
+Els quatre ingredients no tenen res d'específic d'informàtica: un format de marcatge pla que separi contingut i presentació, un repositori de control de versions, la IA supervisada amb rol humà definit, i un sistema de convencions documentat. Física, Matemàtiques o Electrònica comparteixen el repte de mantenir materials tècnics amb equips reduïts. I el cost d'entrada és baix: totes les eines (Quarto, GitLab, RARS) són obertes o gratuïtes.
+
+**«Quant temps real us ha estalviat la IA? Teniu una xifra?»**
+No tinc una mètrica controlada, i seria poc rigorós inventar-ne una. L'evidència és la comparativa pla→realitat: el pla preveia només la teoria al lliurament final, i s'ha assolit tot el corpus més 23 exercicis nous en el mateix termini. L'ordre de magnitud de l'acceleració és aquest salt d'abast.
+
+**«Per a un professor no informàtic, quina és la corba d'entrada d'aquest flux?»**
+Moderada i esglaonada: Markdown s'aprèn en hores; Git i Quarto tenen corba però hi ha molt material; i la part d'IA no requereix res tècnic, requereix aprendre a definir convencions i validar. Precisament per això la conclusió és que cal formar el professorat en *gestió de projectes amb IA*, no en eines soltes.
+
+---
+
+# Tier 3 — Ràpides / factuals
+
+- **«Quin model exactament?»** Claude (Sonnet 4.6 a la citació). Abans, NotebookLM per a l'exploració inicial.
+- **«Per què no un model obert (Llama, etc.)?»** La prioritat va ser la qualitat i el manteniment de context complet en una sessió, on Claude va marcar la diferència. El *procés* (convencions + validació + DoDs) és independent del model concret: és replicable amb altres eines a mesura que millorin.
+- **«Cost econòmic?»** Les eines del corpus (Quarto, GitLab UPC, RARS) són obertes o institucionals. L'ús de la IA és una subscripció, cost menor comparat amb el temps de producció estalviat.
+- **«Teníeu drets sobre els materials MIPS originals?»** Són materials docents de l'assignatura; en sóc autor/coautor dins de l'equip, i el resultat es publica obert amb llicència (CC BY-NC-SA).
+- **«Consentiment dels estudiants per a la fase de dades (Q1 2026-27)?»** La comparativa de rendiment i les enquestes requeriran consentiment informat i tractament adequat de dades, tal com preveu la guia del PFP; està contemplat per a la fase prospectiva.
+- **«Per què Quarto i no LaTeX pur o un LMS?»** Quarto dona una sola font → HTML accessible + PDF d'alta qualitat (via LuaLaTeX) sense duplicar feina, és llegible per màquines i s'integra amb Git. Un LMS tanca el contingut; LaTeX pur no dona l'HTML accessible amb la mateixa facilitat.
+- **«Mermaid vs SVG?»** Vam abandonar Mermaid per limitacions de qualitat i control; les >100 figures són SVG amb paleta i convencions documentades, en versió clara i fosca.
+
+---
+
+# R-ÈTICA — Resposta d'ètica reforçada (per a Hernández)
+
+*Les 3 vinyetes de la memòria són el mínim. Si Hernández estira, tens material per anar més fons. Estructura-ho en quatre plans:*
+
+1. **Supervisió com a garantia epistèmica.** L'ús de la IA s'ha regit pel principi de supervisió humana crítica: mai acceptar una al·lucinació tècnica que perjudiqui l'aprenentatge. El codi es valida a RARS; la prosa, per expertesa humana i revisió col·legiada. La responsabilitat epistèmica del material és meva, no de l'eina.
+
+2. **Transparència i autoria.** Els estudiants han estat informats de l'ús d'IA en la creació del material i han rebut pautes per a un ús ètic de la IA en el seu propi estudi. L'eina està citada a la bibliografia. Les decisions pedagògiques són humanes i atribuïbles.
+
+3. **Equitat i accessibilitat com a compromís ètic.** El format obert (Markdown, WCAG 2.1, mode fosc/clar, eines gratuïtes) és una decisió ètica: cap estudiant queda exclòs per barreres de format o de cost. El callout d'Aprofundiment afegeix una dimensió d'equitat sovint oblidada: atendre els estudiants d'alta capacitat (CFIS) que el disseny per al perfil mitjà desatén.
+
+4. **Honestedat sobre els límits.** No tinc encara dades d'aprenentatge amb estudiants; per tant no reclamo millores de rendiment provades, sinó qualitat de procés i de producte. Aquesta distinció és, en si mateixa, una postura ètica: no sobrevendre.
+
+*Frase de tancament si vols rematar:* la lliçó transferible per a l'ICE és que la formació del professorat en IA ha de ser una alfabetització en gestió de projectes assistits per IA amb validació adequada al domini — no l'adopció acrítica d'eines.
+
+---
+
+# Tècnica per als 10 minuts de debat
+
+- **Escolta la pregunta sencera** abans de respondre. Si no la entens, demana que la reformulin — Vallverdú, planer, no s'ho prendrà malament i guanyes segons.
+- **Nucli primer, matís després.** Digues la idea central en una frase i després desenvolupa. Si t'interrompen, ja hauràs dit el que importa.
+- **«No ho sé» és una resposta forta** quan és honesta: "No ho he mesurat i no vull inventar-ho; el que sí que puc dir és…". A un tribunal d'innovació educativa, l'honestedat epistèmica suma.
+- **Reconeix el bon apunt.** Si una pregunta assenyala una limitació real (verificació WCAG completa, dades pendents), dona-hi la raó i emmarca-ho com a línia de treball, no com a fallada.
+- **Torna al fil.** Sempre que puguis, reconnecta la resposta amb la idea única: IA multiplica, supervisió experta fa qualitat, docent promogut a director.

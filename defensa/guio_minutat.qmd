@@ -1,0 +1,97 @@
+---
+title: "Guió minutat de l'exposició"
+subtitle: "Defensa PFP · Estructura de Computadors (MIPS → RISC-V)"
+author: "Roger Baig Viñas"
+date: 2026-07-14
+date-format: "D [de] MMMM [de] YYYY"
+---
+
+
+**Durada objectiu:** ~14:00 (límit dur 15:00). **Ritme:** mesurat, ~130 paraules/min. Millor sobrar 1 min que passar-te.
+
+**Punts de control de ritme** (mira el rellotge només aquí):
+- **Min ~4:30** → hauries d'estar entrant a la slide 6 (*El mètode*). Si vas més tard, has anat lent a la introducció: accelera els "per què".
+- **Min ~8:30** → hauries d'estar sortint de la slide 7 (*Què fa fiable*), el cor. Aquí no retallis; retalla abans.
+- **Min ~12:00** → slide 11 (*Model exportable*). Si vas tard, escurça la 11 i ves directe al tancament.
+
+**Marques:** `[avança]` = passa de diapositiva · `[pausa]` = silenci breu, deixa respirar la idea · ✂️ = frase prescindible si vas llarg.
+
+---
+
+## Obertura · slide 1 (portada) — 0:00 → 0:30
+
+Bon dia. Sóc Roger Baig i us presento el meu Projecte Fi de Postgrau: la migració i el redisseny dels materials docents de l'assignatura Estructura de Computadors, de la Facultat d'Informàtica, de l'arquitectura MIPS a RISC-V, produïts amb intel·ligència artificial supervisada. En quinze minuts us explicaré **per què** calia fer-ho, **com** ho he fet —que és la part més interessant— i **què** n'ha sortit. [pausa]
+
+## Slide 2 · Per què migrar — 0:30 → 1:45
+
+[avança] Comencem pel per què. L'assignatura ha ensenyat arquitectura amb MIPS des dels seus orígens. El problema és que MIPS ha perdut la seva rellevància industrial. En canvi, RISC-V s'ha consolidat com l'estàndard obert de facto, adoptat tant per la indústria com per la Unió Europea, que hi veu una via cap a la sobirania tecnològica. Però la prova acadèmica més clara del canvi de paradigma és aquesta: Patterson i Hennessy, que van ser dels creadors de MIPS, han **reescrit** el seu llibre de referència sencer al voltant de RISC-V. Quan els mateixos pares d'una arquitectura la deixen per adoptar-ne una d'oberta, el senyal és inequívoc. ✂️ I la FIB no seria pionera aïllada: Berkeley —bressol de RISC-V— i Cornell ja han migrat els seus cursos equivalents. Calia posar-s'hi.
+
+*Pont →* Ara bé, migrar no és només canviar de llenguatge.
+
+## Slide 3 · No només un port tècnic — 1:45 → 3:00
+
+[avança] I aquí ve la primera decisió important. Hauria estat un error quedar-se en el port tècnic: canviar la sintaxi de MIPS per la de RISC-V i prou. Aquesta reorientació —entendre el projecte com una renovació integral i no com una traducció— **la dec en bona part a una conversa primerenca amb en David López**, que em va animar a focalitzar-me en el redisseny dels continguts. Aquesta mirada obre tres eixos. Primer, redissenyar el contingut, aprofitant per reordenar temes densos o mal cohesionats. Segon, obrir el format: passar de PDFs tancats a Quarto Markdown. I tercer, construir un sistema de qualitat documentat que, senzillament, als materials originals no existia en cap forma.
+
+*Pont →* Aquests tres eixos són, de fet, els meus tres objectius específics.
+
+## Slide 4 · Context i objectius — 3:00 → 3:50
+
+[avança] Abans de continuar, situem l'assignatura. EC no està sola: és la peça central de l'eix d'arquitectura del grau, entre Introducció als Computadors i Arquitectura de Computadors. Millorar EC té efecte sobre tot l'eix. I els tres objectius específics, que us aniré tancant al final, són: **OE1**, migrar tot el corpus a RISC-V; **OE2**, transformar-lo a un format obert i accessible; i **OE3**, establir un sistema de qualitat documentat.
+
+*Pont →* El repte, però, no era decidir què fer, sinó com fer-ho tot, i a temps.
+
+## Slide 5 · L'obstacle — 3:50 → 4:40
+
+[avança] Perquè aquí ve l'obstacle real. Parlem d'un corpus sencer: nou temes de teoria, els seus problemes, els solucionaris i sis sessions de laboratori. I un sol professor, amb el temps fragmentat que tots coneixem. De fet, el pla que vaig presentar al lliurament intermedi era deliberadament modest: acabar només la teoria. La pregunta que estructura tot el projecte és, doncs, aquesta: com es produeix un corpus complet, **validat** i de qualitat, a aquesta escala i amb aquests recursos? [pausa]
+
+*Pont →* La resposta és una manera de treballar, no una eina màgica.
+
+## Slide 6 · El mètode: director tècnic — 4:40 → 6:30
+
+[avança] La resposta té dues potes. La primera és metodològica: gestió àgil. He adaptat elements de Scrum a la creació de continguts —treballar per unitats temàtiques, de manera iterativa, en comptes d'afrontar el corpus com un bloc monolític. La segona pota és la intel·ligència artificial generativa com a accelerador. Vaig començar amb NotebookLM, que em va servir per validar la idea, però el punt d'inflexió va ser passar a **Claude**: la capacitat de mantenir el context complet del projecte —les convencions, les decisions preses, l'estructura sencera— en una sola sessió va eliminar la fragmentació i va disparar tant la velocitat com la qualitat. Ara bé, i això és el que vull que quedi clar: el meu rol no es va **reduir** amb la IA, es va **transformar**. Vaig passar de ser escriptor a ser director tècnic. Fixeu-vos en la fletxa de l'esquerra de l'esquema: la supervisió humana no és constant, **creix** a mesura que avancem de fase —mínima a la producció bruta, màxima a la revisió col·legiada.
+
+*Pont →* I què és, exactament, el que fa fiable aquesta producció, i no un abocador d'errors?
+
+## Slide 7 · Què fa fiable la producció amb IA — 6:30 → 8:20  ⟵ EL COR
+
+[avança] Aquesta és la diapositiva central de la meva defensa. El risc és evident: les eines d'IA produeixen codi RISC-V sintàcticament plausible, però no necessàriament correcte. Errors subtils d'ABI, d'ordre d'operands, de pseudoinstruccions... passen desapercebuts en una lectura ràpida i només salten en execució. Per contenir aquest risc, el sistema descansa en **tres garanties**. La primera: les Definitions of Done, criteris binaris i verificables, adaptats de Scrum, que cada unitat ha de complir abans de tancar-se; en tinc tres, per a producció, revisió de conjunt i revisió externa. La segona, i innegociable: he validat **cada línia** d'assemblador del corpus executant-la al simulador RARS. Aquest pas no és automatitzable, i no ha de ser-ho: és precisament on l'expertesa del professor és imprescindible. I la tercera: un sistema de convencions terminològiques documentat, que manté la coherència a través de trenta-sis fitxers. [pausa] La conclusió, que és també la meva resposta a la pregunta ètica de fons: la IA **accelera** la producció; però la **intel·ligència pedagògica** és, i ha de continuar sent, humana.
+
+*Pont →* I amb aquest mètode, els resultats van superar la previsió.
+
+## Slide 8 · Resultats: vam superar el pla — 8:20 → 9:40
+
+[avança] I la van superar amb escreix. Allà on el pla deia "només teoria", hem assolit el corpus sencer: teoria, problemes, solucionaris i laboratoris. A més de **vint-i-tres exercicis nous**, sobre continguts que a MIPS ni existien —com les excepcions i interrupcions, ara avaluables gràcies als registres de control de RISC-V. En números: el cent per cent del corpus, trenta-sis fitxers, més de cent figures, cadascuna en versió clara i fosca. Aquesta diferència entre el previst i l'assolit és directament atribuïble a l'adopció de la IA com a eina principal. ✂️ I no s'acaba aquí: la revisió externa, amb sis revisors, ja està en marxa, amb protocol, calendari i grups de treball establerts.
+
+*Pont →* Però he insistit que això no és una traducció. Deixeu-me ensenyar-vos el redisseny.
+
+## Slide 9 · No és un port: és un redisseny — 9:40 → 11:10
+
+[avança] El redisseny és la petjada pedagògica del projecte, i on la migració deixa de ser tècnica per ser docent. Tres exemples concrets. El T1 original barrejava la introducció conceptual amb el rendiment i la potència: dos blocs sense connexió cognitiva. Els he separat en T1 i un nou T6, que queda com a avantsala natural de la memòria cau. Segon: l'aritmètica entera, que a MIPS vivia dins del T5 barrejada amb la coma flotant, l'he avançat al T4. Això redueix la càrrega cognitiva i deixa el T5 dedicat exclusivament a la coma flotant, amb una frontera conceptual neta. I els temes on MIPS i RISC-V divergeixen més —tota la part d'ISA— estan reescrits de zero; els de jerarquia de memòria, ampliats amb context actual: GPU, IA, taules de pàgines multinivell. Res d'això és reordenar per gust: cada decisió està documentada i justificada amb taules de correspondència.
+
+*Pont →* I tot aquest contingut, ara, viu en un format radicalment més obert.
+
+## Slide 10 · Un sol origen, dos formats — 11:10 → 12:10
+
+[avança] Aquest és el fruit de l'objectiu dos. La imatge gran és el format HTML, el veritablement nou: navegació lateral, cercador integrat, mode fosc i clar, disseny adaptable i accessibilitat WCAG. I fixeu-vos en un detall clau: teoria, problemes, solucionaris i laboratoris queden interconnectats amb referències creuades. Un estudiant que llegeix un laboratori salta directament a la teoria que aplica —cosa impossible al PDF original. A la dreta, el mateix contingut en PDF d'alta qualitat. I el punt essencial: tots dos formats surten de la **mateixa font** Quarto, sense cap edició manual.
+
+*Pont →* I res de tot això és específic de l'arquitectura de computadors.
+
+## Slide 11 · Un model exportable a STEAM — 12:10 → 13:30
+
+[avança] Perquè la contribució de fons va més enllà d'EC. L'arquitectura metodològica que he descrit —format de marcatge pla, control de versions, IA supervisada amb un rol humà ben definit, i convencions documentades— no és específica ni de l'arquitectura de computadors ni tan sols de la informàtica. Qualsevol assignatura STEAM amb materials tècnics per actualitzar pot aplicar-la, i totes les eines són obertes o gratuïtes. A més, deixo llegat concret: el primer recull terminològic sistemàtic de RISC-V en **català normatiu**, reutilitzable; un repositori públic; i, sobretot, un missatge per a l'ICE. La formació del professorat en IA ha d'anar més enllà d'adoptar eines soltes: ha de ser una **alfabetització en la gestió de projectes assistits per IA**. ✂️ L'esquema mostra com el projecte continua: cada quadrimestre d'ús a l'aula retroalimentarà el corpus.
+
+*Pont →* I amb això arribo a la idea que us vull deixar.
+
+## Slide 12 · En síntesi — 13:30 → 14:00
+
+[avança] La idea és aquesta. La intel·ligència artificial generativa **multiplica** la capacitat de produir materials docents; això és real, i el projecte ho demostra. Però només la **supervisió experta** la converteix en producció de qualitat. La conseqüència per a la nostra professió no és que la IA substitueixi el docent: és que el **promou a director**. I el resultat tangible és el material d'un curs sencer, complet, validat i redissenyat, a punt per estrenar-se el primer quadrimestre del 2026-27, amb els tres objectius assolits. [pausa] Moltes gràcies; quedo a la vostra disposició per a les preguntes.
+
+---
+
+## Notes d'assaig
+
+- **Cronometra dues coses:** el total, i el moment en què arribes a la slide 7. Si el cor arriba tard, el problema sempre és a la intro (slides 2–5): allà és on tendim a explicar de més.
+- **Les ✂️ són el teu coixí.** Si a mig camí vas 30–45 s llarg, elimina-les i recuperes sense que es noti.
+- **La frase de David López** (slide 3) digues-la mirant-lo un instant, amb naturalitat, i segueix. Ni adulació ni solemnitat: un deute honest.
+- **El [pausa] de la slide 7**, després de les tres garanties, és deliberat: deixa que "la intel·ligència pedagògica és humana" quedi surant abans de passar a resultats. És la frase que vols que recordin.
+- No llegeixis: aquest text és per interioritzar-lo. El dia D, les diapositives i les speaker notes t'hi han de fer de xarxa, no de guió.

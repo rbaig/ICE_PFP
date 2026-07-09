@@ -1,0 +1,158 @@
+/*-- scss:defaults --*/
+
+// Tipografia coherent amb les SVG de la memòria (Source Sans Pro)
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace: "Source Code Pro", "SFMono-Regular", Menlo, Consolas, monospace !default;
+
+// Paleta extreta de les figures de la memòria (Bootstrap-based)
+$blau:        #084298;   // accent primari
+$blau-clar:   #cfe2ff;
+$gris-fosc:   #343a40;   // text
+$gris:        #6c757d;
+$gris-clar:   #adb5bd;
+$fons-clar:   #f8f9fa;
+$verd-fosc:   #0a3622;   // "assolit"
+$verd-clar:   #d1e7dd;
+$lila:        #4a1fb8;   // èmfasi IA
+$lila-clar:   #e9d8fd;
+$groc-fosc:   #664d03;
+$groc-clar:   #fff3cd;
+
+// Variables reveal.js / Quarto
+$body-bg:      #ffffff !default;
+$body-color:   $gris-fosc !default;
+$link-color:   $blau !default;
+$selection-bg: $blau-clar !default;
+
+$presentation-heading-font: $font-family-sans-serif !default;
+$presentation-heading-color: $blau !default;
+$presentation-heading-font-weight: 700 !default;
+$presentation-font-size-root: 34px !default;
+
+/*-- scss:rules --*/
+
+.reveal {
+  letter-spacing: -0.005em;
+}
+
+// Títol de slide amb filet inferior discret
+.reveal h2 {
+  border-bottom: 3px solid $blau-clar;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.6em;
+  line-height: 1.15;
+}
+
+.reveal h3 { color: $gris-fosc; font-weight: 600; }
+
+// Portada
+#title-slide .title {
+  color: $blau;
+  font-weight: 700;
+  font-size: 1.55em;
+  line-height: 1.15;
+}
+#title-slide .subtitle {
+  color: $gris;
+  font-weight: 600;
+  font-size: 0.82em;
+  margin-top: 0.6em;
+}
+#title-slide .author,
+#title-slide .date {
+  color: $gris-fosc;
+  font-size: 0.72em;
+}
+#title-slide .author { margin-top: 1.2em; font-weight: 600; }
+
+// Llistes: una mica més d'aire
+.reveal ul, .reveal ol { line-height: 1.4; }
+.reveal li { margin-bottom: 0.35em; }
+
+// Èmfasi
+.reveal strong { color: $blau; font-weight: 700; }
+
+// Citació destacada (la "idea única" i les preguntes-pont)
+.reveal blockquote {
+  border-left: 5px solid $blau;
+  background: $fons-clar;
+  padding: 0.6em 1em;
+  font-style: normal;
+  color: $gris-fosc;
+  box-shadow: none;
+  width: 100%;
+  font-size: 0.95em;
+}
+
+// Caixa "assolit" (verd)
+.assolit {
+  background: $verd-clar;
+  border-left: 5px solid $verd-fosc;
+  border-radius: 4px;
+  padding: 0.5em 0.9em;
+  color: $verd-fosc;
+  font-weight: 600;
+}
+
+// Xifres grans de resultats
+.xifres {
+  color: $blau;
+  font-weight: 700;
+  font-size: 1.6em;
+  text-align: center;
+  line-height: 1.2;
+}
+.xifres .u { color: $gris; font-weight: 600; font-size: 0.5em; display: block; }
+
+// Èmfasi "IA" en lila (per distingir del blau estructural)
+.ia { color: $lila; font-weight: 700; }
+
+// Taules compactes i llegibles
+.reveal table {
+  font-size: 0.72em;
+  border-collapse: collapse;
+  margin: 0.4em auto;
+}
+.reveal table th {
+  background: $blau;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.35em 0.7em;
+}
+.reveal table td {
+  border-bottom: 1px solid $gris-clar;
+  padding: 0.35em 0.7em;
+  vertical-align: top;
+}
+.reveal table tr:last-child td { border-bottom: none; }
+
+// Peus de figura discrets
+.reveal figcaption {
+  font-size: 0.55em;
+  color: $gris;
+  text-align: center;
+}
+
+// Text de suport petit
+.small { font-size: 0.75em; color: $gris; }
+
+// Slide de secció / èmfasi central
+.reveal .lead {
+  font-size: 1.25em;
+  text-align: center;
+  color: $blau;
+  font-weight: 600;
+}
+
+// Número de slide discret
+.reveal .slide-number {
+  background: transparent;
+  color: $gris-clar;
+  font-size: 0.6em;
+}
+
+// Imatges sense marc pesant
+.reveal .slide img { border: none; box-shadow: none; }
