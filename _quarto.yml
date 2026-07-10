@@ -3,16 +3,12 @@ project:
   output-dir: _output
   render:
     - index.qmd
- 
-lang: ca
- 
-crossref:
-  fig-prefix: "Figura"
-  fig-title: "Figura"
-  tbl-prefix: "Taula"
-  tbl-title: "Taula"
-  sec-prefix: "§"
- 
+
+metadata-files:
+  - _format-common.yml
+
+# lang i crossref (fig-prefix, tbl-prefix, sec-prefix...) venen de _format-common.yml
+
 format:
   # html:
   #   toc: true
@@ -24,11 +20,13 @@ format:
   #   code-overflow: wrap
   #   theme: cosmo
   pdf:
+    # documentclass, classoption, papersize, fontsize, colorlinks,
+    # urlcolor, linkcolor venen de _format-common.yml
     output-file: "ICE_STEAM_PFP_RogerBaigViñas_llarg.pdf"
     toc: true
-    documentclass: scrartcl
-    classoption: oneside
-    papersize: a4
+    number-sections: true
+    keep-tex: false
+    citecolor: blue
     geometry:
       - top=1.5cm
       - bottom=1.5cm
@@ -36,13 +34,6 @@ format:
       - right=2cm
       - includeheadfoot
       - footskip=1cm
-    fontsize: 11pt
-    number-sections: true
-    keep-tex: false
-    colorlinks: true
-    urlcolor: blue
-    linkcolor: blue
-    citecolor: blue
     include-in-header:
       - portada.tex
       - text: |

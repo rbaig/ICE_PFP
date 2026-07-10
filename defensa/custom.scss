@@ -47,25 +47,82 @@ $presentation-font-size-root: 34px !default;
 
 .reveal h3 { color: $gris-fosc; font-weight: 600; }
 
-// Portada
-#title-slide .title {
+// Portada: un únic espai vertical (en px, no em, perquè sigui visualment
+// igual malgrat que cada element tingui una mida de lletra diferent) entre
+// tots els blocs: logo -> títol -> subtítol -> autor -> tutor -> data -> peu.
+// margin-bottom es força a 0 arreu i tot l'espaiat es controla amb
+// margin-top, per evitar l'ambigüitat del "margin collapsing".
+$title-stack-gap: 24px;
+
+.quarto-title-block .title {
   color: $blau;
   font-weight: 700;
-  font-size: 1.55em;
-  line-height: 1.15;
+  font-size: 1.25em;
+  line-height: 1.35;
+  margin-top: $title-stack-gap !important;
+  margin-bottom: 0 !important;
 }
-#title-slide .subtitle {
+.quarto-title-block .subtitle {
   color: $gris;
   font-weight: 600;
-  font-size: 0.82em;
-  margin-top: 0.6em;
+  font-size: 0.78em;
+  line-height: 1.3;
+  margin-top: $title-stack-gap !important;
+  margin-bottom: 0 !important;
 }
-#title-slide .author,
-#title-slide .date {
+.quarto-title-block .quarto-title-author-name,
+.reveal .quarto-title-block .date {
   color: $gris-fosc;
-  font-size: 0.72em;
+  font-size: 0.47em !important; // ~40% més petit que el subtítol (0.78em)
 }
-#title-slide .author { margin-top: 1.2em; font-weight: 600; }
+.reveal .quarto-title-block .date {
+  margin-top: $title-stack-gap !important;
+  margin-bottom: 0 !important;
+}
+.quarto-title-block .quarto-title-authors {
+  margin-top: $title-stack-gap !important;
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+
+// Línia del tutor (injectada per JS), mateix pes visual que l'autoria
+.quarto-title-tutor {
+  color: $gris-fosc;
+  font-size: 0.47em; // ~40% més petit que el subtítol (0.78em)
+  margin-top: $title-stack-gap !important;
+  margin-bottom: 0 !important;
+}
+
+// Logo ICE: petit i discret, dins del flux normal (simplificat expressament
+// per evitar dependencies de position:relative del contenidor pare).
+.title-logo {
+  display: block;
+  height: 42px;
+  width: auto;
+  // !important necessari: `html:not(.print-pdf) .reveal section img` del tema
+  // per defecte de reveal.js (margin: 15px 0) té més especificitat CSS que
+  // aquest selector d'una sola classe i guanya la cascada independentment
+  // de l'ordre de càrrega.
+  margin: 0 auto 0 auto !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  opacity: 0.9;
+}
+
+// Peu formal (títol oficial del postgrau): lletra mínima, gris, com un timbre
+.title-formal-footer {
+  color: $gris-clar;
+  font-size: 0.46em;
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 70%;
+  // !important necessari: `.reveal p { margin: var(--r-block-margin) 0 }` té
+  // més especificitat (classe + element) que aquest selector d'una classe i
+  // guanya la cascada, forçant marges laterals a 0 i desalineant el bloc.
+  margin: $title-stack-gap auto 0 auto !important;
+  text-align: center;
+}
 
 // Llistes: una mica més d'aire
 .reveal ul, .reveal ol { line-height: 1.4; }

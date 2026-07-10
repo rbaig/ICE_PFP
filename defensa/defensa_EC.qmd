@@ -1,6 +1,6 @@
 ---
 title: "De MIPS a RISC-V amb IA supervisada"
-subtitle: "Migració i redisseny dels materials d'Estructura de Computadors (FIB-UPC)<br>Projecte Fi de Postgrau · Innovació i Recerca en Educació STEAM"
+subtitle: "Migració i redisseny dels materials d'Estructura de Computadors (FIB-UPC)"
 author: "Roger Baig Viñas"
 date: "2026-07-14"
 date-format: "D [de] MMMM [de] YYYY"
@@ -20,7 +20,51 @@ format:
     link-external-newwindow: true
     hash-type: number
     embed-resources: true   # incrusta SVG/PNG dins l'HTML: un sol fitxer portàtil, sense problemes de rutes
-    totalTime: 840          # 14 min: activa el cronòmetre de ritme (vista de presentador). Marge d'1 min fins al límit dur de 15
+    include-after-body:
+      # Quarto no reconeix `totalTime` com a clau YAML del format revealjs (queda
+      # com a metadata pandoc solta i no arriba a Reveal.initialize()). S'activa
+      # el cronòmetre de ritme injectant Reveal.configure() directament.
+      # defaultTiming = temps mitjà per slide, en segons (840 s totals / 13 slides).
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            if (window.Reveal) {
+              Reveal.configure({ defaultTiming: 65 });
+            }
+          });
+          </script>
+      # Afegeix tutor, logo ICE i peu formal del títol oficial del postgrau a la
+      # portada. S'injecta per JS (en comptes de YAML) perquè Quarto no genera
+      # camps per a "tutor" ni per a logos al bloc de títol automàtic.
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var block = document.querySelector('.quarto-title-block');
+            if (!block) return;
+
+            var authorEl = block.querySelector('.quarto-title-author-name');
+            if (authorEl) {
+              authorEl.innerHTML = '<strong>per</strong> ' + authorEl.textContent;
+            }
+
+            var tutor = document.createElement('p');
+            tutor.className = 'quarto-title-tutor';
+            tutor.innerHTML = '<strong>Tutor:</strong> Agustín Fernández Jiménez';
+            var authors = block.querySelector('.quarto-title-authors');
+            (authors || block).insertAdjacentElement('afterend', tutor);
+
+            var logo = document.createElement('img');
+            logo.src = '../figures/UPC_ICE_logo.png';
+            logo.alt = "Institut de Ciències de l'Educació - UPC";
+            logo.className = 'title-logo';
+            block.insertBefore(logo, block.firstChild);
+
+            var footer = document.createElement('p');
+            footer.className = 'title-formal-footer';
+            footer.innerHTML = "Acte de defensa del Projecte presentat per optar al Postgrau en Ensenyament Universitari en Ciències,<br>Tecnologia, Enginyeria i Matemàtiques (STEM), Títol per la Fundació Politècnica de Catalunya";
+            block.appendChild(footer);
+          });
+          </script>
 ---
 
 ## L'assignatura i el concepte clau: la ISA {#sec-context-ec data-timing="55"}

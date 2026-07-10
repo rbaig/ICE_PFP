@@ -1,0 +1,29 @@
+# Configuració compartida entre la memòria (arrel) i el mini-projecte defensa/.
+# S'inclou des dels dos _quarto.yml amb `metadata-files`.
+#
+# IMPORTANT: aquí NO hi ha cap ruta de fitxer. `metadata-files` no reresol les
+# rutes internes (les passa tal qual al _quarto.yml que l'inclou), així que tot
+# el que impliqui rutes —portada.tex, include-in-header, include-before-body—
+# es queda a cada _quarto.yml. Aquí només claus «purs».
+#
+# Els claus de format.pdf d'aquí són DISJUNTS dels que defineix cada projecte
+# (geometria, motor, includes...), de manera que la fusió és una unió neta.
+
+lang: ca
+
+crossref:
+  fig-prefix: "Figura"
+  fig-title: "Figura"
+  tbl-prefix: "Taula"
+  tbl-title: "Taula"
+  sec-prefix: "§"
+
+format:
+  pdf:
+    documentclass: scrartcl
+    classoption: oneside
+    papersize: a4
+    fontsize: 11pt
+    colorlinks: true
+    urlcolor: blue
+    linkcolor: blue

@@ -5,19 +5,17 @@ project:
     - preguntes_tribunal.qmd
     - defensa_EC.qmd      # es renderitza com a revealjs (ho fixa el seu propi front matter)
 
-lang: ca
+metadata-files:
+  - ../_format-common.yml
 
-crossref:
-  fig-prefix: "Figura"
-  tbl-prefix: "Taula"
-  sec-prefix: "§"
+# lang i crossref venen de ../_format-common.yml
 
 # Format per defecte dels documents de preparació (el deck l'ignora i usa revealjs).
 # HTML és el més pràctic per assajar: emojis i fletxes es renderitzen bé, i cada
 # fitxer surt autocontingut.
 format:
   html:
-    theme: cosmo            # mateix esperit que la memòria (tenies cosmo comentat al _quarto.yml)
+    theme: cosmo            # mateix esperit que la memòria
     toc: true
     toc-location: left
     toc-depth: 2
@@ -25,22 +23,17 @@ format:
     code-copy: true
     embed-resources: true   # un sol .html portàtil, fàcil de compartir o imprimir
 
-  # --- PDF (reaprofita la identitat de la memòria) --------------------------
+  # --- PDF (reaprofita la identitat de la memòria via _format-common.yml) ----
   # Requereix LuaLaTeX + la font "Noto Color Emoji" instal·lada al sistema
   # (Debian/Ubuntu: sudo apt install fonts-noto-color-emoji). Vegeu el README.
   pdf:
-    documentclass: scrartcl
-    classoption: oneside
-    papersize: a4
-    fontsize: 11pt
+    # documentclass, classoption, papersize, fontsize, colorlinks,
+    # urlcolor, linkcolor venen de ../_format-common.yml
     geometry:
       - top=2cm
       - bottom=2cm
       - left=2.5cm
       - right=2.5cm
-    colorlinks: true
-    urlcolor: blue
-    linkcolor: blue
     pdf-engine: lualatex
     include-in-header:
       - text: |
