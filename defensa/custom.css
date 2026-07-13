@@ -1,0 +1,4 @@
+.reveal .slides section img + p.caption,
+.reveal .slides section p.caption {
+  font-size: 0.6em; /* Adjust percentage or em values as needed */
+}

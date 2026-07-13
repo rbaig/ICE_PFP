@@ -1,8 +1,8 @@
 project:
   type: default
   render:
-    - guio_minutat.qmd
-    - preguntes_tribunal.qmd
+    # - guio_minutat.qmd
+    # - preguntes_tribunal.qmd
     - defensa_EC.qmd      # es renderitza com a revealjs (ho fixa el seu propi front matter)
 
 metadata-files:

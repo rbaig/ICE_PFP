@@ -224,7 +224,9 @@
      id="text5-1"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;dominant-baseline:central;text-anchor:middle;fill:#343a40"><tspan
        sodipodi:role="line"
-       id="tspan12">Corpus docent MIPS</tspan></text>
+       id="tspan12"
+       x="249.76953"
+       y="6.5">Corpus decent MIPS</tspan></text>
   <text
      x="249.76953"
      y="26.5"
@@ -262,7 +264,7 @@
        sodipodi:role="line"
        id="tspan16-7"
        x="250.0083"
-       y="484.97949">Teoria · Problemaris · Solucionaris · Laboratoris</tspan></text>
+       y="484.97949">Apunts· Problemes · Solucions · Laboratoris . Diapositives</tspan></text>
   <text
      x="3.0083008"
      y="120.29676"
@@ -462,7 +464,7 @@
        sodipodi:role="line"
        id="tspan1"
        x="249.11664"
-       y="317.0571">P4. Cicle de Revisió Externa</tspan></text>
+       y="317.0571">P4. Cicle de Revisió externa</tspan></text>
   <text
      x="249.11664"
      y="337.0571"
@@ -587,7 +589,7 @@
        x="244.05708"
        y="-490.11664">Millora de convencions, d'entorn, de flux de treball</tspan></text>
   <text
-     x="-395.77917"
+     x="-369.77917"
      y="7.9980469"
      font-size="10px"
      fill="#6c757d"
@@ -595,13 +597,7 @@
      transform="rotate(-90)"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6c757d"><tspan
        sodipodi:role="line"
-       id="tspan6"
-       x="-395.77917"
-       y="7.9980469">Proporció de supervisió humana del contingut</tspan><tspan
-       sodipodi:role="line"
-       id="tspan7"
-       x="-395.77917"
-       y="20.498047">tècnic i pedagògic del material produït per IA</tspan></text>
+       id="tspan22">Intensitat de supervisió humana</tspan></text>
   <metadata
      id="metadata33">
     <rdf:RDF>
@@ -672,4 +668,16 @@
      fill="#0a3622"
      dominant-baseline="central"
      id="text-dod-ur">DoD-UR</text>
+  <text
+     x="-359.77917"
+     y="19.998047"
+     font-size="10px"
+     fill="#6c757d"
+     id="text21"
+     transform="rotate(-90)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Sans;-inkscape-font-specification:'Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#6c757d"><tspan
+       sodipodi:role="line"
+       id="tspan23"
+       x="-359.77917"
+       y="19.998047">del contingut produït per IA</tspan></text>
 </svg>

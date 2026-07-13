@@ -276,7 +276,7 @@
        sodipodi:role="line"
        id="tspan23"
        x="250.0083"
-       y="250.97949">Teoria · Problemaris · Solucionaris · Laboratoris . Diapositives</tspan></text>
+       y="250.97949">Apunts· Problemes · Solucions · Laboratoris . Diapositives</tspan></text>
   <line
      x1="249.11664"
      y1="114.05708"
@@ -411,7 +411,7 @@
      stroke-dasharray="3 3"
      marker-end="url(#arr)"
      id="path23"
-     style="stroke-width:1;stroke-dasharray:4, 4;stroke-dashoffset:0;marker-end:url(#arr-8)" />
+     style="stroke-width:1.5;stroke-dasharray:6,6;stroke-dashoffset:0;marker-end:url(#arr-8)" />
   <metadata
      id="metadata33">
     <rdf:RDF>

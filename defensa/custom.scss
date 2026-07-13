@@ -213,3 +213,45 @@ $title-stack-gap: 24px;
 
 // Imatges sense marc pesant
 .reveal .slide img { border: none; box-shadow: none; }
+
+// Columnes de Quarto (:::: {.columns}): centrat vertical DESACTIVAT.
+// La versió amb display:flex trencava la imatge (SVG) dins de .column a la
+// slide sec-context-ec — el text es desbordava i la imatge desapareixia.
+// Pendent de resoldre amb inspecció real del DOM (probablement cal tractar
+// l'embolcall <p>/<figure> de la imatge dins del contenidor flex).
+// .reveal .columns { align-items: center !important; }
+// .reveal .column {
+//   display: flex !important;
+//   flex-direction: column !important;
+//   justify-content: center !important;
+// }
+
+// Espaiador invisible: substitueix el ". . ." de pausa quan es vol l'efecte
+// de `.fragment` sense el símbol visual (veure sec-context-ec). Reserva l'espai
+// vertical (visibility:hidden, no display:none) per evitar que el contingut
+// de després "salti" cap amunt en desaparèixer el punt suspensiu.
+// .pause-spacer { height: 74px; visibility: hidden; }
+
+// Roger 
+
+// S'ha de fer servir `<div class="spacer-hidden" style="height: 74px;"></div>`
+.spacer-hidden {
+  visibility: hidden;
+}
+
+.no-bullets-spaced-list {
+  ul { list-style: none !important; padding-left: 0 !important; margin-left: 0 !important; }
+  li { list-style: none !important; margin-bottom: 20px !important; } // Default fallback
+
+  // Size parameters/modifiers
+  &.gap-S li { margin-bottom: 15px !important; }
+  &.gap-M li { margin-bottom: 45px !important; }
+  &.gap-L li { margin-bottom: 80px !important; }
+}
+
+.custom-spaced-list {
+  li {
+    // Si pasas el parámetro '--item-gap' lo usa, si no, usa 20px por defecto
+    margin-bottom: var(--item-gap, 20px) !important;
+  }
+}
