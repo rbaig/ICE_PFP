@@ -39,6 +39,7 @@ $presentation-font-size-root: 34px !default;
 
 // Títol de slide amb filet inferior discret
 .reveal h2 {
+  font-size: 0.84em; // -30% respecte a l'1.2em original
   border-bottom: 3px solid $blau-clar;
   padding-bottom: 0.25em;
   margin-bottom: 0.6em;
@@ -177,19 +178,46 @@ $title-stack-gap: 24px;
   color: #fff;
   font-weight: 600;
   border: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.35);
   padding: 0.35em 0.7em;
 }
+.reveal table th:last-child { border-right: none; }
 .reveal table td {
   border-bottom: 1px solid $gris-clar;
+  border-right: 2px solid #e9ecef;
   padding: 0.35em 0.7em;
   vertical-align: top;
 }
+.reveal table td:last-child { border-right: none; }
 .reveal table tr:last-child td { border-bottom: none; }
 
-// Peus de figura discrets
-.reveal figcaption {
-  font-size: 0.55em;
+// Peus de figura discrets (~40% del cos de text)
+// Quarto genera DOS elements per a la llegenda de la figura: el <figcaption>
+// "Figura N" (dins de <figure>, germà de la imatge) i, a fora de <figure>
+// (germà del div.quarto-figure), un <p> amb el text real del peu qmd.
+// Com que no són germans DOM directes, no es poden ajuntar en una línia amb
+// CSS sense trencar el layout de la imatge -> s'amaga el "Figura N" i només
+// es mostra el <p>, en una sola línia centrada.
+.reveal .slide figure > figcaption {
+  display: none;
+}
+// Selector amb combinador de germans adjacents (+), NO :first-of-type:
+// aquest últim capturava també el primer <p> de contingut normal d'una
+// .column sense figura (p.ex. "Ingredients reutilitzables..." a sec-model).
+.quarto-figure + p {
+  font-size: 0.4em;
   color: $gris;
+  text-align: center;
+  margin: 0;
+}
+// El contenidor `.quarto-figure` (embolcall del div#fig-xxx) porta
+// margin-bottom: 1em fix, que deixa un buit gran abans del <p> de peu.
+.quarto-figure {
+  margin-bottom: 0;
+  // El div intern (aria-describedby) i el figcaption són per defecte
+  // display:block amb amplada pròpia -> centrar-los com a bloc requereix
+  // que el contenidor tingui text-align:center (heretat pel figcaption
+  // i pel <p> de peu, ja que ambdós són germans dins de .column/.quarto-figure).
   text-align: center;
 }
 

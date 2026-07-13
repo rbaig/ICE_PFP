@@ -11,6 +11,8 @@ format:
     slide-number: c/t
     width: 1280
     height: 720
+    # width: 1024             # 4:3 projector format antic
+    # height: 768             # 4:3 projector format antic
     transition: fade
     transition-speed: fast
     progress: true
@@ -19,17 +21,17 @@ format:
     fig-align: center
     link-external-newwindow: true
     hash-type: number
-    embed-resources: true   # incrusta SVG/PNG dins l'HTML: un sol fitxer portàtil, sense problemes de rutes
+    embed-resources: true    # incrusta SVG/PNG dins l'HTML: un sol fitxer portàtil, sense problemes de rutes
     include-after-body:
       # Quarto no reconeix `totalTime` com a clau YAML del format revealjs (queda
       # com a metadata pandoc solta i no arriba a Reveal.initialize()). S'activa
       # el cronòmetre de ritme injectant Reveal.configure() directament.
-      # defaultTiming = temps mitjà per slide, en segons (840 s totals / 13 slides).
+      # defaultTiming = temps mitjà per slide, en segons (735 s totals / 13 slides).
       - text: |
           <script>
           document.addEventListener('DOMContentLoaded', function() {
             if (window.Reveal) {
-              Reveal.configure({ defaultTiming: 65 });
+              Reveal.configure({ defaultTiming: 57 });
             }
           });
           </script>
@@ -67,16 +69,6 @@ format:
           </script>
 ---
 
-## TODO
-
-- capçaleres diapos: Fontsize títol a ~70% 
-- captions
-    - Captions: Reduir fontsize a ~40% la paraula "Figura", la numeració i la descripció.
-    - Eliminar salt de línia entre "Figura x" i la descripció 
-    - Incloure la configuració per projector format antic 
-- vspace després de títol slide: taules i `>` (petit) vs. bullets i figures (quasi el doble). Slide 13 ha de pujar com a les taules per no desbordar per sota
-- Última diapo: "Tots els objectius assolits ⟹ ..." Sense vinyeta i centrat
-
 ## L'assignatura -- La base fonamental {#sec-context-ec data-timing="55"}
 
 :::: {.columns}
@@ -106,10 +98,17 @@ format:
 ::::
 
 ::: {.notes}
-(~0:55) Abans d'entrar en matèria, dos apunts perquè tothom segueixi el fil. Primer, l'assignatura: Estructura de Computadors ensenya com un computador executa instruccions per dins, i és la peça central de l'eix d'arquitectura del grau, entre Introducció als Computadors i Arquitectura de Computadors. Segon, i és el concepte clau de tota la xerrada: la ISA, l'*Instruction Set Architecture*, és el contracte entre el maquinari i el programari —el repertori d'instruccions que el processador entén i executa—. L'ABI hi afegeix, un pas per sobre, les convencions d'ús: quins registres es fan servir per a què, com es passen els paràmetres a les funcions. Amb això n'hi ha prou; quedeu-vos amb una idea: canviar d'ISA vol dir canviar el llenguatge més fonamental que ensenyem. — Pont: i el que ensenyem, avui, ha quedat enrere.
+- (~0:55) Abans d'entrar en matèria, dos apunts perquè tothom segueixi el fil
+- **L'assignatura**: EC ensenya com un computador executa instruccions per dins
+  - És la peça central de l'eix d'arquitectura del Grau en Enginyeria Informàtica (GEI)
+- **Concepte clau de tota la xerrada**: la ISA (*Instruction Set Architecture*)
+  - És el contracte entre el maquinari i el programari — el repertori d'instruccions que el processador entén i executa
+  - L'ABI hi afegeix, un pas per sobre, les convencions d'ús: registres, pas de paràmetres a funcions
+- Idea per quedar-se'n: canviar d'ISA/ABI és sacsejar els fonaments de l'assignatura
+- Pont: i el que ensenyem, avui, ha quedat enrere
 :::
 
-## Per què migrar? {#sec-perque data-timing="65"}
+## Per què migrar? {#sec-perque data-timing="55"}
 
 - **MIPS** — la ISA de referència d'EC des dels orígens; avui, rellevància industrial perduda
 - **RISC-V** — estàndard obert de facto, adoptat per la indústria i la Unió Europea
@@ -122,7 +121,13 @@ format:
 > *Que els pares de MIPS l'abandonin per adoptar i contribuir a RISC-V és un bon indicador del **canvi de paradigma** que representa aquesta arquitectura.*
 
 ::: {.notes}
-(~1:05) El que hem ensenyat fins ara, MIPS, ha perdut la seva rellevància industrial. En canvi, RISC-V s'ha consolidat com l'estàndard obert de facto, adoptat per la indústria i per la Unió Europea com a via cap a la sobirania tecnològica. Però la prova acadèmica més clara del canvi de paradigma és que Patterson i Hennessy, dels creadors de MIPS, han reescrit el seu llibre de referència sencer al voltant de RISC-V. Quan els pares d'una arquitectura la deixen per una d'oberta, el senyal és inequívoc. I la FIB no seria pionera aïllada: Berkeley i Cornell ja han migrat. Calia posar-s'hi. — Pont: però migrar no és només canviar de llenguatge.
+- (~1:05) MIPS, el que hem ensenyat fins ara, ha perdut la seva rellevància industrial
+- RISC-V s'ha consolidat com l'estàndard obert de facto
+  - Adoptat per la indústria i per la Unió Europea com a via cap a la sobirania tecnològica
+- Prova acadèmica del canvi de paradigma: tots els llibres de referència d'EC han estat portats a RISC-V
+  - Quan els pares d'una arquitectura la deixen per una d'oberta, el senyal és inequívoc
+- La FIB no és pionera aïllada: Berkeley i Cornell ja han migrat
+- Pont: però migrar no és només canviar de llenguatge
 :::
 
 ## Però no és només un canvi d'arquitectura {#sec-abast data-timing="70"}
@@ -132,6 +137,7 @@ format:
 - Oportunitat: una **renovació integral**
   - Repensar el **contingut**, *no només traduir-lo*
   - Obrir el **format**, jerarquitzat i etiquetat
+  - Automatitzar la **producció** 
   - Construir un **sistema de qualitat**¹, col·laboratiu i documentat
 :::
 
@@ -145,10 +151,18 @@ format:
 :::
 
 ::: {.notes}
-(~1:15) Ara bé, hauria estat un error quedar-se en el port tècnic: canviar la sintaxi de MIPS per la de RISC-V i llestos. Aquesta reorientació —entendre-ho com una renovació integral i no com una traducció— la dec en bona part a una conversa primerenca amb en David López, que em va animar a focalitzar-me en el redisseny de continguts. Tres eixos: redissenyar el contingut aprofitant per reordenar temes densos o inconnexos; obrir el format, passant de PDF tancat a Quarto Markdown; i construir un sistema de qualitat documentat que als materials originals no existia. — Pont: aquests tres eixos són els meus tres objectius específics.
+- (~1:15) Hauria estat un error quedar-se en el port tècnic: canviar la sintaxi de MIPS per la de RISC-V i llestos
+- Aquesta reorientació —renovació integral, no traducció— la dec en bona part a una conversa primerenca amb en David López
+  - Em va animar a focalitzar-me en el redisseny de continguts
+- Quatre eixos de la renovació:
+  - Redissenyar el contingut, aprofitant per reordenar temes densos o inconnexos
+  - Obrir el format, passant de PDF tancat a Quarto Markdown
+  - Automatitzar la producció allà on la tasca és mecànica i propensa a error humà
+  - Construir un sistema de qualitat documentat que als materials originals no existia
+- Pont: aquests eixos es concreten en els meus objectius específics
 :::
 
-## Objectius específics {#sec-objectius data-timing="35"}
+## Objectius específics {#sec-objectius data-timing="30"}
 
 ::: {.incremental}
 - **OE1**  Migració completa del corpus a RISC-V
@@ -157,10 +171,14 @@ format:
 :::
 
 ::: {.notes}
-(~0:35) Aquesta renovació integral es concreta en tres objectius específics, que us aniré tancant al final. OE1: migrar tot el corpus —teoria, problemes i laboratoris— a RISC-V. OE2: transformar-lo a un format obert i accessible. I OE3: establir un sistema de qualitat documentat que faci el corpus auditable i replicable. — Pont: el repte, però, no era decidir què fer, sinó com fer-ho tot, i a temps.
+- (~0:35) Aquesta renovació integral es concreta en tres objectius específics, que us aniré tancant al final
+- **OE1**: migrar tot el corpus —teoria, problemes i laboratoris— a RISC-V
+- **OE2**: transformar-lo a un format obert i accessible
+- **OE3**: establir un sistema de qualitat documentat que faci el corpus auditable i replicable
+- Pont: el repte, però, no era decidir què fer, sinó com fer-ho tot, i a temps
 :::
 
-## L'obstacle: escala vs. recursos {#sec-obstacle data-timing="45"}
+## L'obstacle: escala vs. recursos {#sec-obstacle data-timing="40"}
 
 - Un corpus **sencer**[: *apunts + problemes + solucions + laboratoris*]{style="word-spacing: 15px;"}
 - **Un sol professor**, amb temps fragmentat
@@ -174,17 +192,21 @@ format:
 > *Disrupció: aprofitament dels **avanços** de la IA generativa.*
 
 ::: {.notes}
-(~0:50) I aquí ve l'obstacle real. Estem parlant d'un corpus sencer: nou temes de teoria, els seus problemes, els solucionaris i sis sessions de laboratori. I un sol professor, amb el temps fragmentat que tots coneixem. De fet, el pla que vaig presentar al lliurament intermedi era deliberadament modest: acabar només la teoria. La pregunta que estructura tot el projecte és aquesta: com es produeix un corpus complet, validat i de qualitat, a aquesta escala i amb aquests recursos? — Pont: la resposta és una manera de treballar, no una eina màgica.
+- (~0:50) Aquí ve l'obstacle real
+- Un corpus sencer: apunts, problemes, solucions i laboratoris
+- Un sol professor, amb el temps fragmentat que tots coneixem
+- El pla inicial per al PFP era modest: tenir els apunts d'alguns temes de teoria migrats
+- Pont: la disrupció ve d'aprofitar els avanços de la IA generativa
 :::
 
-## El mètode: el professor com a director tècnic {#sec-metode data-timing="105"}
+## El mètode: el professor com a director tècnic {#sec-metode data-timing="90"}
 
 :::: {.columns}
 ::: {.column width="36%"}
 ::: {#fig-corpus-flux .figure}
 ![](../figures/etapa_produccio.svg){width="100%"}
 :::
-Flux de producció del corpus
+**Figura 1.** Flux de producció del corpus
 :::
 
 ::: {.column width="2%"}
@@ -200,17 +222,25 @@ Flux de producció del corpus
 ::::
 
 ::: {.notes}
-(~1:50) La resposta té dues potes. La primera: gestió àgil, adaptant elements de Scrum a la creació de continguts —treballar per unitats temàtiques, de manera iterativa, no com un bloc monolític. La segona: la IA generativa com a accelerador. Vaig començar amb NotebookLM, útil per validar la idea, però el punt d'inflexió va ser passar a Claude: la capacitat de mantenir el context complet del projecte —convencions, decisions prèvies, estructura— en una sola sessió va eliminar la fragmentació i va disparar la velocitat i la qualitat. Ara bé —i això és el que vull remarcar— el meu rol no es va reduir, es va transformar: vaig passar d'escriptor a director tècnic. Fixeu-vos en la fletxa de l'esquerra de l'esquema: la supervisió humana creix a mesura que avancem de fase, mínima a la producció bruta i màxima a la revisió col·legiada. — Pont: i què és, exactament, el que fa que aquesta producció sigui fiable i no un abocador d'al·lucinacions?
+- (~1:50) La resposta té dues potes
+- **Gestió àgil**, adaptant elements de Scrum a la creació de continguts
+  - Treballar per unitats temàtiques, de manera iterativa, no com un bloc monolític
+- **La IA com a accelerador**
+  - Vaig començar amb NotebookLM, útil per validar la idea
+  - Punt d'inflexió: pivot a Claude — mantenir el context complet del projecte en una sola sessió elimina la fragmentació
+- El meu rol no es va reduir, es va transformar: d'escriptor a director tècnic
+- La supervisió humana creix a mesura que avancem de fase — mínima a la producció bruta, màxima a la revisió col·legiada
+- Pont: i què fa que aquesta producció sigui fiable, i no un abocador d'al·lucinacions?
 :::
 
-## Què fa fiable la producció amb IA? {#sec-fiabilitat data-timing="105"}
+## Què fa fiable la producció amb IA? {#sec-fiabilitat data-timing="100"}
 
 :::: {.columns}
 ::: {.column width="34%"}
 ::: {#fig-unitat-produccio .figure}
 ![](../figures/unitat_produccio.svg){fig-align="center" width="77%"}
 :::
-Etapes d'una unitat de producció (x ∈ [1, 9], y ∈ [1, 6])
+**Figura 2.** Etapes d'una unitat de producció
 :::
 
 ::: {.column width="4%"}
@@ -230,24 +260,41 @@ Criteris del sistema de qualitat:
 ::::
 
 ::: {.notes}
-(~1:50) Aquesta és la diapositiva central de la defensa. Les eines d'IA produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte: errors subtils d'ABI, d'ordre d'operands, de pseudoinstruccions. Passen desapercebuts en una lectura ràpida i fallen en execució. Per això el sistema descansa en tres garanties. Primera: les Definitions of Done, criteris binaris verificables —adaptats de Scrum— que cada unitat ha de complir abans de tancar-se; en tinc tres, per producció, per revisió de conjunt i per revisió externa. Segona, i innegociable: he validat cada fragment d'assemblador del corpus al simulador RARS, executant-lo. Aquest pas no és automatitzable, i no ha de ser-ho: és precisament on l'expertesa del professor és imprescindible. Tercera: un sistema de convencions terminològiques documentat que manté la coherència en 36 fitxers. La conclusió, que és també la resposta a la pregunta ètica de fons: la IA accelera; el judici pedagògic és, i ha de continuar sent, humà. — Pont: amb aquest mètode, els resultats van superar el pla.
+- (~1:50) Aquesta és la diapositiva central de la defensa
+- El risc: les eines d'IA produeixen codi RISC-V sintàcticament plausible però no necessàriament correcte
+  - Errors subtils d'ABI, d'ordre d'operands, de pseudoinstruccions — passen desapercebuts en una lectura ràpida i fallen en execució
+- Per contenir aquest risc, tres garanties:
+  - **DoDs** (*Definition of Done*, adaptats de Scrum): criteris binaris verificables abans de tancar cada unitat
+  - **Validació a RARS**: cada fragment d'assemblador del corpus, executat al simulador — pas no automatitzable, i no ha de ser-ho
+  - **Revisió col·legiada**: per experts, com a capa final de control
+- Conclusió, i resposta a la pregunta ètica de fons: la IA accelera la producció; la intel·ligència pedagògica continua sent humana
+- Pont: amb aquest mètode, els resultats van superar el pla
 :::
 
-## Resultats {#sec-resultats data-timing="70"}
+## Resultats {#sec-resultats data-timing="60"}
+
+- L'adopció de [Claude]{.ia}  com a eina principal ha permès assolir un
+    - un **ritme de producció** que supera amb escreix el previst al pla inicial
+    - un grau de **qualitat de la producció** (coherència terminològica, referències creuades, organització jeràrquica) només a l'abast d'un equip de producció amb diversos autors i revisors
+- Revisió externa **ja en curs**: protocol, calendari i grups de treball establerts
 
 ::: {.assolit}
 - **100%** del corpus completat
 - Generació **programàtica** de continguts **elevada**
 :::
 
-- La diferència és directament atribuïble a l'adopció de [Claude]{.ia} com a eina principal
-- Revisió externa **ja en curs**: protocol, calendari i grups de treball establerts
-
 ::: {.notes}
-(~1:20) I els resultats van superar la previsió amb escreix. On el pla deia "només teoria", vam assolir el corpus sencer: teoria, problemes, solucionaris i laboratoris, més 23 exercicis nous sobre continguts que a MIPS ni existien —com les excepcions i interrupcions, ara avaluables gràcies als registres CSR de RISC-V. En números: 100% del corpus, 36 fitxers, més de cent figures SVG, cadascuna en versió clara i fosca. Aquesta diferència entre el previst i l'assolit és directament atribuïble a l'adopció de Claude. I no acaba aquí: la Revisió externa ja està en marxa, amb sis revisors, protocol, calendari i grups de treball establerts. — Pont: però he insistit que no és una traducció. Deixeu-me ensenyar-vos el redisseny.
+- (~1:20) L'adopció de Claude com a eina principal ha permès assolir dues coses
+  - Un ritme de producció que supera amb escreix el previst al pla inicial
+  - Un grau de qualitat de la producció —coherència terminològica, referències creuades, organització jeràrquica— només a l'abast d'un equip amb diversos autors i revisors
+- 100% del corpus completat, amb generació programàtica de continguts elevada
+- Revisió externa ja en curs: protocol, calendari i grups de treball establerts
+- Pont: però he insistit que no és una traducció — deixeu-me ensenyar-vos el redisseny
 :::
 
 ## No és *un port*: és un redisseny {#sec-redisseny data-timing="85"}
+
+<br>
 
 | RISC-V (nou) | MIPS (original) | Naturalesa del canvi |
 |:---|:---|:---|
@@ -256,12 +303,23 @@ Criteris del sistema de qualitat:
 | **T5** · Només coma flotant | T5 (aritmètica **+** CF) | Frontera conceptual **clara** |
 : {tbl-colwidths="[25,25,25]"}
 
+<br>
 
 - Els temes de la ISA (T2–T5, T9) **reescrits íntegrament**; jerarquia de memòria (T7–T8) **ampliada** (GPU, IA, taules multinivell)
-- Decisions **documentades** i justificades pedagògicament, no arbitràries
+- Decisions i convencions **documentades** i justificades
+- Llibre d'estil **extens**
 
 ::: {.notes}
-(~1:30) El redisseny és la petjada intel·lectual del projecte, i on la migració deixa de ser tècnica per ser pedagògica. Tres exemples. El T1 original barrejava la introducció conceptual amb rendiment i potència, dos blocs sense connexió; els he separat en T1 i T6, i T6 queda com a avantsala natural de la memòria cau. L'aritmètica entera, que a MIPS vivia dins del T5 barrejada amb la coma flotant, l'he avançat al T4; això redueix la càrrega cognitiva i deixa el T5 dedicat exclusivament a coma flotant, amb una frontera conceptual neta. Els temes on MIPS i RISC-V divergeixen més —tota la ISA— estan reescrits de zero; els de jerarquia de memòria, ampliats amb context actual: GPU, IA, taules de pàgines multinivell. Cada decisió està documentada i justificada a la memòria, amb taules de correspondència completes. No és reordenar per reordenar. — Pont: i tot això, en un format radicalment més obert.
+- (~1:30) El redisseny és la petjada intel·lectual del projecte
+  - És on la migració deixa de ser tècnica per ser pedagògica
+- Tres exemples:
+  - El T1 original barrejava introducció conceptual amb rendiment i potència, dos blocs sense connexió
+    - Separats en T1 i T6; T6 queda com a avantsala natural de la memòria cau
+  - L'aritmètica entera, dins del T5 original barrejada amb la coma flotant, avançada al T4
+    - Redueix la càrrega cognitiva i deixa el T5 amb una frontera conceptual neta
+  - Temes de la ISA (on MIPS i RISC-V divergeixen més) reescrits de zero; jerarquia de memòria ampliada amb context actual (GPU, IA, taules multinivell)
+- Cada decisió documentada i justificada, amb taules de correspondència completes — no és reordenar per reordenar
+- Pont: i tot això, en un format radicalment més obert
 :::
 
 ## Un sol origen, dos formats {#sec-formats data-timing="55"}
@@ -280,26 +338,40 @@ El **mateix** fragment, des d'una **única font** Quarto — sense cap edició m
 ::::
 
 ::: {.notes}
-(~1:00) Aquest és el fruit de l'OE2. La imatge gran és el format HTML, el veritablement nou: navegació lateral, cercador integrat, mode fosc i clar, disseny responsive, accessibilitat WCAG 2.1 i referències creuades que enllacen teoria, problemes, solucionaris i laboratoris —un estudiant que llegeix un laboratori salta directament a la teoria que aplica, cosa impossible al PDF original—. A la dreta, el mateix contingut renderitzat en PDF d'alta qualitat amb LuaLaTeX. El punt clau, i el que tanca l'OE2: tots dos formats surten de la mateixa font Quarto, sense cap retoc manual. — Pont: i res d'això és específic de l'arquitectura de computadors.
+- (~1:00) Aquest és el fruit de l'OE2
+- Imatge gran: el format HTML, el veritablement nou
+  - Navegació lateral, cercador integrat, mode fosc i clar, disseny responsive, accessibilitat WCAG 2.1
+  - Referències creuades que enllacen teoria, problemes, solucionaris i laboratoris
+    - Un estudiant que llegeix un laboratori salta directament a la teoria que aplica — impossible al PDF original
+- A la dreta: el mateix contingut en PDF d'alta qualitat amb LuaLaTeX
+- Punt clau, i el que tanca l'OE2: tots dos formats surten de la mateixa font Quarto, sense cap retoc manual
+- Pont: i res d'això és específic de l'arquitectura de computadors
 :::
 
-## Un model sostenible i replicable a STEAM {#sec-model data-timing="70"}
+## Un model sostenible i replicable a STEAM {#sec-model data-timing="65"}
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="34%"}
+::: {#fig-etapa-explotacio .figure}
 <br>
 <br>
 <br>
-![](../figures/etapa_explotacio.svg){width="100%"}
+![](../figures/etapa_explotacio.svg){fig-align="center" width="100%"}
 :::
-::: {.column width="60%"}
-Ingredients **reutilitzables** per a qualsevol assignatura STEAM:
+**Figura 3.** Flux d'explotació del corpus
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="62%"}
+Ingredients **reutilitzables** per a qualsevol assignatura **STEAM**:
 
 - Format de marcatge pla + control de versions
-- IA supervisada amb rol humà **explícitament definit**
+- IA supervisada amb rol humà explícitament definit
 - Convencions documentades
 
-Llegat concret:
+**Llegat concret**:
 
 - Recull terminològic d'EC en **català normatiu**
 - Repositori **públic**
@@ -308,7 +380,16 @@ Llegat concret:
 ::::
 
 ::: {.notes}
-(~1:20) La contribució de fons va més enllà d'EC. L'arquitectura metodològica —format de marcatge pla, control de versions, IA supervisada amb un rol humà ben definit, i convencions documentades— no és específica ni de l'arquitectura de computadors ni de la informàtica. Qualsevol assignatura STEAM amb materials tècnics a actualitzar pot aplicar-la, i totes les eines són obertes o gratuïtes. Deixo llegat concret: el primer recull terminològic sistemàtic de RISC-V en català normatiu, reutilitzable per altres assignatures de l'àmbit; un repositori públic; i, sobretot, un missatge per a l'ICE: la formació del professorat en IA ha d'anar més enllà d'adoptar eines soltes; ha de ser una alfabetització en la gestió de projectes assistits per IA. L'esquema mostra com el projecte continua: cada quadrimestre d'ús a l'aula retroalimenta i millora el corpus. — Pont: i amb això arribo a la idea que us vull deixar.
+- (~1:20) La contribució de fons va més enllà d'EC
+- L'arquitectura metodològica —format de marcatge pla, control de versions, IA supervisada amb rol humà ben definit, convencions documentades— no és específica de l'arquitectura de computadors ni de la informàtica
+  - Qualsevol assignatura STEAM amb materials tècnics per actualitzar pot aplicar-la
+  - Totes les eines són obertes o gratuïtes
+- Llegat concret:
+  - El primer recull terminològic sistemàtic d'EC en català normatiu, reutilitzable per altres assignatures
+  - Un repositori públic
+  - Una proposta de gestió de projectes amb IA per a l'ICE
+- L'esquema mostra com el projecte continua: cada quadrimestre d'ús a l'aula retroalimenta i millora el corpus
+- Pont: i amb això arribo a la idea que us vull deixar
 :::
 
 ## En síntesi {#sec-sintesi data-timing="30"}
@@ -320,7 +401,9 @@ Llegat concret:
 <br>
 
 ::: {.lead}
-El docent no queda substituït: 💥️ **és promogut a director** 💥️
+El docent no queda substituït:
+
+💥️ **és promogut a director** 💥️
 :::
 
 <br>
@@ -334,5 +417,10 @@ Web (demo): [loi.pc.ac.upc.edu/ec](http://loi.pc.ac.upc.edu/ec) [Repositori (UPC
 :::
 
 ::: {.notes}
-(~0:30) Tanco amb la idea única. La IA generativa multiplica la capacitat de producció de materials docents; això és real i el projecte ho demostra. Però només la supervisió experta la converteix en producció de qualitat. La conseqüència per a la nostra professió no és que la IA substitueixi el docent: és que el promou a director. El resultat tangible és el material d'un curs sencer, complet, validat i redissenyat, a punt per estrenar-se el primer quadrimestre del 2026-27, amb els tres objectius específics assolits. Moltes gràcies; quedo a la vostra disposició per a les preguntes.
+- (~0:30) Tanco amb la idea única
+- La IA generativa multiplica la capacitat de producció de materials docents — això és real, el projecte ho demostra
+- Però només la supervisió experta la converteix en producció de qualitat
+- La conseqüència per a la nostra professió: la IA no substitueix el docent, el promou a director
+- Resultat tangible: el material d'un curs sencer, complet, validat i redissenyat, a punt per estrenar-se el primer quadrimestre del 2026-27, amb els tres objectius específics assolits
+- Moltes gràcies; quedo a la vostra disposició per a les preguntes
 :::
